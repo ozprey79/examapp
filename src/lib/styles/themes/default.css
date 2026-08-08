@@ -1,0 +1,73 @@
+:root {
+  /* Typography */
+
+  --font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  --font-size-base: 14px;
+
+  /* Layout */
+
+  --page-width: 960px;
+  --page-padding: 24px;
+
+  /* Surfaces */
+
+  --bg: #1d1e1e;
+
+  --surface: #252626;
+  --surface-hover: #2d2e2e;
+  --surface-strong: #181919;
+
+  /* Text */
+
+  --text: #f2f2f2;
+  --text-muted: #b9b9b9;
+
+  /* Borders */
+
+  --border: #4a4a4a;
+  --border-soft: #373737;
+
+  /* Primary interaction */
+
+  --primary: #5874e6;
+  --primary-hover: #f0e768;
+  --primary-text: #111111;
+
+  /* Status */
+
+  --success: #63e697;
+  --warning: #ffad4d;
+  --danger: #ff7b85;
+
+  /* Question options */
+
+  --option-bg: #202121;
+  --option-hover: #2d2e2e;
+
+  --option-selected-bg:
+    color-mix(
+      in srgb,
+      var(--primary) 8%,
+      #202121
+    );
+
+  --option-selected-border:
+    var(--primary);
+
+  /* Geometry */
+
+  --radius: 8px;
+
+  /* Spacing */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+}

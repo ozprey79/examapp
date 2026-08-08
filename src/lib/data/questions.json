@@ -1,0 +1,63 @@
+{
+  "meta": {
+  "id": "civil-engineering-mock-001",
+  "title": "Civil Engineering Mock Test",
+  "duration_minutes": 90
+},
+
+  "scoring": {
+    "correct": 1,
+    "wrong": -0.3333333333,
+    "skipped": 0
+  },
+
+  "questions": [
+    {
+      "id": "q1",
+      "m": "M2",
+      "s": "Open Channel Flow",
+      "difficulty": 0.25,
+      "t": "Which force governs open-channel flow?",
+      "o": [
+        "Viscous force",
+        "Gravity force",
+        "Elastic force",
+        "Surface-tension force"
+      ],
+      "a": 1,
+      "e": "Gravity governs free-surface flow."
+    },
+
+    {
+      "id": "q2",
+      "m": "M2",
+      "s": "Fluid Mechanics",
+      "difficulty": 0.18,
+      "t": "What is the SI unit of pressure?",
+      "o": [
+        "Newton",
+        "Pascal",
+        "Joule",
+        "Watt"
+      ],
+      "a": 1,
+      "e": "The pascal is one newton per square metre."
+    },
+
+    {
+      "id": "q3",
+      "m": "M9",
+      "s": "Soil Classification",
+      "difficulty": 0.20,
+      "t": "Which test determines soil consistency limits?",
+      "o": [
+        "Compaction test",
+        "Direct shear test",
+        "Atterberg limits test",
+        "Permeability test"
+      ],
+      "a": 2,
+      "e": "Atterberg limits describe the consistency states of fine-grained soil."
+    }
+  ]
+}
