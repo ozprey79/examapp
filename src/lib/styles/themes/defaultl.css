@@ -1,0 +1,41 @@
+:root {
+  color-scheme: light;
+
+  --paper: #f3f2ed;
+  --paper-soft: #f8f7f3;
+  --white: #ffffff;
+
+  --charcoal: #121614;
+  --charcoal-soft: #363834;
+  --grey: #6f746f;
+
+  --border-light: #d8dad5;
+  --border-lighter: #e5e6e1;
+
+  --verdigris-dark: #1c342c;
+  --verdigris-mid: #2a4e44;
+  --verdigris-bright: #486e60;
+  --verdigris-pale: #dce7e2;
+
+  --background: var(--paper);
+
+  --surface: var(--paper-soft);
+  --surface-raised: var(--white);
+  --surface-hover: var(--verdigris-pale);
+
+  --text: var(--charcoal);
+  --text-muted: var(--grey);
+
+  --primary: var(--verdigris-mid);
+  --primary-hover: var(--verdigris-dark);
+  --primary-text: var(--white);
+
+  --border: var(--border-light);
+  --border-soft: var(--border-lighter);
+
+  --viz-progress-bar:
+    var(--verdigris-bright);
+
+  --viz-progress-latest:
+    var(--verdigris-dark);
+}

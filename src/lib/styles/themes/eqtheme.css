@@ -1,0 +1,53 @@
+:root {
+  /* Raw palette */
+
+  --palette-verdigris-mid: #2A4E44;
+  --palette-charcoal-deep: #121614;
+  --palette-verdigris-bright: #486E60;
+  --palette-charcoal: #1E1E1E;
+  --palette-grey-cool: #363834;
+  --palette-charcoal-near-black: #0A0B0A;
+  --palette-verdigris-dark: #1C342C;
+  --palette-grey-warm: #4E504C;
+  --palette-verdigris-bright: #486E60;
+
+
+  /* Semantic interface tokens */
+   --viz-progress-bar:
+  var(--palette-verdigris-bright);
+  --color-background:
+    var(--palette-charcoal-near-black);
+
+  --color-surface:
+    var(--palette-charcoal-deep);
+
+  --color-surface-raised:
+    var(--palette-charcoal);
+
+  --color-border:
+    var(--palette-grey-cool);
+
+  --color-muted:
+    var(--palette-grey-warm);
+
+  --color-accent:
+    var(--palette-verdigris-bright);
+
+  --color-accent-muted:
+    var(--palette-verdigris-mid);
+
+  --color-accent-dark:
+    var(--palette-verdigris-dark);
+
+
+  /* Data visualization */
+
+  --viz-progress-bar:
+    var(--palette-verdigris-bright);
+
+  --viz-progress-latest:
+    var(--palette-verdigris-mid);
+
+  --viz-progress-reference:
+    var(--palette-grey-cool);
+}

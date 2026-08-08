@@ -705,6 +705,11 @@ export async function getStudentDashboardSummary(
     );
 
 
+  /*
+    Latest 5 attempts:
+    used by the Recent Attempts table.
+  */
+
   const recentResult =
     await db.query(
       `
@@ -721,6 +726,7 @@ export async function getStudentDashboardSummary(
           a.skipped_count,
           a.total_questions,
           a.created_at
+
         FROM attempts AS a
 
         JOIN tests AS t
@@ -732,6 +738,59 @@ export async function getStudentDashboardSummary(
           a.completed_at DESC
 
         LIMIT 5
+      `,
+      [
+        userId
+      ]
+    );
+
+
+  /*
+    Latest 18 attempts:
+    used only by the progress SVG.
+
+    Inner query:
+      finds the newest 18.
+
+    Outer query:
+      places them oldest → newest
+      so progress reads naturally
+      from left → right.
+  */
+
+  const progressResult =
+    await db.query(
+      `
+        SELECT
+          progress_attempts.id,
+          progress_attempts.test_id,
+          progress_attempts.test_title,
+          progress_attempts.score,
+          progress_attempts.completed_at
+
+        FROM (
+          SELECT
+            a.id,
+            a.test_id,
+            t.title AS test_title,
+            a.score,
+            a.completed_at
+
+          FROM attempts AS a
+
+          JOIN tests AS t
+            ON t.id = a.test_id
+
+          WHERE a.user_id = $1
+
+          ORDER BY
+            a.completed_at DESC
+
+          LIMIT 18
+        ) AS progress_attempts
+
+        ORDER BY
+          progress_attempts.completed_at ASC
       `,
       [
         userId
@@ -770,6 +829,44 @@ export async function getStudentDashboardSummary(
 
     lastAttemptAt:
       summary.last_attempt_at,
+
+
+    /*
+      For our SVG equalizer.
+    */
+
+    progressAttempts:
+      progressResult.rows.map(
+        (
+          row,
+          index
+        ) => ({
+          id:
+            row.id,
+
+          testId:
+            row.test_id,
+
+          testTitle:
+            row.test_title,
+
+          label:
+            `Attempt ${index + 1}`,
+
+          score:
+            Number(
+              row.score
+            ),
+
+          completedAt:
+            row.completed_at
+        })
+      ),
+
+
+    /*
+      Existing table data.
+    */
 
     recentAttempts:
       recentResult.rows.map(

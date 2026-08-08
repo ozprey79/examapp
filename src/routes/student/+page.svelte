@@ -1,71 +1,62 @@
 <script>
-  import SignOutButton
-    from '$lib/components/auth/SignOutButton.svelte';
+    import '@fontsource/space-mono/400.css';
+  import '@fontsource/space-mono/700.css';
+  import SignOutButton from "$lib/components/auth/SignOutButton.svelte";
 
-  let {
-    data
-  } = $props();
+  import AttemptProgressEqualizer from "$lib/components/AttemptProgressEqualizer.svelte";
 
+  let { data } = $props();
 
-  function formatScore(
-    score
-  ) {
-    if (score === null) {
-      return '—';
+  const studentName =
+    data.profile?.displayName ??
+    data.user?.name ??
+    data.user?.email ??
+    "Student";
+
+  function formatScore(score) {
+    if (score === null || score === undefined) {
+      return "—";
     }
 
-    return Number(
-      score
-    ).toFixed(2);
+    const value = Number(score);
+
+    return Number.isInteger(value) ? String(value) : value.toFixed(1);
   }
 
-
-  function formatDate(
-    value
-  ) {
+  function formatDate(value) {
     if (!value) {
-      return '—';
+      return "—";
     }
 
-    return new Date(
-      value
-    ).toLocaleString();
+    return new Date(value).toLocaleDateString();
   }
 </script>
 
-
 <svelte:head>
-  <title>
-    Student Dashboard
-  </title>
+  <title>Student Dashboard</title>
 </svelte:head>
 
-
 <div class="dashboard-page">
+  <!-- ======================================================
+       HEADER
+  ======================================================= -->
+
   <header class="dashboard-header">
-    <div class="heading-group">
-      <p class="eyebrow">
-        Student
-      </p>
+    <div>
+      <p class="eyebrow">Student</p>
 
-      <h1>
-        Dashboard
-      </h1>
-
-      <p class="subtitle">
-        Tests, revision, progress and recent activity.
-      </p>
+      <h1>Progress</h1>
     </div>
 
     <div class="account-area">
       <div class="account-copy">
-        <span class="account-label">
-          Signed in as
-        </span>
-
         <strong>
-          {data.user.email}
+          {studentName}
         </strong>
+
+        <span>
+          {data.user.email}
+        </span>
       </div>
 
       <div class="signout-wrap">
@@ -74,182 +65,88 @@
     </div>
   </header>
 
+  <!-- ======================================================
+       ATTEMPT PROGRESS
+  ======================================================= -->
 
-  <section
-    class="dashboard-section"
-    aria-labelledby="progress-heading"
-  >
+  <section class="progress-section" aria-labelledby="progress-heading">
     <div class="section-heading">
       <div>
-        <p class="section-kicker">
-          Overview
-        </p>
+        <p class="section-kicker">Performance</p>
 
-        <h2 id="progress-heading">
-          Progress
-        </h2>
+        <h2 id="progress-heading">Attempts</h2>
       </div>
 
       <p class="section-note">
-        Last attempt:
-        {formatDate(
-          data.progress.lastAttemptAt
-        )}
+        Last attempt ·
+        {formatDate(data.progress.lastAttemptAt)}
       </p>
     </div>
 
-    <div class="stat-grid">
-      <article class="stat-card">
-        <span class="stat-label">
-          Attempts
-        </span>
-
-        <strong class="stat-value">
-          {data.progress.attemptCount}
-        </strong>
-
-        <span class="stat-caption">
-          completed
-        </span>
-      </article>
-
-      <article class="stat-card">
-        <span class="stat-label">
-          Latest score
-        </span>
-
-        <strong class="stat-value primary-value">
-          {formatScore(
-            data.progress.latestScore
-          )}
-        </strong>
-
-        <span class="stat-caption">
-          most recent attempt
-        </span>
-      </article>
-
-      <article class="stat-card">
-        <span class="stat-label">
-          Best score
-        </span>
-
-        <strong class="stat-value success-value">
-          {formatScore(
-            data.progress.bestScore
-          )}
-        </strong>
-
-        <span class="stat-caption">
-          personal best
-        </span>
-      </article>
-
-      <article class="stat-card">
-        <span class="stat-label">
-          Average score
-        </span>
-
-        <strong class="stat-value">
-          {formatScore(
-            data.progress.averageScore
-          )}
-        </strong>
-
-        <span class="stat-caption">
-          across attempts
-        </span>
-      </article>
-    </div>
+    <AttemptProgressEqualizer
+      attempts={data.progress.progressAttempts ?? []}
+      totalAttempts={data.progress.attemptCount}
+    />
   </section>
 
+  <!-- ======================================================
+       REVISION
+  ======================================================= -->
 
-  <section
-    class="dashboard-section"
-    aria-labelledby="revision-heading"
-  >
+  <section class="dashboard-section" aria-labelledby="revision-heading">
     <div class="section-heading">
       <div>
-        <p class="section-kicker">
-          Revision
-        </p>
+        <p class="section-kicker">Leitner</p>
 
-        <h2 id="revision-heading">
-          Leitner Review
-        </h2>
+        <h2 id="revision-heading">Revision</h2>
       </div>
 
-      <a
-        class="text-link"
-        href="/student/revision"
-      >
+      <a class="section-link" href="/student/revision">
         Open revision
-        <span aria-hidden="true">
-          →
-        </span>
+        <span aria-hidden="true"> → </span>
       </a>
     </div>
 
-    <div class="revision-panel">
-      <div class="revision-summary">
-        <span class="revision-label">
-          Due now
-        </span>
-
-        <strong class="revision-count">
+    <div class="revision-row">
+      <div class="revision-count">
+        <strong>
           {data.revision.dueCount}
         </strong>
 
-        <p>
-          Questions currently scheduled
-          for Leitner review.
-        </p>
+        <div>
+          <span> Due now </span>
+
+          <p>Questions scheduled for review.</p>
+        </div>
       </div>
 
       <div class="revision-actions">
         {#if data.revision.dueCount > 0}
-          <a
-            class="revision-primary"
-            href="/student/revision/due"
-          >
+          <a class="primary-action" href="/student/revision/due">
             Start Due Review
-            <span aria-hidden="true">
-              →
-            </span>
           </a>
         {:else}
-          <span class="revision-status">
-            Nothing is currently due.
-          </span>
+          <span class="revision-clear"> Nothing due </span>
         {/if}
 
-        <a
-          class="revision-secondary"
-          href="/student/revision"
-        >
-          Revise Now
-        </a>
+        <a class="secondary-action" href="/student/revision"> Revise Now </a>
       </div>
     </div>
   </section>
 
+  <!-- ======================================================
+       AVAILABLE TESTS
+  ======================================================= -->
 
-  <section
-    class="dashboard-section"
-    aria-labelledby="tests-heading"
-  >
+  <section class="dashboard-section" aria-labelledby="tests-heading">
     <div class="section-heading">
       <div>
-        <p class="section-kicker">
-          Examination
-        </p>
+        <p class="section-kicker">Examination</p>
 
-        <h2 id="tests-heading">
-          Available Tests
-        </h2>
+        <h2 id="tests-heading">Available Tests</h2>
       </div>
 
-      <span class="section-count">
+      <span class="section-note">
         {data.tests.length}
         available
       </span>
@@ -257,63 +154,32 @@
 
     {#if data.tests.length === 0}
       <div class="empty-state">
-        <strong>
-          No tests are available.
-        </strong>
+        <strong> No tests available. </strong>
 
-        <span>
-          New tests will appear here when they are published.
-        </span>
+        <span> New tests will appear here when published. </span>
       </div>
     {:else}
       <div class="test-list">
-        <div
-          class="test-list-head"
-          aria-hidden="true"
-        >
-          <span>Test</span>
-          <span>Questions</span>
-          <span>Duration</span>
-          <span></span>
-        </div>
-
         {#each data.tests as test}
           <article class="test-row">
-            <div class="test-title">
+            <div class="test-copy">
               <strong>
                 {test.title}
               </strong>
-            </div>
 
-            <div class="test-meta">
-              <span class="mobile-label">
-                Questions
-              </span>
-
-              <strong>
+              <span>
                 {test.questionCount}
-              </strong>
-            </div>
+                questions ·
 
-            <div class="test-meta">
-              <span class="mobile-label">
-                Duration
-              </span>
-
-              <strong>
                 {test.durationMinutes}
                 min
-              </strong>
+              </span>
             </div>
 
-            <a
-              class="start-test"
-              href={`/student/test/${test.id}`}
-            >
-              Start Test
-              <span aria-hidden="true">
-                →
-              </span>
+            <a href={`/student/test/${test.id}`}>
+              Start
+
+              <span aria-hidden="true"> → </span>
             </a>
           </article>
         {/each}
@@ -321,656 +187,550 @@
     {/if}
   </section>
 
+  <!-- ======================================================
+       RECENT ATTEMPTS
+  ======================================================= -->
 
-  <section
-    class="dashboard-section"
-    aria-labelledby="attempts-heading"
-  >
+  <section class="dashboard-section" aria-labelledby="history-heading">
     <div class="section-heading">
       <div>
-        <p class="section-kicker">
-          History
-        </p>
+        <p class="section-kicker">History</p>
 
-        <h2 id="attempts-heading">
-          Recent Attempts
-        </h2>
+        <h2 id="history-heading">Recent Attempts</h2>
       </div>
-
-      <a
-        class="text-link"
-        href="/results"
-      >
-        View full history
-        <span aria-hidden="true">
-          →
-        </span>
-      </a>
     </div>
 
     {#if data.progress.recentAttempts.length === 0}
       <div class="empty-state">
-        <strong>
-          No attempts completed yet.
-        </strong>
+        <strong> No completed attempts. </strong>
 
-        <span>
-          Completed tests will appear here.
-        </span>
+        <span> Completed tests will appear here. </span>
       </div>
     {:else}
-      <div class="table-panel">
-        <div class="table-scroll">
-          <table>
-            <thead>
-              <tr>
-                <th>Test</th>
-                <th>Score</th>
-                <th>Correct</th>
-                <th>Wrong</th>
-                <th>Skipped</th>
-                <th>Date</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {#each data.progress.recentAttempts as attempt}
-                <tr>
-                  <td class="attempt-title">
-                    {attempt.testTitle}
-                  </td>
-
-                  <td class="score-cell">
-                    {formatScore(
-                      attempt.score
-                    )}
-                  </td>
-
-                  <td class="correct-cell">
-                    {attempt.correct}
-                  </td>
-
-                  <td class="wrong-cell">
-                    {attempt.wrong}
-                  </td>
-
-                  <td class="skipped-cell">
-                    {attempt.skipped}
-                  </td>
-
-                  <td class="date-cell">
-                    {formatDate(
-                      attempt.completedAt
-                    )}
-                  </td>
-                </tr>
-              {/each}
-            </tbody>
-          </table>
+      <div class="attempt-table">
+        <div class="attempt-head" aria-hidden="true">
+          <span>Test</span>
+          <span>Score</span>
+          <span>Correct</span>
+          <span>Date</span>
+          <span></span>
         </div>
+
+        {#each data.progress.recentAttempts as attempt}
+          <div class="attempt-row">
+            <div class="attempt-test">
+              <strong>
+                {attempt.testTitle}
+              </strong>
+
+              <span>
+                {attempt.wrong}
+                wrong ·
+
+                {attempt.skipped}
+                skipped
+              </span>
+            </div>
+
+            <strong class="attempt-score">
+              {formatScore(attempt.score)}
+            </strong>
+
+            <span>
+              {attempt.correct}
+            </span>
+
+            <span class="attempt-date">
+              {formatDate(attempt.completedAt)}
+            </span>
+
+            <a href={`/student/results/${attempt.id}`}>
+              Result
+
+              <span aria-hidden="true"> → </span>
+            </a>
+          </div>
+        {/each}
       </div>
     {/if}
   </section>
 </div>
 
-
 <style>
   .dashboard-page {
-    width: min(
-      calc(100% - 32px),
-      var(--page-width)
-    );
+    width: min(calc(100% - var(--space-8)), var(--page-width));
 
     margin-inline: auto;
 
-    padding:
-      var(--space-6)
-      0
-      var(--space-8);
+    padding: var(--space-6) 0 var(--space-8);
+    font-family:
+    'Space Mono',
+    monospace;
   }
+
+  /* ========================================================
+     Header
+  ======================================================== */
 
   .dashboard-header {
     display: flex;
+
     align-items: flex-start;
+
     justify-content: space-between;
+
     gap: var(--space-6);
 
-    padding-bottom: var(--space-6);
+    padding-bottom: var(--space-5);
 
-    border-bottom:
-      1px solid
-      var(--border-soft);
-  }
-
-  .heading-group {
-    min-width: 0;
-  }
-
-  .eyebrow,
-  .section-kicker,
-  .account-label,
-  .stat-label,
-  .mobile-label {
-    color: var(--text-muted);
-
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-
-    text-transform: uppercase;
+    border-bottom: 1px solid var(--border-soft);
   }
 
   .eyebrow,
   .section-kicker {
     margin: 0 0 var(--space-1);
+
+    color: var(--text-muted);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
   }
 
   h1,
   h2,
   p {
-    margin-top: 0;
+    margin: 0;
   }
 
   h1 {
-    margin-bottom: var(--space-1);
-
     color: var(--primary);
 
-    font-size: 24px;
-    line-height: 1.25;
+    font-size: 27px;
+
+    line-height: 1.15;
+
     font-weight: 600;
   }
 
-  .subtitle {
-    margin: 0;
+  h2 {
+    color: var(--text);
 
-    color: var(--text-muted);
-    font-size: 13px;
+    font-size: 16px;
+
+    line-height: 1.25;
+
+    font-weight: 600;
   }
 
   .account-area {
     display: flex;
+
     align-items: center;
+
     gap: var(--space-3);
   }
 
   .account-copy {
+    min-width: 0;
+
     display: grid;
+
     gap: 2px;
 
     text-align: right;
   }
 
   .account-copy strong {
-    max-width: 260px;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
     font-size: 12px;
+
     font-weight: 600;
   }
 
+  .account-copy span {
+    max-width: 240px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: var(--text-muted);
+
+    font-size: 10px;
+  }
+
   .signout-wrap :global(button) {
-    min-height: 38px;
+    min-height: 34px;
+
     padding: 0 var(--space-3);
 
-    background: var(--surface);
-    color: var(--text);
+    background: transparent;
 
-    border: 1px solid var(--border);
+    color: var(--text-muted);
+
+    border: 1px solid var(--border-soft);
+
     border-radius: var(--radius);
   }
 
   .signout-wrap :global(button:hover) {
-    background: var(--surface-hover);
+    color: var(--text);
+
+    border-color: var(--border);
   }
 
+  /* ========================================================
+     Sections
+  ======================================================== */
+
+  .progress-section,
   .dashboard-section {
     margin-top: var(--space-8);
   }
 
   .section-heading {
     display: flex;
+
     align-items: flex-end;
+
     justify-content: space-between;
+
     gap: var(--space-4);
 
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-4);
   }
 
-  .section-heading h2 {
-    margin: 0;
-
-    font-size: 17px;
-    line-height: 1.3;
-    font-weight: 600;
-  }
-
-  .section-note,
-  .section-count {
-    margin: 0;
-
+  .section-note {
     color: var(--text-muted);
+
+    font-size: 10px;
+  }
+
+  .section-link {
+    color: var(--primary);
+
     font-size: 11px;
+
+    font-weight: 600;
+
+    text-decoration: none;
   }
 
-  .stat-grid {
-    display: grid;
-    grid-template-columns:
-      repeat(4, minmax(0, 1fr));
+  /* ========================================================
+     Revision
+  ======================================================== */
 
-    gap: 10px;
-  }
-
-  .stat-card {
-    min-width: 0;
-    min-height: 118px;
+  .revision-row {
+    min-height: 104px;
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
 
-    padding: var(--space-4);
+    align-items: center;
 
-    background: var(--surface);
+    justify-content: space-between;
 
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
+    gap: var(--space-6);
+
+    padding: var(--space-4) 0;
+
+    border-top: 1px solid var(--border-soft);
+
+    border-bottom: 1px solid var(--border-soft);
   }
 
-  .stat-value {
-    margin-top: var(--space-2);
+  .revision-count {
+    display: flex;
 
-    color: var(--text);
+    align-items: center;
 
-    font-size: 25px;
+    gap: var(--space-4);
+  }
+
+  .revision-count > strong {
+    color: var(--primary);
+
+    font-size: 38px;
+
     line-height: 1;
-    font-weight: 600;
+
+    font-weight: 500;
 
     font-variant-numeric: tabular-nums;
   }
 
-  .primary-value {
-    color: var(--primary);
+  .revision-count div {
+    display: grid;
+
+    gap: 3px;
   }
 
-  .success-value {
-    color: var(--success);
+  .revision-count span {
+    font-size: 12px;
+
+    font-weight: 600;
   }
 
-  .stat-caption {
-    margin-top: var(--space-2);
-
+  .revision-count p {
     color: var(--text-muted);
+
     font-size: 11px;
   }
 
-  .revision-panel {
-    display: grid;
-    grid-template-columns:
-      minmax(0, 1fr)
-      auto;
+  .revision-actions {
+    display: flex;
+
     align-items: center;
-    gap: var(--space-6);
 
-    padding: var(--space-4);
+    gap: var(--space-2);
+  }
 
-    background: var(--surface);
+  .primary-action,
+  .secondary-action {
+    min-height: 36px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0 var(--space-3);
+
+    border-radius: var(--radius);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+  }
+
+  .primary-action {
+    background: var(--primary);
+
+    color: var(--primary-text);
+  }
+
+  .secondary-action {
+    color: var(--text);
 
     border: 1px solid var(--border);
-    border-radius: var(--radius);
   }
 
-  .revision-summary {
-    min-width: 0;
-  }
-
-  .revision-label {
-    display: block;
-
+  .revision-clear {
     color: var(--text-muted);
 
     font-size: 11px;
+  }
+
+  /* ========================================================
+     Tests
+  ======================================================== */
+
+  .test-list {
+    border-top: 1px solid var(--border-soft);
+  }
+
+  .test-row {
+    min-height: 66px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: var(--space-5);
+
+    padding: var(--space-3) 0;
+
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .test-copy {
+    min-width: 0;
+
+    display: grid;
+
+    gap: 4px;
+  }
+
+  .test-copy strong {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    font-size: 13px;
+
     font-weight: 600;
+  }
+
+  .test-copy span {
+    color: var(--text-muted);
+
+    font-size: 10px;
+  }
+
+  .test-row > a {
+    flex: 0 0 auto;
+
+    min-width: 72px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: var(--space-2);
+
+    color: var(--primary);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+  }
+
+  /* ========================================================
+     Attempts
+  ======================================================== */
+
+  .attempt-table {
+    border-top: 1px solid var(--border-soft);
+  }
+
+  .attempt-head,
+  .attempt-row {
+    display: grid;
+
+    grid-template-columns:
+      minmax(200px, 1fr)
+      80px
+      80px
+      110px
+      70px;
+
+    align-items: center;
+
+    gap: var(--space-4);
+  }
+
+  .attempt-head {
+    padding: var(--space-2) 0;
+
+    color: var(--text-muted);
+
+    border-bottom: 1px solid var(--border-soft);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
     letter-spacing: 0.06em;
 
     text-transform: uppercase;
   }
 
-  .revision-count {
-    display: block;
+  .attempt-row {
+    min-height: 61px;
 
-    margin-top: var(--space-2);
+    padding: var(--space-2) 0;
 
-    color: var(--primary);
+    border-bottom: 1px solid var(--border-soft);
 
-    font-size: 30px;
-    line-height: 1;
-    font-weight: 600;
+    font-size: 11px;
 
-    font-variant-numeric:
-      tabular-nums;
-  }
-
-  .revision-summary p {
-    margin:
-      var(--space-2)
-      0
-      0;
-
-    color: var(--text-muted);
-
-    font-size: 12px;
-  }
-
-  .revision-actions {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: var(--space-2);
-  }
-
-  .revision-primary,
-  .revision-secondary {
-    min-height: 38px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-2);
-
-    padding:
-      0
-      var(--space-3);
-
-    border-radius:
-      var(--radius);
-
-    font-size: 12px;
-    font-weight: 700;
-
-    text-decoration: none;
-  }
-
-  .revision-primary {
-    background: var(--primary);
-    color: var(--primary-text);
-
-    border:
-      1px solid
-      var(--primary);
-  }
-
-  .revision-primary:hover {
-    background:
-      var(--primary-hover);
-  }
-
-  .revision-secondary {
-    background:
-      var(--surface);
-
-    color:
-      var(--text);
-
-    border:
-      1px solid
-      var(--border);
-  }
-
-  .revision-secondary:hover {
-    background:
-      var(--surface-hover);
-  }
-
-  .revision-status {
-    color: var(--success);
-
-    font-size: 12px;
-    font-weight: 600;
-  }
-
-
-  .test-list,
-  .table-panel,
-  .empty-state {
-    background: var(--surface);
-
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-  }
-
-  .test-list {
-    overflow: hidden;
-  }
-
-  .test-list-head,
-  .test-row {
-    display: grid;
-    grid-template-columns:
-      minmax(0, 1fr)
-      100px
-      100px
-      130px;
-
-    align-items: center;
-    gap: var(--space-4);
-  }
-
-  .test-list-head {
-    padding: 9px var(--space-4);
-
-    color: var(--text-muted);
-
-    border-bottom:
-      1px solid
-      var(--border-soft);
-
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-
-    text-transform: uppercase;
-  }
-
-  .test-row {
-    min-height: 62px;
-
-    padding:
-      10px
-      var(--space-4);
-
-    border-bottom:
-      1px solid
-      var(--border-soft);
-  }
-
-  .test-row:last-child {
-    border-bottom: 0;
-  }
-
-  .test-title {
-    min-width: 0;
-  }
-
-  .test-title strong {
-    display: block;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
-    font-size: 13px;
-    font-weight: 600;
-  }
-
-  .test-meta {
-    color: var(--text-muted);
-
-    font-size: 12px;
     font-variant-numeric: tabular-nums;
   }
 
-  .test-meta strong {
-    color: var(--text);
-    font-weight: 500;
-  }
-
-  .mobile-label {
-    display: none;
-  }
-
-  .start-test {
-    min-height: 38px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-2);
-
-    padding: 0 var(--space-3);
-
-    background: var(--primary);
-    color: var(--primary-text);
-
-    border: 1px solid var(--primary);
-    border-radius: var(--radius);
-
-    font-size: 12px;
-    font-weight: 700;
-    text-decoration: none;
-  }
-
-  .start-test:hover {
-    background: var(--primary-hover);
-  }
-
-  .text-link {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-
-    color: var(--primary);
-
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  .text-link:hover {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
-
-  .table-panel {
-    overflow: hidden;
-  }
-
-  .table-scroll {
-    overflow-x: auto;
-  }
-
-  table {
-    width: 100%;
-
-    border-collapse: collapse;
-  }
-
-  th,
-  td {
-    padding:
-      11px
-      var(--space-4);
-
-    border-bottom:
-      1px solid
-      var(--border-soft);
-
-    text-align: left;
-    white-space: nowrap;
-  }
-
-  th {
-    color: var(--text-muted);
-
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-
-    text-transform: uppercase;
-  }
-
-  td {
-    font-size: 12px;
-    font-variant-numeric: tabular-nums;
-  }
-
-  tbody tr:last-child td {
-    border-bottom: 0;
-  }
-
-  tbody tr:hover {
+  .attempt-row:hover {
     background: var(--surface-hover);
   }
 
-  .attempt-title {
-    min-width: 220px;
+  .attempt-test {
+    min-width: 0;
 
-    color: var(--text);
-    font-weight: 600;
+    display: grid;
+
+    gap: 3px;
   }
 
-  .score-cell {
-    color: var(--primary);
-    font-weight: 700;
+  .attempt-test strong {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    font-size: 12px;
   }
 
-  .correct-cell {
-    color: var(--success);
-  }
-
-  .wrong-cell {
-    color: var(--danger);
-  }
-
-  .skipped-cell {
-    color: var(--warning);
-  }
-
-  .date-cell {
+  .attempt-test span,
+  .attempt-date {
     color: var(--text-muted);
+
+    font-size: 10px;
   }
+
+  .attempt-score {
+    color: var(--primary);
+
+    font-size: 14px;
+  }
+
+  .attempt-row > a {
+    justify-self: end;
+
+    color: var(--primary);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+  }
+
+  /* ========================================================
+     Empty
+  ======================================================== */
 
   .empty-state {
     display: grid;
+
     gap: var(--space-1);
 
-    padding: var(--space-6);
+    padding: var(--space-5) 0;
+
+    border-top: 1px solid var(--border-soft);
+
+    border-bottom: 1px solid var(--border-soft);
   }
 
   .empty-state strong {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .empty-state span {
     color: var(--text-muted);
-    font-size: 12px;
+
+    font-size: 11px;
   }
 
+  /* ========================================================
+     Responsive
+  ======================================================== */
 
-  @media (max-width: 760px) {
-    .revision-panel {
-      grid-template-columns: 1fr;
-      gap: var(--space-4);
-    }
-
-    .revision-actions {
-      justify-content: flex-start;
-    }
-
+  @media (max-width: 720px) {
     .dashboard-header {
       flex-direction: column;
     }
@@ -985,46 +745,25 @@
       text-align: left;
     }
 
-    .stat-grid {
-      grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+    .revision-row {
+      align-items: flex-start;
+
+      flex-direction: column;
     }
 
-    .test-list-head {
-      display: none;
+    .revision-actions {
+      width: 100%;
     }
 
-    .test-row {
-      grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-      align-items: start;
-
-      padding: var(--space-4);
+    .attempt-table {
+      overflow-x: auto;
     }
 
-    .test-title {
-      grid-column: span 2;
-    }
-
-    .test-title strong {
-      white-space: normal;
-    }
-
-    .test-meta {
-      display: grid;
-      gap: 2px;
-    }
-
-    .mobile-label {
-      display: inline;
-    }
-
-    .start-test {
-      grid-column: span 2;
+    .attempt-head,
+    .attempt-row {
+      min-width: 650px;
     }
   }
-
 
   @media (max-width: 480px) {
     .dashboard-page {
@@ -1035,30 +774,21 @@
 
     .section-heading {
       align-items: flex-start;
+
       flex-direction: column;
+
       gap: var(--space-2);
     }
 
-    .stat-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .stat-card {
-      min-height: 96px;
-    }
-
-    .test-row {
-      grid-template-columns: 1fr;
-    }
-
-    .test-title,
-    .start-test {
-      grid-column: auto;
-    }
-
-    .account-area {
-      align-items: flex-start;
+    .revision-actions {
       flex-direction: column;
+
+      align-items: stretch;
+    }
+
+    .primary-action,
+    .secondary-action {
+      width: 100%;
     }
   }
 </style>

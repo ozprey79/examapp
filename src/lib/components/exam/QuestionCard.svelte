@@ -10,15 +10,38 @@
     onSelectAnswer = undefined
   } = $props();
 
-  let isReview = $derived(
-    mode === 'review'
-  );
+
+  let isReview =
+    $derived(
+      mode === 'review'
+    );
+
+
+  let isPractice =
+    $derived(
+      mode === 'practice'
+    );
+
+
+  let showCorrectAnswer =
+    $derived(
+      isReview ||
+      (
+        isPractice &&
+        submitted
+      )
+    );
+
+
+  let locked =
+    $derived(
+      isReview ||
+      submitted
+    );
+
 
   function selectOption(index) {
-    if (
-      submitted ||
-      isReview
-    ) {
+    if (locked) {
       return;
     }
 
@@ -46,10 +69,24 @@
     {/if}
 
     {#if isReview}
-      <span class="state-label">
-        Review
-      </span>
-    {/if}
+
+  <span class="question-state review">
+    Review
+  </span>
+
+{:else if isPractice && submitted}
+
+  <span class="question-state submitted">
+    Checked
+  </span>
+
+{:else if submitted}
+
+  <span class="question-state submitted">
+    Submitted
+  </span>
+
+{/if}
   </div>
 
   <div class="question-content">
@@ -65,19 +102,18 @@
           class:selected={
             selectedAnswer === index
           }
-          class:correct={
-            isReview &&
-            index === correctAnswer
-          }
-          class:wrong={
-            isReview &&
-            selectedAnswer === index &&
-            index !== correctAnswer
-          }
-          disabled={
-            submitted ||
-            isReview
-          }
+class:correct={
+  showCorrectAnswer &&
+  index === correctAnswer
+}
+
+class:wrong={
+  showCorrectAnswer &&
+  selectedAnswer === index &&
+  index !== correctAnswer
+}
+
+disabled={locked}
           aria-pressed={
             selectedAnswer === index
           }
@@ -108,6 +144,7 @@
 
     border: 1px solid var(--border);
     border-radius: var(--radius);
+    font-family: "Times New Roman", Times, serif;
   }
 
   .question-meta {
@@ -152,7 +189,8 @@
 
     font-size: 18px;
     line-height: 1.55;
-    font-weight: 600;
+    font-weight: 000;
+
   }
 
   .options {
@@ -191,13 +229,14 @@
     display: grid;
     place-items: center;
 
-    background: var(--surface-strong);
+    /* background: var(--surface-strong); */
+    background-color: transparent;
     color: var(--text);
 
-    border: 1px solid var(--border);
+    border: 0px solid var(--border);
     border-radius: var(--radius);
 
-    font-weight: 700;
+    /* font-weight: 700; */
   }
 
   .option.selected {
@@ -248,7 +287,10 @@
   .option:disabled {
     cursor: default;
   }
-
+  #question-title{
+     font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+  }
   @media (max-width: 600px) {
     .question-content {
       padding: var(--space-4);

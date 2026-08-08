@@ -1,5 +1,6 @@
 :root {
   /* Typography */
+  
 
   --font-family:
     Arial,
@@ -15,7 +16,7 @@
 
   /* Surfaces */
 
-  --bg: #1d1e1e;
+  --bg: #141414;
 
   --surface: #252626;
   --surface-hover: #2d2e2e;
@@ -34,7 +35,7 @@
   /* Primary interaction */
 
   --primary: #5874e6;
-  --primary-hover: #f0e768;
+  --primary-hover: #687ff0;
   --primary-text: #111111;
 
   /* Status */

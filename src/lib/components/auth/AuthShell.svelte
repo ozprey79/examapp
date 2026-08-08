@@ -1,5 +1,5 @@
 <script>
-  import ShaderBackground from './ShaderBackgroundwpink.svelte';
+  import ShaderBackground from '../ShaderBackgroundwpink.svelte';
 
   let {
     title,

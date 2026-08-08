@@ -1,42 +1,24 @@
 <script>
-  import QuestionCard
-    from '$lib/components/exam/QuestionCard.svelte';
+  import QuestionCard from "$lib/components/exam/QuestionCard.svelte";
 
-  import QuestionNavigator
-    from '$lib/components/exam/QuestionNavigator.svelte';
-
+  import QuestionNavigator from "$lib/components/exam/QuestionNavigator.svelte";
+  import QuestionFeedback from "$lib/components/exam/QuestionFeedback.svelte";
   let { data } = $props();
 
-  const attempt =
-    data.attempt;
+  const attempt = data.attempt;
 
-  const answers =
-    attempt.answers;
+  const answers = attempt.answers;
 
-  let currentIndex =
-    $state(0);
+  let currentIndex = $state(0);
 
-  const answer =
-    $derived(
-      answers[currentIndex]
-    );
+  const answer = $derived(answers[currentIndex]);
 
-  const isFirst =
-    $derived(
-      currentIndex === 0
-    );
+  const isFirst = $derived(currentIndex === 0);
 
-  const isLast =
-    $derived(
-      currentIndex ===
-        answers.length - 1
-    );
+  const isLast = $derived(currentIndex === answers.length - 1);
 
   function goToQuestion(index) {
-    if (
-      index < 0 ||
-      index >= answers.length
-    ) {
+    if (index < 0 || index >= answers.length) {
       return;
     }
 
@@ -53,8 +35,7 @@
 
   function nextQuestion() {
     if (isLast) {
-      window.location.href =
-        `/student/results/${attempt.id}`;
+      window.location.href = `/student/results/${attempt.id}`;
 
       return;
     }
@@ -63,37 +44,30 @@
   }
 
   function optionLetter(index) {
-    if (
-      index === null ||
-      index === undefined
-    ) {
-      return '—';
+    if (index === null || index === undefined) {
+      return "—";
     }
 
-    return String.fromCharCode(
-      65 + index
-    );
+    return String.fromCharCode(65 + index);
   }
 
   function statusLabel(status) {
-    if (status === 'correct') {
-      return 'Correct';
+    if (status === "correct") {
+      return "Correct";
     }
 
-    if (status === 'wrong') {
-      return 'Incorrect';
+    if (status === "wrong") {
+      return "Incorrect";
     }
 
-    return 'Skipped';
+    return "Skipped";
   }
 </script>
 
 <div class="review-page">
   <header class="review-header">
     <div>
-      <p class="eyebrow">
-        Question Review
-      </p>
+      <p class="eyebrow">Question Review</p>
 
       <h1>
         {attempt.testTitle}
@@ -107,10 +81,7 @@
       </p>
     </div>
 
-    <a
-      class="back-result"
-      href={`/student/results/${attempt.id}`}
-    >
+    <a class="back-result" href={`/student/results/${attempt.id}`}>
       Back to Results
     </a>
   </header>
@@ -126,67 +97,34 @@
   <QuestionCard
     mode="review"
     question={{
-      m:
-        answer.module,
+      m: answer.module,
 
-      s:
-        answer.topic,
+      s: answer.topic,
 
-      t:
-        answer.questionText,
+      t: answer.questionText,
 
-      o:
-        answer.options
+      o: answer.options,
     }}
-    selectedAnswer={
-      answer.selectedAnswer
-    }
-    correctAnswer={
-      answer.correctAnswer
-    }
+    selectedAnswer={answer.selectedAnswer}
+    correctAnswer={answer.correctAnswer}
   />
 
-  <section
-    class="feedback {answer.status}"
-    aria-label="Answer feedback"
-  >
+  <section class="feedback {answer.status}" aria-label="Answer feedback">
     <h2>
-      {statusLabel(
-        answer.status
-      )}
+      {statusLabel(answer.status)}
     </h2>
 
-    <div class="feedback-facts">
-      <p>
-        <span>
-          Your answer
-        </span>
-
-        <strong>
-          {optionLetter(
-            answer.selectedAnswer
-          )}
-        </strong>
-      </p>
-
-      <p>
-        <span>
-          Correct answer
-        </span>
-
-        <strong>
-          {optionLetter(
-            answer.correctAnswer
-          )}
-        </strong>
-      </p>
-    </div>
+    <QuestionFeedback
+      {question}
+      {selectedAnswer}
+      {correctAnswer}
+      correct={selectedAnswer === correctAnswer}
+      explanation={question.e}
+    />
 
     {#if answer.explanation}
       <div class="explanation">
-        <strong>
-          Explanation
-        </strong>
+        <strong> Explanation </strong>
 
         <p>
           {answer.explanation}
@@ -205,34 +143,19 @@
       ← Previous
     </button>
 
-    <button
-      type="button"
-      class="primary"
-      onclick={nextQuestion}
-    >
-      {isLast
-        ? 'Back to Results'
-        : 'Next Question →'}
+    <button type="button" class="primary" onclick={nextQuestion}>
+      {isLast ? "Back to Results" : "Next Question →"}
     </button>
   </footer>
 </div>
 
 <style>
   .review-page {
-    width: min(
-      calc(
-        100% -
-        var(--space-8)
-      ),
-      var(--page-width)
-    );
+    width: min(calc(100% - var(--space-8)), var(--page-width));
 
     margin-inline: auto;
 
-    padding:
-      var(--space-6)
-      0
-      var(--space-8);
+    padding: var(--space-6) 0 var(--space-8);
 
     display: grid;
     gap: var(--space-4);
@@ -302,8 +225,7 @@
   }
 
   .back-result:hover,
-  .review-controls
-  .secondary:hover:not(:disabled) {
+  .review-controls .secondary:hover:not(:disabled) {
     background: var(--surface-hover);
     border-color: var(--primary);
   }
@@ -353,11 +275,7 @@
   .feedback-facts {
     display: grid;
 
-    grid-template-columns:
-      repeat(
-        2,
-        minmax(0, 1fr)
-      );
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: var(--space-2);
   }
@@ -436,11 +354,7 @@
 
   @media (max-width: 600px) {
     .review-page {
-      width:
-        calc(
-          100% -
-          var(--space-6)
-        );
+      width: calc(100% - var(--space-6));
 
       padding-top: var(--space-4);
     }
@@ -457,11 +371,7 @@
     .review-controls {
       display: grid;
 
-      grid-template-columns:
-        repeat(
-          2,
-          minmax(0, 1fr)
-        );
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .review-controls button {
