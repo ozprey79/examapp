@@ -223,6 +223,25 @@
       role="img"
       aria-label="Score progress across recent attempts"
     >
+    <defs>
+    <linearGradient
+      id="attempt-progress-gradient"
+      x1="0%"
+      y1="100%"
+      x2="0%"
+      y2="0%"
+    >
+      <stop
+        offset="50%"
+        stop-color="var(--gold)"
+      />
+
+      <stop
+        offset="100%"
+        stop-color="var(--verdigris)"
+      />
+    </linearGradient>
+  </defs>
 
       {#each
         displayedSlots
@@ -315,31 +334,37 @@
           {/if}
 
 
-          <rect
-            class="attempt-shape"
+         <rect
+  class="attempt-shape"
 
-            {x}
+  {x}
 
-            y={
-              slot.occupied
-                ? startY
-                : targetY
-            }
+  y={
+    slot.occupied
+      ? startY
+      : targetY
+  }
 
-            width={
-              BAR_WIDTH
-            }
+  width={
+    BAR_WIDTH
+  }
 
-            height={
-              slot.occupied
-                ? MIN_HEIGHT
-                : targetHeight
-            }
+  height={
+    slot.occupied
+      ? MIN_HEIGHT
+      : targetHeight
+  }
 
-            rx={
-              BAR_WIDTH / 2
-            }
-          >
+  rx={
+    BAR_WIDTH / 2
+  }
+
+  fill={
+    slot.occupied
+      ? 'url(#attempt-progress-gradient)'
+      : 'var(--border-soft)'
+  }
+>
 
             {#if slot.occupied}
 
@@ -556,10 +581,7 @@
   }
 
 
-  .attempt-shape {
-    fill:
-      currentColor;
-  }
+ 
 
 
   g.empty

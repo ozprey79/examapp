@@ -152,7 +152,7 @@
           length(tuv - mouseNorm);
 
         float mouseStrength =
-          1.8 /
+          0.18 /
           (1.0 + mouseDist * 6.0);
 
         tuv +=
@@ -161,7 +161,7 @@
 
         float frequency = 5.0;
         float amplitude = 30.0;
-        float speed = iTime * 5.0;
+        float speed = iTime * 2.0;
 
         tuv.x +=
           sin(
@@ -184,28 +184,28 @@
           copper teal-green) punches through as the accent hue.
         */
         vec3 amberYellow =
-          vec3(42.0, 78.0, 68.0) / 255.0;   // mid verdigris
+          vec3(18.0, 36.0, 30.0) / 255.0;   // mid verdigris
 
         vec3 deepBlue =
-          vec3(18.0, 22.0, 20.0) / 255.0;   // deep charcoal, green-tinted
+          vec3(6.0,  68.0,  67.0)  / 255.0;   // deep charcoal, green-tinted
 
         vec3 pink =
-          vec3(72.0, 110.0, 96.0) / 255.0;  // bright verdigris
+          vec3(28.0, 48.0, 38.0) / 255.0;   // bright verdigris
 
         vec3 blue =
-          vec3(30.0, 30.0, 30.0) / 255.0;   // pure charcoal
+          vec3(10.0, 10.0, 10.0) / 255.0;   // pure charcoal
 
         vec3 purpleHaze =
-          vec3(54.0, 56.0, 52.0) / 255.0;   // cool mid-grey
+          vec3(20.0, 22.0, 18.0) / 255.0;   // cool mid-grey
 
         vec3 swampyBlack =
-          vec3(10.0, 11.0, 10.0) / 255.0;   // near-black charcoal
+          vec3(4.0,  4.0,  4.0)  / 255.0;   // near-black charcoal
 
         vec3 persimmonOrange =
-          vec3(28.0, 52.0, 44.0) / 255.0;   // dark verdigris shadow
+          vec3(10.0, 20.0, 15.0) / 255.0;   // dark verdigris shadow
 
         vec3 darkAmber =
-          vec3(78.0, 80.0, 76.0) / 255.0;   // light warm grey
+          vec3(32.0, 33.0, 30.0) / 255.0;   // light warm grey
 
         float cycle =
           sin(iTime * 0.5);

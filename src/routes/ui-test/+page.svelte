@@ -1,6 +1,6 @@
 <script>
   import ShaderBackground
-    from '$lib/components/ui/ShaderBackground.svelte';
+    from '$lib/components/test/ui/ShaderBackground.svelte';
 
   /*
     KEEP YOUR EXISTING BETTER AUTH

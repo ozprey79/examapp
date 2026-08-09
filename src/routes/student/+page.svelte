@@ -266,6 +266,7 @@
     font-family:
     'Space Mono',
     monospace;
+    color: var(--verdigris-gold);
   }
 
   /* ========================================================
@@ -290,8 +291,7 @@
   .section-kicker {
     margin: 0 0 var(--space-1);
 
-    color: var(--text-muted);
-
+   color:  #6cb09b;
     font-size: 10px;
 
     font-weight: 600;

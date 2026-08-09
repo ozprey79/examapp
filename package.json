@@ -21,6 +21,9 @@
 		"@fontsource/eb-garamond": "^5.3.0",
 		"@fontsource/space-mono": "^5.3.0",
 		"better-auth": "^1.6.26",
+		"d3-drag": "^3.0.0",
+		"d3-force": "^3.0.0",
+		"d3-selection": "^3.0.0",
 		"pg": "^8.22.0",
 		"three": "^0.185.1"
 	}

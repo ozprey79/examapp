@@ -38,4 +38,7 @@
 
   --viz-progress-latest:
     var(--verdigris-dark);
+
+    --viz-score-low: #d8b236;
+--viz-score-high: #4a8c78;
 }

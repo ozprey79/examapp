@@ -179,9 +179,10 @@
   }
 
   .auth-panel :global(.auth-submit:hover:not(:disabled)) {
-    background: #5904617e;
-    color: white;
-    border: 1px solid pink;
+    background: #00423d0a;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(29, 25, 28);
+    filter: invert(80%);
   }
 
   .auth-panel :global(.auth-submit:active:not(:disabled)) {

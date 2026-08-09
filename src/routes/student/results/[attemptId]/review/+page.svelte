@@ -1,29 +1,78 @@
 <script>
-  import QuestionCard from "$lib/components/exam/QuestionCard.svelte";
+  import QuestionCard
+    from '$lib/components/exam/QuestionCard.svelte';
 
-  import QuestionNavigator from "$lib/components/exam/QuestionNavigator.svelte";
-  import QuestionFeedback from "$lib/components/exam/QuestionFeedback.svelte";
+  import QuestionNavigator
+    from '$lib/components/exam/QuestionNavigator.svelte';
+
+
   let { data } = $props();
 
-  const attempt = data.attempt;
 
-  const answers = attempt.answers;
+  const attempt =
+    data.attempt;
 
-  let currentIndex = $state(0);
+  const answers =
+    attempt.answers;
 
-  const answer = $derived(answers[currentIndex]);
 
-  const isFirst = $derived(currentIndex === 0);
+  let currentIndex =
+    $state(0);
 
-  const isLast = $derived(currentIndex === answers.length - 1);
 
-  function goToQuestion(index) {
-    if (index < 0 || index >= answers.length) {
+  const answer =
+    $derived(
+      answers[currentIndex]
+    );
+
+
+  const question =
+    $derived({
+      id:
+        answer?.questionId,
+
+      m:
+        answer?.module,
+
+      s:
+        answer?.topic,
+
+      t:
+        answer?.questionText,
+
+      o:
+        answer?.options ?? []
+    });
+
+
+  const isFirst =
+    $derived(
+      currentIndex === 0
+    );
+
+
+  const isLast =
+    $derived(
+      currentIndex ===
+        answers.length - 1
+    );
+
+
+  function goToQuestion(
+    index
+  ) {
+    if (
+      index < 0 ||
+      index >= answers.length ||
+      index === currentIndex
+    ) {
       return;
     }
 
-    currentIndex = index;
+    currentIndex =
+      index;
   }
+
 
   function previousQuestion() {
     if (isFirst) {
@@ -33,9 +82,11 @@
     currentIndex -= 1;
   }
 
+
   function nextQuestion() {
     if (isLast) {
-      window.location.href = `/student/results/${attempt.id}`;
+      window.location.href =
+        `/student/results/${attempt.id}`;
 
       return;
     }
@@ -43,35 +94,113 @@
     currentIndex += 1;
   }
 
-  function optionLetter(index) {
-    if (index === null || index === undefined) {
-      return "—";
+
+  function optionLetter(
+    index
+  ) {
+    if (
+      index === null ||
+      index === undefined
+    ) {
+      return '—';
     }
 
-    return String.fromCharCode(65 + index);
+    return String.fromCharCode(
+      65 + index
+    );
   }
 
-  function statusLabel(status) {
-    if (status === "correct") {
-      return "Correct";
+
+  function statusLabel(
+    status
+  ) {
+    if (
+      status === 'correct'
+    ) {
+      return 'Correct';
     }
 
-    if (status === "wrong") {
-      return "Incorrect";
+    if (
+      status === 'wrong'
+    ) {
+      return 'Incorrect';
     }
 
-    return "Skipped";
+    return 'Skipped';
+  }
+
+
+  function formatTime(
+    milliseconds
+  ) {
+    if (
+      !Number.isFinite(
+        milliseconds
+      )
+    ) {
+      return '—';
+    }
+
+
+    const totalSeconds =
+      Math.round(
+        milliseconds /
+        1000
+      );
+
+
+    if (
+      totalSeconds < 60
+    ) {
+      return `${totalSeconds}s`;
+    }
+
+
+    const minutes =
+      Math.floor(
+        totalSeconds /
+        60
+      );
+
+    const seconds =
+      totalSeconds %
+      60;
+
+
+    return (
+      `${minutes}m ` +
+      `${seconds}s`
+    );
   }
 </script>
 
+
+<svelte:head>
+  <title>
+    Review · {attempt.testTitle}
+  </title>
+</svelte:head>
+
+
 <div class="review-page">
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
   <header class="review-header">
-    <div>
-      <p class="eyebrow">Question Review</p>
+
+    <div class="title-group">
+
+      <p class="eyebrow">
+        Question Review
+      </p>
+
 
       <h1>
         {attempt.testTitle}
       </h1>
+
 
       <p class="review-summary">
         Question
@@ -79,12 +208,25 @@
         of
         {answers.length}
       </p>
+
     </div>
 
-    <a class="back-result" href={`/student/results/${attempt.id}`}>
-      Back to Results
+
+    <a
+      class="back-result"
+      href={`/student/results/${attempt.id}`}
+    >
+      ← Results
     </a>
+
   </header>
+
+
+
+  <!-- =====================================================
+       QUESTION NAVIGATOR
+       Same component used by the mock
+  ====================================================== -->
 
   <QuestionNavigator
     questions={answers}
@@ -94,288 +236,831 @@
     onGoToQuestion={goToQuestion}
   />
 
+
+
+  <!-- =====================================================
+       QUESTION
+       Same component used by the mock
+  ====================================================== -->
+
   <QuestionCard
     mode="review"
-    question={{
-      m: answer.module,
-
-      s: answer.topic,
-
-      t: answer.questionText,
-
-      o: answer.options,
-    }}
-    selectedAnswer={answer.selectedAnswer}
-    correctAnswer={answer.correctAnswer}
+    {question}
+    selectedAnswer={
+      answer.selectedAnswer
+    }
+    correctAnswer={
+      answer.correctAnswer
+    }
   />
 
-  <section class="feedback {answer.status}" aria-label="Answer feedback">
-    <h2>
-      {statusLabel(answer.status)}
-    </h2>
 
-    <QuestionFeedback
-      {question}
-      {selectedAnswer}
-      {correctAnswer}
-      correct={selectedAnswer === correctAnswer}
-      explanation={question.e}
-    />
+
+  <!-- =====================================================
+       REVIEW FEEDBACK
+  ====================================================== -->
+
+  <section
+    class="feedback {answer.status}"
+    aria-label="Answer feedback"
+  >
+
+    <div class="feedback-heading">
+
+      <p class="feedback-kicker">
+        Result
+      </p>
+
+
+      <h2>
+        {statusLabel(
+          answer.status
+        )}
+      </h2>
+
+    </div>
+
+
+
+    <div class="feedback-facts">
+
+      <div>
+
+        <span>
+          Your answer
+        </span>
+
+        <strong>
+          {optionLetter(
+            answer.selectedAnswer
+          )}
+        </strong>
+
+      </div>
+
+
+      <div>
+
+        <span>
+          Correct answer
+        </span>
+
+        <strong>
+          {optionLetter(
+            answer.correctAnswer
+          )}
+        </strong>
+
+      </div>
+
+
+      <div>
+
+        <span>
+          Time used
+        </span>
+
+        <strong>
+          {formatTime(
+            answer.timeMilliseconds
+          )}
+        </strong>
+
+      </div>
+
+
+      <div>
+
+        <span>
+          Difficulty
+        </span>
+
+        <strong>
+          {answer.difficulty ??
+            '—'}
+        </strong>
+
+      </div>
+
+    </div>
+
+
 
     {#if answer.explanation}
+
       <div class="explanation">
-        <strong> Explanation </strong>
+
+        <span class="explanation-label">
+          Explanation
+        </span>
+
 
         <p>
           {answer.explanation}
         </p>
+
       </div>
+
     {/if}
+
   </section>
 
+
+
+  <!-- =====================================================
+       REVIEW CONTROLS
+       Styled like mock-test controls
+  ====================================================== -->
+
   <footer class="review-controls">
+
     <button
       type="button"
-      class="secondary"
+      class="control-button secondary-button"
       onclick={previousQuestion}
       disabled={isFirst}
     >
       ← Previous
     </button>
 
-    <button type="button" class="primary" onclick={nextQuestion}>
-      {isLast ? "Back to Results" : "Next Question →"}
+
+    <span class="control-position">
+      Question
+      {currentIndex + 1}
+      of
+      {answers.length}
+    </span>
+
+
+    <button
+      type="button"
+      class="control-button primary-button"
+      onclick={nextQuestion}
+    >
+      {isLast
+        ? 'Back to Results'
+        : 'Next Question →'}
     </button>
+
   </footer>
+
 </div>
 
+
 <style>
+
+  /* ======================================================
+     PAGE
+  ====================================================== */
+
   .review-page {
-    width: min(calc(100% - var(--space-8)), var(--page-width));
+    width:
+      min(
+        calc(
+          100% -
+          var(--space-8)
+        ),
+        var(--page-width)
+      );
 
-    margin-inline: auto;
+    margin-inline:
+      auto;
 
-    padding: var(--space-6) 0 var(--space-8);
+    padding:
+      var(--space-6)
+      0
+      var(--space-8);
 
-    display: grid;
-    gap: var(--space-4);
+    display:
+      grid;
+
+    gap:
+      var(--space-4);
   }
+
+
+
+  /* ======================================================
+     HEADER
+  ====================================================== */
 
   .review-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: var(--space-6);
+    display:
+      flex;
+
+    align-items:
+      flex-start;
+
+    justify-content:
+      space-between;
+
+    gap:
+      var(--space-6);
+
+    margin-bottom:
+      var(--space-1);
   }
+
+
+  .title-group {
+    min-width: 0;
+  }
+
 
   .eyebrow {
-    margin: 0 0 var(--space-1);
+    margin:
+      0
+      0
+      var(--space-1);
 
-    color: var(--text-muted);
+    color:
+      var(--text-muted);
 
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
+    font-size:
+      11px;
 
-    text-transform: uppercase;
+    font-weight:
+      600;
+
+    letter-spacing:
+      0.08em;
+
+    text-transform:
+      uppercase;
   }
+
 
   h1 {
     margin: 0;
 
-    color: var(--primary);
+    color:
+      var(--primary);
 
-    font-size: 20px;
-    line-height: 1.3;
-    font-weight: 600;
+    font-size:
+      20px;
+
+    line-height:
+      1.3;
+
+    font-weight:
+      600;
   }
+
 
   .review-summary {
-    margin: var(--space-1) 0 0;
+    margin:
+      var(--space-1)
+      0
+      0;
 
-    color: var(--text-muted);
+    color:
+      var(--text-muted);
 
-    font-size: 13px;
+    font-size:
+      13px;
   }
 
-  .back-result,
-  .review-controls button {
-    min-height: 40px;
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
 
-    padding: 0 var(--space-4);
+  /* ======================================================
+     BACK TO RESULT
+  ====================================================== */
 
-    border-radius: var(--radius);
+  .back-result {
+    flex:
+      0
+      0
+      auto;
 
-    font-size: 12px;
-    font-weight: 600;
+    min-height:
+      40px;
 
-    text-decoration: none;
+    display:
+      inline-flex;
+
+    align-items:
+      center;
+
+    justify-content:
+      center;
+
+    padding:
+      0
+      var(--space-4);
+
+    background:
+      var(--surface);
+
+    color:
+      var(--text);
+
+    border:
+      1px solid
+      var(--border);
+
+    border-radius:
+      var(--radius);
+
+    font-size:
+      13px;
+
+    font-weight:
+      600;
+
+    text-decoration:
+      none;
   }
 
-  .back-result,
-  .review-controls .secondary {
-    background: var(--surface);
-    color: var(--text);
 
-    border: 1px solid var(--border);
+  .back-result:hover {
+    background:
+      var(--surface-hover);
+
+    border-color:
+      var(--primary);
   }
 
-  .back-result:hover,
-  .review-controls .secondary:hover:not(:disabled) {
-    background: var(--surface-hover);
-    border-color: var(--primary);
-  }
+
+
+  /* ======================================================
+     FEEDBACK
+  ====================================================== */
 
   .feedback {
-    padding: var(--space-4);
+    overflow:
+      hidden;
 
-    background: var(--surface);
-    color: var(--text);
+    background:
+      var(--surface);
 
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
+    color:
+      var(--text);
+
+    border:
+      1px solid
+      var(--border);
+
+    border-radius:
+      var(--radius);
   }
+
 
   .feedback.correct {
-    border-color: var(--success);
+    border-color:
+      var(--success);
   }
+
 
   .feedback.wrong {
-    border-color: var(--danger);
+    border-color:
+      var(--danger);
   }
+
 
   .feedback.skipped {
-    border-color: var(--warning);
+    border-color:
+      var(--warning);
   }
+
+
+
+  /* ------------------------------------------------------
+     Feedback title
+  ------------------------------------------------------ */
+
+  .feedback-heading {
+    padding:
+      var(--space-4);
+
+    border-bottom:
+      1px solid
+      var(--border-soft);
+  }
+
+
+  .feedback-kicker {
+    margin:
+      0
+      0
+      var(--space-1);
+
+    color:
+      var(--text-muted);
+
+    font-size:
+      11px;
+
+    font-weight:
+      600;
+
+    letter-spacing:
+      0.06em;
+
+    text-transform:
+      uppercase;
+  }
+
 
   .feedback h2 {
-    margin: 0 0 var(--space-3);
+    margin: 0;
 
-    font-size: 16px;
-    line-height: 1.3;
-    font-weight: 600;
+    color:
+      var(--text);
+
+    font-size:
+      16px;
+
+    line-height:
+      1.3;
+
+    font-weight:
+      600;
   }
+
 
   .feedback.correct h2 {
-    color: var(--success);
+    color:
+      var(--success);
   }
+
 
   .feedback.wrong h2 {
-    color: var(--danger);
+    color:
+      var(--danger);
   }
+
 
   .feedback.skipped h2 {
-    color: var(--warning);
+    color:
+      var(--warning);
   }
+
+
+
+  /* ------------------------------------------------------
+     Answer facts
+  ------------------------------------------------------ */
 
   .feedback-facts {
-    display: grid;
+    display:
+      grid;
 
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(
+        4,
+        minmax(
+          0,
+          1fr
+        )
+      );
 
-    gap: var(--space-2);
+    border-bottom:
+      1px solid
+      var(--border-soft);
   }
 
-  .feedback-facts p {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: var(--space-4);
 
-    margin: 0;
-    padding: var(--space-3);
+  .feedback-facts > div {
+    min-width: 0;
 
-    background: var(--surface-strong);
+    display:
+      grid;
 
-    border: 1px solid var(--border-soft);
-    border-radius: var(--radius);
+    gap:
+      var(--space-1);
+
+    padding:
+      var(--space-4);
+
+    border-right:
+      1px solid
+      var(--border-soft);
   }
+
+
+  .feedback-facts
+    > div:last-child {
+    border-right: 0;
+  }
+
 
   .feedback-facts span {
-    color: var(--text-muted);
-    font-size: 12px;
+    color:
+      var(--text-muted);
+
+    font-size:
+      11px;
   }
+
 
   .feedback-facts strong {
-    color: var(--text);
+    color:
+      var(--text);
 
-    font-size: 14px;
-    font-weight: 700;
+    font-size:
+      14px;
+
+    font-weight:
+      700;
+
+    font-variant-numeric:
+      tabular-nums;
   }
+
+
+
+  /* ------------------------------------------------------
+     Explanation
+  ------------------------------------------------------ */
 
   .explanation {
-    margin-top: var(--space-4);
-    padding-top: var(--space-4);
-
-    border-top: 1px solid var(--border-soft);
+    padding:
+      var(--space-4);
   }
 
-  .explanation > strong {
-    color: var(--text);
 
-    font-size: 12px;
-    font-weight: 700;
+  .explanation-label {
+    display: block;
+
+    color:
+      var(--text-muted);
+
+    font-size:
+      11px;
+
+    font-weight:
+      600;
+
+    letter-spacing:
+      0.06em;
+
+    text-transform:
+      uppercase;
   }
+
 
   .explanation p {
-    margin: var(--space-2) 0 0;
+    max-width:
+      60rem;
 
-    color: var(--text-muted);
+    margin:
+      var(--space-2)
+      0
+      0;
 
-    font-size: 14px;
-    line-height: 1.55;
+    color:
+      var(--text);
+
+    font-size:
+      14px;
+
+    line-height:
+      1.6;
   }
+
+
+
+  /* ======================================================
+     CONTROLS
+  ====================================================== */
 
   .review-controls {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-4);
+    display:
+      grid;
+
+    grid-template-columns:
+      1fr
+      auto
+      1fr;
+
+    align-items:
+      center;
+
+    gap:
+      var(--space-4);
+
+    padding-top:
+      var(--space-1);
   }
 
-  .review-controls button:disabled {
-    opacity: 0.35;
+
+  .control-button {
+    min-height:
+      40px;
+
+    display:
+      inline-flex;
+
+    align-items:
+      center;
+
+    justify-content:
+      center;
+
+    padding:
+      0
+      var(--space-4);
+
+    border:
+      1px solid
+      var(--border);
+
+    border-radius:
+      var(--radius);
+
+    font:
+      inherit;
+
+    font-size:
+      13px;
+
+    font-weight:
+      600;
+
+    cursor:
+      pointer;
   }
 
-  .review-controls .primary {
-    background: var(--primary);
-    color: var(--primary-text);
 
-    border: 1px solid var(--primary);
+
+  /* ------------------------------------------------------
+     Previous
+  ------------------------------------------------------ */
+
+  .secondary-button {
+    justify-self:
+      start;
+
+    background:
+      var(--surface);
+
+    color:
+      var(--text);
   }
 
-  .review-controls .primary:hover {
-    background: var(--primary-hover);
+
+  .secondary-button:hover:not(
+    :disabled
+  ) {
+    background:
+      var(--surface-hover);
+
+    border-color:
+      var(--primary);
   }
 
-  @media (max-width: 600px) {
+
+
+  /* ------------------------------------------------------
+     Next
+  ------------------------------------------------------ */
+
+  .primary-button {
+    justify-self:
+      end;
+
+    background:
+      var(--primary);
+
+    color:
+      var(--primary-text);
+
+    border-color:
+      var(--primary);
+  }
+
+
+  .primary-button:hover {
+    background:
+      var(--primary-hover);
+  }
+
+
+
+  /* ------------------------------------------------------
+     Disabled
+  ------------------------------------------------------ */
+
+  .control-button:disabled {
+    opacity:
+      0.35;
+
+    cursor:
+      not-allowed;
+  }
+
+
+
+  /* ------------------------------------------------------
+     Position
+  ------------------------------------------------------ */
+
+  .control-position {
+    color:
+      var(--text-muted);
+
+    font-size:
+      12px;
+
+    text-align:
+      center;
+
+    white-space:
+      nowrap;
+  }
+
+
+
+  /* ======================================================
+     MOBILE
+  ====================================================== */
+
+  @media (
+    max-width: 700px
+  ) {
+
     .review-page {
-      width: calc(100% - var(--space-6));
+      width:
+        calc(
+          100% -
+          var(--space-6)
+        );
 
-      padding-top: var(--space-4);
+      padding-top:
+        var(--space-4);
     }
+
 
     .review-header {
-      flex-direction: column;
-      gap: var(--space-3);
+      flex-direction:
+        column;
+
+      gap:
+        var(--space-3);
     }
+
+
+    .back-result {
+      align-self:
+        flex-start;
+    }
+
 
     .feedback-facts {
-      grid-template-columns: 1fr;
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(
+            0,
+            1fr
+          )
+        );
     }
+
+
+    .feedback-facts
+      > div:nth-child(2) {
+      border-right: 0;
+    }
+
+
+    .feedback-facts
+      > div:nth-child(-n + 2) {
+      border-bottom:
+        1px solid
+        var(--border-soft);
+    }
+
 
     .review-controls {
-      display: grid;
-
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(
+            0,
+            1fr
+          )
+        );
     }
 
-    .review-controls button {
+
+    .control-position {
+      grid-column:
+        1 / -1;
+
+      grid-row:
+        1;
+    }
+
+
+    .secondary-button,
+    .primary-button {
       width: 100%;
+
+      justify-self:
+        stretch;
     }
+
   }
+
 </style>
