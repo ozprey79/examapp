@@ -1,8 +1,6 @@
 // src/routes/student/+page.server.js
 
-import {
-  redirect
-} from '@sveltejs/kit';
+import { redirect } from '@sveltejs/kit';
 
 import {
   getStudentDashboardSummary
@@ -13,8 +11,13 @@ import {
 } from '$lib/server/questions.js';
 
 import {
-  getDueLeitnerQuestions
+  getDueLeitnerQuestions,
+  getLeitnerVisualization
 } from '$lib/server/leitner.js';
+
+import {
+  getSavedQuestions
+} from '$lib/server/savedQuestions.js';
 
 
 export async function load({
@@ -27,6 +30,7 @@ export async function load({
     );
   }
 
+
   if (
     locals.profile?.role !==
     'student'
@@ -37,21 +41,38 @@ export async function load({
     );
   }
 
+
+  const userId =
+    locals.user.id;
+
+
   const [
     progress,
     tests,
-    dueQuestions
-  ] = await Promise.all([
-    getStudentDashboardSummary(
-      locals.user.id
-    ),
+    dueQuestions,
+    leitnerVisualization,
+    savedQuestions
+  ] =
+    await Promise.all([
+      getStudentDashboardSummary(
+        userId
+      ),
 
-    getAvailableTests(),
+      getAvailableTests(),
 
-    getDueLeitnerQuestions(
-      locals.user.id
-    )
-  ]);
+      getDueLeitnerQuestions(
+        userId
+      ),
+
+      getLeitnerVisualization(
+        userId
+      ),
+
+      getSavedQuestions(
+        userId
+      )
+    ]);
+
 
   return {
     user:
@@ -63,6 +84,13 @@ export async function load({
     progress,
 
     tests,
+
+    leitnerVisualization,
+
+    savedQuestions,
+
+    savedCount:
+      savedQuestions.length,
 
     revision: {
       dueCount:

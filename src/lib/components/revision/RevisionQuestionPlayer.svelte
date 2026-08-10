@@ -7,10 +7,28 @@
 
 
   let {
-    questions = [],
-    title = 'Revision',
-    backHref = '/student/revision'
-  } = $props();
+  questions = [],
+
+  title = 'Revision',
+
+  eyebrow =
+    'Leitner Practice',
+
+  backHref =
+    '/student/revision',
+
+  exitLabel =
+    'Exit Revision',
+
+  completeTitle =
+    'Practice complete',
+
+  completeLabel =
+    'Back to Revision',
+
+  finishLabel =
+    'Finish Revision'
+} = $props();
 
 
   let currentIndex =
@@ -25,6 +43,7 @@ let results =
 let checking =
   $state(false);
 
+  
 const selectedAnswer =
   $derived(
     currentQuestion
@@ -79,25 +98,32 @@ const submitted =
   */
 
   const cardQuestion =
-    $derived(
-      currentQuestion
-        ? {
-            m:
-              currentQuestion.module ??
-              `Box ${currentQuestion.box}`,
+  $derived(
+    currentQuestion
+      ? {
+          id:
+            currentQuestion.id,
 
-            s:
-              currentQuestion.topic ??
-              '',
+          m:
+            currentQuestion.module ??
+            (
+              currentQuestion.box
+                ? `Box ${currentQuestion.box}`
+                : ''
+            ),
 
-            t:
-              currentQuestion.question_text,
+          s:
+            currentQuestion.topic ??
+            '',
 
-            o:
-              currentQuestion.options
-          }
-        : null
-    );
+          t:
+            currentQuestion.question_text,
+
+          o:
+            currentQuestion.options
+        }
+      : null
+  );
 
 function selectAnswer(index) {
   if (
@@ -218,8 +244,8 @@ function nextQuestion() {
 
     <div>
       <p class="eyebrow">
-        Leitner Practice
-      </p>
+  {eyebrow}
+</p>
 
       <h1>
         {title}
@@ -228,8 +254,8 @@ function nextQuestion() {
 
 
     <a href={backHref}>
-      Exit Revision
-    </a>
+  {exitLabel}
+</a>
 
   </header>
 
@@ -264,8 +290,8 @@ function nextQuestion() {
       </p>
 
       <h2>
-        Practice complete
-      </h2>
+  {completeTitle}
+</h2>
 
       <p>
         You revised
@@ -274,8 +300,8 @@ function nextQuestion() {
       </p>
 
       <a href={backHref}>
-        Back to Revision
-      </a>
+  {completeLabel}
+</a>
 
     </section>
 
@@ -389,8 +415,8 @@ function nextQuestion() {
     {:else if submitted}
 
       {isLastQuestion
-        ? 'Finish Revision'
-        : 'Next Question'}
+  ? finishLabel
+  : 'Next Question'}
 
     {:else}
 

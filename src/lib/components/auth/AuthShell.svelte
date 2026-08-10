@@ -25,14 +25,14 @@
 
       {@render children()}
 
-    <!--  <footer class="auth-footer">
+     <footer class="auth-footer">
         <p>
           {alternateText}
           <a href={alternateHref}>{alternateLabel}</a>
         </p>
 
-        <span class="secure-label">Made with lines</span>
-      </footer>-->
+        <span class="secure-label">Made with love for lines</span>
+      </footer>
     </section>
   </main>
 </div>

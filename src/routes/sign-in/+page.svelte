@@ -43,9 +43,9 @@
 <AuthShell
   title="Sign in"
   subtitle="Continue to your workspace."
-  alternateText=""
-  alternateHref="/sign-in"
-  alternateLabel=""
+  alternateText="Don't have an account?"
+  alternateHref="/sign-up"
+  alternateLabel="Create account"
 >
   <form
     class="auth-form"

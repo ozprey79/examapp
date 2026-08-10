@@ -1,4 +1,7 @@
 <script>
+
+   import SavedQuestionButton
+  from '$lib/components/test/SavedQuestionButton.svelte';
   let {
     question,
     selectedAnswer = null,
@@ -61,6 +64,10 @@
     {#if question.s}
       <span>{question.s}</span>
     {/if}
+
+    <SavedQuestionButton
+  questionId={question.id}
+/>
 
     {#if submitted && !isReview}
       <span class="state-label submitted">

@@ -7,6 +7,8 @@
     Helvetica,
     sans-serif;
 
+--fonty:'Space Mono', monospace;
+
   --font-size-base: 14px;
 
   /* Layout */
@@ -49,15 +51,14 @@
   --verdigris: #2a9d8f;
   --gold: #d4af37;
 
+  /* Leitner force visualization */
+
+  --viz-leitner-inner: oklch(0.1186 0.0248 260.66);
+  --viz-leitner-middle: oklch(0.3133 0.1419 260.73);
+  --viz-leitner-outer: oklch(0.6061 0.2122 260.66);
+
   --verdigris-gold: linear-gradient(
     135deg,
-    var(--verdigris),
-    var(--gold)
-  );
-
-  --text-accent-gradient:
-  linear-gradient(
-    90deg,
     var(--verdigris),
     var(--gold)
   );
@@ -80,6 +81,7 @@
   /* Geometry */
 
   --radius: 8px;
+  --radius-one:5rem;
 
   /* Spacing */
 
@@ -89,4 +91,12 @@
   --space-4: 16px;
   --space-6: 24px;
   --space-8: 32px;
+
+
+  --leitner-box-1: oklch(86.806% 0.27961 140.048);
+--leitner-box-2: var(--gold);
+--leitner-box-3: oklch(63.297% 0.30801 317.401);
+--leitner-box-4: var(--verdigris);
+--leitner-box-5: oklch(0.6061 0.2122 260.66);
+
 }

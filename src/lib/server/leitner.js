@@ -22,6 +22,72 @@ function getReviewIntervalDays(box) {
   }
 }
 
+export async function getLeitnerVisualization(
+  userId
+) {
+  const result =
+    await db.query(
+      `
+        SELECT
+          l.question_id,
+          l.box,
+          l.correct_streak,
+          l.next_review_at,
+
+          q.module,
+          q.topic
+
+        FROM
+          public.student_question_leitner l
+
+        JOIN
+          public.questions q
+        ON
+          q.id = l.question_id
+
+        WHERE
+          l.user_id = $1
+
+        ORDER BY
+          l.box,
+          l.next_review_at
+      `,
+      [
+        userId
+      ]
+    );
+
+
+  return result.rows.map(
+    (row) => ({
+      id:
+        row.question_id,
+
+      box:
+        Number(row.box),
+
+      streak:
+        Number(
+          row.correct_streak ?? 0
+        ),
+
+      module:
+        row.module ?? '',
+
+      topic:
+        row.topic ?? '',
+
+      due:
+        row.next_review_at
+          ? new Date(
+              row.next_review_at
+            ) <= new Date()
+          : false
+    })
+  );
+}
+
+
 export async function getLeitnerPracticeSummary(
   userId
 ) {

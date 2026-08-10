@@ -623,18 +623,9 @@
       </p>
 
 
-      <h2>
-        Inspect every answer
-      </h2>
+      
 
-
-      <p class="section-copy">
-        Re-open the test in the
-        read-only exam interface with
-        your answer, the correct answer
-        and explanation visible.
-      </p>
-
+  
     </div>
 
 
@@ -1282,6 +1273,7 @@
 
     gap:
       var(--space-8);
+      font-family: var(--fonty);
   }
 
 
@@ -1442,7 +1434,7 @@
       var(--border);
 
     border-radius:
-      var(--radius);
+      var(--radius-one);
 
     font-size:
       calc(
@@ -1461,10 +1453,10 @@
   .dashboard-action:hover,
   .dashboard-link:hover {
     background:
-      var(--surface-hover);
+     var(--verdigris-gold);
 
     border-color:
-      var(--primary);
+      var(--verdigris-gold);
   }
 
 

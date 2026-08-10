@@ -40,5 +40,5 @@
 >
   {signingOut
     ? 'Signing out...'
-    : 'Sign out'}
+    : '\u23CF'}
 </button>

@@ -242,9 +242,6 @@
       border-color 150ms ease,
       transform 100ms ease;
 
-      font-family:
-    'Space Mono',
-    monospace;
   }
 
 

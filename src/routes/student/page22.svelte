@@ -11,18 +11,11 @@
   import LeitnerForceCollider
     from "$lib/components/dashboard/2LeitnerForceCollider.svelte";
 
-  import SavedQuestionsForceMap
-    from "$lib/components/dashboard/SavedQuestionsForceMap.svelte";
-
 
   let { data } = $props();
 
   let activeSection =
     $state("results");
-
-
-  let selectedSavedId =
-    $state(null);
 
 
   const recentAttempts =
@@ -183,33 +176,6 @@
       "—"
     );
   }
-
-
-  function locateSavedQuestion(
-    questionId
-  ) {
-    selectedSavedId =
-      questionId;
-
-
-    requestAnimationFrame(
-      () => {
-
-        document
-          .getElementById(
-            `saved-row-${questionId}`
-          )
-          ?.scrollIntoView({
-            behavior:
-              "smooth",
-
-            block:
-              "center"
-          });
-      }
-    );
-  }
-
 </script>
 
 
@@ -282,14 +248,26 @@
 
     {:else if activeSection === "saved"}
 
-      <SavedQuestionsForceMap
-        questions={savedQuestions}
-        selectedId={selectedSavedId}
-        onSelect={locateSavedQuestion}
-      />
+      <div class="viz-placeholder">
+
+        <p>
+          Personal collection
+        </p>
+
+        <strong>
+          {savedCount}
+        </strong>
+
+        <span>
+          {savedCount === 1
+            ? "saved question"
+            : "saved questions"}
+        </span>
+
+      </div>
 
 
-    {:else if activeSection === "tests"}
+    <!-- {:else if activeSection === "tests"}
 
       <div class="viz-placeholder">
 
@@ -307,7 +285,7 @@
             : "examinations"}
         </span>
 
-      </div>
+      </div> -->
 
     {/if}
 
@@ -690,16 +668,7 @@
 
               {#each savedQuestions as question (getSavedQuestionId(question))}
 
-                <article
-                  id={`saved-row-${getSavedQuestionId(question)}`}
-
-                  class="saved-table-row"
-
-                  class:selected={
-                    selectedSavedId ===
-                    getSavedQuestionId(question)
-                  }
-                >
+                <article class="saved-table-row">
 
                   <div class="saved-question">
                     {getSavedQuestionText(question)}
@@ -875,9 +844,6 @@
       1px solid
       var(--border-soft);
 
-    font-family:
-      "Space Mono",
-      monospace;
   }
 
 
@@ -1038,7 +1004,7 @@
       var(--border-soft);
 
     border-radius:
-      var(--radius);
+      var(--radius-one);
   }
 
 
@@ -1132,9 +1098,7 @@
     margin-top:
       var(--space-8);
 
-    font-family:
-      "Space Mono",
-      monospace;
+ 
   }
 
 
@@ -1725,19 +1689,6 @@
   .saved-table-row:hover {
     background-color:
       var(--surface-hover);
-  }
-
-
-  .saved-table-row.selected {
-    background-color:
-      var(--surface-hover);
-
-    box-shadow:
-      inset
-      3px
-      0
-      0
-      var(--primary);
   }
 
 

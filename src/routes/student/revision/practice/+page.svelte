@@ -347,9 +347,7 @@
     gap:
       var(--space-8);
 
-      ;font-family:
-    'Space Mono',
-    monospace;
+      
   }
 
 

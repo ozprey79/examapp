@@ -3,32 +3,29 @@
   // 1. Imports
   // ============================================================
 
-  import ExamControls from '$lib/components/exam/ExamControls.svelte';
-  import ExamHeader from '$lib/components/exam/ExamHeader.svelte';
-  import QuestionCard from '$lib/components/exam/QuestionCard.svelte';
-  import QuestionNavigator from '$lib/components/exam/QuestionNavigator.svelte';
-  import QuestionTimeList from '$lib/components/exam/QuestionTimeList.svelte';
-  import { ExamTimer } from '$lib/timers/ExamTimer.svelte.js';
-  import { QuestionTimer } from '$lib/timers/QuestionTimer.svelte.js';
+  import ExamControls from "$lib/components/exam/ExamControls.svelte";
+  import ExamHeader from "$lib/components/exam/ExamHeader.svelte";
+  import QuestionCard from "$lib/components/exam/QuestionCard.svelte";
+  import QuestionNavigator from "$lib/components/exam/QuestionNavigator.svelte";
+  import QuestionTimeList from "$lib/components/exam/QuestionTimeList.svelte";
+  import { ExamTimer } from "$lib/timers/ExamTimer.svelte.js";
+  import { QuestionTimer } from "$lib/timers/QuestionTimer.svelte.js";
+  import SavingPulseWave from "$lib/components/results/SavingPulseWave.svelte";
 
   import {
     loadAttempt,
     saveAttempt,
-    clearAttempt
-  } from '$lib/storage/attemptStorage.js';
+    clearAttempt,
+  } from "$lib/storage/attemptStorage.js";
 
   import {
     buildQuestionResults,
-    summarizeResults
-  } from '$lib/results/buildResults.js';
+    summarizeResults,
+  } from "$lib/results/buildResults.js";
 
-  import {
-  buildAttempt
-} from '$lib/results/buildAttempt.js';
+  import { buildAttempt } from "$lib/results/buildAttempt.js";
 
-  import {
-  formatMilliseconds
-} from '$lib/utils/formatDuration.js';
+  import { formatMilliseconds } from "$lib/utils/formatDuration.js";
 
   // ============================================================
   // 2. Page data
@@ -41,130 +38,77 @@
 
   let questions = $state(data.questions);
 
-  const attemptStorageKey =
-    `mock-attempt:${meta.id ?? meta.title}`;
-
+  const attemptStorageKey = `mock-attempt:${meta.id ?? meta.title}`;
 
   // ============================================================
   // 3. Primary exam state
   // ============================================================
 
- let currentIndex = $state(0);
+  let currentIndex = $state(0);
 
-let answersById = $state(
-  createAnswerState()
-);
+  let answersById = $state(createAnswerState());
 
-let submittedById = $state(
-  createSubmissionState()
-);
+  let submittedById = $state(createSubmissionState());
 
-let completed = $state(false);
+  let completed = $state(false);
 
-let persistenceReady = $state(false);
+  let persistenceReady = $state(false);
 
-let startedAt = $state(
-  new Date().toISOString()
-);
+  let startedAt = $state(new Date().toISOString());
 
-let completedAt = $state(null);
+  let completedAt = $state(null);
 
-let completedAttempt = $state(null);
+  let completedAttempt = $state(null);
 
-let attemptSaveStatus = $state(
-  'idle'
-);
+  let attemptSaveStatus = $state("idle");
 
-let attemptSaveMessage = $state(
-  ''
-);
+  let attemptSaveMessage = $state("");
 
-let lastSaveRequestedId = $state(
-  null
-);
+  let lastSaveRequestedId = $state(null);
 
   // ============================================================
   // 4. Timer objects
   // ============================================================
 
-  const questionTimer = new QuestionTimer(
-    questions,
-    questions[0].id
-  );
+  const questionTimer = new QuestionTimer(questions, questions[0].id);
 
-  const examTimer = new ExamTimer(
-    meta.duration_minutes,
-    finishTest
-  );
-
+  const examTimer = new ExamTimer(meta.duration_minutes, finishTest);
 
   // ============================================================
   // 5. Derived exam state
   // ============================================================
 
-  let question = $derived(
-    questions[currentIndex]
-  );
+  let question = $derived(questions[currentIndex]);
 
-  let selectedAnswer = $derived(
-    answersById[question.id]
-  );
+  let selectedAnswer = $derived(answersById[question.id]);
 
-  let currentQuestionSubmitted = $derived(
-    submittedById[question.id]
-  );
-  let currentQuestionTime = $derived(
-  questionTimer.formattedFor(
-    question.id
-  )
-);
+  let currentQuestionSubmitted = $derived(submittedById[question.id]);
+  let currentQuestionTime = $derived(questionTimer.formattedFor(question.id));
 
-  let isFirstQuestion = $derived(
-    currentIndex === 0
-  );
+  let isFirstQuestion = $derived(currentIndex === 0);
 
-  let isLastQuestion = $derived(
-    currentIndex === questions.length - 1
-  );
+  let isLastQuestion = $derived(currentIndex === questions.length - 1);
 
   let questionResults = $derived(
     buildQuestionResults({
       questions,
       answersById,
       submittedById,
-      timeById: questionTimer.timeById
-    })
+      timeById: questionTimer.timeById,
+    }),
   );
 
-  let results = $derived(
-    summarizeResults(
-      questionResults,
-      scoring
-    )
-  );
-
+  let results = $derived(summarizeResults(questionResults, scoring));
 
   let submittedCount = $derived(
-    questions.filter(
-      (question) =>
-        submittedById[question.id]
-    ).length
+    questions.filter((question) => submittedById[question.id]).length,
   );
 
-  let remainingCount = $derived(
-    questions.length -
-      submittedCount
-  );
+  let remainingCount = $derived(questions.length - submittedCount);
 
   let progressPercent = $derived(
-    questions.length > 0
-      ? (
-          submittedCount /
-          questions.length
-        ) * 100
-      : 0
+    questions.length > 0 ? (submittedCount / questions.length) * 100 : 0,
   );
-
 
   // ============================================================
   // 6. Attempt persistence
@@ -176,9 +120,7 @@ let lastSaveRequestedId = $state(
       return;
     }
 
-    const savedAttempt = loadAttempt(
-      attemptStorageKey
-    );
+    const savedAttempt = loadAttempt(attemptStorageKey);
 
     if (savedAttempt !== null) {
       restoreAttempt(savedAttempt);
@@ -187,76 +129,47 @@ let lastSaveRequestedId = $state(
     persistenceReady = true;
   });
 
-
   // Automatically save the active attempt.
   $effect(() => {
-    if (
-      !persistenceReady ||
-      completed
-    ) {
+    if (!persistenceReady || completed) {
       return;
     }
 
     // Reading this value makes the effect run
     // whenever the exam clock changes.
-    const clockTick =
-      examTimer.remainingSeconds;
+    const clockTick = examTimer.remainingSeconds;
 
     const attempt = {
       version: 1,
 
-      savedAt:
-        new Date().toISOString(),
+      savedAt: new Date().toISOString(),
 
-      questionIds:
-        questions.map(
-          (question) => question.id
-        ),
+      questionIds: questions.map((question) => question.id),
 
-      currentQuestionId:
-        question.id,
+      currentQuestionId: question.id,
 
-      answersById:
-        $state.snapshot(
-          answersById
-        ),
+      answersById: $state.snapshot(answersById),
 
-      submittedById:
-        $state.snapshot(
-          submittedById
-        ),
+      submittedById: $state.snapshot(submittedById),
 
-      examTimer:
-        examTimer.snapshot(),
+      examTimer: examTimer.snapshot(),
 
-      questionTimer:
-        questionTimer.snapshot()
+      questionTimer: questionTimer.snapshot(),
     };
 
-    saveAttempt(
-      attemptStorageKey,
-      attempt
-    );
+    saveAttempt(attemptStorageKey, attempt);
   });
-$effect(() => {
-  const attempt =
-    completedAttempt;
+  $effect(() => {
+    const attempt = completedAttempt;
 
-  if (
-    attempt === null ||
-    attempt.attemptId ===
-      lastSaveRequestedId
-  ) {
-    return;
-  }
+    if (attempt === null || attempt.attemptId === lastSaveRequestedId) {
+      return;
+    }
 
-  lastSaveRequestedId =
-    attempt.attemptId;
+    lastSaveRequestedId = attempt.attemptId;
 
-  void saveAttemptToDatabase(
-    attempt
-  );
-});
+    void saveAttemptToDatabase(attempt);
+  });
 
   // ============================================================
   // 7. State factory functions
@@ -272,7 +185,6 @@ $effect(() => {
     return answerState;
   }
 
-
   function createSubmissionState() {
     const submissionState = {};
 
@@ -283,136 +195,81 @@ $effect(() => {
     return submissionState;
   }
 
-
   // ============================================================
   // 8. Attempt restoration
   // ============================================================
 
-  function restoreQuestionOrder(
-    savedQuestionIds
-  ) {
-    if (
-      !Array.isArray(savedQuestionIds)
-    ) {
+  function restoreQuestionOrder(savedQuestionIds) {
+    if (!Array.isArray(savedQuestionIds)) {
       return;
     }
 
     const questionsById = new Map(
-      data.questions.map(
-        (question) => [
-          question.id,
-          question
-        ]
-      )
+      data.questions.map((question) => [question.id, question]),
     );
 
-    const restoredQuestions =
-      savedQuestionIds
-        .map(
-          (questionId) =>
-            questionsById.get(questionId)
-        )
-        .filter(Boolean);
+    const restoredQuestions = savedQuestionIds
+      .map((questionId) => questionsById.get(questionId))
+      .filter(Boolean);
 
     const restoredIds = new Set(
-      restoredQuestions.map(
-        (question) => question.id
-      )
+      restoredQuestions.map((question) => question.id),
     );
 
-    const newQuestions =
-      data.questions.filter(
-        (question) =>
-          !restoredIds.has(question.id)
-      );
+    const newQuestions = data.questions.filter(
+      (question) => !restoredIds.has(question.id),
+    );
 
-    questions = [
-      ...restoredQuestions,
-      ...newQuestions
-    ];
+    questions = [...restoredQuestions, ...newQuestions];
   }
 
-
-  function restoreAttempt(
-    savedAttempt
-  ) {
-    if (
-      savedAttempt?.version !== 1
-    ) {
+  function restoreAttempt(savedAttempt) {
+    if (savedAttempt?.version !== 1) {
       return false;
     }
 
-    restoreQuestionOrder(
-      savedAttempt.questionIds
-    );
+    restoreQuestionOrder(savedAttempt.questionIds);
 
-    const freshAnswers =
-      createAnswerState();
+    const freshAnswers = createAnswerState();
 
-    const freshSubmissions =
-      createSubmissionState();
+    const freshSubmissions = createSubmissionState();
 
     questions.forEach((question) => {
-      const savedAnswer =
-        savedAttempt.answersById?.[
-          question.id
-        ];
+      const savedAnswer = savedAttempt.answersById?.[question.id];
 
-      if (
-        savedAnswer === null ||
-        Number.isInteger(savedAnswer)
-      ) {
-        freshAnswers[question.id] =
-          savedAnswer;
+      if (savedAnswer === null || Number.isInteger(savedAnswer)) {
+        freshAnswers[question.id] = savedAnswer;
       }
 
       freshSubmissions[question.id] =
-        savedAttempt.submittedById?.[
-          question.id
-        ] === true;
+        savedAttempt.submittedById?.[question.id] === true;
     });
 
-    answersById =
-      freshAnswers;
+    answersById = freshAnswers;
 
-    submittedById =
-      freshSubmissions;
+    submittedById = freshSubmissions;
 
-    const savedCurrentQuestionId =
-      savedAttempt.currentQuestionId;
+    const savedCurrentQuestionId = savedAttempt.currentQuestionId;
 
-    const savedIndex =
-      questions.findIndex(
-        (question) =>
-          question.id ===
-          savedCurrentQuestionId
-      );
+    const savedIndex = questions.findIndex(
+      (question) => question.id === savedCurrentQuestionId,
+    );
 
-    currentIndex =
-      savedIndex >= 0
-        ? savedIndex
-        : 0;
+    currentIndex = savedIndex >= 0 ? savedIndex : 0;
 
     completed = false;
 
-    const hasTimeRemaining =
-      examTimer.restore(
-        savedAttempt.examTimer
-      );
+    const hasTimeRemaining = examTimer.restore(savedAttempt.examTimer);
 
-    const currentQuestionId =
-      questions[currentIndex].id;
+    const currentQuestionId = questions[currentIndex].id;
 
     const shouldTimeCurrentQuestion =
-      hasTimeRemaining &&
-      !submittedById[
-        currentQuestionId
-      ];
+      hasTimeRemaining && !submittedById[currentQuestionId];
 
     questionTimer.restore(
       savedAttempt.questionTimer,
       currentQuestionId,
-      shouldTimeCurrentQuestion
+      shouldTimeCurrentQuestion,
     );
 
     if (!hasTimeRemaining) {
@@ -422,48 +279,34 @@ $effect(() => {
     return true;
   }
 
-
   // ============================================================
   // 9. Answer actions
   // ============================================================
 
   function selectAnswer(index) {
-    if (
-      currentQuestionSubmitted ||
-      completed
-    ) {
+    if (currentQuestionSubmitted || completed) {
       return;
     }
 
-    answersById[question.id] =
-      index;
+    answersById[question.id] = index;
   }
 
-function clearAnswer() {
-  if (
-    currentQuestionSubmitted ||
-    completed
-  ) {
-    return;
-  }
+  function clearAnswer() {
+    if (currentQuestionSubmitted || completed) {
+      return;
+    }
 
-  answersById[question.id] =
-    null;
-}
+    answersById[question.id] = null;
+  }
   function submitAnswer() {
-    if (
-      selectedAnswer === null ||
-      currentQuestionSubmitted
-    ) {
+    if (selectedAnswer === null || currentQuestionSubmitted) {
       return;
     }
 
     questionTimer.stopCurrent();
 
-    submittedById[question.id] =
-      true;
+    submittedById[question.id] = true;
   }
-
 
   function skipQuestion() {
     if (currentQuestionSubmitted) {
@@ -472,58 +315,40 @@ function clearAnswer() {
 
     questionTimer.stopCurrent();
 
-    answersById[question.id] =
-      null;
+    answersById[question.id] = null;
 
-    submittedById[question.id] =
-      true;
+    submittedById[question.id] = true;
   }
-
 
   // ============================================================
   // 10. Navigation actions
   // ============================================================
 
   function goToQuestion(index) {
-    if (
-      completed ||
-      index === currentIndex
-    ) {
+    if (completed || index === currentIndex) {
       return;
     }
 
     moveToQuestion(index);
   }
 
-
   function moveToQuestion(index) {
-    const destinationQuestion =
-      questions[index];
+    const destinationQuestion = questions[index];
 
-    const shouldStartTiming =
-      !submittedById[
-        destinationQuestion.id
-      ];
+    const shouldStartTiming = !submittedById[destinationQuestion.id];
 
-    questionTimer.switchTo(
-      destinationQuestion.id,
-      shouldStartTiming
-    );
+    questionTimer.switchTo(destinationQuestion.id, shouldStartTiming);
 
     currentIndex = index;
   }
-
 
   function previousQuestion() {
     if (isFirstQuestion) {
       return;
     }
 
-    moveToQuestion(
-      currentIndex - 1
-    );
+    moveToQuestion(currentIndex - 1);
   }
-
 
   function nextQuestion() {
     if (!currentQuestionSubmitted) {
@@ -535,210 +360,149 @@ function clearAnswer() {
       return;
     }
 
-    moveToQuestion(
-      currentIndex + 1
-    );
+    moveToQuestion(currentIndex + 1);
   }
 
-function primaryQuestionAction() {
-  if (completed) {
-    return;
-  }
-
-  // First click:
-  // submit/skip the current question,
-  // but stay on this question.
-  if (!currentQuestionSubmitted) {
-    if (selectedAnswer === null) {
-      skipQuestion();
-    } else {
-      submitAnswer();
+  function primaryQuestionAction() {
+    if (completed) {
+      return;
     }
 
-    return;
+    // First click:
+    // submit/skip the current question,
+    // but stay on this question.
+    if (!currentQuestionSubmitted) {
+      if (selectedAnswer === null) {
+        skipQuestion();
+      } else {
+        submitAnswer();
+      }
+
+      return;
+    }
+
+    // Second click on final question:
+    // finish the test.
+    if (isLastQuestion) {
+      finishTest();
+      return;
+    }
+
+    // Second click on any other question:
+    // move forward.
+    moveToQuestion(currentIndex + 1);
   }
 
-  // Second click on final question:
-  // finish the test.
-  if (isLastQuestion) {
-    finishTest();
-    return;
-  }
-
-  // Second click on any other question:
-  // move forward.
-  moveToQuestion(
-    currentIndex + 1
-  );
-}
-
-  function getQuestionStatus(
-    navigationQuestion,
-    index
-  ) {
+  function getQuestionStatus(navigationQuestion, index) {
     if (index === currentIndex) {
-      return 'Current';
+      return "Current";
     }
 
-    if (
-      !submittedById[
-        navigationQuestion.id
-      ]
-    ) {
-      return 'Open';
+    if (!submittedById[navigationQuestion.id]) {
+      return "Open";
     }
 
-    if (
-      answersById[
-        navigationQuestion.id
-      ] === null
-    ) {
-      return 'Skipped';
+    if (answersById[navigationQuestion.id] === null) {
+      return "Skipped";
     }
 
-    return 'Submitted';
+    return "Submitted";
   }
-
 
   // ============================================================
   // 11. Test lifecycle actions
   // ============================================================
-async function saveAttemptToDatabase(
-  attempt
-) {
-  attemptSaveStatus =
-    'saving';
+  async function saveAttemptToDatabase(attempt) {
+    attemptSaveStatus = "saving";
 
-  attemptSaveMessage =
-    'Saving your result...';
+    attemptSaveMessage = "Saving your result...";
 
-  try {
-    const response = await fetch(
-      '/api/attempts',
-      {
-        method: 'POST',
+    try {
+      const response = await fetch("/api/attempts", {
+        method: "POST",
 
         headers: {
-          'Content-Type':
-            'application/json'
+          "Content-Type": "application/json",
         },
 
-        body: JSON.stringify(
-          attempt
-        )
+        body: JSON.stringify(attempt),
+      });
+
+      const responseData = await response.json();
+
+      if (!response.ok) {
+        throw new Error(responseData.error ?? "Could not save the result.");
       }
-    );
 
-    const responseData =
-      await response.json();
+      attemptSaveStatus = "saved";
 
-    if (!response.ok) {
-      throw new Error(
-        responseData.error ??
-          'Could not save the result.'
-      );
+      attemptSaveMessage = "Result saved successfully.";
+
+      window.location.href = `/student/results/${encodeURIComponent(
+        attempt.attemptId,
+      )}`;
+    } catch (error) {
+      console.error("Attempt request failed:", error);
+
+      attemptSaveStatus = "error";
+
+      attemptSaveMessage =
+        error instanceof Error ? error.message : "Could not save the result.";
+    }
+  }
+  function finishTest() {
+    if (completed) {
+      return;
     }
 
-    attemptSaveStatus =
-      'saved';
+    questionTimer.stopCurrent();
+    examTimer.stop();
 
-    attemptSaveMessage =
-      'Result saved successfully.';
+    const finishedAt = new Date().toISOString();
 
-    window.location.href =
-      `/student/results/${encodeURIComponent(
-        attempt.attemptId
-      )}`;
-  } catch (error) {
-    console.error(
-      'Attempt request failed:',
-      error
-    );
+    completedAt = finishedAt;
 
-    attemptSaveStatus =
-      'error';
+    completed = true;
 
-    attemptSaveMessage =
-      error instanceof Error
-        ? error.message
-        : 'Could not save the result.';
-  }
-}
-function finishTest() {
-  if (completed) {
-    return;
-  }
-
-  questionTimer.stopCurrent();
-  examTimer.stop();
-
-  const finishedAt =
-    new Date().toISOString();
-
-  completedAt =
-    finishedAt;
-
-  completed = true;
-
-  completedAttempt =
-    buildAttempt({
+    completedAttempt = buildAttempt({
       meta,
       results,
       questionResults,
       startedAt,
-      completedAt:
-        finishedAt
+      completedAt: finishedAt,
     });
 
-  clearAttempt(
-    attemptStorageKey
-  );
-}
+    clearAttempt(attemptStorageKey);
+  }
 
+  function restartTest() {
+    clearAttempt(attemptStorageKey);
 
-function restartTest() {
-  clearAttempt(
-    attemptStorageKey
-  );
+    currentIndex = 0;
 
-  currentIndex = 0;
+    answersById = createAnswerState();
 
-  answersById =
-    createAnswerState();
+    submittedById = createSubmissionState();
 
-  submittedById =
-    createSubmissionState();
+    completed = false;
 
-  completed = false;
+    startedAt = new Date().toISOString();
 
-  startedAt =
-    new Date().toISOString();
+    completedAt = null;
 
-  completedAt =
-    null;
+    completedAttempt = null;
 
-  completedAttempt =
-    null;
+    attemptSaveStatus = "idle";
 
-  attemptSaveStatus =
-    'idle';
+    attemptSaveMessage = "";
 
-  attemptSaveMessage =
-    '';
+    lastSaveRequestedId = null;
 
-  lastSaveRequestedId =
-    null;
+    questionTimer.reset(questions[0].id);
 
-  questionTimer.reset(
-    questions[0].id
-  );
-
-  examTimer.restart();
-}
-
-
+    examTimer.restart();
+  }
 </script>
-
 
 <!-- ============================================================
      12. Page interface
@@ -746,59 +510,38 @@ function restartTest() {
 
 <div class="exam-page">
   {#if completed}
+    <section class="completion-state">
+      <p class="eyebrow">Completed test</p>
 
-  <section class="completion-state">
+      <h1>
+        {meta.title}
+      </h1>
 
-    <p class="eyebrow">
-      Completed test
-    </p>
+      {#if attemptSaveStatus === "saving"}
+         <SavingPulseWave />
+      {:else if attemptSaveStatus === "error"}
+        <p>
+          {attemptSaveMessage}
+        </p>
 
-    <h1>
-      {meta.title}
-    </h1>
-
-
-    {#if attemptSaveStatus === 'saving'}
-
-      <p>
-        Saving your result...
-      </p>
-
-    {:else if attemptSaveStatus === 'error'}
-
-      <p>
-        {attemptSaveMessage}
-      </p>
-
-      <button
-        type="button"
-        onclick={() => {
-          if (completedAttempt) {
-            saveAttemptToDatabase(
-              completedAttempt
-            );
-          }
-        }}
-      >
-        Retry Save
-      </button>
-
-    {:else}
-
-      <p>
-        Opening result...
-      </p>
-
-    {/if}
-
-  </section>
-
+        <button
+          type="button"
+          onclick={() => {
+            if (completedAttempt) {
+              saveAttemptToDatabase(completedAttempt);
+            }
+          }}
+        >
+          Retry Save
+        </button>
+      {:else}
+         <SavingPulseWave />
+      {/if}
+    </section>
   {:else}
     <header class="test-titlebar">
       <div class="title-group">
-        <p class="eyebrow">
-          Mock Test
-        </p>
+        <p class="eyebrow">Mock Test</p>
 
         <h1>
           {meta.title}
@@ -806,45 +549,27 @@ function restartTest() {
 
         <p class="test-summary">
           {questions.length}
-          questions
-          ·
+          questions ·
           {meta.duration_minutes}
           minutes
         </p>
       </div>
 
-      <button
-        class="restart-button"
-        type="button"
-        onclick={restartTest}
-      >
+      <button class="restart-button" type="button" onclick={restartTest}>
         Restart
       </button>
     </header>
 
     <ExamHeader
-  formattedTime={
-    examTimer.formattedTime
-  }
-  formattedQuestionTime={
-    currentQuestionTime
-  }
-  currentQuestionNumber={
-    currentIndex + 1
-  }
-  totalQuestions={
-    questions.length
-  }
-/>
+      formattedTime={examTimer.formattedTime}
+      formattedQuestionTime={currentQuestionTime}
+      currentQuestionNumber={currentIndex + 1}
+      totalQuestions={questions.length}
+    />
 
-    <section
-      class="progress-panel"
-      aria-label="Test progress"
-    >
+    <section class="progress-panel" aria-label="Test progress">
       <div class="progress-info">
-        <span>
-          Progress
-        </span>
+        <span> Progress </span>
 
         <span>
           {submittedCount}
@@ -853,10 +578,7 @@ function restartTest() {
       </div>
 
       <div class="progress-track">
-        <div
-          class="progress-fill"
-          style={`width: ${progressPercent}%`}
-        ></div>
+        <div class="progress-fill" style={`width: ${progressPercent}%`}></div>
       </div>
 
       <div class="progress-summary">
@@ -881,11 +603,7 @@ function restartTest() {
 
     <QuestionTimeList
       {questions}
-      getFormattedTime={
-        questionTimer.formattedFor.bind(
-          questionTimer
-        )
-      }
+      getFormattedTime={questionTimer.formattedFor.bind(questionTimer)}
     />
 
     <QuestionCard
@@ -896,15 +614,9 @@ function restartTest() {
     />
 
     <ExamControls
-      hasAnswer={
-        selectedAnswer !== null
-      }
-      submitted={
-        currentQuestionSubmitted
-      }
-      canGoPrevious={
-        !isFirstQuestion
-      }
+      hasAnswer={selectedAnswer !== null}
+      submitted={currentQuestionSubmitted}
+      canGoPrevious={!isFirstQuestion}
       {isLastQuestion}
       onPrevious={previousQuestion}
       onClear={clearAnswer}
@@ -915,17 +627,11 @@ function restartTest() {
 
 <style>
   .exam-page {
-    width: min(
-      calc(100% - 32px),
-      var(--page-width)
-    );
+    width: min(calc(100% - 32px), var(--page-width));
 
     margin-inline: auto;
 
-    padding:
-      var(--space-6)
-      0
-      var(--space-8);
+    padding: var(--space-6) 0 var(--space-8);
   }
 
   .test-titlebar,
@@ -943,10 +649,7 @@ function restartTest() {
   }
 
   .eyebrow {
-    margin:
-      0
-      0
-      var(--space-1);
+    margin: 0 0 var(--space-1);
 
     color: var(--text-muted);
 
@@ -968,10 +671,7 @@ function restartTest() {
   }
 
   .test-summary {
-    margin:
-      var(--space-1)
-      0
-      0;
+    margin: var(--space-1) 0 0;
 
     color: var(--text-muted);
 
@@ -983,16 +683,12 @@ function restartTest() {
 
     min-height: 40px;
 
-    padding:
-      0
-      var(--space-4);
+    padding: 0 var(--space-4);
 
     background: var(--surface);
     color: var(--text);
 
-    border:
-      1px solid
-      var(--border);
+    border: 1px solid var(--border);
 
     border-radius: var(--radius);
   }
@@ -1004,15 +700,11 @@ function restartTest() {
   .progress-panel {
     margin-top: var(--space-4);
 
-    padding:
-      12px
-      14px;
+    padding: 12px 14px;
 
     background: var(--surface);
 
-    border:
-      1px solid
-      var(--border);
+    border: 1px solid var(--border);
 
     border-radius: var(--radius);
   }
@@ -1043,9 +735,7 @@ function restartTest() {
 
     background: var(--surface-strong);
 
-    border:
-      1px solid
-      var(--border-soft);
+    border: 1px solid var(--border-soft);
 
     border-radius: 999px;
   }
@@ -1057,8 +747,7 @@ function restartTest() {
 
     border-radius: inherit;
 
-    transition:
-      width 160ms ease;
+    transition: width 160ms ease;
   }
 
   .progress-summary {
