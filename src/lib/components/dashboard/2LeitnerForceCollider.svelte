@@ -924,7 +924,7 @@
       var(--primary);
 
     stroke-width:
-      2;
+      0.7;
   }
 
 

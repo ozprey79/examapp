@@ -26,105 +26,107 @@
     $state(null);
 
 
-  const visibleAttempts =
-    $derived(
-      attempts.slice(
-        -VISIBLE_SLOTS
-      )
-    );
+  function getTotalQuestions(
+    attempt
+  ) {
+    const explicitTotal =
+      Number(
+        attempt?.totalQuestions ??
+        attempt?.total_questions ??
+        attempt?.questionCount ??
+        attempt?.question_count
+      );
 
 
-  const firstAttemptNumber =
-    $derived(
-      Math.max(
-        1,
-        totalAttempts -
-          visibleAttempts.length +
-          1
-      )
-    );
-
-
-  const displayedSlots =
-    $derived.by(() =>
-      Array.from(
-        {
-          length:
-            VISIBLE_SLOTS
-        },
-
-        (_, index) => {
-          const attempt =
-            visibleAttempts[index];
-
-          if (attempt) {
-            return {
-              ...attempt,
-
-              occupied:
-                true,
-
-              attemptNumber:
-                firstAttemptNumber +
-                index
-            };
-          }
-
-          return {
-            occupied:
-              false,
-
-            score:
-              0,
-
-            attemptNumber:
-              null,
-
-            id:
-              null,
-
-            testTitle:
-              null
-          };
-        }
-      )
-    );
-
-
-  const bestScore =
-    $derived(
-      attempts.length
-        ? Math.max(
-            ...attempts.map(
-              (attempt) =>
-                clampScore(
-                  attempt.score
-                )
-            )
-          )
-        : 0
-    );
-
-
-  const selectedAttempt =
-    $derived(
-      selectedIndex === null
-        ? null
-        : displayedSlots[
-            selectedIndex
-          ] ?? null
-    );
-
-
-  $effect(() => {
     if (
-      selectedIndex === null &&
-      visibleAttempts.length > 0
+      Number.isFinite(
+        explicitTotal
+      ) &&
+      explicitTotal > 0
     ) {
-      selectedIndex =
-        visibleAttempts.length - 1;
+      return explicitTotal;
     }
-  });
+
+
+    const correct =
+      Number(
+        attempt?.correct ??
+        attempt?.correctCount ??
+        0
+      );
+
+
+    const wrong =
+      Number(
+        attempt?.wrong ??
+        attempt?.wrongCount ??
+        0
+      );
+
+
+    const skipped =
+      Number(
+        attempt?.skipped ??
+        attempt?.skippedCount ??
+        0
+      );
+
+
+    const derivedTotal =
+      correct +
+      wrong +
+      skipped;
+
+
+    if (
+      Number.isFinite(
+        derivedTotal
+      ) &&
+      derivedTotal > 0
+    ) {
+      return derivedTotal;
+    }
+
+
+    return null;
+  }
+
+
+  function getNormalizedScore(
+    attempt
+  ) {
+    if (!attempt) {
+      return null;
+    }
+
+
+    const rawScore =
+      Number(
+        attempt.score
+      );
+
+
+    const totalQuestions =
+      getTotalQuestions(
+        attempt
+      );
+
+
+    if (
+      !Number.isFinite(
+        rawScore
+      ) ||
+      totalQuestions === null
+    ) {
+      return null;
+    }
+
+
+    return (
+      rawScore /
+      totalQuestions
+    ) * 100;
+  }
 
 
   function clampScore(
@@ -179,6 +181,7 @@
         ) * 0.1
       );
 
+
     return Math.min(
       MAX_HEIGHT,
       targetHeight +
@@ -193,6 +196,7 @@
     const value =
       Number(score);
 
+
     if (
       !Number.isFinite(
         value
@@ -201,12 +205,126 @@
       return '0';
     }
 
+
     return Number.isInteger(
       value
     )
       ? String(value)
       : value.toFixed(1);
   }
+
+
+  const visibleAttempts =
+    $derived(
+      attempts.slice(
+        -VISIBLE_SLOTS
+      )
+    );
+
+
+  const firstAttemptNumber =
+    $derived(
+      Math.max(
+        1,
+        totalAttempts -
+          visibleAttempts.length +
+          1
+      )
+    );
+
+
+  const displayedSlots =
+    $derived.by(() =>
+      Array.from(
+        {
+          length:
+            VISIBLE_SLOTS
+        },
+
+        (_, index) => {
+          const attempt =
+            visibleAttempts[index];
+
+
+          if (attempt) {
+            return {
+              ...attempt,
+
+              occupied:
+                true,
+
+              attemptNumber:
+                firstAttemptNumber +
+                index
+            };
+          }
+
+
+          return {
+            occupied:
+              false,
+
+            score:
+              0,
+
+            attemptNumber:
+              null,
+
+            id:
+              null,
+
+            testTitle:
+              null
+          };
+        }
+      )
+    );
+
+
+  const bestScore =
+    $derived.by(() => {
+      const normalizedScores =
+        attempts
+          .map(
+            (attempt) =>
+              getNormalizedScore(
+                attempt
+              )
+          )
+          .filter(
+            (score) =>
+              score !== null
+          );
+
+
+      return normalizedScores.length
+        ? Math.max(
+            ...normalizedScores
+          )
+        : null;
+    });
+
+
+  const selectedAttempt =
+    $derived(
+      selectedIndex === null
+        ? null
+        : displayedSlots[
+            selectedIndex
+          ] ?? null
+    );
+
+
+  $effect(() => {
+    if (
+      selectedIndex === null &&
+      visibleAttempts.length > 0
+    ) {
+      selectedIndex =
+        visibleAttempts.length -
+        1;
+    }
+  });
 </script>
 
 
@@ -216,65 +334,89 @@
 
     <svg
       class="progress-equalizer"
+
       viewBox={`0 0 ${
         VISIBLE_SLOTS *
         SLOT_WIDTH
       } ${CHART_HEIGHT}`}
+
       role="img"
-      aria-label="Score progress across recent attempts"
-    >
-    <defs>
-    <linearGradient
-      id="attempt-progress-gradient"
-      x1="0%"
-      y1="100%"
-      x2="0%"
-      y2="0%"
-    >
-      <stop
-        offset="50%"
-        stop-color="var(--gold)"
-      />
 
-      <stop
-        offset="100%"
-        stop-color="var(--verdigris)"
-      />
-    </linearGradient>
-  </defs>
+      aria-label="Normalized score progress across recent attempts"
+    >
 
-      {#each
-        displayedSlots
-        as slot, index
-      }
+      <defs>
+
+        <linearGradient
+          id="attempt-progress-gradient"
+
+          x1="0%"
+          y1="100%"
+
+          x2="0%"
+          y2="0%"
+        >
+
+          <stop
+            offset="50%"
+            stop-color="var(--gold)"
+          />
+
+          <stop
+            offset="100%"
+            stop-color="var(--verdigris)"
+          />
+
+        </linearGradient>
+
+      </defs>
+
+
+      {#each displayedSlots as slot, index}
+
+        {@const normalizedScore =
+          slot.occupied
+            ? getNormalizedScore(
+                slot
+              )
+            : 0}
+
 
         {@const score =
           clampScore(
-            slot.score
+            normalizedScore
           )}
 
+
         {@const targetHeight =
-          getHeight(score)}
+          getHeight(
+            score
+          )}
+
 
         {@const startY =
           getY(
             MIN_HEIGHT
           )}
 
+
         {@const targetY =
           getY(
             targetHeight
           )}
+
 
         {@const overshootHeight =
           getOvershootHeight(
             targetHeight
           )}
 
+
         {@const overshootY =
           getY(
             overshootHeight
           )}
+
 
         {@const x =
           index *
@@ -283,6 +425,7 @@
             SLOT_WIDTH -
             BAR_WIDTH
           ) / 2}
+
 
         {@const delay =
           index *
@@ -308,14 +451,18 @@
 
             <rect
               class="attempt-hit-area"
+
               x={
                 index *
                 SLOT_WIDTH
               }
+
               y="0"
+
               width={
                 SLOT_WIDTH
               }
+
               height={
                 CHART_HEIGHT
               }
@@ -334,37 +481,37 @@
           {/if}
 
 
-         <rect
-  class="attempt-shape"
+          <rect
+            class="attempt-shape"
 
-  {x}
+            {x}
 
-  y={
-    slot.occupied
-      ? startY
-      : targetY
-  }
+            y={
+              slot.occupied
+                ? startY
+                : targetY
+            }
 
-  width={
-    BAR_WIDTH
-  }
+            width={
+              BAR_WIDTH
+            }
 
-  height={
-    slot.occupied
-      ? MIN_HEIGHT
-      : targetHeight
-  }
+            height={
+              slot.occupied
+                ? MIN_HEIGHT
+                : targetHeight
+            }
 
-  rx={
-    BAR_WIDTH / 2
-  }
+            rx={
+              BAR_WIDTH / 2
+            }
 
-  fill={
-    slot.occupied
-      ? 'url(#attempt-progress-gradient)'
-      : 'var(--border-soft)'
-  }
->
+            fill={
+              slot.occupied
+                ? 'url(#attempt-progress-gradient)'
+                : 'var(--border-soft)'
+            }
+          >
 
             {#if slot.occupied}
 
@@ -436,36 +583,44 @@
   </div>
 
 
-  {#if
-    selectedAttempt?.occupied
-  }
+  {#if selectedAttempt?.occupied}
 
     <div class="selected-attempt">
 
       <div>
+
         <span class="attempt-label">
           Attempt
-          {selectedAttempt
-            .attemptNumber}
+          {selectedAttempt.attemptNumber}
         </span>
 
+
         <strong>
-          {selectedAttempt
-            .testTitle}
+          {selectedAttempt.testTitle}
         </strong>
+
       </div>
 
 
       <div class="selected-score">
+
         <strong>
-          {formatScore(
-            selectedAttempt.score
-          )}
+          {getNormalizedScore(
+            selectedAttempt
+          ) === null
+            ? '—'
+            : `${formatScore(
+                getNormalizedScore(
+                  selectedAttempt
+                )
+              )}%`}
         </strong>
 
+
         <span>
-          score
+          normalized score
         </span>
+
       </div>
 
 
@@ -475,6 +630,7 @@
           href={`/student/results/${selectedAttempt.id}`}
         >
           Result
+
           <span aria-hidden="true">
             →
           </span>
@@ -490,6 +646,7 @@
   <div class="progress-metrics">
 
     <div>
+
       <span>
         Attempts
       </span>
@@ -497,39 +654,52 @@
       <strong>
         {totalAttempts}
       </strong>
+
     </div>
 
 
     <div>
+
       <span>
-        Best score
+        Best normalized
       </span>
 
       <strong>
-        {attempts.length
-          ? formatScore(
+        {bestScore === null
+          ? '—'
+          : `${formatScore(
               bestScore
-            )
-          : '—'}
+            )}%`}
       </strong>
+
     </div>
 
 
     <div>
+
       <span>
-        Latest
+        Latest normalized
       </span>
 
       <strong>
-        {attempts.length
-          ? formatScore(
-              attempts[
-                attempts.length -
-                  1
-              ].score
-            )
+        {attempts.length &&
+        getNormalizedScore(
+          attempts[
+            attempts.length -
+              1
+          ]
+        ) !== null
+          ? `${formatScore(
+              getNormalizedScore(
+                attempts[
+                  attempts.length -
+                    1
+                ]
+              )
+            )}%`
           : '—'}
       </strong>
+
     </div>
 
   </div>
@@ -539,9 +709,11 @@
 
 <style>
   .progress-visual {
-    width: 100%;
+    width:
+      100%;
 
-    display: grid;
+    display:
+      grid;
 
     gap:
       var(--space-4);
@@ -549,20 +721,26 @@
 
 
   .chart-wrap {
-    width: 100%;
+    width:
+      100%;
 
-    overflow-x: auto;
+    overflow-x:
+      auto;
   }
 
 
   .progress-equalizer {
-    display: block;
+    display:
+      block;
 
-    width: 100%;
+    width:
+      100%;
 
-    min-width: 410px;
+    min-width:
+      410px;
 
-    height: 190px;
+    height:
+      190px;
 
     color:
       var(
@@ -570,35 +748,38 @@
         var(--primary)
       );
 
-    overflow: visible;
+    overflow:
+      visible;
   }
 
 
   .attempt-hit-area {
-    fill: transparent;
+    fill:
+      transparent;
 
-    cursor: pointer;
+    cursor:
+      pointer;
   }
 
 
- 
-
-
   g.empty
-    .attempt-shape {
-    opacity: 0.22;
+  .attempt-shape {
+    opacity:
+      0.22;
   }
 
 
   g.occupied:not(.selected)
-    .attempt-shape {
-    opacity: 0.72;
+  .attempt-shape {
+    opacity:
+      0.72;
   }
 
 
   g.selected
-    .attempt-shape {
-    opacity: 1;
+  .attempt-shape {
+    opacity:
+      1;
   }
 
 
@@ -612,16 +793,19 @@
 
 
   .selected-attempt {
-    min-height: 42px;
+    min-height:
+      42px;
 
-    display: grid;
+    display:
+      grid;
 
     grid-template-columns:
       minmax(0, 1fr)
       auto
       auto;
 
-    align-items: center;
+    align-items:
+      center;
 
     gap:
       var(--space-4);
@@ -636,11 +820,14 @@
 
 
   .selected-attempt > div:first-child {
-    min-width: 0;
+    min-width:
+      0;
 
-    display: grid;
+    display:
+      grid;
 
-    gap: 3px;
+    gap:
+      3px;
   }
 
 
@@ -649,7 +836,8 @@
     color:
       var(--text-muted);
 
-    font-size: 10px;
+    font-size:
+      10px;
 
     letter-spacing:
       0.06em;
@@ -660,21 +848,26 @@
 
 
   .selected-attempt strong {
-    overflow: hidden;
+    overflow:
+      hidden;
 
     text-overflow:
       ellipsis;
 
-    white-space: nowrap;
+    white-space:
+      nowrap;
 
-    font-size: 12px;
+    font-size:
+      12px;
   }
 
 
   .selected-score {
-    display: grid;
+    display:
+      grid;
 
-    text-align: right;
+    text-align:
+      right;
   }
 
 
@@ -682,7 +875,8 @@
     color:
       var(--primary);
 
-    font-size: 19px;
+    font-size:
+      19px;
 
     font-variant-numeric:
       tabular-nums;
@@ -690,9 +884,11 @@
 
 
   .selected-attempt a {
-    display: inline-flex;
+    display:
+      inline-flex;
 
-    align-items: center;
+    align-items:
+      center;
 
     gap:
       var(--space-1);
@@ -700,16 +896,20 @@
     color:
       var(--primary);
 
-    font-size: 11px;
+    font-size:
+      11px;
 
-    font-weight: 600;
+    font-weight:
+      600;
 
-    text-decoration: none;
+    text-decoration:
+      none;
   }
 
 
   .progress-metrics {
-    display: grid;
+    display:
+      grid;
 
     grid-template-columns:
       repeat(
@@ -728,11 +928,14 @@
 
 
   .progress-metrics > div {
-    min-width: 0;
+    min-width:
+      0;
 
-    display: flex;
+    display:
+      flex;
 
-    align-items: baseline;
+    align-items:
+      baseline;
 
     justify-content:
       space-between;
@@ -751,7 +954,8 @@
 
 
   .progress-metrics > div:last-child {
-    border-right: 0;
+    border-right:
+      0;
   }
 
 
@@ -759,7 +963,8 @@
     color:
       var(--text-muted);
 
-    font-size: 10px;
+    font-size:
+      10px;
 
     letter-spacing:
       0.05em;
@@ -773,7 +978,8 @@
     color:
       var(--text);
 
-    font-size: 17px;
+    font-size:
+      17px;
 
     font-variant-numeric:
       tabular-nums;
@@ -783,6 +989,7 @@
   @media (
     max-width: 600px
   ) {
+
     .selected-attempt {
       grid-template-columns:
         minmax(0, 1fr)
@@ -803,7 +1010,8 @@
 
 
     .progress-metrics > div {
-      border-right: 0;
+      border-right:
+        0;
 
       border-bottom:
         1px solid
@@ -812,7 +1020,9 @@
 
 
     .progress-metrics > div:last-child {
-      border-bottom: 0;
+      border-bottom:
+        0;
     }
+
   }
 </style>

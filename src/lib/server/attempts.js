@@ -672,6 +672,10 @@ export async function getStudentAttemptsForAdmin(
 export async function getStudentDashboardSummary(
   userId
 ) {
+  // ----------------------------------------------------------
+  // 1. General summary
+  // ----------------------------------------------------------
+
   const summaryResult =
     await db.query(
       `
@@ -679,24 +683,11 @@ export async function getStudentDashboardSummary(
           COUNT(id)::int
             AS attempt_count,
 
-          AVG(score)
-            AS average_score,
-
-          MAX(score)
-            AS best_score,
-
           MAX(completed_at)
-            AS last_attempt_at,
-
-          (
-            SELECT score
-            FROM attempts
-            WHERE user_id = $1
-            ORDER BY completed_at DESC
-            LIMIT 1
-          ) AS latest_score
+            AS last_attempt_at
 
         FROM attempts
+
         WHERE user_id = $1
       `,
       [
@@ -705,10 +696,11 @@ export async function getStudentDashboardSummary(
     );
 
 
-  /*
-    Latest 5 attempts:
-    used by the Recent Attempts table.
-  */
+  // ----------------------------------------------------------
+  // 2. Recent attempts
+  //    Used by the RESULTS table
+  //    newest first
+  // ----------------------------------------------------------
 
   const recentResult =
     await db.query(
@@ -716,15 +708,21 @@ export async function getStudentDashboardSummary(
         SELECT
           a.id,
           a.test_id,
-          t.title AS test_title,
+          t.title
+            AS test_title,
+
           a.started_at,
           a.completed_at,
           a.duration_milliseconds,
+
           a.score,
+
           a.correct_count,
           a.wrong_count,
           a.skipped_count,
+
           a.total_questions,
+
           a.created_at
 
         FROM attempts AS a
@@ -745,52 +743,48 @@ export async function getStudentDashboardSummary(
     );
 
 
-  /*
-    Latest 18 attempts:
-    used only by the progress SVG.
-
-    Inner query:
-      finds the newest 18.
-
-    Outer query:
-      places them oldest → newest
-      so progress reads naturally
-      from left → right.
-  */
+  // ----------------------------------------------------------
+  // 3. Progress attempts
+  //    Used by AttemptProgressEqualizer
+  //
+  //    IMPORTANT:
+  //    total_questions MUST be included here.
+  // ----------------------------------------------------------
 
   const progressResult =
     await db.query(
       `
         SELECT
-          progress_attempts.id,
-          progress_attempts.test_id,
-          progress_attempts.test_title,
-          progress_attempts.score,
-          progress_attempts.completed_at
+          a.id,
+          a.test_id,
+          t.title
+            AS test_title,
 
-        FROM (
-          SELECT
-            a.id,
-            a.test_id,
-            t.title AS test_title,
-            a.score,
-            a.completed_at
+          a.started_at,
+          a.completed_at,
+          a.duration_milliseconds,
 
-          FROM attempts AS a
+          a.score,
 
-          JOIN tests AS t
-            ON t.id = a.test_id
+          a.correct_count,
+          a.wrong_count,
+          a.skipped_count,
 
-          WHERE a.user_id = $1
+          a.total_questions,
 
-          ORDER BY
-            a.completed_at DESC
+          a.created_at
 
-          LIMIT 18
-        ) AS progress_attempts
+        FROM attempts AS a
+
+        JOIN tests AS t
+          ON t.id = a.test_id
+
+        WHERE a.user_id = $1
 
         ORDER BY
-          progress_attempts.completed_at ASC
+          a.completed_at DESC
+
+        LIMIT 18
       `,
       [
         userId
@@ -802,76 +796,36 @@ export async function getStudentDashboardSummary(
     summaryResult.rows[0];
 
 
+  /*
+    SQL returned newest -> oldest.
+
+    The equalizer expects:
+    oldest -> newest
+
+    so reverse only the progress array.
+  */
+
+  const progressAttempts =
+    progressResult.rows
+      .map(
+        mapAttemptRow
+      )
+      .reverse();
+
+
   return {
     attemptCount:
       summary.attempt_count,
 
-    latestScore:
-      summary.latest_score === null
-        ? null
-        : Number(
-            summary.latest_score
-          ),
-
-    bestScore:
-      summary.best_score === null
-        ? null
-        : Number(
-            summary.best_score
-          ),
-
-    averageScore:
-      summary.average_score === null
-        ? null
-        : Number(
-            summary.average_score
-          ),
-
     lastAttemptAt:
       summary.last_attempt_at,
-
-
-    /*
-      For our SVG equalizer.
-    */
-
-    progressAttempts:
-      progressResult.rows.map(
-        (
-          row,
-          index
-        ) => ({
-          id:
-            row.id,
-
-          testId:
-            row.test_id,
-
-          testTitle:
-            row.test_title,
-
-          label:
-            `Attempt ${index + 1}`,
-
-          score:
-            Number(
-              row.score
-            ),
-
-          completedAt:
-            row.completed_at
-        })
-      ),
-
-
-    /*
-      Existing table data.
-    */
 
     recentAttempts:
       recentResult.rows.map(
         mapAttemptRow
-      )
+      ),
+
+    progressAttempts
   };
 }
 // ============================================================

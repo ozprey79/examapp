@@ -848,6 +848,8 @@
 
     font-family:
       var(--fonty);
+
+      	
   }
 
 
