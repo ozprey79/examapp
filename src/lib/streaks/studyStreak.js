@@ -72,19 +72,34 @@ export function calculateStudyStreak(
     timeZone = 'Asia/Kolkata'
   } = {}
 ) {
+  const attemptCountsByDate =
+    new Map();
+
+  for (
+    const value of
+      completedAtValues
+  ) {
+    const dateKey =
+      getLocalDateKey(
+        value,
+        timeZone
+      );
+
+    if (!dateKey) {
+      continue;
+    }
+
+    attemptCountsByDate.set(
+      dateKey,
+      (attemptCountsByDate.get(
+        dateKey
+      ) ?? 0) + 1
+    );
+  }
+
   const activeDateKeys =
     [
-      ...new Set(
-        completedAtValues
-          .map(
-            (value) =>
-              getLocalDateKey(
-                value,
-                timeZone
-              )
-          )
-          .filter(Boolean)
-      )
+      ...attemptCountsByDate.keys()
     ].sort();
 
   const todayKey =
@@ -192,6 +207,11 @@ export function calculateStudyStreak(
         activeDayNumbers.has(
           dayNumber
         ),
+      attemptCount:
+        attemptCountsByDate.get(
+          date.toISOString()
+            .slice(0, 10)
+        ) ?? 0,
       isToday:
         offset === 0
     });

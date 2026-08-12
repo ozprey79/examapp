@@ -51,6 +51,12 @@ test(
       streak.completedToday,
       true
     );
+
+    assert.equal(
+      streak.recentDays.at(-1)
+        .attemptCount,
+      2
+    );
   }
 );
 

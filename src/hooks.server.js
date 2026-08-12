@@ -21,6 +21,13 @@ export async function handle({
   event,
   resolve
 }) {
+  if (
+    event.url.pathname ===
+    '/favicon.ico'
+  ) {
+    return resolve(event);
+  }
+
   const authSession =
     await auth.api.getSession({
       headers:
