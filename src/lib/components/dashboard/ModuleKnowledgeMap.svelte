@@ -5,6 +5,12 @@
 
   const LEVELS = [5, 4, 3, 2, 1];
 
+  const moduleNameCollator =
+    new Intl.Collator("en", {
+      numeric: true,
+      sensitivity: "base"
+    });
+
   const modules =
     $derived.by(
       () => {
@@ -59,8 +65,10 @@
           }))
           .sort(
             (first, second) =>
-              second.total - first.total ||
-              first.name.localeCompare(second.name)
+              moduleNameCollator.compare(
+                first.name,
+                second.name
+              )
           );
       }
     );
@@ -147,10 +155,10 @@
         </div>
 
         <div class="module-grid">
-          {#each modules as module (module.name)}
+          {#each modules as module, moduleIndex (module.name)}
             <div class="module-column">
               <div class="level-cells">
-                {#each LEVELS as level}
+                {#each LEVELS as level, levelIndex}
                   {@const count = module.levels[level]}
                   <div
                     class:occupied={count > 0}
@@ -159,7 +167,7 @@
                   >
                     <i
                       aria-hidden="true"
-                      style={`--bubble-size: ${bubbleSize(count)}px`}
+                      style={`--bubble-size: ${bubbleSize(count)}px; --bubble-delay: ${moduleIndex * 42 + levelIndex * 24}ms`}
                     ></i>
 
                     {#if count > 0}
@@ -171,7 +179,11 @@
 
               <div class="module-label">
                 <strong>{module.name}</strong>
-                <span>{module.total} learned · L{module.knowledge.toFixed(1)}</span>
+                <span
+                  title={`${module.total} learned questions, average level ${module.knowledge.toFixed(1)}`}
+                >
+                  {module.total} · L{module.knowledge.toFixed(1)}
+                </span>
               </div>
             </div>
           {/each}
@@ -253,20 +265,67 @@
 
   .matrix-scroll {
     min-width: 0;
-    overflow-x: auto;
+    overflow-x: hidden;
+    color-scheme: dark;
+    scrollbar-color:
+      var(--viz-spectrum-4)
+      color-mix(in srgb, var(--surface-strong) 88%, transparent);
     scrollbar-width: thin;
   }
 
+  .matrix-scroll::-webkit-scrollbar {
+    height: 7px;
+  }
+
+  .matrix-scroll::-webkit-scrollbar-track {
+    background:
+      color-mix(
+        in srgb,
+        var(--surface-strong) 88%,
+        transparent
+      );
+    border-radius: 999px;
+  }
+
+  .matrix-scroll::-webkit-scrollbar-thumb {
+    background:
+      linear-gradient(
+        90deg,
+        var(--viz-spectrum-1),
+        var(--viz-spectrum-3),
+        var(--viz-spectrum-5)
+      );
+    border: 1px solid var(--bg);
+    border-radius: 999px;
+  }
+
+  .matrix-scroll::-webkit-scrollbar-thumb:hover {
+    background:
+      linear-gradient(
+        90deg,
+        var(--gold),
+        var(--verdigris)
+      );
+  }
+
+  .matrix-scroll::-webkit-scrollbar-button,
+  .matrix-scroll::-webkit-scrollbar-corner {
+    width: 0;
+    height: 0;
+    display: none;
+    background: transparent;
+  }
+
   .matrix {
-    min-width: max(100%, calc(70px + var(--module-count) * 112px));
+    min-width: 100%;
     display: grid;
-    grid-template-columns: 58px minmax(0, 1fr);
+    grid-template-columns: 50px minmax(0, 1fr);
     gap: var(--space-2);
   }
 
   .level-axis,
   .level-cells {
-    height: 220px;
+    height: 160px;
     display: grid;
     grid-template-rows: repeat(5, 1fr);
   }
@@ -292,13 +351,13 @@
 
   .module-grid {
     display: grid;
-    grid-template-columns: repeat(var(--module-count), minmax(100px, 1fr));
+    grid-template-columns: repeat(var(--module-count), minmax(0, 1fr));
   }
 
   .module-column {
     min-width: 0;
     display: grid;
-    grid-template-rows: 220px auto;
+    grid-template-rows: 160px auto;
   }
 
   .level-cell {
@@ -325,6 +384,12 @@
         var(--viz-spectrum-5)
       );
     border: 1px solid color-mix(in srgb, var(--viz-spectrum-2) 70%, white);
+    animation:
+      knowledge-bubble-in
+      520ms
+      cubic-bezier(0.2, 0.8, 0.2, 1)
+      both;
+    animation-delay: var(--bubble-delay, 0ms);
   }
 
   .level-cell span {
@@ -362,6 +427,30 @@
     font-size: calc(var(--font-size-base) * 0.64);
   }
 
+  .module-label span {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @keyframes knowledge-bubble-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px) scale(0.2);
+    }
+
+    72% {
+      opacity: 1;
+      transform: translateY(-1px) scale(1.08);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
   .knowledge-note,
   .knowledge-empty {
     text-align: center;
@@ -383,5 +472,26 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+  }
+
+  @media (max-width: 600px) {
+    .matrix-scroll {
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+
+    .matrix {
+      min-width: max(100%, calc(50px + var(--module-count) * 64px));
+    }
+
+    .module-grid {
+      grid-template-columns: repeat(var(--module-count), minmax(64px, 1fr));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .level-cell.occupied i {
+      animation: none;
+    }
   }
 </style>

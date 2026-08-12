@@ -1,4 +1,9 @@
 <script>
+  import {
+    onMount
+  } from 'svelte';
+
+
   let {
     attempts = [],
     totalAttempts = 0
@@ -24,6 +29,40 @@
 
   let selectedIndex =
     $state(null);
+
+
+  let reduceMotion =
+    $state(false);
+
+
+  onMount(() => {
+    const motionQuery =
+      window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+      );
+
+
+    const updateMotionPreference =
+      () => {
+        reduceMotion =
+          motionQuery.matches;
+      };
+
+
+    updateMotionPreference();
+    motionQuery.addEventListener(
+      'change',
+      updateMotionPreference
+    );
+
+
+    return () => {
+      motionQuery.removeEventListener(
+        'change',
+        updateMotionPreference
+      );
+    };
+  });
 
 
   function getTotalQuestions(
@@ -330,7 +369,21 @@
 
 <div class="progress-visual">
 
+  <div class="chart-identifier">
+    <strong>Normalized score by attempt</strong>
+    <span>Bar height shows score · A1, A2… identify attempt order</span>
+  </div>
+
   <div class="chart-wrap">
+
+    <div class="chart-stage">
+
+      <div class="score-axis" aria-hidden="true">
+        <span class="score-maximum">100%</span>
+        <span class="score-zero">0%</span>
+      </div>
+
+      <div class="chart-series">
 
     <svg
       class="progress-equalizer"
@@ -385,6 +438,24 @@
         </linearGradient>
 
       </defs>
+
+
+      <g class="score-guides" aria-hidden="true">
+        <line
+          x1="0"
+          y1={getY(MAX_HEIGHT)}
+          x2={VISIBLE_SLOTS * SLOT_WIDTH}
+          y2={getY(MAX_HEIGHT)}
+        />
+
+        <line
+          class="zero-guide"
+          x1="0"
+          y1={CHART_HEIGHT / 2}
+          x2={VISIBLE_SLOTS * SLOT_WIDTH}
+          y2={CHART_HEIGHT / 2}
+        />
+      </g>
 
 
       {#each displayedSlots as slot, index}
@@ -467,6 +538,10 @@
             <rect
               class="attempt-hit-area"
 
+              role="button"
+              tabindex="0"
+              aria-label={`Attempt ${slot.attemptNumber}, ${formatScore(normalizedScore)} percent normalized score${index === visibleAttempts.length - 1 ? ', latest attempt' : ''}`}
+
               x={
                 index *
                 SLOT_WIDTH
@@ -490,6 +565,21 @@
               onmouseenter={() => {
                 selectedIndex =
                   index;
+              }}
+
+              onfocus={() => {
+                selectedIndex =
+                  index;
+              }}
+
+              onkeydown={(event) => {
+                if (
+                  event.key === 'Enter' ||
+                  event.key === ' '
+                ) {
+                  event.preventDefault();
+                  selectedIndex = index;
+                }
               }}
             />
 
@@ -528,7 +618,7 @@
             }
           >
 
-            {#if slot.occupied}
+            {#if slot.occupied && !reduceMotion}
 
               <animate
                 attributeName="height"
@@ -595,6 +685,43 @@
 
     </svg>
 
+
+        <div
+          class="attempt-axis"
+          role="group"
+          aria-label="Attempt order"
+        >
+          {#each displayedSlots as slot}
+            <span
+              class:occupied={slot.occupied}
+              class:latest={slot.occupied && slot.attemptNumber === totalAttempts}
+            >
+              {slot.occupied ? `A${slot.attemptNumber}` : ''}
+            </span>
+          {/each}
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div
+    class="chart-key"
+    role="list"
+    aria-label="Visualization key"
+  >
+    <span role="listitem">
+      <i class="selected-key" aria-hidden="true"></i>
+      Selected attempt
+    </span>
+
+    <span role="listitem">
+      <i class="latest-key" aria-hidden="true"></i>
+      Latest attempt
+    </span>
   </div>
 
 
@@ -735,6 +862,51 @@
   }
 
 
+  .chart-identifier {
+    display:
+      flex;
+
+    align-items:
+      baseline;
+
+    justify-content:
+      space-between;
+
+    gap:
+      var(--space-4);
+
+    font-family:
+      var(--font-ui);
+
+    animation:
+      result-detail-in
+      420ms
+      ease-out
+      both;
+  }
+
+
+  .chart-identifier strong {
+    color:
+      var(--text);
+
+    font-size:
+      12px;
+  }
+
+
+  .chart-identifier span {
+    color:
+      var(--text-muted);
+
+    font-family:
+      var(--font-metadata);
+
+    font-size:
+      10px;
+  }
+
+
   .chart-wrap {
     width:
       100%;
@@ -753,6 +925,83 @@
 
     border-radius:
       0;
+  }
+
+
+  .chart-stage {
+    min-width:
+      454px;
+
+    display:
+      grid;
+
+    grid-template-columns:
+      36px
+      minmax(410px, 1fr);
+
+    gap:
+      var(--space-2);
+  }
+
+
+  .score-axis {
+    position:
+      relative;
+
+    height:
+      190px;
+
+    color:
+      var(--text-muted);
+
+    font-family:
+      var(--font-metadata);
+
+    font-size:
+      9px;
+
+    font-variant-numeric:
+      tabular-nums;
+
+    animation:
+      result-detail-in
+      420ms
+      80ms
+      ease-out
+      both;
+  }
+
+
+  .score-axis span {
+    position:
+      absolute;
+
+    right:
+      0;
+
+    transform:
+      translateY(-50%);
+  }
+
+
+  .score-maximum {
+    top:
+      9.42%;
+  }
+
+
+  .score-zero {
+    top:
+      50%;
+  }
+
+
+  .chart-series {
+    min-width:
+      410px;
+
+    display:
+      grid;
   }
 
 
@@ -780,12 +1029,124 @@
   }
 
 
+  .score-guides line {
+    stroke:
+      var(--border-soft);
+
+    stroke-width:
+      0.8;
+
+    stroke-dasharray:
+      2 4;
+
+    vector-effect:
+      non-scaling-stroke;
+  }
+
+
+  .score-guides .zero-guide {
+    stroke-dasharray:
+      none;
+
+    opacity:
+      0.68;
+  }
+
+
+  .attempt-axis {
+    display:
+      grid;
+
+    grid-template-columns:
+      repeat(
+        18,
+        minmax(0, 1fr)
+      );
+
+    color:
+      var(--text-muted);
+
+    font-family:
+      var(--font-metadata);
+
+    font-size:
+      8px;
+
+    font-variant-numeric:
+      tabular-nums;
+
+    text-align:
+      center;
+
+    animation:
+      result-detail-in
+      420ms
+      220ms
+      ease-out
+      both;
+  }
+
+
+  .attempt-axis span {
+    min-width:
+      0;
+  }
+
+
+  .attempt-axis span.occupied {
+    color:
+      var(--text);
+  }
+
+
+  .attempt-axis span.latest {
+    color:
+      var(--primary);
+
+    font-weight:
+      700;
+  }
+
+
   .attempt-hit-area {
     fill:
       transparent;
 
     cursor:
       pointer;
+  }
+
+
+  .attempt-hit-area:focus {
+    outline:
+      none;
+  }
+
+
+  .attempt-shape {
+    stroke:
+      color-mix(
+        in srgb,
+        var(--text) 72%,
+        transparent
+      );
+
+    stroke-width:
+      1;
+
+    vector-effect:
+      non-scaling-stroke;
+
+    transition:
+      opacity
+      160ms
+      ease,
+      stroke
+      160ms
+      ease,
+      stroke-width
+      160ms
+      ease;
   }
 
 
@@ -807,6 +1168,17 @@
   .attempt-shape {
     opacity:
       1;
+
+    stroke:
+      var(--primary);
+
+    stroke-width:
+      2;
+
+    animation:
+      attempt-select-pulse
+      320ms
+      ease-out;
   }
 
 
@@ -816,6 +1188,149 @@
         --viz-progress-latest,
         var(--primary)
       );
+
+    transform-box:
+      fill-box;
+
+    transform-origin:
+      center;
+
+    animation:
+      latest-marker-in
+      520ms
+      680ms
+      cubic-bezier(0.2, 0.85, 0.25, 1.15)
+      both;
+  }
+
+
+  .chart-key {
+    display:
+      flex;
+
+    flex-wrap:
+      wrap;
+
+    align-items:
+      center;
+
+    gap:
+      var(--space-4);
+
+    color:
+      var(--text-muted);
+
+    font-family:
+      var(--font-metadata);
+
+    font-size:
+      10px;
+
+    animation:
+      result-detail-in
+      420ms
+      300ms
+      ease-out
+      both;
+  }
+
+
+  @keyframes result-detail-in {
+    from {
+      opacity:
+        0;
+
+      transform:
+        translateY(5px);
+    }
+
+    to {
+      opacity:
+        1;
+
+      transform:
+        translateY(0);
+    }
+  }
+
+
+  @keyframes attempt-select-pulse {
+    from {
+      filter:
+        brightness(1.35);
+    }
+
+    to {
+      filter:
+        none;
+    }
+  }
+
+
+  @keyframes latest-marker-in {
+    from {
+      opacity:
+        0;
+
+      transform:
+        scale(0);
+    }
+
+    72% {
+      transform:
+        scale(1.5);
+    }
+
+    to {
+      opacity:
+        1;
+
+      transform:
+        scale(1);
+    }
+  }
+
+
+  .chart-key span {
+    display:
+      inline-flex;
+
+    align-items:
+      center;
+
+    gap:
+      var(--space-2);
+  }
+
+
+  .chart-key i {
+    width:
+      9px;
+
+    height:
+      9px;
+
+    display:
+      block;
+  }
+
+
+  .selected-key {
+    border:
+      2px solid
+      var(--primary);
+
+    border-radius:
+      999px;
+  }
+
+
+  .latest-key {
+    background:
+      var(--primary);
+
+    border-radius:
+      50%;
   }
 
 
@@ -1023,6 +1538,17 @@
     max-width: 600px
   ) {
 
+    .chart-identifier {
+      align-items:
+        flex-start;
+
+      flex-direction:
+        column;
+
+      gap:
+        var(--space-1);
+    }
+
     .selected-attempt {
       grid-template-columns:
         minmax(0, 1fr)
@@ -1055,6 +1581,26 @@
     .progress-metrics > div:last-child {
       border-bottom:
         0;
+    }
+
+  }
+
+
+  @media (
+    prefers-reduced-motion: reduce
+  ) {
+
+    .chart-identifier,
+    .score-axis,
+    .attempt-axis,
+    .attempt-shape,
+    .latest-marker,
+    .chart-key {
+      animation:
+        none;
+
+      transition:
+        none;
     }
 
   }

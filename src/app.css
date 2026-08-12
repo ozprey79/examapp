@@ -1,3 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600&family=Space+Grotesk:wght@400;500;600&family=Atkinson+Hyperlegible:wght@400;700&display=swap');
 @import './lib/styles/base.css';
 @import './lib/styles/themes/default.css';
+@import './lib/styles/themes/bauhaus.css';

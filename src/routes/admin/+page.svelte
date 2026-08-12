@@ -6,6 +6,9 @@
   import SignOutButton
     from '$lib/components/auth/SignOutButton.svelte';
 
+  import ThemeToggle
+    from '$lib/components/theme/ThemeToggle.svelte';
+
   import AdminStudentActivityViz
     from '$lib/components/dashboard/AdminStudentActivityViz.svelte';
 
@@ -200,6 +203,9 @@
         </span>
 
       </div>
+
+
+      <ThemeToggle />
 
 
       <SignOutButton />

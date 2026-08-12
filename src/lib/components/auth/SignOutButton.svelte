@@ -37,8 +37,10 @@
   type="button"
   onclick={signOut}
   disabled={signingOut}
+  aria-label={signingOut ? 'Signing out' : 'Sign out'}
+  title={signingOut ? 'Signing out' : 'Sign out'}
 >
   {signingOut
     ? 'Signing out...'
-    : '\u23CF'}
+    : 'Sign out'}
 </button>

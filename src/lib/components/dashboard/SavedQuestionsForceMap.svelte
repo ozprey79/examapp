@@ -677,7 +677,7 @@
         {/each}
 
 
-        {#each nodes as node (getQuestionId(node))}
+        {#each nodes as node, nodeIndex (getQuestionId(node))}
 
           <circle
             class="saved-node"
@@ -702,6 +702,8 @@
             }
 
             fill="url(#saved-node-gradient)"
+
+            style={`--saved-node-delay: ${Math.min(520, nodeIndex * 18)}ms`}
 
             tabindex="0"
 
@@ -961,6 +963,45 @@
       opacity
       120ms
       ease;
+
+    transform-box:
+      fill-box;
+
+    transform-origin:
+      center;
+
+    animation:
+      saved-node-in
+      440ms
+      cubic-bezier(0.2, 0.85, 0.25, 1.1)
+      both;
+
+    animation-delay:
+      var(--saved-node-delay, 0ms);
+  }
+
+
+  @keyframes saved-node-in {
+    from {
+      opacity:
+        0;
+
+      transform:
+        scale(0.45);
+    }
+
+    75% {
+      transform:
+        scale(1.06);
+    }
+
+    to {
+      opacity:
+        1;
+
+      transform:
+        scale(1);
+    }
   }
 
 
@@ -1103,6 +1144,21 @@
     .inspector-hint {
       flex:
         0 1 auto;
+    }
+
+  }
+
+
+  @media (
+    prefers-reduced-motion: reduce
+  ) {
+
+    .saved-node {
+      animation:
+        none;
+
+      transition:
+        none;
     }
 
   }

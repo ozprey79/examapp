@@ -580,7 +580,7 @@
         >
 
           <circle
-            class="topic-node"
+            class={`topic-node band-${accuracyBand(node.accuracy)}`}
             r={node.radius}
             fill={`url(#topic-ball-mesh-${accuracyBand(node.accuracy)})`}
           />

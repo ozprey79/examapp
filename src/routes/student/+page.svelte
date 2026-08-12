@@ -2,6 +2,9 @@
   import SignOutButton
     from "$lib/components/auth/SignOutButton.svelte";
 
+  import ThemeToggle
+    from "$lib/components/theme/ThemeToggle.svelte";
+
   import AttemptProgressEqualizer
     from "$lib/components/AttemptProgressEqualizer.svelte";
 
@@ -277,6 +280,8 @@
 
 
     <div class="account-area">
+      <ThemeToggle />
+
       <div class="signout-wrap">
         <SignOutButton />
       </div>
@@ -304,7 +309,8 @@
        PRIMARY STUDENT ACTIONS
   ======================================================= -->
 
-  <section class="priority-section" aria-label="Quick actions">
+  {#if activeSection === "tests"}
+    <section class="priority-section" aria-label="Quick actions">
     <div class="priority-grid">
       <article class="priority-card revision-card featured">
         <div class="priority-card-topline">
@@ -381,7 +387,8 @@
         </a>
       </article>
     </div>
-  </section>
+    </section>
+  {/if}
 
 
   <!-- ======================================================
@@ -1107,7 +1114,7 @@
 
   .signout-wrap :global(button) {
     min-height:
-      var(--space-8);
+      36px;
 
     padding:
       0 var(--space-3);
@@ -2951,8 +2958,37 @@
     flex:
       0 0 auto;
 
+    min-width:
+      84px;
+
+    min-height:
+      40px;
+
+    display:
+      inline-flex;
+
+    align-items:
+      center;
+
+    justify-content:
+      center;
+
+    padding:
+      0 var(--space-3);
+
     color:
       var(--primary);
+
+    border:
+      1px solid
+      color-mix(
+        in srgb,
+        var(--primary) 46%,
+        var(--border-soft)
+      );
+
+    border-radius:
+      999px;
 
     font-weight:
       600;
@@ -2963,13 +2999,40 @@
 
 
   .test-row > a:hover {
-    text-decoration:
-      underline;
+    background:
+      color-mix(
+        in srgb,
+        var(--primary) 10%,
+        transparent
+      );
+
+    border-color:
+      var(--primary);
   }
 
 
   .test-row.taken > a {
     color:
+      var(--success);
+
+    border-color:
+      color-mix(
+        in srgb,
+        var(--success) 46%,
+        var(--border-soft)
+      );
+  }
+
+
+  .test-row.taken > a:hover {
+    background:
+      color-mix(
+        in srgb,
+        var(--success) 10%,
+        transparent
+      );
+
+    border-color:
       var(--success);
   }
 

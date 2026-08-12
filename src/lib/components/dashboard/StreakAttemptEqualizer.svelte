@@ -81,7 +81,7 @@
     role="img"
     aria-label={`Seven-day study activity. ${streak.current ?? 0} day streak and ${weekAttempts} attempts this week.`}
   >
-    {#each days as day (day.dateKey)}
+    {#each days as day, dayIndex (day.dateKey)}
       <div
         class:today={day.isToday}
         class="day-column"
@@ -89,12 +89,16 @@
       >
         <div class="sphere-stack" aria-hidden="true">
           {#if day.attemptCount === 0}
-            <i class="sphere empty"></i>
+            <i
+              class="sphere empty"
+              style={`--sphere-delay: ${dayIndex * 60}ms`}
+            ></i>
           {:else}
             {#each Array(Math.min(day.attemptCount, MAX_VISIBLE_ATTEMPTS)) as _, sphereIndex}
               <i
                 class:base={sphereIndex === 0}
                 class="sphere filled"
+                style={`--sphere-delay: ${dayIndex * 60 + sphereIndex * 48}ms`}
               ></i>
             {/each}
 
@@ -220,6 +224,13 @@
     aspect-ratio: 1;
     display: block;
     border-radius: 50%;
+    animation:
+      rhythm-sphere-in
+      520ms
+      cubic-bezier(0.2, 0.85, 0.25, 1.15)
+      both;
+    animation-delay: var(--sphere-delay, 0ms);
+    transform-origin: center bottom;
   }
 
   .sphere.base,
@@ -250,6 +261,23 @@
     color: var(--primary);
     font-family: var(--font-metadata);
     font-size: 11px;
+  }
+
+  @keyframes rhythm-sphere-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px) scale(0.25);
+    }
+
+    76% {
+      opacity: 1;
+      transform: translateY(-2px) scale(1.06);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 
   .day-label {
@@ -346,7 +374,8 @@
   }
 
   .compact .day-label span {
-    display: none;
+    display: block;
+    font-size: calc(var(--font-size-base) * 0.56);
   }
 
   .compact .rhythm-note {
@@ -400,6 +429,12 @@
 
     .day-label span {
       display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sphere {
+      animation: none;
     }
   }
 </style>

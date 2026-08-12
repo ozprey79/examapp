@@ -322,15 +322,14 @@
       {/each}
 
 
-      {#each boxSummaries as box}
+      {#each boxSummaries as box, boxIndex}
         <circle
           class="box-ring"
           cx={CENTER_X}
           cy={CENTER_Y}
           r={box.boundaryRadius}
-          style:stroke={boxColor(
-            box.number
-          )}
+          pathLength="1"
+          style={`stroke: ${boxColor(box.number)}; --ring-delay: ${boxIndex * 90}ms`}
         />
 
         {#if box.number < 5}
@@ -357,19 +356,22 @@
       {/each}
 
 
-      {#each nodes as node (node.id)}
-        <circle
-          class="question-dot"
+      {#each nodes as node, nodeIndex (node.id)}
+        <g class={`planetary-orbit orbit-${node.box}`}>
+          <circle
+          class={`question-dot box-${node.box}`}
           class:due={node.due}
           cx={node.x}
           cy={node.y}
           r={node.radius}
           fill={`url(#leitner-ball-mesh-${node.box})`}
+          style={`--node-delay: ${Math.min(760, nodeIndex * 2.3 + node.box * 55)}ms`}
         >
           <title>
             Box {node.box}{node.module ? ` · ${node.module}` : ''}{node.topic ? ` · ${node.topic}` : ''}{node.due ? ' · Due now' : ''}
           </title>
-        </circle>
+          </circle>
+        </g>
       {/each}
 
 
@@ -533,6 +535,10 @@
     fill: none;
     stroke-width: 1.2;
     opacity: 0.62;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: leitner-ring-in 900ms cubic-bezier(0.22, 0.8, 0.25, 1) both;
+    animation-delay: var(--ring-delay, 0ms);
   }
 
   .ring-label circle {
@@ -548,12 +554,76 @@
 
   .question-dot {
     opacity: 0.84;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: leitner-node-in 420ms cubic-bezier(0.2, 0.85, 0.25, 1.15) both;
+    animation-delay: var(--node-delay, 0ms);
+  }
+
+  .planetary-orbit {
+    transform-box: view-box;
+    transform-origin: center;
+    animation: planetary-orbit var(--orbit-duration) linear 900ms infinite;
+    will-change: transform;
+  }
+
+  .planetary-orbit.orbit-1 {
+    --orbit-duration: 150s;
+  }
+
+  .planetary-orbit.orbit-2 {
+    --orbit-duration: 124s;
+  }
+
+  .planetary-orbit.orbit-3 {
+    --orbit-duration: 100s;
+  }
+
+  .planetary-orbit.orbit-4 {
+    --orbit-duration: 78s;
+  }
+
+  .planetary-orbit.orbit-5 {
+    --orbit-duration: 58s;
+  }
+
+  .chart-frame:hover .planetary-orbit {
+    animation-play-state: paused;
   }
 
   .question-dot.due {
     stroke: var(--text);
     stroke-width: 2;
     paint-order: stroke;
+  }
+
+  @keyframes leitner-ring-in {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes leitner-node-in {
+    from {
+      opacity: 0;
+      transform: scale(0.18);
+    }
+
+    72% {
+      opacity: 0.9;
+      transform: scale(1.08);
+    }
+
+    to {
+      opacity: 0.84;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes planetary-orbit {
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   .centre-eyebrow {
@@ -684,6 +754,18 @@
     .legend-item + .legend-item {
       border-top: 1px solid var(--border-soft);
       border-left: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .box-ring,
+    .question-dot,
+    .planetary-orbit {
+      animation: none;
+    }
+
+    .box-ring {
+      stroke-dashoffset: 0;
     }
   }
 </style>
