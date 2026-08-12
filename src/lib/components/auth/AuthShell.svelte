@@ -18,9 +18,12 @@
   <main class="auth-stage">
     <section class="auth-panel">
       <header class="auth-header">
-        <p class="system-label"></p>
-        <!--<h1>{title}</h1>-->
-        <!--<p class="subtitle">{subtitle}</p>-->
+        <p class="system-label">Exam system</p>
+        <h1>{title}</h1>
+
+        {#if subtitle}
+          <p class="subtitle">{subtitle}</p>
+        {/if}
       </header>
 
       {@render children()}
@@ -31,7 +34,9 @@
           <a href={alternateHref}>{alternateLabel}</a>
         </p>
 
-        <span class="secure-label">Made with love for lines</span>
+        <span class="secure-label">
+          Focused practice. Measurable progress.
+        </span>
       </footer>
     </section>
   </main>
@@ -45,12 +50,7 @@
     background: #080808;
     color: #f5f5f5;
     font-family:
-      "Cascadia Code",
-      "SFMono-Regular",
-      "Roboto Mono",
-      "Liberation Mono",
-      ui-monospace,
-      monospace;
+      var(--font-ui);
   }
 
   .auth-vignette {
@@ -77,26 +77,25 @@
   }
 
   .auth-panel {
-    width: min(100%, 390px);
-    padding: 32px;
-    background: rgba(15, 15, 15, 0.167);
-    border: 0px solid rgba(255, 255, 255, 0.11);
-    border-radius: 50px;
-    box-shadow: 8 24px 80px rgba(0, 0, 0, 0.34);
-    backdrop-filter: blur(0px) saturate(112%);
+    width: min(100%, 420px);
+    padding: 34px;
+    background: rgba(10, 16, 15, 0.68);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 30px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
+    backdrop-filter: blur(18px) saturate(112%);
     -webkit-backdrop-filter: blur(18px) saturate(112%);
   }
 
   .auth-header {
-    margin-bottom:8px;
-    margin-left:150px;
+    margin-bottom: 24px;
   }
 
   .system-label {
-    margin: 0 0 16px;
-    color: rgba(255, 255, 255, 0.46);
+    margin: 0 0 10px;
+    color: #d4af37;
     font-size: 10px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
   }
@@ -104,18 +103,20 @@
   h1 {
     margin: 0;
     color: #f5f5f5;
-    font: inherit;
-    font-size: 25px;
-    font-weight: 500;
-    letter-spacing: -0.045em;
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
     line-height: 1.15;
   }
 
   .subtitle {
     margin: 8px 0 0;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
     line-height: 1.55;
+
+    font-family: var(--font-reading);
   }
 
   .auth-panel :global(.auth-form) {
@@ -129,45 +130,81 @@
   }
 
   .auth-panel :global(.auth-field > label) {
-    color: rgba(255, 255, 255, 0.62);
-    font-size: 11px;
-    font-weight: 500;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 12px;
+    font-weight: 600;
   }
 
   .auth-panel :global(input) {
     width: 100%;
     height: 44px;
     padding: 0 13px;
-    background: rgba(255, 255, 255, 0.055);
+    background: rgba(255, 255, 255, 0.07);
     color: #f5f5f5;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 17px;
     outline: none;
     font: inherit;
-    font-size: 12px;
+    font-size: 14px;
     transition:
       background 120ms ease,
       border-color 120ms ease;
+  }
+
+  .auth-panel :global(input::placeholder) {
+    color: rgba(255, 255, 255, 0.56);
   }
 
   .auth-panel :global(input:hover) {
     border-color: rgba(255, 255, 255, 0.2);
   }
 
-  .auth-panel :global(input:focus) {
-    background: rgba(255, 255, 255, 0.075);
-    border-color: rgba(255, 255, 255, 0.45);
+  .auth-panel :global(input:focus-visible) {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18);
+  }
+
+  .auth-panel :global(.password-control) {
+    position: relative;
+  }
+
+  .auth-panel :global(.password-control input) {
+    padding-right: 72px;
+  }
+
+  .auth-panel :global(.password-toggle) {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    min-width: 54px;
+    height: 32px;
+    padding: 0 8px;
+    transform: translateY(-50%);
+    background: transparent;
+    color: rgba(255, 255, 255, 0.72);
+    border: 0;
+    border-radius: 11px;
+    font: inherit;
+    font-size: 11px;
+    font-weight: 650;
+    cursor: pointer;
+  }
+
+  .auth-panel :global(.password-toggle:hover) {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
   }
 
   .auth-panel :global(.auth-submit) {
     height: 44px;
     margin-top: 5px;
-    background: #edededec;
+    background: rgba(237, 237, 237, 0.96);
     color: #111;
     border: 0;
     border-radius: 17px;
     font: inherit;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.035em;
     cursor: pointer;
@@ -179,10 +216,7 @@
   }
 
   .auth-panel :global(.auth-submit:hover:not(:disabled)) {
-    background: #00423d0a;
-    color: rgb(0, 0, 0);
-    border: 1px solid rgb(29, 25, 28);
-    filter: invert(80%);
+    background: #fff;
   }
 
   .auth-panel :global(.auth-submit:active:not(:disabled)) {
@@ -194,14 +228,21 @@
     cursor: wait;
   }
 
+  .auth-panel :global(.auth-submit:focus-visible),
+  .auth-panel :global(.password-toggle:focus-visible),
+  .auth-footer a:focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 3px;
+  }
+
   .auth-panel :global(.auth-message) {
     margin: 16px 0 0;
     padding: 10px 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 17px;
     background: rgba(255, 255, 255, 0.04);
-    color: rgba(255, 255, 255, 0.72);
-    font-size: 11px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 12px;
     line-height: 1.5;
   }
 
@@ -223,8 +264,10 @@
 
   .auth-footer p {
     margin: 0 0 16px;
-    color: rgba(255, 255, 255, 0.43);
-    font-size: 11px;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 12px;
+
+    font-family: var(--font-reading);
   }
 
   .auth-footer a {
@@ -239,9 +282,11 @@
   }
 
   .secure-label {
-    color: rgba(255, 255, 255, 0.25);
-    font-size: 9px;
-    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+
+    font-family: var(--font-reading);
   }
 
   @media (max-width: 480px) {
@@ -251,6 +296,7 @@
 
     .auth-panel {
       padding: 26px 22px;
+      border-radius: 26px;
     }
   }
 </style>

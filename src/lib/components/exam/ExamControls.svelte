@@ -1,4 +1,8 @@
 <script>
+  import {
+    getPrimaryActionLabel
+  } from '$lib/exam/examFlow.js';
+
   let {
     hasAnswer = false,
     submitted = false,
@@ -10,23 +14,13 @@
     onPrimary
   } = $props();
 
-  let primaryLabel = $derived.by(() => {
-    if (submitted) {
-      return isLastQuestion
-        ? 'Finish Test'
-        : 'Next';
-    }
-
-    if (!hasAnswer) {
-      return isLastQuestion
-        ? 'Skip & Finish'
-        : 'Skip & Next';
-    }
-
-    return isLastQuestion
-      ? 'Submit & Finish'
-      : 'Submit & Next';
-  });
+  let primaryLabel = $derived(
+    getPrimaryActionLabel({
+      hasAnswer,
+      submitted,
+      isLastQuestion
+    })
+  );
 </script>
 
 <nav

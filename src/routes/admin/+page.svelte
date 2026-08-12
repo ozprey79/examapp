@@ -3,9 +3,6 @@
     onMount
   } from 'svelte';
 
-  import '@fontsource/space-mono/400.css';
-  import '@fontsource/space-mono/700.css';
-
   import SignOutButton
     from '$lib/components/auth/SignOutButton.svelte';
 
@@ -676,8 +673,7 @@
       var(--text);
 
     font-family:
-      'Space Mono',
-      monospace;
+      var(--font-ui);
   }
 
 
@@ -795,6 +791,9 @@
         var(--font-size-base) *
         0.78
       );
+
+    font-family:
+      var(--font-metadata);
   }
 
 
@@ -1124,10 +1123,16 @@
 
     letter-spacing:
       0.05em;
+
+    font-family:
+      var(--font-metadata);
   }
 
 
   .metric-strip strong {
+    font-family:
+      var(--font-heading);
+
     font-size:
       calc(
         var(--font-size-base) *
@@ -1331,6 +1336,9 @@
         var(--font-size-base) *
         0.78
       );
+
+    font-family:
+      var(--font-metadata);
   }
 
 

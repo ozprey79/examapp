@@ -145,6 +145,9 @@
 
     color: var(--text);
 
+    font-family:
+      var(--font-heading);
+
     font-size: 16px;
     font-weight: 600;
 

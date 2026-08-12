@@ -4,6 +4,7 @@
   // ============================================================
 
   import ExamControls from "$lib/components/exam/ExamControls.svelte";
+  import ExamConfirmationDialog from "$lib/components/exam/ExamConfirmationDialog.svelte";
   import ExamHeader from "$lib/components/exam/ExamHeader.svelte";
   import QuestionCard from "$lib/components/exam/QuestionCard.svelte";
   import QuestionNavigator from "$lib/components/exam/QuestionNavigator.svelte";
@@ -24,6 +25,11 @@
   } from "$lib/results/buildResults.js";
 
   import { buildAttempt } from "$lib/results/buildAttempt.js";
+
+  import {
+    getSubmissionSummary,
+    lockAllAnswers,
+  } from "$lib/exam/examFlow.js";
 
   import { formatMilliseconds } from "$lib/utils/formatDuration.js";
 
@@ -66,6 +72,8 @@
 
   let lastSaveRequestedId = $state(null);
 
+  let confirmationMode = $state(null);
+
   // ============================================================
   // 4. Timer objects
   // ============================================================
@@ -89,22 +97,21 @@
 
   let isLastQuestion = $derived(currentIndex === questions.length - 1);
 
-  let questionResults = $derived(
-    buildQuestionResults({
-      questions,
-      answersById,
-      submittedById,
-      timeById: questionTimer.timeById,
-    }),
-  );
-
-  let results = $derived(summarizeResults(questionResults, scoring));
-
   let submittedCount = $derived(
     questions.filter((question) => submittedById[question.id]).length,
   );
 
   let remainingCount = $derived(questions.length - submittedCount);
+
+  let submissionSummary = $derived(
+    getSubmissionSummary(questions, answersById),
+  );
+
+  let finishConfirmationDescription = $derived(
+    submissionSummary.unanswered > 0
+      ? `${submissionSummary.unanswered} unanswered ${submissionSummary.unanswered === 1 ? "question" : "questions"} will be recorded as skipped. Answers cannot be changed after submission.`
+      : "All questions have an answer. Answers cannot be changed after submission.",
+  );
 
   let progressPercent = $derived(
     questions.length > 0 ? (submittedCount / questions.length) * 100 : 0,
@@ -350,46 +357,24 @@
     moveToQuestion(currentIndex - 1);
   }
 
-  function nextQuestion() {
-    if (!currentQuestionSubmitted) {
-      return;
-    }
-
-    if (isLastQuestion) {
-      finishTest();
-      return;
-    }
-
-    moveToQuestion(currentIndex + 1);
-  }
-
   function primaryQuestionAction() {
     if (completed) {
       return;
     }
 
-    // First click:
-    // submit/skip the current question,
-    // but stay on this question.
+    if (isLastQuestion) {
+      requestFinish();
+      return;
+    }
+
     if (!currentQuestionSubmitted) {
       if (selectedAnswer === null) {
         skipQuestion();
       } else {
         submitAnswer();
       }
-
-      return;
     }
 
-    // Second click on final question:
-    // finish the test.
-    if (isLastQuestion) {
-      finishTest();
-      return;
-    }
-
-    // Second click on any other question:
-    // move forward.
     moveToQuestion(currentIndex + 1);
   }
 
@@ -450,13 +435,59 @@
         error instanceof Error ? error.message : "Could not save the result.";
     }
   }
-  function finishTest() {
+  function requestRestart() {
+    if (!completed) {
+      confirmationMode = "restart";
+    }
+  }
+
+  function requestFinish() {
+    if (!completed) {
+      confirmationMode = "finish";
+    }
+  }
+
+  function cancelConfirmation() {
+    confirmationMode = null;
+  }
+
+  function confirmPendingAction() {
+    const pendingAction = confirmationMode;
+
+    confirmationMode = null;
+
+    if (pendingAction === "restart") {
+      restartTest();
+      return;
+    }
+
+    if (pendingAction === "finish") {
+      finishTest({ commitOpenAnswers: true });
+    }
+  }
+
+  function finishTest({ commitOpenAnswers = false } = {}) {
     if (completed) {
       return;
     }
 
+    confirmationMode = null;
+
+    if (commitOpenAnswers) {
+      submittedById = lockAllAnswers(questions, submittedById);
+    }
+
     questionTimer.stopCurrent();
     examTimer.stop();
+
+    const finalQuestionResults = buildQuestionResults({
+      questions,
+      answersById,
+      submittedById,
+      timeById: questionTimer.timeById,
+    });
+
+    const finalResults = summarizeResults(finalQuestionResults, scoring);
 
     const finishedAt = new Date().toISOString();
 
@@ -466,8 +497,8 @@
 
     completedAttempt = buildAttempt({
       meta,
-      results,
-      questionResults,
+      results: finalResults,
+      questionResults: finalQuestionResults,
       startedAt,
       completedAt: finishedAt,
     });
@@ -476,6 +507,8 @@
   }
 
   function restartTest() {
+    confirmationMode = null;
+
     clearAttempt(attemptStorageKey);
 
     currentIndex = 0;
@@ -555,7 +588,7 @@
         </p>
       </div>
 
-      <button class="restart-button" type="button" onclick={restartTest}>
+      <button class="restart-button" type="button" onclick={requestRestart}>
         Restart
       </button>
     </header>
@@ -624,6 +657,46 @@
     />
   {/if}
 </div>
+
+<ExamConfirmationDialog
+  open={confirmationMode !== null}
+  title={confirmationMode === "restart"
+    ? "Restart this test?"
+    : "Submit this test?"}
+  description={confirmationMode === "restart"
+    ? "Your answers and recorded question time will be cleared. This action cannot be undone."
+    : finishConfirmationDescription}
+  details={confirmationMode === "restart"
+    ? [
+        {
+          label: "Completed",
+          value: `${submittedCount} / ${questions.length}`,
+        },
+        {
+          label: "Time left",
+          value: examTimer.formattedTime,
+        },
+      ]
+    : [
+        {
+          label: "Answered",
+          value: `${submissionSummary.answered} / ${submissionSummary.total}`,
+        },
+        {
+          label: "Unanswered",
+          value: submissionSummary.unanswered,
+        },
+      ]}
+  confirmLabel={confirmationMode === "restart"
+    ? "Restart test"
+    : "Submit test"}
+  cancelLabel={confirmationMode === "restart"
+    ? "Keep test"
+    : "Continue test"}
+  tone={confirmationMode === "restart" ? "destructive" : "default"}
+  onConfirm={confirmPendingAction}
+  onCancel={cancelConfirmation}
+/>
 
 <style>
   .exam-page {

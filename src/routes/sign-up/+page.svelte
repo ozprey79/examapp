@@ -5,6 +5,7 @@
   let name = $state('');
   let email = $state('');
   let password = $state('');
+  let showPassword = $state(false);
 
   let status = $state('idle');
   let message = $state('');
@@ -63,6 +64,7 @@
 
       <input
         id="name"
+        name="name"
         type="text"
         bind:value={name}
         autocomplete="name"
@@ -78,6 +80,7 @@
 
       <input
         id="email"
+        name="email"
         type="email"
         bind:value={email}
         autocomplete="email"
@@ -91,15 +94,32 @@
         Password
       </label>
 
-      <input
-        id="password"
-        type="password"
-        bind:value={password}
-        autocomplete="new-password"
-        placeholder="Minimum 8 characters"
-        required
-        minlength="8"
-      />
+      <div class="password-control">
+        <input
+          id="password"
+          name="password"
+          type={showPassword ? 'text' : 'password'}
+          bind:value={password}
+          autocomplete="new-password"
+          placeholder="Minimum 8 characters"
+          required
+          minlength="8"
+        />
+
+        <button
+          class="password-toggle"
+          type="button"
+          aria-label={showPassword
+            ? 'Hide password'
+            : 'Show password'}
+          aria-pressed={showPassword}
+          onclick={() => {
+            showPassword = !showPassword;
+          }}
+        >
+          {showPassword ? 'Hide' : 'Show'}
+        </button>
+      </div>
     </div>
 
     <button
@@ -117,6 +137,9 @@
     <p
       class="auth-message {status}"
       aria-live="polite"
+      role={status === 'error'
+        ? 'alert'
+        : 'status'}
     >
       {message}
     </p>

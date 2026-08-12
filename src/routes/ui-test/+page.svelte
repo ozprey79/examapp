@@ -109,12 +109,7 @@
     background: #080808;
 
     font-family:
-      "Cascadia Code",
-      "SFMono-Regular",
-      "Roboto Mono",
-      "Liberation Mono",
-      ui-monospace,
-      monospace;
+      var(--font-ui);
   }
 
 

@@ -51,6 +51,9 @@
     background: var(--surface);
 
     border-bottom: 1px solid var(--border);
+
+    font-family:
+      var(--font-ui);
   }
 
   .brand {

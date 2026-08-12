@@ -624,20 +624,32 @@
 
             <stop
               offset="0%"
-              stop-color="var(--gold)"
+              stop-color="var(--viz-spectrum-1)"
               stop-opacity="0.96"
             />
 
             <stop
-              offset="46%"
-              stop-color="var(--verdigris)"
-              stop-opacity="0.82"
+              offset="28%"
+              stop-color="var(--viz-spectrum-2)"
+              stop-opacity="0.92"
+            />
+
+            <stop
+              offset="52%"
+              stop-color="var(--viz-spectrum-3)"
+              stop-opacity="0.88"
+            />
+
+            <stop
+              offset="76%"
+              stop-color="var(--viz-spectrum-4)"
+              stop-opacity="0.84"
             />
 
             <stop
               offset="100%"
-              stop-color="var(--surface-strong)"
-              stop-opacity="1"
+              stop-color="var(--viz-spectrum-5)"
+              stop-opacity="0.78"
             />
 
           </radialGradient>
@@ -894,13 +906,14 @@
     overflow:
       hidden;
 
-    border-top:
-      1px solid
-      var(--border-soft);
+    background:
+      transparent;
 
-    border-bottom:
-      1px solid
-      var(--border-soft);
+    border:
+      0;
+
+    border-radius:
+      0;
   }
 
 

@@ -33,11 +33,47 @@ body {
     antialiased;
 }
 
+h1,
+h2,
+h3 {
+  font-family:
+    var(--font-heading);
+
+  font-optical-sizing:
+    auto;
+}
+
 button,
 input,
 select,
 textarea {
-  font: inherit;
+  font-family:
+    var(--font-ui);
+
+  font-size:
+    inherit;
+
+  line-height:
+    inherit;
+}
+
+nav,
+label,
+[role='tab'],
+[role='navigation'] {
+  font-family:
+    var(--font-ui);
+}
+
+small,
+time,
+.metadata,
+.meta,
+.eyebrow,
+.panel-eyebrow,
+.section-note {
+  font-family:
+    var(--font-metadata);
 }
 
 button {

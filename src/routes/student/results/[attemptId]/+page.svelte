@@ -1273,7 +1273,9 @@
 
     gap:
       var(--space-8);
-      font-family: var(--fonty);
+
+    font-family:
+      var(--font-reading);
   }
 
 
@@ -1510,6 +1512,9 @@
   color:
     var(--text);
 
+  font-family:
+    var(--font-heading);
+
   font-size:
     calc(
       var(--font-size-base) *
@@ -1559,6 +1564,9 @@
   .score-display strong {
     color:
       var(--primary);
+
+    font-family:
+      var(--font-heading);
 
     font-size:
       clamp(

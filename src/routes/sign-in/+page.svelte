@@ -4,6 +4,7 @@
 
   let email = $state('');
   let password = $state('');
+  let showPassword = $state(false);
 
   let status = $state('idle');
   let message = $state('');
@@ -55,10 +56,11 @@
     }}
   >
     <div class="auth-field">
-     <!-- <label for="email">  Email</label>-->
+      <label for="email">Email</label>
 
       <input
         id="email"
+        name="email"
         type="email"
         bind:value={email}
         autocomplete="email"
@@ -68,16 +70,33 @@
     </div>
 
     <div class="auth-field">
-    
+      <label for="password">Password</label>
 
-      <input
-        id="password"
-        type="password"
-        bind:value={password}
-        autocomplete="current-password"
-        placeholder="••••••••"
-        required
-      />
+      <div class="password-control">
+        <input
+          id="password"
+          name="password"
+          type={showPassword ? 'text' : 'password'}
+          bind:value={password}
+          autocomplete="current-password"
+          placeholder="Enter your password"
+          required
+        />
+
+        <button
+          class="password-toggle"
+          type="button"
+          aria-label={showPassword
+            ? 'Hide password'
+            : 'Show password'}
+          aria-pressed={showPassword}
+          onclick={() => {
+            showPassword = !showPassword;
+          }}
+        >
+          {showPassword ? 'Hide' : 'Show'}
+        </button>
+      </div>
     </div>
 
     <button
@@ -95,6 +114,9 @@
     <p
       class="auth-message {status}"
       aria-live="polite"
+      role={status === 'error'
+        ? 'alert'
+        : 'status'}
     >
       {message}
     </p>

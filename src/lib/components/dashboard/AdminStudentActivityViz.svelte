@@ -184,12 +184,27 @@
 
             <stop
               offset="0%"
-              stop-color="var(--gold)"
+              stop-color="var(--viz-spectrum-1)"
+            />
+
+            <stop
+              offset="25%"
+              stop-color="var(--viz-spectrum-2)"
+            />
+
+            <stop
+              offset="50%"
+              stop-color="var(--viz-spectrum-3)"
+            />
+
+            <stop
+              offset="75%"
+              stop-color="var(--viz-spectrum-4)"
             />
 
             <stop
               offset="100%"
-              stop-color="var(--verdigris)"
+              stop-color="var(--viz-spectrum-5)"
             />
 
           </linearGradient>
@@ -501,13 +516,14 @@
     overflow-x:
       auto;
 
-    border-top:
-      1px solid
-      var(--border-soft);
+    background:
+      transparent;
 
-    border-bottom:
-      1px solid
-      var(--border-soft);
+    border:
+      0;
+
+    border-radius:
+      0;
   }
 
 

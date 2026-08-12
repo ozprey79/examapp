@@ -58,6 +58,22 @@
   }
 
 
+  function accuracyBand(
+    accuracy
+  ) {
+    return Math.min(
+      5,
+      Math.max(
+        1,
+        Math.ceil(
+          Number(accuracy) /
+            20
+        ) || 1
+      )
+    );
+  }
+
+
   function syncNodes() {
     if (!simulation) {
       return;
@@ -509,6 +525,39 @@
       aria-label="Interactive topic distribution. Drag topics to explore the force layout."
     >
 
+      <defs>
+        {#each [1, 2, 3, 4, 5] as band}
+          <radialGradient
+            id={`topic-ball-mesh-${band}`}
+            cx={band % 2 === 0 ? "72%" : "28%"}
+            cy={band % 2 === 0 ? "24%" : "30%"}
+            r="92%"
+          >
+            <stop
+              offset="0%"
+              stop-color={`var(--viz-spectrum-${band})`}
+            />
+
+            <stop
+              offset="48%"
+              stop-color="var(--viz-spectrum-3)"
+            />
+
+            <stop
+              offset="82%"
+              stop-color={band <= 3
+                ? "var(--viz-spectrum-5)"
+                : "var(--viz-spectrum-1)"}
+            />
+
+            <stop
+              offset="100%"
+              stop-color={`var(--viz-spectrum-${band})`}
+            />
+          </radialGradient>
+        {/each}
+      </defs>
+
       {#each
         nodes as node
         (node.id)
@@ -531,14 +580,10 @@
         >
 
           <circle
-  class="topic-node"
-  r={node.radius}
-  style:fill={`color-mix(
-    in srgb,
-    var(--gold) ${100 - node.accuracy}%,
-    var(--verdigris) ${node.accuracy}%
-  )`}
-/>
+            class="topic-node"
+            r={node.radius}
+            fill={`url(#topic-ball-mesh-${accuracyBand(node.accuracy)})`}
+          />
             <title>
               {node.topic}
               · {node.total} questions
@@ -714,13 +759,14 @@
 
     overflow: hidden;
 
-    border-top:
-      1px solid
-      var(--border-soft);
+    background:
+      transparent;
 
-    border-bottom:
-      1px solid
-      var(--border-soft);
+    border:
+      0;
+
+    border-radius:
+      0;
   }
 
 

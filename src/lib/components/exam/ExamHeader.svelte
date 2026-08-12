@@ -78,9 +78,15 @@
 
     color: var(--text-muted);
     font-size: 12px;
+
+    font-family:
+      var(--font-ui);
   }
 
   strong {
+    font-family:
+      var(--font-heading);
+
     font-size: 20px;
     line-height: 1.2;
   }

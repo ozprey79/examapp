@@ -1,13 +1,30 @@
 :root {
   /* Typography */
-  
 
-  --font-family:
+  --font-heading:
+    'Bricolage Grotesque',
     Arial,
-    Helvetica,
     sans-serif;
 
---fonty:'Space Mono', monospace;
+  --font-ui:
+    'Space Grotesk',
+    Arial,
+    sans-serif;
+
+  --font-reading:
+    'Atkinson Hyperlegible',
+    Arial,
+    sans-serif;
+
+  --font-metadata:
+    var(--font-reading);
+
+  --font-family:
+    var(--font-reading);
+
+  /* Temporary compatibility alias for older components. */
+  --fonty:
+    var(--font-ui);
 
   --font-size-base: 14px;
 
@@ -51,17 +68,58 @@
   --verdigris: #2a9d8f;
   --gold: #d4af37;
 
+  /* Visualization spectrum: gold -> verdigris */
+
+  --viz-spectrum-1:
+    var(--gold);
+
+  --viz-spectrum-2:
+    color-mix(
+      in oklch,
+      var(--gold) 75%,
+      var(--verdigris)
+    );
+
+  --viz-spectrum-3:
+    color-mix(
+      in oklch,
+      var(--gold) 50%,
+      var(--verdigris)
+    );
+
+  --viz-spectrum-4:
+    color-mix(
+      in oklch,
+      var(--gold) 25%,
+      var(--verdigris)
+    );
+
+  --viz-spectrum-5:
+    var(--verdigris);
+
+  --viz-spectrum-gradient:
+    linear-gradient(
+      135deg,
+      var(--viz-spectrum-1),
+      var(--viz-spectrum-2) 24%,
+      var(--viz-spectrum-3) 50%,
+      var(--viz-spectrum-4) 76%,
+      var(--viz-spectrum-5)
+    );
+
   /* Leitner force visualization */
 
-  --viz-leitner-inner: oklch(0.1186 0.0248 260.66);
-  --viz-leitner-middle: oklch(0.3133 0.1419 260.73);
-  --viz-leitner-outer: oklch(0.6061 0.2122 260.66);
+  --viz-leitner-inner:
+    var(--viz-spectrum-1);
 
-  --verdigris-gold: linear-gradient(
-    135deg,
-    var(--verdigris),
-    var(--gold)
-  );
+  --viz-leitner-middle:
+    var(--viz-spectrum-3);
+
+  --viz-leitner-outer:
+    var(--viz-spectrum-5);
+
+  --verdigris-gold:
+    var(--viz-spectrum-gradient);
 
   /* Question options */
 
@@ -93,10 +151,19 @@
   --space-8: 32px;
 
 
-  --leitner-box-1: oklch(86.806% 0.27961 140.048);
---leitner-box-2: var(--gold);
---leitner-box-3: oklch(63.297% 0.30801 317.401);
---leitner-box-4: var(--verdigris);
---leitner-box-5: oklch(0.6061 0.2122 260.66);
+  --leitner-box-1:
+    var(--viz-spectrum-1);
+
+  --leitner-box-2:
+    var(--viz-spectrum-2);
+
+  --leitner-box-3:
+    var(--viz-spectrum-3);
+
+  --leitner-box-4:
+    var(--viz-spectrum-4);
+
+  --leitner-box-5:
+    var(--viz-spectrum-5);
 
 }

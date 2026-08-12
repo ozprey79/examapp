@@ -1,7 +1,4 @@
 <script>
-  import "@fontsource/space-mono/400.css";
-  import "@fontsource/space-mono/700.css";
-
   import SignOutButton
     from "$lib/components/auth/SignOutButton.svelte";
 
@@ -816,7 +813,7 @@
       var(--text);
 
     font-family:
-      var(--fonty);
+      var(--font-ui);
   }
 
 

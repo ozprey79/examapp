@@ -69,31 +69,19 @@
   questionId={question.id}
 />
 
-    {#if submitted && !isReview}
+    {#if isReview}
+      <span class="state-label">
+        Review
+      </span>
+    {:else if isPractice && submitted}
       <span class="state-label submitted">
-        Submitted
+        Checked
+      </span>
+    {:else if submitted}
+      <span class="state-label submitted">
+        Answer locked
       </span>
     {/if}
-
-    {#if isReview}
-
-  <span class="question-state review">
-    Review
-  </span>
-
-{:else if isPractice && submitted}
-
-  <span class="question-state submitted">
-    Checked
-  </span>
-
-{:else if submitted}
-
-  <span class="question-state submitted">
-    Submitted
-  </span>
-
-{/if}
   </div>
 
   <div class="question-content">
@@ -151,7 +139,7 @@ disabled={locked}
 
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-reading);
   }
 
   .question-meta {
@@ -223,6 +211,8 @@ disabled={locked}
     border-radius: var(--radius);
 
     text-align: left;
+
+    font-family: var(--font-reading);
   }
 
   .option:hover:not(:disabled) {
@@ -295,7 +285,7 @@ disabled={locked}
     cursor: default;
   }
   #question-title{
-     font-family: "Times New Roman", Times, serif;
+    font-family: var(--font-reading);
     font-weight: normal;
   }
   @media (max-width: 600px) {

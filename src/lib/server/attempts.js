@@ -2,6 +2,9 @@
 
 import { db } from '$lib/server/db.js';
 import { updateLeitner } from '$lib/server/leitner';
+import {
+  calculateStudyStreak
+} from '$lib/streaks/studyStreak.js';
 
 export async function saveCompletedAttempt(
   attempt,
@@ -697,6 +700,31 @@ export async function getStudentDashboardSummary(
 
 
   // ----------------------------------------------------------
+  // Daily streak activity
+  // One or more completed tests on a local calendar day count
+  // as a single active day.
+  // ----------------------------------------------------------
+
+  const streakResult =
+    await db.query(
+      `
+        SELECT
+          completed_at
+
+        FROM attempts
+
+        WHERE user_id = $1
+
+        ORDER BY
+          completed_at ASC
+      `,
+      [
+        userId
+      ]
+    );
+
+
+  // ----------------------------------------------------------
   // 2. Recent attempts
   //    Used by the RESULTS table
   //    newest first
@@ -813,12 +841,23 @@ export async function getStudentDashboardSummary(
       .reverse();
 
 
+  const streak =
+    calculateStudyStreak(
+      streakResult.rows.map(
+        (row) =>
+          row.completed_at
+      )
+    );
+
+
   return {
     attemptCount:
       summary.attempt_count,
 
     lastAttemptAt:
       summary.last_attempt_at,
+
+    streak,
 
     recentAttempts:
       recentResult.rows.map(

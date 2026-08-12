@@ -193,6 +193,9 @@
 
     margin: 0 0 26px;
 
+    font-family:
+      var(--font-reading);
+
     font-size: 18px;
     line-height: 1.55;
     font-weight: 600;

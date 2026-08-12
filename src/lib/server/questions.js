@@ -362,7 +362,9 @@ export async function getTestForStudent(
       )
   };
 }
-export async function getAvailableTests() {
+export async function getAvailableTests(
+  userId
+) {
   const result =
     await db.query(
       `
@@ -370,12 +372,19 @@ export async function getAvailableTests() {
           t.id,
           t.title,
           t.duration_minutes,
-          COUNT(q.id)::int
-            AS question_count
+          COUNT(DISTINCT q.id)::int
+            AS question_count,
+
+          COUNT(DISTINCT a.id)::int
+            AS attempt_count
         FROM tests AS t
 
         LEFT JOIN questions AS q
           ON q.test_id = t.id
+
+        LEFT JOIN attempts AS a
+          ON a.test_id = t.id
+          AND a.user_id = $1
 
         GROUP BY
           t.id,
@@ -383,8 +392,12 @@ export async function getAvailableTests() {
           t.duration_minutes
 
         ORDER BY
+          COUNT(DISTINCT a.id) = 0 DESC,
           t.created_at DESC
-      `
+      `,
+      [
+        userId
+      ]
     );
 
 
@@ -400,7 +413,13 @@ export async function getAvailableTests() {
         row.duration_minutes,
 
       questionCount:
-        row.question_count
+        row.question_count,
+
+      attemptCount:
+        row.attempt_count,
+
+      taken:
+        row.attempt_count > 0
     })
   );
 }

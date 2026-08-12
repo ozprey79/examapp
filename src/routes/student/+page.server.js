@@ -58,7 +58,9 @@ export async function load({
         userId
       ),
 
-      getAvailableTests(),
+      getAvailableTests(
+        userId
+      ),
 
       getDueLeitnerQuestions(
         userId

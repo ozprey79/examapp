@@ -56,6 +56,9 @@
     font-size: 12px;
     font-weight: 600;
 
+    font-family:
+      var(--font-ui);
+
     list-style: none;
   }
 

@@ -133,6 +133,9 @@
 
     border: 1px solid var(--border);
     border-radius: var(--radius);
+
+    font-family:
+      var(--font-ui);
   }
 
   .navigator-header {

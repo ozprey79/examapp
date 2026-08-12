@@ -1,15 +1,12 @@
 <script>
-  import "@fontsource/space-mono/400.css";
-  import "@fontsource/space-mono/700.css";
-
   import SignOutButton
     from "$lib/components/auth/SignOutButton.svelte";
 
   import AttemptProgressEqualizer
     from "$lib/components/AttemptProgressEqualizer.svelte";
 
-  import LeitnerForceCollider
-    from "$lib/components/dashboard/2LeitnerForceCollider.svelte";
+  import LeitnerConcentricBoxes
+    from "$lib/components/dashboard/LeitnerConcentricBoxes.svelte";
 
   import SavedQuestionsForceMap
     from "$lib/components/dashboard/SavedQuestionsForceMap.svelte";
@@ -18,7 +15,7 @@
   let { data } = $props();
 
   let activeSection =
-    $state("results");
+    $state("tests");
 
 
   let selectedSavedId =
@@ -47,6 +44,13 @@
     );
 
 
+  const primaryTest =
+    $derived(
+      tests[0] ??
+      null
+    );
+
+
   const savedQuestions =
     $derived(
       data.savedQuestions ??
@@ -68,12 +72,77 @@
     );
 
 
+  const leitnerBoxCounts =
+    $derived.by(
+      () => {
+        const counts = {
+          1: 0,
+          2: 0,
+          3: 0,
+          4: 0,
+          5: 0
+        };
+
+        for (
+          const question of
+            data.leitnerVisualization ?? []
+        ) {
+          const box =
+            Number(
+              question.box
+            );
+
+          if (box in counts) {
+            counts[box] += 1;
+          }
+        }
+
+        return counts;
+      }
+    );
+
+
   const studentName =
     $derived(
       data.profile?.displayName ??
       data.user?.name ??
       data.user?.email ??
       "Student"
+    );
+
+
+  const streak =
+    $derived(
+      data.progress?.streak ??
+      {
+        current: 0,
+        longest: 0,
+        completedToday: false,
+        atRisk: false,
+        recentDays: []
+      }
+    );
+
+
+  const streakTitle =
+    $derived(
+      streak.completedToday
+        ? "Today's streak is complete"
+        : streak.atRisk
+          ? "Keep your streak alive"
+          : streak.current > 0
+            ? "Build on your streak"
+            : "Start your study streak"
+    );
+
+
+  const streakMessage =
+    $derived(
+      streak.completedToday
+        ? "Come back tomorrow to add another day."
+        : streak.atRisk
+          ? "Complete a test today before your streak resets."
+          : "Complete a test today to count your first active day."
     );
 
 
@@ -259,58 +328,233 @@
   </header>
 
 
+  <section
+    class:complete={streak.completedToday}
+    class:at-risk={streak.atRisk}
+    class="streak-card"
+    aria-labelledby="streak-heading"
+  >
+    <div class="streak-mark" aria-hidden="true">
+      <span>◆</span>
+    </div>
+
+    <div class="streak-copy">
+      <p class="panel-eyebrow">
+        Daily study streak
+      </p>
+
+      <div class="streak-titleline">
+        <strong>
+          {streak.current}
+        </strong>
+
+        <div>
+          <h2 id="streak-heading">
+            {streakTitle}
+          </h2>
+
+          <p>
+            {streakMessage}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="streak-week" aria-label="Activity during the last seven days">
+      {#each streak.recentDays as day (day.dateKey)}
+        <div
+          class:active={day.active}
+          class:today={day.isToday}
+          class="streak-day"
+          title={`${day.dateKey}: ${day.active ? "test completed" : "no test completed"}`}
+        >
+          <span>{day.label}</span>
+          <i aria-hidden="true"></i>
+          <span class="sr-only">
+            {day.dateKey}, {day.active ? "active" : "inactive"}
+          </span>
+        </div>
+      {/each}
+    </div>
+
+    <div class="streak-record">
+      <span>Best streak</span>
+      <strong>{streak.longest} days</strong>
+    </div>
+  </section>
+
+
   <!-- ======================================================
-       ACTIVE VISUALIZATION
+       PRIMARY STUDENT ACTIONS
   ======================================================= -->
 
-  <section class="dashboard-viz">
-
-    {#if activeSection === "results"}
-
-      <AttemptProgressEqualizer
-        attempts={progressAttempts}
-        totalAttempts={data.progress?.attemptCount ?? progressAttempts.length}
-      />
-
-
-    {:else if activeSection === "leitner"}
-
-      <LeitnerForceCollider
-        questions={data.leitnerVisualization ?? []}
-      />
-
-
-    {:else if activeSection === "saved"}
-
-      <SavedQuestionsForceMap
-        questions={savedQuestions}
-        selectedId={selectedSavedId}
-        onSelect={locateSavedQuestion}
-      />
-
-
-    {:else if activeSection === "tests"}
-
-      <div class="viz-placeholder">
-
-        <p>
-          Available
+  <section
+    class="priority-section"
+    aria-labelledby="priority-heading"
+  >
+    <header class="priority-heading">
+      <div>
+        <p class="panel-eyebrow">
+          Continue learning
         </p>
 
-        <strong>
+        <h2 id="priority-heading">
+          What would you like to do?
+        </h2>
+      </div>
+
+      <span class="section-note">
+        Pick up where you left off
+      </span>
+    </header>
+
+
+    <div class="priority-grid">
+      <article class="priority-card revision-card featured">
+        <div class="priority-card-topline">
+          <span>Revision due</span>
+
+          <span class="status-dots" aria-hidden="true">
+            {#each [1, 2, 3, 4, 5] as box}
+              <i class:active={leitnerBoxCounts[box] > 0}></i>
+            {/each}
+          </span>
+        </div>
+
+        <strong class="priority-number">
+          {dueCount}
+        </strong>
+
+        <div class="priority-copy">
+          <h3>
+            {dueCount > 0
+              ? "Start revision session"
+              : "Revision is up to date"}
+          </h3>
+
+          <p>
+            {dueCount > 0
+              ? `${dueCount} questions are ready. Move them into stronger boxes.`
+              : "Practice any box to keep your recall active."}
+          </p>
+        </div>
+
+        <a
+          class="priority-action primary"
+          href={dueCount > 0
+            ? "/student/revision/due"
+            : "/student/revision/practice"}
+        >
+          {dueCount > 0
+            ? "Begin review"
+            : "Practice by box"}
+          <span aria-hidden="true">→</span>
+        </a>
+
+        <span class="card-orbits" aria-hidden="true">
+          <i></i><i></i><i></i>
+        </span>
+      </article>
+
+
+      <article class="priority-card examination-card">
+        <div class="priority-card-topline">
+          <span>Examination</span>
+
+          <span class="status-dots compact" aria-hidden="true">
+            {#each [1, 2, 3] as dot}
+              <i class:active={dot <= Math.min(tests.length, 3)}></i>
+            {/each}
+          </span>
+        </div>
+
+        <strong class="priority-number">
           {tests.length}
         </strong>
 
-        <span>
-          {tests.length === 1
-            ? "examination"
-            : "examinations"}
+        {#if primaryTest}
+          <div class="priority-copy">
+            <h3>
+              {primaryTest.title}
+            </h3>
+
+            <p>
+              {primaryTest.questionCount} questions ·
+              {primaryTest.durationMinutes} minutes
+            </p>
+          </div>
+
+          <a
+            class="priority-action"
+            href={`/student/test/${primaryTest.id}`}
+          >
+            Start test
+            <span aria-hidden="true">→</span>
+          </a>
+        {:else}
+          <div class="priority-copy">
+            <h3>No tests available</h3>
+
+            <p>
+              New examinations will appear here when published.
+            </p>
+          </div>
+
+          <span class="priority-unavailable">
+            Nothing to start yet
+          </span>
+        {/if}
+
+        <span class="card-orbits" aria-hidden="true">
+          <i></i><i></i><i></i>
         </span>
+      </article>
 
-      </div>
 
-    {/if}
+      <article class="priority-card saved-card">
+        <div class="priority-card-topline">
+          <span>Saved practice</span>
 
+          <span class="status-dots compact" aria-hidden="true">
+            {#each [1, 2] as dot}
+              <i class:active={dot <= Math.min(savedCount, 2)}></i>
+            {/each}
+          </span>
+        </div>
+
+        <strong class="priority-number">
+          {savedCount}
+        </strong>
+
+        <div class="priority-copy">
+          <h3>
+            {savedCount > 0
+              ? "Practice saved"
+              : "Build your collection"}
+          </h3>
+
+          <p>
+            Bookmarked questions for focused review.
+          </p>
+        </div>
+
+        <a
+          class="priority-action"
+          href={savedCount > 0
+            ? "/student/saved/practice"
+            : "/student/saved"}
+        >
+          {savedCount > 0
+            ? "Practice saved"
+            : "View saved questions"}
+          <span aria-hidden="true">→</span>
+        </a>
+
+        <span class="card-orbits" aria-hidden="true">
+          <i></i><i></i><i></i>
+        </span>
+      </article>
+    </div>
   </section>
 
 
@@ -329,6 +573,34 @@
       <button
         type="button"
         role="tab"
+        class:active={activeSection === "tests"}
+        aria-selected={activeSection === "tests"}
+        aria-controls="tests-panel"
+        onclick={() => {
+          activeSection = "tests";
+        }}
+      >
+        Tests
+      </button>
+
+
+      <button
+        type="button"
+        role="tab"
+        class:active={activeSection === "leitner"}
+        aria-selected={activeSection === "leitner"}
+        aria-controls="leitner-panel"
+        onclick={() => {
+          activeSection = "leitner";
+        }}
+      >
+        Revision
+      </button>
+
+
+      <button
+        type="button"
+        role="tab"
         class:active={activeSection === "results"}
         aria-selected={activeSection === "results"}
         aria-controls="results-panel"
@@ -343,26 +615,6 @@
       <button
         type="button"
         role="tab"
-        class:active={activeSection === "leitner"}
-        aria-selected={activeSection === "leitner"}
-        aria-controls="leitner-panel"
-        onclick={() => {
-          activeSection = "leitner";
-        }}
-      >
-        <span>
-          Leitner
-        </span>
-
-        <span class="tab-count">
-          {dueCount}
-        </span>
-      </button>
-
-
-      <button
-        type="button"
-        role="tab"
         class:active={activeSection === "saved"}
         aria-selected={activeSection === "saved"}
         aria-controls="saved-panel"
@@ -370,33 +622,7 @@
           activeSection = "saved";
         }}
       >
-        <span>
-          Saved
-        </span>
-
-        <span class="tab-count">
-          {savedCount}
-        </span>
-      </button>
-
-
-      <button
-        type="button"
-        role="tab"
-        class:active={activeSection === "tests"}
-        aria-selected={activeSection === "tests"}
-        aria-controls="tests-panel"
-        onclick={() => {
-          activeSection = "tests";
-        }}
-      >
-        <span>
-          Tests
-        </span>
-
-        <span class="tab-count">
-          {tests.length}
-        </span>
+        Saved
       </button>
 
     </div>
@@ -747,28 +973,8 @@
           id="tests-panel"
           class="panel-block"
           role="tabpanel"
-          aria-label="Available tests"
+          aria-label="Tests"
         >
-
-          <header class="panel-heading">
-
-            <div>
-              <p class="panel-eyebrow">
-                Examination
-              </p>
-
-              <h2>
-                Available tests
-              </h2>
-            </div>
-
-
-            <span class="section-note">
-              {tests.length} available
-            </span>
-
-          </header>
-
 
           {#if tests.length === 0}
 
@@ -788,13 +994,24 @@
 
               {#each tests as test (test.id)}
 
-                <article class="test-row">
+                <article
+                  class:taken={test.taken}
+                  class="test-row"
+                >
 
                   <div class="test-copy">
 
-                    <strong>
-                      {test.title}
-                    </strong>
+                    <div class="test-titleline">
+                      <strong>
+                        {test.title}
+                      </strong>
+
+                      {#if test.taken}
+                        <span class="taken-label">
+                          Taken
+                        </span>
+                      {/if}
+                    </div>
 
                     <span>
                       {test.questionCount} questions ·
@@ -805,7 +1022,7 @@
 
 
                   <a href={`/student/test/${test.id}`}>
-                    Start →
+                    {test.taken ? "Retake" : "Start"} →
                   </a>
 
                 </article>
@@ -824,15 +1041,55 @@
 
   </section>
 
+
+  <!-- ======================================================
+       SUPPORTING VISUALIZATION
+  ======================================================= -->
+
+  {#if activeSection !== "tests"}
+    <section
+      class="dashboard-viz"
+      aria-label="Section visualization"
+    >
+
+    {#if activeSection === "results"}
+
+      <AttemptProgressEqualizer
+        attempts={progressAttempts}
+        totalAttempts={data.progress?.attemptCount ?? progressAttempts.length}
+      />
+
+
+    {:else if activeSection === "leitner"}
+
+      <LeitnerConcentricBoxes
+        questions={data.leitnerVisualization ?? []}
+      />
+
+
+    {:else if activeSection === "saved"}
+
+      <SavedQuestionsForceMap
+        questions={savedQuestions}
+        selectedId={selectedSavedId}
+        onSelect={locateSavedQuestion}
+      />
+
+
+    {/if}
+
+    </section>
+  {/if}
+
 </div>
 
 
 <style>
   .dashboard-page {
     width:
-      min(
-        calc(100% - var(--space-8)),
-        var(--page-width)
+      calc(
+        100% -
+        var(--space-8)
       );
 
     margin-inline:
@@ -847,9 +1104,7 @@
       var(--text);
 
     font-family:
-      var(--fonty);
-
-      	
+      var(--font-ui);
   }
 
 
@@ -878,8 +1133,7 @@
       var(--border-soft);
 
     font-family:
-      "Space Mono",
-      monospace;
+      var(--font-ui);
   }
 
 
@@ -1019,6 +1273,9 @@
         var(--font-size-base) *
         0.78
       );
+
+    font-family:
+      var(--font-metadata);
   }
 
 
@@ -1057,7 +1314,882 @@
 
 
   /* ========================================================
-     Active visualization
+     Daily study streak
+  ======================================================== */
+
+  .streak-card {
+    display:
+      grid;
+
+    grid-template-columns:
+      auto
+      minmax(220px, 1fr)
+      auto
+      auto;
+
+    align-items:
+      center;
+
+    gap:
+      var(--space-4);
+
+    margin-top:
+      var(--space-6);
+
+    padding:
+      var(--space-4);
+
+    background:
+      linear-gradient(
+        115deg,
+        color-mix(
+          in srgb,
+          var(--primary) 8%,
+          var(--surface)
+        ),
+        var(--surface)
+      );
+
+    border:
+      1px solid
+      color-mix(
+        in srgb,
+        var(--primary) 34%,
+        var(--border-soft)
+      );
+
+    border-radius:
+      var(--radius);
+  }
+
+
+  .sr-only {
+    position:
+      absolute;
+
+    width:
+      1px;
+
+    height:
+      1px;
+
+    padding:
+      0;
+
+    margin:
+      -1px;
+
+    overflow:
+      hidden;
+
+    clip:
+      rect(0, 0, 0, 0);
+
+    white-space:
+      nowrap;
+
+    border:
+      0;
+  }
+
+
+  .streak-card.complete {
+    border-color:
+      color-mix(
+        in srgb,
+        var(--success) 50%,
+        var(--border-soft)
+      );
+  }
+
+
+  .streak-card.at-risk {
+    border-color:
+      color-mix(
+        in srgb,
+        var(--danger) 58%,
+        var(--border-soft)
+      );
+  }
+
+
+  .streak-mark {
+    width:
+      52px;
+
+    aspect-ratio:
+      1;
+
+    display:
+      grid;
+
+    place-items:
+      center;
+
+    background:
+      color-mix(
+        in srgb,
+        var(--primary) 15%,
+        var(--surface-strong)
+      );
+
+    color:
+      var(--primary);
+
+    border:
+      1px solid
+      color-mix(
+        in srgb,
+        var(--primary) 42%,
+        var(--border)
+      );
+
+    border-radius:
+      50%;
+
+    font-size:
+      22px;
+
+    transform:
+      rotate(45deg);
+  }
+
+
+  .streak-mark span {
+    transform:
+      rotate(-45deg);
+  }
+
+
+  .streak-card.complete .streak-mark {
+    color:
+      var(--success);
+  }
+
+
+  .streak-card.at-risk .streak-mark {
+    color:
+      var(--danger);
+  }
+
+
+  .streak-copy {
+    min-width:
+      0;
+
+    display:
+      grid;
+
+    gap:
+      var(--space-1);
+  }
+
+
+  .streak-titleline {
+    display:
+      flex;
+
+    align-items:
+      center;
+
+    gap:
+      var(--space-3);
+  }
+
+
+  .streak-titleline > strong {
+    color:
+      var(--primary);
+
+    font-family:
+      var(--font-heading);
+
+    font-size:
+      calc(
+        var(--font-size-base) *
+        2.9
+      );
+
+    line-height:
+      1;
+
+    font-weight:
+      600;
+
+    font-variant-numeric:
+      tabular-nums;
+  }
+
+
+  .streak-titleline p {
+    margin-top:
+      var(--space-1);
+
+    color:
+      var(--text-muted);
+
+    font-family:
+      var(--font-reading);
+  }
+
+
+  .streak-week {
+    display:
+      grid;
+
+    grid-template-columns:
+      repeat(7, 24px);
+
+    gap:
+      var(--space-1);
+  }
+
+
+  .streak-day {
+    display:
+      grid;
+
+    justify-items:
+      center;
+
+    gap:
+      5px;
+
+    color:
+      var(--text-muted);
+
+    font-family:
+      var(--font-metadata);
+
+    font-size:
+      10px;
+  }
+
+
+  .streak-day i {
+    width:
+      12px;
+
+    height:
+      12px;
+
+    background:
+      var(--surface-strong);
+
+    border:
+      1px solid
+      var(--border);
+
+    border-radius:
+      50%;
+  }
+
+
+  .streak-day.active i {
+    background:
+      var(--primary);
+
+    border-color:
+      var(--primary);
+
+    box-shadow:
+      0 0 0 3px
+      color-mix(
+        in srgb,
+        var(--primary) 12%,
+        transparent
+      );
+  }
+
+
+  .streak-day.today span:first-child {
+    color:
+      var(--text);
+
+    font-weight:
+      600;
+  }
+
+
+  .streak-record {
+    display:
+      grid;
+
+    gap:
+      3px;
+
+    padding-left:
+      var(--space-4);
+
+    border-left:
+      1px solid
+      var(--border-soft);
+
+    white-space:
+      nowrap;
+  }
+
+
+  .streak-record span {
+    color:
+      var(--text-muted);
+
+    font-family:
+      var(--font-metadata);
+
+    font-size:
+      calc(
+        var(--font-size-base) *
+        0.72
+      );
+
+    text-transform:
+      uppercase;
+  }
+
+
+  .streak-record strong {
+    font-family:
+      var(--font-heading);
+
+    font-size:
+      calc(
+        var(--font-size-base) *
+        1.05
+      );
+  }
+
+
+  /* ========================================================
+     Primary actions
+  ======================================================== */
+
+  .priority-section {
+    display:
+      grid;
+
+    gap:
+      var(--space-4);
+
+    margin-top:
+      var(--space-8);
+  }
+
+
+  .priority-heading {
+    display:
+      flex;
+
+    align-items:
+      flex-end;
+
+    justify-content:
+      space-between;
+
+    gap:
+      var(--space-4);
+  }
+
+
+  .priority-grid {
+    display:
+      grid;
+
+    grid-template-columns:
+      minmax(0, 1.75fr)
+      repeat(2, minmax(0, 1fr));
+
+    gap:
+      var(--space-3);
+  }
+
+
+  .priority-card {
+    position:
+      relative;
+
+    min-width:
+      0;
+
+    min-height:
+      286px;
+
+    display:
+      flex;
+
+    flex-direction:
+      column;
+
+    gap:
+      var(--space-2);
+
+    padding:
+      var(--space-4);
+
+    background-color:
+      var(--surface-strong);
+
+    border:
+      1px solid
+      var(--border-soft);
+
+    border-radius:
+      14px;
+
+    overflow:
+      hidden;
+  }
+
+
+  .priority-card::after {
+    position:
+      absolute;
+
+    top:
+      38%;
+
+    right:
+      -3px;
+
+    width:
+      7px;
+
+    height:
+      76px;
+
+    content:
+      "";
+
+    background:
+      radial-gradient(
+        circle,
+        var(--border) 0 1.5px,
+        transparent 1.8px
+      ) center / 7px 12px repeat-y;
+
+    opacity:
+      0.75;
+  }
+
+
+  .priority-card > :not(.card-orbits) {
+    position:
+      relative;
+
+    z-index:
+      2;
+  }
+
+
+  .priority-card.featured {
+    background:
+      linear-gradient(
+        135deg,
+        color-mix(
+          in srgb,
+          var(--success) 5%,
+          var(--surface-strong)
+        ),
+        var(--surface-strong)
+      );
+
+    border-color:
+      color-mix(
+        in srgb,
+        var(--success) 48%,
+        var(--border-soft)
+      );
+  }
+
+
+  .priority-card-topline {
+    display:
+      flex;
+
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+
+    justify-content:
+      flex-start;
+
+    gap:
+      var(--space-2);
+
+    color:
+      var(--text-muted);
+
+    font-size:
+      calc(
+        var(--font-size-base) *
+        0.76
+      );
+
+    letter-spacing:
+      0.07em;
+
+    text-transform:
+      uppercase;
+  }
+
+
+  .status-dots {
+    display:
+      inline-flex;
+
+    align-items:
+      center;
+
+    gap:
+      4px;
+  }
+
+
+  .status-dots i {
+    width:
+      9px;
+
+    height:
+      9px;
+
+    display:
+      block;
+
+    border:
+      1px solid
+      color-mix(
+        in srgb,
+        var(--success) 55%,
+        var(--border)
+      );
+
+    border-radius:
+      50%;
+  }
+
+
+  .status-dots i.active {
+    background:
+      var(--success);
+
+    border-color:
+      var(--success);
+  }
+
+
+  .examination-card .status-dots i {
+    border-color:
+      color-mix(
+        in srgb,
+        var(--primary) 58%,
+        var(--border)
+      );
+  }
+
+
+  .examination-card .status-dots i.active {
+    background:
+      var(--primary);
+
+    border-color:
+      var(--primary);
+  }
+
+
+  .saved-card .status-dots i {
+    border-color:
+      var(--border);
+  }
+
+
+  .saved-card .status-dots i.active {
+    background:
+      var(--text-muted);
+
+    border-color:
+      var(--text-muted);
+  }
+
+
+  .priority-number {
+    margin-top:
+      var(--space-1);
+
+    color:
+      var(--text-muted);
+
+    font-family:
+      var(--font-heading);
+
+    font-size:
+      clamp(34px, 4vw, 44px);
+
+    line-height:
+      1;
+
+    font-weight:
+      600;
+
+    font-variant-numeric:
+      tabular-nums;
+  }
+
+
+  .revision-card .priority-number {
+    color:
+      var(--success);
+  }
+
+
+  .examination-card .priority-number {
+    color:
+      var(--primary);
+  }
+
+
+  .priority-copy {
+    min-width:
+      0;
+
+    display:
+      grid;
+
+    gap:
+      var(--space-1);
+  }
+
+
+  .priority-copy h3 {
+    margin:
+      0;
+
+    overflow:
+      hidden;
+
+    color:
+      var(--text);
+
+    font-size:
+      calc(
+        var(--font-size-base) *
+        1.18
+      );
+
+    line-height:
+      1.35;
+
+    font-weight:
+      600;
+  }
+
+
+  .priority-copy p {
+    color:
+      var(--text-muted);
+
+    line-height:
+      1.5;
+
+    font-family:
+      var(--font-reading);
+  }
+
+
+  .priority-action,
+  .priority-unavailable {
+    min-height:
+      56px;
+
+    display:
+      inline-flex;
+
+    align-items:
+      center;
+
+    justify-content:
+      space-between;
+
+    gap:
+      var(--space-3);
+
+    margin-top:
+      auto;
+
+    padding:
+      0 var(--space-4);
+
+    border-radius:
+      var(--radius);
+
+    font-weight:
+      600;
+  }
+
+
+  .priority-action {
+    color:
+      var(--text);
+
+    border:
+      1px solid
+      var(--border);
+
+    text-decoration:
+      none;
+  }
+
+
+  .priority-action > span {
+    width:
+      50px;
+
+    align-self:
+      stretch;
+
+    display:
+      grid;
+
+    place-items:
+      center;
+
+    margin-right:
+      calc(var(--space-4) * -1);
+
+    border-left:
+      1px solid
+      color-mix(
+        in srgb,
+        currentColor 24%,
+        transparent
+      );
+
+    font-size:
+      19px;
+  }
+
+
+  .priority-action:hover {
+    background-color:
+      var(--surface-hover);
+
+    border-color:
+      var(--primary);
+  }
+
+
+  .priority-action.primary {
+    background-color:
+      var(--primary);
+
+    color:
+      var(--primary-text);
+
+    border-color:
+      var(--primary);
+  }
+
+
+  .priority-action.primary:hover {
+    background-color:
+      color-mix(
+        in srgb,
+        var(--primary) 88%,
+        white
+      );
+
+    border-color:
+      var(--primary);
+  }
+
+
+  .priority-unavailable {
+    color:
+      var(--text-muted);
+
+    border:
+      1px dashed
+      var(--border-soft);
+  }
+
+
+  .card-orbits {
+    position:
+      absolute;
+
+    right:
+      -54px;
+
+    bottom:
+      -82px;
+
+    z-index:
+      1;
+
+    width:
+      190px;
+
+    height:
+      190px;
+
+    pointer-events:
+      none;
+  }
+
+
+  .card-orbits i {
+    position:
+      absolute;
+
+    right:
+      0;
+
+    bottom:
+      0;
+
+    border:
+      1px solid
+      color-mix(
+        in srgb,
+        var(--border) 65%,
+        transparent
+      );
+
+    border-radius:
+      50%;
+  }
+
+
+  .card-orbits i:nth-child(1) {
+    width:
+      94px;
+
+    height:
+      94px;
+  }
+
+
+  .card-orbits i:nth-child(2) {
+    width:
+      140px;
+
+    height:
+      140px;
+  }
+
+
+  .card-orbits i:nth-child(3) {
+    width:
+      186px;
+
+    height:
+      186px;
+  }
+
+
+  /* ========================================================
+     Supporting visualization
   ======================================================== */
 
   .dashboard-viz {
@@ -1135,8 +2267,7 @@
       var(--space-8);
 
     font-family:
-      "Space Mono",
-      monospace;
+      var(--font-ui);
   }
 
 
@@ -1156,6 +2287,15 @@
     border-bottom:
       1px solid
       var(--border-soft);
+
+    scrollbar-width:
+      none;
+  }
+
+
+  .section-rail::-webkit-scrollbar {
+    display:
+      none;
   }
 
 
@@ -1215,40 +2355,6 @@
   .section-rail button.active {
     border-bottom-color:
       var(--primary);
-  }
-
-
-  .tab-count {
-    min-width:
-      var(--space-6);
-
-    display:
-      inline-flex;
-
-    align-items:
-      center;
-
-    justify-content:
-      center;
-
-    padding:
-      0 var(--space-2);
-
-    background-color:
-      var(--surface-strong);
-
-    color:
-      var(--text);
-
-    border:
-      1px solid
-      var(--border-soft);
-
-    border-radius:
-      var(--radius);
-
-    font-variant-numeric:
-      tabular-nums;
   }
 
 
@@ -1445,11 +2551,17 @@
         var(--font-size-base) *
         0.8
       );
+
+    font-family:
+      var(--font-metadata);
   }
 
 
   .attempt-score,
   .attempt-correct {
+    font-family:
+      var(--font-heading);
+
     font-size:
       var(--font-size-base);
   }
@@ -1548,6 +2660,9 @@
   .metric-block > strong {
     color:
       var(--primary);
+
+    font-family:
+      var(--font-heading);
 
     font-size:
       calc(
@@ -1843,13 +2958,12 @@
 
 
   /* ========================================================
-     Available tests
+     Tests
   ======================================================== */
 
   .test-list {
-    border-top:
-      1px solid
-      var(--border-soft);
+    display:
+      grid;
   }
 
 
@@ -1870,11 +2984,42 @@
       var(--space-4);
 
     padding:
-      var(--space-3) 0;
+      var(--space-3)
+      var(--space-3)
+      var(--space-3)
+      var(--space-4);
 
     border-bottom:
       1px solid
       var(--border-soft);
+
+    border-left:
+      2px solid
+      transparent;
+  }
+
+
+  .test-row:first-child {
+    border-top:
+      1px solid
+      var(--border-soft);
+  }
+
+
+  .test-row.taken {
+    background:
+      linear-gradient(
+        90deg,
+        color-mix(
+          in srgb,
+          var(--success) 9%,
+          transparent
+        ),
+        transparent 34%
+      );
+
+    border-left-color:
+      var(--success);
   }
 
 
@@ -1902,6 +3047,65 @@
   }
 
 
+  .test-titleline {
+    min-width:
+      0;
+
+    display:
+      flex;
+
+    align-items:
+      center;
+
+    gap:
+      var(--space-2);
+  }
+
+
+  .taken-label {
+    flex:
+      0 0 auto;
+
+    padding:
+      2px var(--space-2);
+
+    color:
+      var(--success);
+
+    border:
+      1px solid
+      color-mix(
+        in srgb,
+        var(--success) 48%,
+        transparent
+      );
+
+    border-radius:
+      999px;
+
+    font-family:
+      var(--font-metadata);
+
+    font-size:
+      calc(
+        var(--font-size-base) *
+        0.68
+      );
+
+    font-weight:
+      700;
+
+    letter-spacing:
+      0.06em;
+
+    line-height:
+      1.2;
+
+    text-transform:
+      uppercase;
+  }
+
+
   .test-copy span {
     color:
       var(--text-muted);
@@ -1911,6 +3115,9 @@
         var(--font-size-base) *
         0.8
       );
+
+    font-family:
+      var(--font-metadata);
   }
 
 
@@ -1932,6 +3139,12 @@
   .test-row > a:hover {
     text-decoration:
       underline;
+  }
+
+
+  .test-row.taken > a {
+    color:
+      var(--success);
   }
 
 
@@ -1973,6 +3186,33 @@
     max-width: 800px
   ) {
 
+    .streak-card {
+      grid-template-columns:
+        auto
+        minmax(0, 1fr)
+        auto;
+    }
+
+
+    .streak-week {
+      grid-column:
+        2 / -1;
+
+      justify-content:
+        start;
+    }
+
+    .priority-grid {
+      grid-template-columns:
+        1fr 1fr;
+    }
+
+
+    .priority-card.featured {
+      grid-column:
+        1 / -1;
+    }
+
     .saved-table {
       overflow-x:
         auto;
@@ -1992,7 +3232,42 @@
     max-width: 720px
   ) {
 
+    .streak-card {
+      grid-template-columns:
+        auto
+        minmax(0, 1fr);
+    }
+
+
+    .streak-week {
+      grid-column:
+        1 / -1;
+    }
+
+
+    .streak-record {
+      grid-column:
+        1 / -1;
+
+      grid-template-columns:
+        1fr auto;
+
+      align-items:
+        baseline;
+
+      padding:
+        var(--space-3) 0 0;
+
+      border-top:
+        1px solid
+        var(--border-soft);
+
+      border-left:
+        0;
+    }
+
     .dashboard-header,
+    .priority-heading,
     .panel-heading,
     .leitner-summary {
       align-items:
@@ -2043,6 +3318,44 @@
     max-width: 480px
   ) {
 
+    .streak-card {
+      gap:
+        var(--space-3);
+
+      padding:
+        var(--space-3);
+    }
+
+
+    .streak-mark {
+      width:
+        42px;
+    }
+
+
+    .streak-titleline {
+      align-items:
+        flex-start;
+    }
+
+
+    .streak-titleline > strong {
+      font-size:
+        calc(
+          var(--font-size-base) *
+          2.25
+        );
+    }
+
+
+    .streak-week {
+      grid-template-columns:
+        repeat(7, minmax(22px, 1fr));
+
+      width:
+        100%;
+    }
+
     .dashboard-page {
       width:
         calc(
@@ -2052,6 +3365,18 @@
 
       padding-top:
         var(--space-4);
+    }
+
+
+    .priority-grid {
+      grid-template-columns:
+        1fr;
+    }
+
+
+    .priority-card.featured {
+      grid-column:
+        auto;
     }
 
 

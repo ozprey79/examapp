@@ -51,6 +51,9 @@
 
     text-align: left;
 
+    font-family:
+      var(--font-reading);
+
     transition:
       background 100ms ease,
       border-color 100ms ease;
