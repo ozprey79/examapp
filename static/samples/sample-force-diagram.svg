@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-labelledby="title desc">
+  <title id="title">Two perpendicular forces at a joint</title>
+  <desc id="desc">A horizontal force points right and a vertical force points upward from a central joint.</desc>
+  <rect width="640" height="320" fill="#151716"/>
+  <g fill="none" stroke="#d9b735" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M320 180H520"/>
+    <path d="m520 180-28-20m28 20-28 20"/>
+    <path d="M320 180V48"/>
+    <path d="m320 48-20 28m20-28 20 28"/>
+  </g>
+  <circle cx="320" cy="180" r="15" fill="#38a996" stroke="#f4efe4" stroke-width="3"/>
+  <g fill="#f4efe4" font-family="Arial, sans-serif" font-size="24">
+    <text x="430" y="145">F₁</text>
+    <text x="350" y="80">F₂</text>
+    <text x="286" y="225">Joint</text>
+  </g>
+</svg>

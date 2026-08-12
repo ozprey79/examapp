@@ -219,6 +219,31 @@ if (
     );
   }
 
+  if (
+    question.image !== undefined &&
+    question.image !== null
+  ) {
+    if (!isNonEmptyString(question.image)) {
+      errors.push(
+        `${location}.image must be a non-empty image reference when provided.`
+      );
+    }
+
+    if (!isNonEmptyString(question.image_alt)) {
+      errors.push(
+        `${location}.image_alt is required when an image is provided.`
+      );
+    }
+  } else if (
+    question.image_alt !== undefined &&
+    question.image_alt !== null &&
+    !isNonEmptyString(question.image_alt)
+  ) {
+    errors.push(
+      `${location}.image_alt must be a non-empty string when provided.`
+    );
+  }
+
   validateOptions(
     question,
     location,

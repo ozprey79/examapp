@@ -7,27 +7,15 @@ import {
   importQuestionBank
 } from '$lib/server/questions.js';
 
+import {
+  readQuestionBundle
+} from '$lib/server/questionBundle.js';
+
 
 export function load({
   locals
 }) {
-  if (!locals.user) {
-    redirect(
-      303,
-      '/sign-in'
-    );
-  }
-
-  if (
-    locals.profile?.role !==
-    'admin'
-  ) {
-    redirect(
-      303,
-      '/student'
-    );
-  }
-
+  requireAdmin(locals);
   return {};
 }
 
@@ -57,75 +45,56 @@ export const actions = {
       );
     }
 
-
     const formData =
       await request.formData();
 
-    const jsonText =
-      formData.get(
-        'questionBank'
-      );
-
-
-    if (
-      typeof jsonText !==
-      'string' ||
-      jsonText.trim().length === 0
-    ) {
-      return fail(
-        400,
-        {
-          error:
-            'Question bank JSON is required.'
-        }
-      );
-    }
-
-
     let questionBank;
+    let bundle;
 
     try {
-      questionBank =
-        JSON.parse(
-          jsonText
-        );
-    } catch {
+      ({
+        questionBank,
+        bundle
+      } = await readQuestionBundle(
+        formData
+      ));
+    } catch (error) {
       return fail(
         400,
         {
           error:
-            'The supplied text is not valid JSON.'
+            error instanceof Error
+              ? error.message
+              : 'Question bundle could not be read.'
         }
       );
     }
 
-
     try {
-const importResult =
-  await importQuestionBank(
-    questionBank
-  );
+      const importResult =
+        await importQuestionBank(
+          questionBank
+        );
 
+      if (!importResult.success) {
+        return fail(
+          400,
+          {
+            error:
+              'Question bank validation failed.',
 
-if (!importResult.success) {
-  return fail(
-    400,
-    {
-      error:
-        'Question bank validation failed.',
+            validationErrors:
+              importResult.validationErrors
+          }
+        );
+      }
 
-      validationErrors:
-        importResult.validationErrors
-    }
-  );
-}
-
-
-return {
-  success: true,
-  result:
-    importResult.result
-};
+      return {
+        success: true,
+        result:
+          importResult.result,
+        bundle
+      };
     } catch (error) {
       return fail(
         400,
@@ -139,3 +108,23 @@ return {
     }
   }
 };
+
+
+function requireAdmin(locals) {
+  if (!locals.user) {
+    redirect(
+      303,
+      '/sign-in'
+    );
+  }
+
+  if (
+    locals.profile?.role !==
+    'admin'
+  ) {
+    redirect(
+      303,
+      '/student'
+    );
+  }
+}

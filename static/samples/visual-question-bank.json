@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "schema_version": 2,
+    "id": "visual_bundle_sample",
+    "title": "Visual Question Bundle Sample",
+    "duration_minutes": 5
+  },
+  "scoring": {
+    "correct": 2,
+    "wrong": -0.6666666667,
+    "skipped": 0
+  },
+  "questions": [
+    {
+      "id": "visual_bundle_sample_q1",
+      "m": "M1",
+      "s": "Engineering Mechanics — Equilibrium",
+      "difficulty": 0.35,
+      "t": "Which direction balances the two forces shown in the diagram?",
+      "image": "/question-assets/sample-force-diagram.svg",
+      "image_alt": "A joint with one horizontal force pointing right and one vertical force pointing upward.",
+      "o": [
+        "Down and left",
+        "Up and right",
+        "Down and right",
+        "Up and left"
+      ],
+      "a": 0,
+      "e": "The equilibrant acts opposite to the resultant of the two applied forces, therefore it points down and left."
+    }
+  ]
+}

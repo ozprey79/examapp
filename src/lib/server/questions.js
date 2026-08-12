@@ -29,6 +29,10 @@ export async function importQuestionBank(
   try {
     await client.query('BEGIN');
 
+    await ensureQuestionImageColumns(
+      client
+    );
+
     const testId =
       questionBank.meta.id;
 
@@ -147,6 +151,19 @@ async function upsertTest(
 }
 
 
+async function ensureQuestionImageColumns(
+  client
+) {
+  await client.query(
+    `
+      ALTER TABLE questions
+        ADD COLUMN IF NOT EXISTS image_url TEXT,
+        ADD COLUMN IF NOT EXISTS image_alt TEXT
+    `
+  );
+}
+
+
 async function upsertQuestion(
   client,
   {
@@ -182,7 +199,9 @@ async function upsertQuestion(
         question_text,
         options,
         correct_answer,
-        explanation
+        explanation,
+        image_url,
+        image_alt
       )
       VALUES (
         $1,
@@ -194,7 +213,9 @@ async function upsertQuestion(
         $7,
         $8::jsonb,
         $9,
-        $10
+        $10,
+        $11,
+        $12
       )
       ON CONFLICT (id)
       DO UPDATE SET
@@ -223,7 +244,13 @@ async function upsertQuestion(
           EXCLUDED.correct_answer,
 
         explanation =
-          EXCLUDED.explanation
+          EXCLUDED.explanation,
+
+        image_url =
+          EXCLUDED.image_url,
+
+        image_alt =
+          EXCLUDED.image_alt
     `,
     [
       question.id,
@@ -237,7 +264,9 @@ async function upsertQuestion(
         question.o
       ),
       question.a,
-      question.e ?? null
+      question.e ?? null,
+      question.image ?? null,
+      question.image_alt ?? null
     ]
   );
 
@@ -286,7 +315,11 @@ export async function getTestForStudent(
           question_text,
           options,
           correct_answer,
-          explanation
+          explanation,
+          to_jsonb(questions) ->> 'image_url'
+            AS image_url,
+          to_jsonb(questions) ->> 'image_alt'
+            AS image_alt
         FROM questions
         WHERE test_id = $1
         ORDER BY position
@@ -357,7 +390,13 @@ export async function getTestForStudent(
             question.correct_answer,
 
           e:
-            question.explanation
+            question.explanation,
+
+          image:
+            question.image_url,
+
+          image_alt:
+            question.image_alt
         })
       )
   };
@@ -439,12 +478,18 @@ export async function getTestsForAdmin() {
           t.skipped_marks,
           t.created_at,
           t.updated_at,
-          COUNT(q.id)::int
-            AS question_count
+          COUNT(DISTINCT q.id)::int
+            AS question_count,
+
+          COUNT(DISTINCT a.id)::int
+            AS attempt_count
         FROM tests AS t
 
         LEFT JOIN questions AS q
           ON q.test_id = t.id
+
+        LEFT JOIN attempts AS a
+          ON a.test_id = t.id
 
         GROUP BY
           t.id,
@@ -492,6 +537,9 @@ export async function getTestsForAdmin() {
       questionCount:
         row.question_count,
 
+      attemptCount:
+        row.attempt_count,
+
       createdAt:
         row.created_at,
 
@@ -499,6 +547,99 @@ export async function getTestsForAdmin() {
         row.updated_at
     })
   );
+}
+
+
+export async function deleteTestSet(
+  testId
+) {
+  if (
+    typeof testId !== 'string' ||
+    testId.trim().length === 0
+  ) {
+    throw new Error(
+      'Test ID is required.'
+    );
+  }
+
+  const client =
+    await db.connect();
+
+  try {
+    await client.query('BEGIN');
+
+    const testResult =
+      await client.query(
+        `
+          SELECT
+            id,
+            title,
+            (
+              SELECT COUNT(*)::int
+              FROM questions
+              WHERE test_id = tests.id
+            ) AS question_count
+          FROM tests
+          WHERE id = $1
+          FOR UPDATE
+        `,
+        [testId]
+      );
+
+    if (testResult.rowCount === 0) {
+      await client.query('ROLLBACK');
+
+      return {
+        status: 'not_found'
+      };
+    }
+
+    const attemptResult =
+      await client.query(
+        `
+          SELECT COUNT(*)::int AS count
+          FROM attempts
+          WHERE test_id = $1
+        `,
+        [testId]
+      );
+
+    const attemptCount =
+      attemptResult.rows[0].count;
+
+    if (attemptCount > 0) {
+      await client.query('ROLLBACK');
+
+      return {
+        status: 'protected',
+        title: testResult.rows[0].title,
+        attemptCount
+      };
+    }
+
+    await client.query(
+      `
+        DELETE FROM tests
+        WHERE id = $1
+      `,
+      [testId]
+    );
+
+    await client.query('COMMIT');
+
+    return {
+      status: 'deleted',
+      id: testResult.rows[0].id,
+      title: testResult.rows[0].title,
+      questionCount:
+        testResult.rows[0].question_count
+    };
+  } catch (error) {
+    await client.query('ROLLBACK');
+    throw error;
+  } finally {
+    client.release();
+  }
 }
 export async function getTestForAdmin(
   testId
@@ -544,6 +685,10 @@ export async function getTestForAdmin(
           options,
           correct_answer,
           explanation,
+          to_jsonb(questions) ->> 'image_url'
+            AS image_url,
+          to_jsonb(questions) ->> 'image_alt'
+            AS image_alt,
           created_at
         FROM questions
         WHERE test_id = $1
@@ -620,7 +765,13 @@ export async function getTestForAdmin(
             row.correct_answer,
 
           explanation:
-            row.explanation
+            row.explanation,
+
+          image:
+            row.image_url,
+
+          imageAlt:
+            row.image_alt
         })
       )
   };
@@ -910,7 +1061,11 @@ export async function getQuestionForAdmin(
           question_text,
           options,
           correct_answer,
-          explanation
+          explanation,
+          to_jsonb(questions) ->> 'image_url'
+            AS image_url,
+          to_jsonb(questions) ->> 'image_alt'
+            AS image_alt
         FROM questions
         WHERE
           id = $1
@@ -965,6 +1120,12 @@ export async function getQuestionForAdmin(
       row.correct_answer,
 
     explanation:
-      row.explanation ?? ''
+      row.explanation ?? '',
+
+    image:
+      row.image_url,
+
+    imageAlt:
+      row.image_alt
   };
 }

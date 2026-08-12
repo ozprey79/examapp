@@ -40,6 +40,12 @@
       t:
         answer?.questionText,
 
+      image:
+        answer?.image,
+
+      image_alt:
+        answer?.imageAlt,
+
       o:
         answer?.options ?? []
     });

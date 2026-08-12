@@ -119,6 +119,12 @@ const submitted =
           t:
             currentQuestion.question_text,
 
+          image:
+            currentQuestion.image_url,
+
+          image_alt:
+            currentQuestion.image_alt,
+
           o:
             currentQuestion.options
         }

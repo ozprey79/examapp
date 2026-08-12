@@ -31,6 +31,16 @@
       raw.t ??
       '',
 
+    image:
+      raw.image_url ??
+      raw.image ??
+      null,
+
+    image_alt:
+      raw.image_alt ??
+      raw.imageAlt ??
+      '',
+
     o:
       raw.options ??
       raw.o ??

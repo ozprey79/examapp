@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"test": "node --test --test-isolation=none src/lib/exam/examFlow.test.js src/lib/streaks/studyStreak.test.js",
+		"test": "node --test --test-isolation=none src/lib/exam/examFlow.test.js src/lib/streaks/studyStreak.test.js src/lib/server/questionBundle.test.js",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''"
 	},

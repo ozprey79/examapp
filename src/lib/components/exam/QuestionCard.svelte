@@ -89,6 +89,16 @@
       {question.t}
     </h2>
 
+    {#if question.image}
+      <figure class="question-figure">
+        <img
+          src={question.image}
+          alt={question.image_alt ?? ''}
+          decoding="async"
+        />
+      </figure>
+    {/if}
+
     <div class="options">
       {#each question.o as option, index}
         <button
@@ -191,6 +201,21 @@ disabled={locked}
   .options {
     display: grid;
     gap: 10px;
+  }
+
+  .question-figure {
+    width: min(100%, 760px);
+    margin: 0 0 var(--space-6);
+    padding: var(--space-4);
+    background: var(--surface-strong);
+    border: 1px solid var(--border-soft);
+  }
+
+  .question-figure img {
+    width: 100%;
+    max-height: 440px;
+    display: block;
+    object-fit: contain;
   }
 
   .option {

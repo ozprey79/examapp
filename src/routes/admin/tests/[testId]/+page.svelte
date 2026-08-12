@@ -107,6 +107,16 @@
       {question.text}
     </p>
 
+    {#if question.image}
+      <figure>
+        <img
+          src={question.image}
+          alt={question.imageAlt ?? ''}
+          decoding="async"
+        />
+      </figure>
+    {/if}
+
 
     <ol type="A">
 
@@ -153,3 +163,20 @@
   <hr />
 
 {/each}
+
+<style>
+  figure {
+    width: min(100%, 720px);
+    margin: var(--space-4) 0;
+    padding: var(--space-4);
+    background: var(--surface-strong);
+    border: 1px solid var(--border-soft);
+  }
+
+  figure img {
+    width: 100%;
+    max-height: 420px;
+    display: block;
+    object-fit: contain;
+  }
+</style>

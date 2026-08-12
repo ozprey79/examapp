@@ -364,6 +364,8 @@ export async function getAttemptById(
           aa.question_id,
           q.position AS question_number,
           q.question_text,
+          to_jsonb(q) ->> 'image_url' AS image_url,
+          to_jsonb(q) ->> 'image_alt' AS image_alt,
           aa.selected_answer,
           aa.correct_answer,
           aa.status,
@@ -449,6 +451,8 @@ const answersResult =
         q.topic,
 
         q.question_text,
+        to_jsonb(q) ->> 'image_url' AS image_url,
+        to_jsonb(q) ->> 'image_alt' AS image_alt,
         q.options,
         q.difficulty,
 
@@ -552,6 +556,8 @@ export async function getStudentAttemptForAdmin(
           aa.question_id,
           q.position AS question_number,
           q.question_text,
+          to_jsonb(q) ->> 'image_url' AS image_url,
+          to_jsonb(q) ->> 'image_alt' AS image_alt,
           q.options,
           aa.selected_answer,
           aa.correct_answer,
@@ -1110,6 +1116,12 @@ function mapAnswerRow(
 
     questionText:
       row.question_text,
+
+    image:
+      row.image_url,
+
+    imageAlt:
+      row.image_alt,
 
     selectedAnswer:
       row.selected_answer,
