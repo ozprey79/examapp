@@ -5,6 +5,23 @@
 
   const LEVELS = [5, 4, 3, 2, 1];
 
+  const MODULE_NAMES = {
+    M1: "Strength of Materials & Structural Analysis",
+    M2: "Fluid Mechanics & Hydraulic Machines",
+    M3: "Hydrology & Irrigation Engineering",
+    M4: "Surveying & Geomatics",
+    M5: "Building Materials & Construction Practice",
+    M6: "Construction Management",
+    M7: "Environmental Engineering",
+    M8: "Concrete & Steel Structure Design",
+    M9: "Geotechnical Engineering",
+    M10: "Transportation Engineering"
+  };
+
+  function getModuleName(moduleCode) {
+    return MODULE_NAMES[moduleCode] ?? moduleCode;
+  }
+
   const moduleNameCollator =
     new Intl.Collator("en", {
       numeric: true,
@@ -17,16 +34,17 @@
         const grouped = new Map();
 
         for (const question of questions) {
-          const name =
+          const code =
             String(
               question.module ??
               "Unassigned"
             ).trim() ||
             "Unassigned";
 
-          if (!grouped.has(name)) {
-            grouped.set(name, {
-              name,
+          if (!grouped.has(code)) {
+            grouped.set(code, {
+              code,
+              name: getModuleName(code),
               total: 0,
               weightedLevel: 0,
               levels: {
@@ -39,7 +57,7 @@
             });
           }
 
-          const module = grouped.get(name);
+          const module = grouped.get(code);
           const level =
             Math.min(
               5,
@@ -66,8 +84,8 @@
           .sort(
             (first, second) =>
               moduleNameCollator.compare(
-                first.name,
-                second.name
+                first.code,
+                second.code
               )
           );
       }
@@ -155,7 +173,7 @@
         </div>
 
         <div class="module-grid">
-          {#each modules as module, moduleIndex (module.name)}
+          {#each modules as module, moduleIndex (module.code)}
             <div class="module-column">
               <div class="level-cells">
                 {#each LEVELS as level, levelIndex}
@@ -196,7 +214,7 @@
     </p>
 
     <ul class="sr-only">
-      {#each modules as module (module.name)}
+      {#each modules as module (module.code)}
         <li>
           {module.name}: {module.total} learned questions, average level {module.knowledge.toFixed(1)} out of 5.
         </li>
@@ -411,12 +429,11 @@
 
   .module-label strong {
     max-width: 100%;
-    overflow: hidden;
     color: var(--text);
     font-family: var(--font-ui);
-    font-size: calc(var(--font-size-base) * 0.72);
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    font-size: calc(var(--font-size-base) * 0.64);
+    line-height: 1.2;
+    text-wrap: balance;
   }
 
   .module-label span,
@@ -481,11 +498,11 @@
     }
 
     .matrix {
-      min-width: max(100%, calc(50px + var(--module-count) * 64px));
+      min-width: max(100%, calc(50px + var(--module-count) * 112px));
     }
 
     .module-grid {
-      grid-template-columns: repeat(var(--module-count), minmax(64px, 1fr));
+      grid-template-columns: repeat(var(--module-count), minmax(112px, 1fr));
     }
   }
 
