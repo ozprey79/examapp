@@ -1,0 +1,46 @@
+79. Which of the following will pose
+difficulties in adopting u.h.g. principles
+and processes in evaluating flood hydro-
+graphs of basins ?
+
+1. Non-uniform areal distribution within
+a storm
+2. Intensity variation within a storm
+3. The centre of the storm varying
+from storm to storm in case of
+large catchments
+4. Dividing into a number of sub-
+basins and routing the individual
+DRHs through their respective
+channels to obtain the composite
+DRH at the basin outlet
+5. Large storages within the catchment     <
+(a) 1, 3 and 4 only
+(b) 2, 3 and 4 only
+(c) 1, 2 and 5 only
+(d) 1, 2, 3 and 5 only
+
+80. Rainfall of magnitude 4-3 cm, followed
+by 3-7 cm, occurred on two consecutive
+4h durations on a catchment area of
+25 km2, and there resulted a DRH (after
+isolation of base flow in the flood flow
+hydrograph) with the following ordinates
+starting from the beginning of the
+rainfall. (Adopt trapezoidal formula)
+
+nr ErEE Ere
+
+(hours)
+
+DRH    9] 16] 20}2017-8|13-4| 9-4 | 6-2|3-7
+
+(ordi-
+
+:    What is the @ index value?
+
+(a) 0-149 cm/h
+(b) 0-155 cm/h
+(c) 0-161.cm/h
+(d) 0-167 cm/h
+SKP-D-CVL-—A                                               16

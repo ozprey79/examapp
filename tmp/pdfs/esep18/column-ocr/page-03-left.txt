@@ -1,0 +1,39 @@
+6. A steel wire of 20mm diameter is
+bent into a circular shape of 1Um
+radius. If #, the modulus of elasticity,
+is 2x 10°kg/em?, then the maximum
+tensile stress induced in the wire is,
+nearly
+(a) 2x 1M kg lem?
+
+(b) 4x 10? kg/cm?
+(c) 2x 10*kg/cm?2
+(d) 4x 10*kg/em2             i
+
+7. The stress-strain curve for an ideally
+
+' . plastic material is
+(a)
+
+Stress     i
+Strain
+(b)
+Stress
+‘Strain
+©
+Stress
+Strain
+@
+    Stress    i    :      4
+Strain
+
+8. A long rod of uniform rectangular section
+with thickness ¢, originally straight, is
+bent into the form of a circular arch
+with displacement d at the mid-point
+of span /. The displacement d may be
+regarded as small as compared to the
+
+_ length 7. The longitudinal surface strain is
+
+ae              3

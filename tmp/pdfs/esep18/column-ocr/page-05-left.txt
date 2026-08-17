@@ -1,0 +1,40 @@
+17. The deformation of a vertically held bar       :
+of length Z and cross-section A is due to
+its self-weight only. If Young’s modulus
+is E and the unit weight of the bar is y,
+the elongation dL is
+ne
+ay al
+Cs Zi
+EP
+(b)   5                                       |
+¥ [2
+oy ES
+Ona
+vy
+‘ay
+@)   2AE
+18. For a material, the modulus of rigidity
+is 100 GPa and the modulus of elasticity
+is 250 GPa. The value of the Poisson’s
+ratio is                                       j
+(a) 0-20
+(b) 0-25
+(c) 0:30
+(d) 0:35
+19. Two persons weighing W each are sitting
+ona plank of length Z floating on water,
+L
+at a from either end. Neglecting the
+weight of the plank, the bending moment
+at the middle point of the plank is
+WL
+a   —
+(a)   ie
+          WL
+OK
+WL
+CG) ==                          :
+(c)    5
+(d) Zero
+5

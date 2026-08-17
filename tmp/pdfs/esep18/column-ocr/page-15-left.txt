@@ -1,0 +1,37 @@
+74. Horton’s infiltration equation was fitted
+to data ftom an infiltration test. lt was
+found that the initial infiltration capacity
+was 20 mm/h, final infiltration capacity
+was 5 mm/h and the exponential decay
+constant was 0-5 h!. If the infiltration
+was at capacity. rates, the total infiltration
+depth for a uniform storm of 10h dira-
+tion would be
+(a) 80 mm
+(bo) 50 mm
+(c) 30 mm
+(d) 20 mm
+
+77. Consider the following statements regard-
+ing turbines :             :
+
+1. The main function of a governor is
+to maintain a constant speed even
+as the load on the turbine fluctuates
+
+2. In the case of Pelton turbines, the
+governor closes or opens the wicket
+gates
+
+3. In the case of Francis turbines, the
+governor opens or closes the needle
+valve
+
+4. In the case of a Kaplan ‘turbine, the
+
+;      governor swings the runner blades
+appropriately in addition to further
+closing or further opening of the
+wicket gates
+
+1

@@ -1,0 +1,35 @@
+14. The required diameter for a solid shaft
+to transmit 400 kW at 150 rpm, with
+the working shear stress not to exceed
+80 MN/m2, is nearly
+(a) 125 mm
+(b) 121mm .
+
+(c) 117 mm          ,
+(d) 113 mm
+
+15. An RCC column of 4 m length is rigidly
+connected to the slab and to the founda-
+tion. Its cross-section is (400x400) mm2.
+The column will behave as a/an
+(a) Long column
+(b) Short column
+(c) Intermediate column
+(d) Linkage
+
+1G." 350    350N
+
+VE,
+100 ‘have 100 N          :
+O ~ AM BNC    DaEy 0
+50N SON
+350 N     350 N
+- The shear force diagram of a single
+overhanging beam is shown in figure.
+One simple. support is at end A. The
+‘total’ downward load acting on the
+beam is
+~ (a) 800 N
+(6) 600 N
+(c) 400N —
+(d) 200 N

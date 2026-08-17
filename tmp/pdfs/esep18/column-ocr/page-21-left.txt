@@ -1,0 +1,49 @@
+106. The theory of consolidation predicts
+settlement due to primary consolidation;
+it cannot include settlement due to
+initial compression nor due to secondary
+consolidation. This happens because of
+the following assumptions made in
+developing the theory :
+
+1. Suil pratus. and water are in-
+compressible
+
+2. Soil is fully saturated
+
+3. Compression takes place in the
+vertical direction only
+
+4. Time lag in consolidation is entirely
+due to low permeability of soil
+
+Which of the above statements are
+correct ?                  :
+
+(a) 1, 2 and 3 only
+
+(b) 1, 2 and.4 only
+
+(c) 3 and 4 only
+
+(d) 1, 2, 3 and 4
+
+107. Consider the following statements :
+
+1. Secondary consolidation results due
+to prolonged dissipation of excess
+hydrostatic pressure
+
+.         2. Primary consolidation happens under
+expulsion of both air and water
+from voids in early stages
+
+_ 3. Initial consolidation in the case of
+fully saturated soils is mainly due to
+compression of solid particles
+
+4. Primary consolidation happens more
+quickly in coarse-grained soils than
+in fine-grained soils
+
+2

@@ -1,0 +1,85 @@
+28.
+
+29.
+
+Consider tho following statements 30. Consider the following statements with
+
+regarding suspension cables :
+
+1. The horizontal component of the
+cable tension in a suspension bridge
+is constant at every point along the
+length of the cable
+
+2. Stiffening girders in a suspension
+bridge carry only the live load
+
+Which of the above statements is/are
+correct ?
+
+(a) 1 only
+(b) 2 only
+(c) Both 1 and 2
+
+(d) Neither 1 nor 2
+
+44 (€Dgeam= 5000 kKNm’ »
+
+Fi an we)
+
+K,=1000N/m
+
+50 kg
+
+The fundamental time period of vibration
+of the system shown in the figure, by
+neglecting the self weight of the beam,
+is nearly
+
+(a) 0:2 sec
+
+(b) 0:8 sec
+
+(c) 1:4 sec
+
+(d) 2:8 sec
+
+reference to the dusign of welded
+tension members :
+
+1. The entire cross-sectional area of
+the connected leg is assumed to
+contribute to the effective area in
+the vase of angles
+
+2. Two angles, back-to-back and tack-
+welded as per the codal require-
+ments, may be assumed to behave
+as a tee-section
+
+3. A check on slenderness ratio may
+be necessary in some cases
+
+Which of the above statements are
+correct ?
+
+(a) 1 and 2 only
+(b) 1 and 3 only
+(c) 2 and 3 only
+
+(@) 1, 2 and 3
+
+. A steel column is pinned at both ends
+
+and has a buckling load of 200 KN. If
+the column is restrained against lateral
+movement at its mid-height, its buckling
+load will be
+
+(a) 100 kN
+(b) 200 KN
+(c) 400 kN
+
+(d) 800 kN
+
+A—SKP-D-CVL

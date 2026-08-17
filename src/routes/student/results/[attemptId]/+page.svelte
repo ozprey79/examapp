@@ -8,7 +8,67 @@
 
   let { data } = $props();
 
+  const MODULE_NAMES = {
+  M1: 'Structural Engineering & Mechanics',
+  M2: 'Fluid Mechanics & Hydraulics',
+  M3: 'Hydrology & Water Resources',
+  M4: 'Surveying & Estimation',
+  M5: 'Building Materials & Construction Technology',
+  M6: 'Construction Management & PERT/CPM',
+  M7: 'Environmental Engineering',
+  M8: 'RCC & Steel Design',
+  M9: 'Geotechnical Engineering',
+  M10: 'Transportation Engineering'
+};
 
+
+function getModuleName(
+  moduleCode
+) {
+  return (
+    MODULE_NAMES[moduleCode] ??
+    moduleCode ??
+    'Unclassified'
+  );
+}
+let selectedModule =
+  $state(null);
+
+
+function selectModule(
+  moduleCode
+) {
+  selectedModule =
+    moduleCode;
+}
+
+
+function resetModuleFilter() {
+  selectedModule =
+    null;
+}
+
+
+const filteredAnswers =
+  $derived.by(() => {
+
+    if (
+      selectedModule ===
+      null
+    ) {
+      return attempt.answers;
+    }
+
+
+    return attempt.answers.filter(
+      (answer) =>
+        (
+          answer.module ??
+          'Unclassified'
+        ) ===
+        selectedModule
+    );
+  });
   const attempt =
     $derived(
       data.attempt
@@ -859,10 +919,14 @@
 
 
     <TopicForceMap
-      topics={
-        topicDistribution
-      }
-    />
+  topics={
+    topicDistribution
+  }
+
+  onModuleSelect={
+    selectModule
+  }
+/>
 
   </section>
 
@@ -1045,7 +1109,32 @@
     </div>
 
   </section>
+{#if selectedModule !== null}
 
+  <div class="active-module-filter">
+
+    <span>
+      Showing questions from
+    </span>
+
+    <strong>
+      {getModuleName(
+        selectedModule
+      )}
+    </strong>
+
+    <button
+      type="button"
+      onclick={
+        resetModuleFilter
+      }
+    >
+      Show All ×
+    </button>
+
+  </div>
+
+{/if}
 
 
   <!-- ========================================================
@@ -1125,9 +1214,9 @@
         <tbody>
 
           {#each
-            attempt.answers
-            as answer
-          }
+  filteredAnswers
+  as answer
+}
 
             <tr>
 
@@ -1145,9 +1234,9 @@
                 <span
                   class="question-meta"
                 >
-                  {answer.module ??
-                    '—'}
-
+                  {getModuleName(
+  answer.module
+)}
                   {#if answer.topic}
                     ·
                     {answer.topic}

@@ -1,0 +1,119 @@
+69.
+
+70.
+
+Tile
+
+72.
+
+In a hydraulic jump, the depths on the
+two sides are 0:-4m and 1-4m. The
+head loss in the jump is nearly
+
+(a) 0-45 m
+
+(b) 0:65 m
+
+(c) 0:80 m
+
+(d) 0:90 m
+
+A 20 cmcentrifugal pump runs at 1400 rpm
+delivering 0-09 m3/sec against a head of
+45 m with an efficiency of 87%. What is
+its non-dimensional specific speed using
+rps as the relevant data component ?
+
+(a) 0-482
+(b) 0-474
+(c) 0-466
+(d) 0-458
+
+Two identical centrifugal pumps are
+connected in parallel to a common
+delivery pipe of a system. The discharge
+performance curve of each of the pumps
+is represented by H=30-—8007. The
+discharge-head equation of the parallel
+duplex pump set is
+(a) H=30-8007
+(6) H=15'—2007
+(c) H=30=2007
+
+-@ H=15-8007
+
+Consider the following data relating to
+the performance of a centrifugal pump :
+speed = 1200 rpm, flow rate = 30 //s,
+head = 20 m, and power = 5 kW. If
+the speed of the pump is increased to
+1500 rpm, assuming the efficiency is
+unaltered, the new flow rate and head,
+respectively, will be
+
+(a) 46-9 I/s and 25:0 m
+(b) 37-5 U/s and 25-0 m
+(c) 46-9 W/s and 31:3 m
+(d) 37-5 i/s and 31-3 m
+
+SKP-D-CVL-—A
+
+14
+
+73.
+
+74.
+
+TiS
+
+The work done by a KN of water jet
+moving with a velocity of 60 m/sec when
+it impinges on a series of vanes moving
+in the same direction with a velocity of
+9 m/sec is
+
+(a) 60:2 kN m
+(b) 55:6 kN m
+(c) 46-8 kN m
+(d) 45:0 kN m
+The velocity heads of water at the inlet
+and outlet sections of a draft tube are
+3-5 m and 0-3 m, respectively. The fric-
+tional and other losses in the draft tube can
+
+be taken as 0-5 m. What is the efficiency
+of the draft tube ?
+
+(a) 84-4%
+(b) 80-:0%
+(©) VEIN
+(d) 744%
+Which of the following situations can
+
+be attributed to sustained excessive
+groundwater pumping in a basin ?
+
+1. Drying up of small lakes and
+streams over a period in spite of
+normal rainfall
+
+2. Deterioration of groundwater quality
+in certain aquifers
+
+3. Land subsidence in the basin
+4. Increase in seismic activity
+
+5. Increased
+extraction
+
+cost of groundwater
+
+(a)
+(b)
+(©)
+()
+
+2 and 4 only
+1, 2, 3 and 5 only
+3 and 4 only
+1 and 5 only

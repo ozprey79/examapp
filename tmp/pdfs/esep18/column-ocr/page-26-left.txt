@@ -1,0 +1,47 @@
+(31. Statement (I): In a bolted joint, all    13
+similarly placed bolts
+share the load equally.
+
+u oo 0 6
+ 0000
+
+Statement (II) : Bolts are placed in holes
+having slightly larger
+diameters.
+
+(32. Statement (I): In an RC beam, bond
+stress developed is due
+to pure adhesion, and
+frictional and mechanical
+resistance.
+
+Statement (II) : Inadequacy of bond     13
+strength can be compen-
+sated by providing end
+anchorage inthe rein-
+forcing bars.
+
+(33. Statement (I) : A Dummy is an activity
+in the network.
+
+Statement (II) : A Dummy is a repre-
+sentation in the network
+requiring neither time nor
+resources.
+
+13
+
+134. Statement (I) : In areas where extreme
+cold conditions are a
+regular feature, and
+more so particularly in
+winter, it is necessary to
+use lighter oil for auto-
+mobiles than in summer.
+
+Statement (ID) : ‘Lighter’ in Statement (1)
+refers to the oil density,
+which may be adjusted
+by admixtures.
+
+KP-D-CVL — A                         26

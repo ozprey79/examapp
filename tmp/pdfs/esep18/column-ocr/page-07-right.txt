@@ -1,0 +1,40 @@
+30. Consider the following statements with
+reference to the design of welded
+tension members :
+
+1. The entire cross-sectional area of
+the connected leg is assumed to
+contribute to the effective area in
+
+- the case of angles
+
+2. Two angles, back-to-back and tack-
+welded as per the codal require-
+ments, may be assumed to behave
+as a tee-séction
+
+3. A check on slenderness ratio may
+be necessary in some cases
+
+Which of the above statements are
+            correct ?
+
+(a) 1 and 2 only               ~
+
+(bo) 1 and 3 only
+
+(c) 2 and 3 only
+
+(d) 1, 2 and 3
+
+31. A steel column is pinned at both ends
+and has a buckling load of 200 KN. If
+the column is restrained against lateral
+movement at its mid-height, its buckling
+load will be
+(a) +100 kN
+(b) 200 kN
+(c) 400 kN
+(d) 800 kN
+
+7                                          A—SKP-D-CVL

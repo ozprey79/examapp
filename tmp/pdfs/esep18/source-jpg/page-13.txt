@@ -1,0 +1,95 @@
+63.
+
+64.
+
+An open channel is of isosceles triangle
+shape, with side slopes 1 veitival and
+horizontal. The ratio of the critical depth
+to specific energy at critical depth will
+be
+
+2
+(fA) =
+5
+3
+(b) A
+4
+Cc =
+(c) i
+5
+d eet
+)
+A a jigs
+10 7 40° Jeb 4
+op) ster
+D 2g €
+y
+8 1 5
+Vv
+
+A pipe network is shown with all needful
+input data to compute the first iteration
+improved magnitudes of the initially
+assumed flows in the branches. What
+will be the such improved flow magni-
+tudes in branches 4B and CD ? Consider
+to first decimal accuracy.
+
+(a) Ato B: 5:1; C to D: 3-1
+(6) to B57) Cato) Die 2:8
+(c) A to B : 4:9; C to D: 3-4
+
+(G)) Alto Bb) 5:5576 toed 3:8
+
+65.
+
+66.
+
+67.
+
+68.
+
+A 2m wide rectangular channel carries
+a discharge of 10 m3/s. What would be
+the depth of flow if the Froude number
+of the flow is 2-0?
+
+(a) 1:72 m
+(b) 1:36 m
+(c) 0-86 us
+(d) 0-68 m
+
+M, Profile is indicated by which of the
+following conditions ?
+
+(@) yo > Ve > Y
+(b) y Z Yo me Ve
+Ciy3 = von
+NY ee My
+Floating logs of wood tend to move
+
+to the mid-river reach on the water
+surface. This is due to
+
+(a) Least obstruction from the banks
+
+(b) 2-cell transverse circulation in the
+flow
+
+(c) Fastest velocity along the mid-river
+reach
+
+(d) Near-symmetry of the isovels
+across the section is conducive to
+principle of least work
+
+The sequent depth ratio in a rectangular
+channel is 14. The Froude number of the
+supercritical flow will be
+
+(a) 6-62
+(b) 7-55
+(c) 8-45
+(a) 10-25
+
+A —SKP-D-CVL

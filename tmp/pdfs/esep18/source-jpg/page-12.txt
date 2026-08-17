@@ -1,0 +1,128 @@
+Sie
+
+A transmitter antenna is of a vertical
+pipe, 20 cm diameter and 25 m height,
+on top of a tall structure. It is subjected
+to wind speed of 20 m/sec. Density
+of air is 1:22 kg/m3; its viscosity is
+1:8 x 10° Ns/n2. Drag coefficient of a
+(tall) circular cylinder is tabulated as
+
+10?
+
+10° | 13x10}10411-5x 104] 106x109] 1:2x10°| 4-5x10°
+
+1:05} 0:95 |1:0) 1:08 1-0 0°89 0:26
+
+58.
+
+Set
+
+What is the drag experienced ?
+(a) 737 N
+
+(b) 700 N
+
+(c) 670 N
+
+(d) 63 N
+
+A smooth flat plate with a sharp leading
+edge is placed along a free stream of
+water flowing at 2-5 m/sec. At what
+distance from the leading edge will the
+boundary layer transition from laminar
+to turbulent flow ? Take density of water
+as 1000 kg/m? and its viscosity as
+1 centipoise. Also, what will be the
+boundary layer thickness at that
+distance ?
+
+(a) 12-8 cm and 0-113 cm
+(b) 14:2 cm and 0-113 cm
+(c) 12-8 cm and 0-125 cm
+(d) 14:2 cm and 0-125 cm
+
+What is the rotational speed in rpm of
+a 0-8 m diameter cylindrical container,
+held with axis vertical, if the fluid
+contained in it rises to 0-6 m height
+at the sides and leaves a circular
+space 0-3m diameter on the bottom
+uncovered ?
+
+(a) 90-2 rpm
+(b) 88-4 rpm
+(c) 86-0 rpm
+(d) 83-7 rpm
+
+SKP-D-CVL-—A .
+
+12
+
+60.
+
+61.
+
+62.
+
+If 6, and 6, are the laminar boundary
+layer thicknesses at a point M distant
+x from the leading edge when the
+Reynolds number of the flow are 100
+and 484, respectively, then the ratio
+
+on will be
+oP)
+(a)
+(b)
+()
+(d)
+
+22
+4-84
+23-43
+45-45
+
+In a 90° triangular notch, the error in the
+estimated discharge for a given head
+due to an error of 1% in cutting the
+vertex angle is
+
+(a) zero
+(b) 1%
+
+Zu
+2
+
+r%
+
+(©)
+@
+
+Consider the following statements :
+
+1. All soils can be identified in the
+field by visual examination
+
+2. Fine-grained soils can be identified
+in the field by visual examination
+and touch
+
+3. Fine-grained soils can be identified
+in the field by dilatancy test
+
+4. By visual examination, only coarse-
+grained soils can be identified
+
+Which of the above statements are
+correct ?
+
+(a)
+(b)- 2 and 3 only
+(c) 3 and 4 only
+(d)
+
+1 and 2 only
+
+1 and 4 only

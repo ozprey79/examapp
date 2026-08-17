@@ -1,0 +1,42 @@
+11. Principal stresses at a point in an elastic
+material are 1:5 o (tensile), o (tensile)
+and 0-5 o (compressive). The elastic limit
+in tension is 210 MPa and p = 0-3. The
+valué of o at failure when computed
+by maximum principal strain theory is,
+nearly
+(a) 140-5 MPa
+(b) 145-5 MPa
+(c) 150-5 MPa
+(d) 155-5 MPa
+
+Us             250N
+
+0:5 m
+A                Cc             B
+1-2 m ——>— 1-2m
+
+A horizontal bar of 40 mm diameter solid
+section is 2-40 m long and is rigidly held
+at both ends so that no angular rotation
+occurs axially or circumferentially at the        :
+ends (as shown in figure). The maximum
+tensile stress in the bar is nearly.
+(a) 12-2 N/mm?
+(b) 13-7 N/mm?
+(c) 15-2 N/mm?
+(d) 16:7 N/mm?
+
+13. A solid shaft A of diameter D and length
+L is subjected to a torque T; another
+shaft B of the same material and of the
+same length, but half the diameter, is
+also subjected to the same torque 7. The
+ratio between the angles of twist of
+shaft B to that of shaft A is
+(a) 32
+(b) 16
+(c). 8
+qd) 4
+
+SKP-D-CVL—A                                                      4

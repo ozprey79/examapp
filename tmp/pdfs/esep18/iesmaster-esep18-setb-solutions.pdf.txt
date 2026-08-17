@@ -1,0 +1,3751 @@
+
+IES MASTER
+1. In a 90° triangular notch, the error in the
+estimated discharge for a given head due to
+an error of 1% in cutting the vertex angle is
+(a) Zero (b) 1%
+(c) %2
+ (d) %
+Ans. (c)
+Sol. Q =
+5/28 Cd 2g tan H15 2
+
+dQ =
+2 5/28 dCd 2g sec H15 2 2
+ 
+dQ
+Q =
+2sec 2 d . .tan 2 2
+   
+  
+dQ
+Q =
+2 11% %1 2 2 2
+    
+2. Consider the following statements :
+1. All soils can be identified in the field by
+visual examination
+2. Fine-grained soils can be identified in the
+field by visual examination and touch
+3. Fine grained soils can be identified in the
+field by dilatancy test
+4. By visual examination, only coarse-grained
+soils can be identified
+Which of the above statements are correct?
+(a) 1 and 2 only (b) 2 and 3 only
+(c) 3 and 4 only (d) 1 and 4 only
+SET - B
+Explanation of Civil Engg. Prelims Paper-II (ESE - 2018)
+Ans. (c)
+Sol. Visual examination should establish the
+colour, grain size, grain shapes of the coarse
+grained part of soil.
+Dilatancy test is one of the test used in field
+to identify fine grained soil. In this test, a
+wet pat of soil is taken and shaken
+vigorously in the palm. Silt exhibits quick
+response and water appears on surface,
+where as clay shows no or slow response.
+3. An open channel is of isosceles triangle shape,
+with side slopes 1 vertical and n horizontal.
+The ratio of the critical depth to specific energy
+at critical depth will be
+(a)
+2
+3 (b) 3
+4
+(c) 4
+5 (d) 5
+6
+Ans. (c)
+Sol.
+EC = C
+Ay 2T
+
+IES MASTER
+Area (A) = C C
+1 2ny y2    = 2
+Cny
+Top width (T) = 2ny C
+ E C = 
+2
+C
+C
+C
+nyy 2 2ny 
+  E C = C
+5 y4
+ 
+C
+C
+y 4
+E 5 
+4.
++
+5Q
+2
+2Q
+2
+3Q
+2
+4Q
+2
+A
+7 10
+D
+8 1 5
+C
+4 7
+B3
+A pipe network is shown with all needful input
+data to compute the first iteration improved
+magnitudes of the initially assumed flows in
+the branches. What will be the such improved
+flow magnitudes in branches AB and CD?
+Consider to first decimal accuracy
+(a) A to B : 5.1; C to D : 3.1
+(b) A to B : 5.7; C to D : 2.8
+(c) A to B : 4.9; C to D : 3.4
+(d) A to B : 5.5; C to D : 3.8
+Ans. (a)
+Sol.
+5Q
+2
+2Q
+2
+3Q
+2
+4Q
+2
+A
+7
+10
+D
+1
+5
+C
+4
+B3
+rQ
+2
+= –255 122
+rnQ
+n–1
+AB
+BC
+DA
+CD
+4Q
+2 2
+= 4×3  = 36 |4×2×Q  = 24 |
+| | 3×2×Q  = 24
+| | 5×2×Q  = 70
+| | 2×2×Q  = 4
+3Q
+2 2
+= –3×4  = –48
+5Q
+2 2
+= –5×7  = –245
+2Q
+2 2
+= 2×1  = 2
+rQ
+n
+Q  = 
+ n
+n–1
+– rQ – –255 2.09122rnQ
+ 
+
+QAB = 3+2.09 = 5.09 = 5.1
+QCD = 1+2.09 = 3.09 = 3.1
+5. A 2 m wide rectangular channel carries a
+discharge of 10 m3/s. What would be the depth
+of fow if the Froude number of the flow is 2.0?
+(a) 1.72 m (b) 1.36
+(c) 0.86 m (d) 0.68 m
+Ans. (c)
+Sol. We know,
+2
+rF  = 
+2
+3
+q
+gy
+Q = 10 m 3/sec, B = 2 m
+  q = Q 10
+B 2  = 5 m 2/s-m
+Fr = 2.0, g = 9.81 m/sec 2
+  2 2 = 
+2
+3
+5
+9.81 y
+y = 
+1/3
+25
+4 9.81
+ 
+     = 0.86 m
+6. M3 profile is indicated by which of the
+following conditions?
+(a) y 0 > y c > y (b) y > y 0 > y c
+(c) y c > y 0 > y (d) y > y c > y 0
+
+IES MASTER
+Ans. (a)
+Sol.
+NDL
+y0
+CDLyC
+M3
+ y < y C < y o
+7. Floating logs of wood tend to move to the
+mid-river reach on the water surface. This is
+due to
+(a) Least obstruction from the banks
+(b) 2-cell transverse circulation in the flow
+(c) Faster velocity along the mid-river reach
+(d) Near-symmetry of the isovels across the
+section is conductive to principle of least
+work
+Ans. (b)
+Sol.
+Secondary 
+currents
+Isovels
+Due to 2- cell transverse circulation in the
+flow, the logs of wood tend to move to the
+mid-river reach on the water surface. This
+is mainly due to effect of secondary currents.
+8. The sequent depth ratio in a rectangular
+channel is 14. The froude number of the
+supercritcal flow will be
+(a) 6.62 (b) 7.55
+(c) 8.45 (d) 10.25
+Ans. (d)
+Sol.
+2
+1
+y
+y  = 
+2
+11 1 8Fr
+2
+  
+y1   depth of supercritical flow
+y2   depth of subcritical flow
+Fr1   Froude’s no. for supercritical flow
+14 = 
+2
+11 1 8Fr
+2
+  
+Fr1 = 10.25
+9. In a hydraulic jump, the depths on the two
+sides are 0.4 m and 1.4 m. The head loss in
+the jump is nearly
+(a) 0.45 (b) 0.65 m
+(c) 0.80 m (d) 0.90 m
+Ans. (a)
+Sol. hL = 
+3
+2 1
+2 1
+(y y )
+4y y
+
+ = 
+3(1.4 0.4)
+4 1.4 0.4
+
+   = 0.45m
+10. A 20 cm centrifugal pump runs at 1400 rpm
+delivering 0.09 m3/sec against a head of 45 m
+with an efficiency of 87%. What is its non-
+dimensional specific speed using rps as the
+relevant data component?
+(a) 0.482 (b) 0.474
+(c) 0.466 (d) 0.458
+Ans. (d)
+Sol. N = 1400 rpm
+D = 20 m
+Q = 0.09 m 3/s
+H = 45 m
+0.87 
+For pump, s 3/4
+N QN
+(gH)
+
+
+IES MASTER
+N in rps = 1400 2 146.61 rps60
+  
+s 3/4
+146.61 0.09N 0.457
+(9.81 45)
+ 
+
+11. Two identical centrifugal pumps are connected
+in parallel to a common delivery pipe of a
+system. The discharge performance curve of
+each of the pumps is represented by H = 30
+– 80Q 2. The discharge-head equation of the
+parallel duplex pump set is
+(a) H = 30 – 80Q 2 (b) H = 15 – 20Q 2
+(c) H = 30 – 20Q 2 (d) H = 15 – 80Q 2
+Ans. (c)
+Sol.
+P P
+Delivery
+pipe
+H = 30 – 80Q
+2
+When two pumps are arranged in parallel, their
+resulting performance curve is obtained by
+adding the pump flow rates at the same head
+(h1)
+So, 
+2
+1 1h 30 80Q  (For pump 1)
+2
+1 2h 30 80Q  (For pump 2)
+For pump 1
+1
+1
+30 hQ 80
+
+For pump 2
+1
+2
+30 hQ 80
+
+So, Q = Q 1 + Q 2 (at same head h1 for
+combined system)
+130 hQ 2 80
+ 
+2 1(30 h )Q 4 80
+ 
+h1 = 30 – 20Q 2
+12. Consider the following data relating to
+performance of a centrifugal pump : speed =
+1200 rpm, flow rate = 30 l/s, head = 20 m,
+and power = 5 kW. If the speed of the pump
+is increased to 1500 rpm, assuming the
+efficiency is unaltered, the new flow rate and
+head, respectively, will be
+(a) 46.9 l/s and 25.0 m
+(b) 37.5 l/s and 25.0 m
+(c) 46.9 l/s and 31.3
+(d) 37.5 l/s and 31.3 m
+Ans. (d)
+Sol. N = 1200 rpm
+Q = 30 l/s
+H = 20 m
+P = 5 kw
+If N 2 = 1500 rpm
+1
+1
+N
+H =
+2
+2
+N
+H
+
+1200
+20 =
+2
+1500
+H
+ H2 =
+2
+1500 201200
+    
+= 31.25 31.3 m
+1
+1
+Q
+H =
+2
+2
+Q
+H
+30
+20 =
+2Q
+31.25
+2Q 37.5 l/sec
+
+IES MASTER
+13. The work done by a kN of water jet moving
+with a velocity of 60 m/sec. when it impinges
+on a series of vanes moving in the same
+direction with a velocity of 9 m/sec is
+(a) 60.2 kN m (b) 55.6 kN m
+(c) 46.8 kN m (d) 45.0 kN m
+Ans. (c)
+Sol. Mass of water = 
+1kN 1000
+g 9.81
+Mass of water (m) = 101.94 kg
+Velocity of jet (V) = 60 m/sec
+Velocity of vane (u) = 9 m/sec
+Work done by jet = mv r . u  [V r = V – u]
+= m(V – u) u
+= 101.94 × (60 – 9) × 9
+= 46789 N
+Work done by jet = 46.8 kN
+14. The velocity heads of water at the inlet and
+outlet sections of a draft tube are 3.5 and 0.3
+m, respectively. The frictional and other losses
+in the draft tube can be taken as 0.5 m. What
+is the efficiency of the draft tube?
+(a) 84.4% (b) 80.0%
+(c) 77.1% (d) 74.4%
+Ans. (c)
+Sol.
+2
+3V 0.3m2g 
+2
+2V 3.5m2g 
+h  = 0.5mL
+2 2
+3 2
+L
+2
+2
+V V h2g 2g% 100
+V
+2g
+  
+         
+ 
+  
+3.5 0.3 0.5 1003.5
+    = 77.14%
+15. Which of the following situations can be
+attributed to sustained excessive groundwater
+pumping in a basin?
+1. Drying up of small lakes and streams over
+a period in spite of normal rainfall.
+2. Deterioration of groundwater quality in
+certain aquifers
+3. Land subsidence in the basin
+4. Increase in seismic activity
+5. Increased cost of groundwater extraction
+(a) 2 and 4 only (b) 1, 2, 3 and 5 only
+(c) 3 and 4 only (d) 1 and 5 only
+Ans. (b)
+Sol. Negative effects of groundwater depletion
+are:
+1. Dryingup of wells
+2. Reduction of water in streams and lakes
+3. Deterioration of water quality
+4. Increased pumping costs
+5. Land subsidence
+16. Horton’s infiltration equation was fitted to data
+from an infiltration test. It was found that the
+initial infiltration capacity was 20 mm/h, final
+infiltration capacity was 5 mm/h and the
+exponential decay constant was 0.5 h–1. If the
+infiltration was at capacity rates, the total depth
+for a uniform storm of 10 h duration would be
+(a) 80 mm (b) 50 mm
+(c) 30 mm (d) 20 mm
+
+IES MASTER
+Ans. (a)
+Sol. f0 = Initial infiltration capacity = 20 mm/h
+fc = Final infiltration capacity = 5 mm/h
+kh = Horton decay coefficient = 0.5h –1
+Horton equation
+f = hk t
+c 0 cf (f f ) e  
+ f = 0.5t5 15 e 
+Total infiltration depth
+F = 
+0.5tefdt 5t 15 0.5
+ 
+    
+=  
+100.5t
+05t 30e 
+F = [5 × 10 – 30e –5 + 30]
+F = 80 mm
+17. Consider the following statements regarding
+turbines :
+1. The main function of a governor is to
+maintain a constant speed even as the
+load on the turbine fluctuates
+2. In the case of pelton turbines, the governor
+closes or oepns the wicket gates
+3. In the case of Francis turbines, the
+governor opens or closes the needle valve
+4. In the case of a Kaplan turbine, the
+governor swings the runner blades
+appropriately in a ddition to further closing
+or further opening of the wicket gates
+Which of the above statements are correct?
+(a) 1 and 3 only (b) 2 and 4 only
+(c) 2 and 3 only (d) 1 and 4 only
+Ans. (d)
+Sol. In pelton turbine governing action is through
+regulation of needle valve. In case of
+reduced load needle in the nozzle start
+moving forwards along with reduction in the
+area of openings and when loads increases,
+needle in the nozzle is pulled back to cause
+increase in the area of opening.
+In francis turbine, governing is done through
+the regulation of guide vane by closing and
+opening the wicket gate, the area of flow is
+decreased or increased correspondingly.
+In Kaplan turbine we have double control
+guide vane which controls flow and inlet
+angle and individual blades can also be
+rotated about their respective axis.
+18.
+v1 d1
+d2
+h
+v2
+VW
+Consider the occurance of a surge at the water
+surface of a wide rectangular channel flow, as
+in the figure, where th eone-dimensionally
+considered velocities are v1 and v 2 and the
+depths are d1 and d2, with the surge height h,
+whereby d2 – d1 = h, moving at a speed of V w
+over depth d 1. Joint application of continuity
+and momentum principles will indicate the
+surge front speed V w, to be
+(a)
+1
+2
+w 1
+1
+3 hV gd 1 2 d
+     
+(b)
+1
+2 2
+w 1
+1 1
+3 h 1 hV gd 1 2 d 2 d
+          
+(c)  
+1
+2
+w 1
+hV gd 1 2
+     
+(d)
+1
+2 2
+w 1
+1
+hV gd 1 d
+           
+
+IES MASTER
+Ans. (b)
+Sol. As celerity is given by
+C = 
+2
+1 2
+1
+y1g (y y )2 y 
+where y 2 = d 1 + h and y 1 = d 1
+  Celerity = 
+1
+1
+1
+d h1 g (2d h)2 d
+    
+ 
+= 1
+1 1
+1 h hg 1 2 d2 d d
+       
+   
+C = 
+2
+1
+1 1 1
+1 h 2h hg 2 d2 d d d
+          
+Assuming V w as celerity
+Vw = 
+2
+1
+1 1
+3 h 1 hg 1 d2 d 2 d
+               
+19. Which of the following will pose difficulties in
+adopting u.h.g. principles and processes in
+evaluating flood hydrographs of basins?
+1. Non-uniform areal distribution within a
+storm
+2. Intensity variation within a storm.
+3. The centre of the storm varying from storm
+to storm in case of large catchments
+4. Dividing into a number of sub-basins and
+routing the individual DRHs through their
+respective channels to obtain the
+composite DRH at the basin outlet.
+5. Large storages within the catchment
+(a) 1, 3 and 4 only (b) 2, 3 and 4 only
+(c) 1, 2 and 5 only (d) 1, 2, 3 and 5 only
+Ans. (d)
+Sol. For adoption of unit hydrograph principle:
+1. Uniform areal distribution within a storm
+2. Intensity does not vary within a storm
+3. Catchment does not have large storage
+4. In case of large storms when centre of
+storm is varying we can not use unit
+hydrograph theory
+20. Rainfall of magnitude 4.3 cm, followed by 3.7
+cm, occurred on two consecutive 4 h durations
+on a catchment area of 25 km 2, and there
+resulted a DRH (after isolation of base flow in
+the flood flow hydrograph) with the following
+ordinates starting from the beginning of the
+rainfall. (Adopt trapezoidal formula)
+3
+Time 0 4 8 12 16 20 24 28 32 36 40 44(hours)
+DRH
+(ordinate 0 9 16 20 20 17.8 13.4 9.4 6.2 3.7 1.8 0
+m / sec)
+What is the   index value?
+(a) 0.149 cm/h (b) 0.155 cm/h
+(c) 0.161 cm/h (d) 0.167 cm/h
+Ans. (b)
+Sol. Runoff calculation:
+Total direct runoff = Area of DRH
+= 1 (0 9 9 16 16 20 20 17.8 17.82
+13.4 13.4 9.4 9.4 6.2 6.2 3.7
+3.7 1.8 1.8 0) 4 3600
+       
+      
+     
+= 117.3 × 4 × 3600 = 1689120 m 3
+Runoff depth = 4
+1689120 cm 6.76 cm
+25 10
+
+
+4.3 3.7 6.76-index = 0.155 cm/h8
+  
+21. Groundwater flows through an aquifer with a
+cross-sectional area of 1.0 × 10 4 m 2 and a
+
+IES MASTER
+length of 1500 m. Hydraulic heads are 300 m
+and 250 m at the groundwater entry and exit
+points in the aquifer, respectively. Groundwater
+discharges into a stream at the rate of 750
+m3/day. Then the hydraulic conductivity of the
+aquifer is
+(a) 1.50 m/day (b) 2.25 m/day
+(c) 3.50 m/day (d) 4.25 m/day
+Ans. (b)
+Sol. Aquifer cross-section = 10 4 m 2
+Length of aquifer = 1500 m
+Head drop between entry and exit points =
+50 m
+Groundwater discharge = 750 m 3/day
+By Darcy law
+Q = kiA
+ 750 = 
+450k 101500 
+ k = 4
+750 1500 2.25 m/day
+50 10
+ 
+
+22. A hydraulic turbine develops 5000 kW under
+a head of 30 m when running at 100 rpm.
+This turbine belongs to the category of
+(a) Pelton wheel (b) Francis Turbine
+(c) Kaplan Turbine (d) Propeller Turbine
+Ans. (b)
+Sol.
+s 5/4 5/4
+N P 100 5000N 100.71
+H 30
+  
+For francis turbine, N s = 60 to 300.
+23. The rate of rainfall for the successive 30 min
+periods of a 3-hour storm are : 1.6, 3.6, 5.0,
+2.8, 2.2 and 1.0 cm/hour. The corresponding
+surface runoff is estimated to be 3.2 cm. Then,
+the 
+  index is
+(a) 1.5 cm/h (b) 1.8 cm/h
+(c) 2.1 cm/h (d) 2.4 cm/h
+Ans. (b)
+Sol. Assume -index  greater than 1 cm/hr
+because no option is less than 1 cm/hr.
+Iteration 1:
+Total precipitation = 1 1(1.6) 3.62 2  
+1 1 15.0 2.8 2.22 2 2     
+= 7.6 cm
+[ 1cm/hr will not be considered as value is
+less than -index  assumed]
+Runoff = 3.2 cm
+-index  = 7.6 3.2 1.76 cm/h 1.6 cm/h2.5
+  
+It implies 1.6 cm/h rainfall ineffective. So,
+exclude 1 cm/h and 1.6 cm/h both.
+Iteration 2:
+Similarly, total precipitation = 1.8 + 2.5 +
+1.4 + 1.1 = 6.8 cm
+Runoff = 3.2 cm
+-index  = 6.8 3.2 1.8 cm/h2
+ 
+so, -index = 1.8 cm/h
+24. For stability analysis of slopes of purely
+cohesive soils, the critical centre is taken to
+lie at the intersection of
+(a) The perpendicular bisector of the slope
+and the locus of the centre
+
+IES MASTER
+(b) The perpendicular drawn at the one-third
+slope from the toe and the locus of the
+centre
+(c) The perpendicular drawn at the two-third
+slope from the toe and the locus of the
+centre
+(d) Directional angles
+Ans. (d)
+Sol. Fellenius proposed on empirical procedure
+to find the centre of the most critical circle
+in a purely cohesive soil. The centre ‘O’ for
+the toe failure case can be located at the
+intersection of the two lines drawn from the
+ends A & B of the slope at angles 
+' ' and ' ' 
+(directional angles.)
+ B
+O
+A
+
+25. Consider the following statements regarding
+water logging :
+1. Water logging is the rise of groundwater
+table leading to possible increase in salinity
+resulting in a reduction in the yield of crops
+2. Water logging cannot be eliminated in
+certain areas but can be controlled only if
+the quantity of water percolating into that
+soil is checked and reduced.
+Which of the above statement is/are correct?
+(a) 1 only (b) 2 only
+(c) Both 1 and 2 (d) Neithr 1 nor 2
+Ans. (c)
+Sol.
+Water logging can be controlled by provision
+of efficient drainage to drain away the storm
+water and excess irrigation water. by use of
+sub-surface drainage, water logging can be
+controlled by checking and removing per-
+colating water.
+26. Annual rainfall values at station A in mm for
+the years 2001 to 2010 are given in the table
+below. If simple central 3-year moving mean
+of this rainfall record is calculated, the
+maximum and minimum values in the moving
+mean list would be
+Year 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010
+Annual
+Rainfall
+P at 586 621 618 639 689 610 591 604 621 650
+station 
+A (mm)
+(a) 689 mm and 602 mm
+(b) 649 mm and 602 mm
+(c) 689 mm and 586 mm
+(d) 649 mm and 586 mm
+Ans. (b)
+Sol.
+Annual rainfall 3-year movingYear at A (mm) mean
+2001 586
+2002 621 608
+2003 618 626
+2004 639 649
+2005 689 646
+2006 610 630
+2007 591 602
+2008 604 605
+2009 621 625
+2010 650
+
+IES MASTER
+Max. 3 year moving mean = 649 mm
+Minimum 3 year moving mean = 602 mm
+27. Khosla’s formulae for assessing pressure
+distribution under weir floors are based on
+(a) Potential flow in permeable layers just
+beneath the floors
+(b) Boundary layer flow with pressure drop
+longitudinally
+(c) Conformal transformation of potential flow
+into the w plane
+(d) Simplification of 3-D flow
+Ans. (a)
+Sol.
+Khosla’s theory of independent variables is
+based an assumption that the potential flow
+theory can be applied to sub-soil flow.
+28. In a siphon aqueduct, the worst condition of
+uplift on the floor occurs when
+(a) The canal is full and the drainage is empty,
+with water table at drainage bed level
+(b) The canal is empty and the drainage is
+full, with water table at drainage bed level
+(c) Both the canal and the drainage are full
+(d) The canal is empty and the drainage is
+full, with water table below the floor.
+Ans. (a)
+Sol.
+In case of Siphon aqueduct drain flows
+below the canal under syphonic action.
+The maximum uplift under the worst
+condition would occur when there is no water
+flowing in the drain and the water table has
+risen upto drainage bed. The maximum net
+uplift in such a case would be equal to the
+difference in level between drainage bed and
+bottom of floor.
+29. Zero hardness of water is achieved by
+(a) Lime-soda process
+(b) Ion exchange treatment
+(c) Excess lime treatment
+(d) Excess alum dosage
+Ans. (b)
+Sol.
+ In ion exchange method we use zeolites
+which are hydrated silicates of sodium and
+aluminium. Which reacts as following:
+3 3
+2 2
+4 4
+HCO HCOCa Ca
+Naz SO Na SO ZMg MgCl Cl
+ 
+ 
+ 
+  
+       
+    
+ Ion exchange method produces water with
+zero hardness.
+30. Five-days BOD of a 10% diluted sample
+having D O = 6.7 mg/l, D S = 2 mg/l and
+consumption of oxygen in blank = 0.5 mg/l,
+will be
+(a) 22 mg/l (b) 42 mg/l
+(c) 62 mg/l (d) 82 mg/l
+Ans. (b)
+Sol.
+D0 = Initial D.O. of mix = 6.7 mg/l
+Ds = Final D.O of mix = 2 mg/L
+Consumption of oxygen inblank sample
+= 0.5 mg/L
+Dilution ratio (P) = 0.1
+As the mixture uses seeded water
+BOD5 = 
+0 s ob Sb(D D ) (D D ) (1 P)
+P
+    
+  = (6.7 2) 0.5 0.9
+0.1
+  
+
+IES MASTER
+  = 42.5 mg/l
+So, nearest option will be (b)
+31. Which one of the following statements related
+to testing of water for municipal use is correctly
+applicable?
+(a) Pseudo-hardness is due to presence of
+fluoride in water
+(b) When alkalinity   total hardness,
+Carbonate hardness in mg/l = Total
+hardness in mg/l
+(c) Bicarbonate alkalinity = total alkalinity –
+(carbonate alkalinity – hydroxide alkalinity)
+(d) Hydroxide alkalinity = Carbonate alkalinity
++ Bicarbonate alkalinity
+Ans. (b)
+Sol.  If non-carbonate hardness is absent in
+water
+  T otal hardness = minimum
+(carbonate hardness, alkalinity)
+Thus, Alkanlinity > T otal hardness
+then total hardness = carbonate hardness.
+ Pseduo hardness is due to pressure of
+Na+ (sodium) ion in water.
+ Bicarbonate alkalinity = T otal alikalnity –
+[carbond alkalnity + hydroxide alkalnity]
+32. The capacity of a service reservoir in a campus
+should cater to
+(a) Sum total of balancing storage, breakdown
+storage and fire reserve
+(b) Sum total of balancing storage and fire
+reserve
+(c) Sum total of breakdown storage and fire
+reserve
+(d) Balancing storage only
+Ans. (a)
+Sol.
+ Capacity of a service reservoir in any
+community should cater to sum total balancing
+storage breakdown stroage and fire reserve.
+ The storage capacity of balancing reservoirs is
+worked out with the help of hydrograph of inflow
+and outflow by mass curve method.
+33. Consider the following statements regarding
+groundwater pollutants:
+1. Most of the groundwaters are generally
+non-alkaline
+2. A moderate amount of fluoride, about 0.6
+mg/l to 1.5 mg/l, in drinking water, would
+help in good development of teeth
+3. Natural waters do not have dissolved
+mineral matter in them
+Which of the above statements is/are correct?
+(a) 1 only (b) 2 only
+(c) 3 only (d) 1, 2 and 3
+Ans. (b)
+Sol.
+1. Most of the ground waters are alkaline in
+nature.
+2. natural waters contain dissolved minor
+matter in them.
+3. A moderate amount of fluoride helps in
+good development of teeth.
+Thus, only statement (2) is correct.
+34. Consider the following statements regarding
+anchorage of pipelines conveying water:
+1. At bends, pipes tend to pull apart
+2. At bends, forces exerted on the joints due
+to longitudinal shearing stresses are
+enormous and the joints may get loosened
+
+IES MASTER
+3. To avoid problems by hydrodynamic
+effects, pipes are anchored using concrete
+blocks which absorb side thrusts at bends
+4. Pipes are also anchored on steep slopes
+Which of the above statements are correct?
+(a) 1, 2 and 3 only (b) 1, 2 and 4 only
+(c) 1, 3 and 4 only (d) 1, 2, 3 and 4
+Ans. (d)
+Sol. Pipelines on pipe bend and those designed
+an steep slope (> 20%) require concrete
+anchor blocks.
+35. Consider the following statements with
+reference to bioenergy as a renewable energy
+source:
+1. Plants ensure continuous supply of gas
+due to their continuous growth
+2. Cost of obtaining energy from biogas is
+less than that from fossil fuels
+3. Digestion of sludge may produce H 2S and
+NOX which are injurious to human health
+4. ‘Floating dome’ installation is the preferred
+option as it supplies gas at constant
+pressure irrespective of quantity of gas
+produced
+Which of the above statements are correct?
+(a) 1, 2 and 3 only (b) 1, 2 and 4 only
+(c) 2, 3 and 4 only (d) 1, 3 and 4 only
+Ans. (d)
+Sol.
+Cost of obtaining energy from fossil fuel is
+less as compared to that from biogas:
+Thus, statement (2) is incorrect.
+36. Consider the following statements regarding
+waste stabilization ponds:
+1. The pond has a symbiotic process of waste
+stabilization through algae on one hand
+and bacteria on the other
+2. The oxygen in the pond is provided by
+algae through photosynthesis
+3. The detention period is of the order of two
+to three days
+4. The bacteria which develop in the pond
+are aerobic bacteria
+Which of the above statements are correct?
+(a) 1 and 2 only (b) 2 and 3 only
+(c) 3 and 4 only (d) 1 and 4 only
+Ans. (a)
+Sol.
+ Stabilization pond has symboisis between
+algae and bacteria.
+In which algae produces oxgyen by
+photosynthesis and aerobic bacteria
+consumes that
+ Stabilization pond used for domestic
+sewage are mostly facultative in nature
+ Stabilization pond has detention period
+around 15 –30 days
+37. The purpose of re-carbonation after water
+softening by the lime-soda process is the
+(a) Removal of excess soda from the water
+(b) Removal of non-carbonate hardness in the
+water
+(c) Recovery of lime from the water
+(d) Conversion of precipitates to soluble forms
+in the water
+Ans. (d)
+Sol.
+ Complete removal of hardness cannot be
+accomplished by chemical precipitation. These
+
+IES MASTER
+remains will precipitate slowly and hence will
+get accumulated inside the pipe and clog the
+pipe with time. Hence it is necessary to make
+it soluble.
+And this is done by adding ‘CO 2’ in water.
+38. Environmental flow of a river refers to the
+quantity, quality and timing of the flow
+(a) Required in the river to sustain the river
+ecosystem
+(b) Required to maintain healthy ecological
+conditions in the command area of a river
+development project
+(c) Generated by the ecosystem of the
+catchment of the river
+(d) As the minimum requirement to support
+the cultural practices of the community
+living on the banks of the river
+Ans. (a)
+Sol.
+Environmental flows describe the quantity,
+timing and quality of water flows required to
+sustain freshwater and river ecosystem.
+39. The moisture content of a certain Municipal
+Solid Waste with the following composition will
+be
+Wet, Dry,
+% weight % weight
+Food waste 10 03
+Paper 35 30
+Yard waste 20 10
+Others 35 20
+(a) 100% (b) 63%
+(c) 37% (d) 13%
+Ans. (c)
+Sol.
+Total weight = (10+ 35 + 20 + 35)
+          = 100 units
+Dry weight = (63 + 30 + 10 + 20)
+        = 63 units
+Thus, moisture = (100 – 63) = 37  units.
+% moisuture content = 37 100%100 
+= 37%
+40. Consider the following statements:
+1. When a soil sample is dried beyond its
+shrinkage limt, the volume of the soil slowly
+decreases.
+2. Plastic limit is always lower than the liquid
+limit for any type of soil
+3. At the liquid limit, the soil behaves like a
+liquid and possesses no shear strength at
+all
+4. When subjected to drying, the volume of
+the soil remains unchanged once the water
+content of the soil goes below its shrinkage
+limit.
+Which of the above statements are correct?
+(a) 1 and 3 only (b) 1 and 4 only
+(c) 2 and 3 only (d) 2 and 4 only
+Ans. (d)
+Sol. Shear strength of soils at liquid limit is
+approximately 2.7 kN/m 2
+The volume of soil do not change, when
+subjected to drying at water content below
+shrinkage limit.
+Plastic limit is always lower than the liquid
+limits for any type of soil.
+41. Consider the following statements in respect
+of the troposphere:
+
+IES MASTER
+1. The gaseous content constantly churns by
+turbulence and mixing.
+2. Its behaviour makes the weather
+3. The ultimate energy source for producing
+any weather change is the sun
+4. The height of the troposhere is nearly 11
+km at the equatorial belt and is 5 km at
+the poles.
+Which of these are true of the troposphere?
+(a) 1, 2 and 3 only (b) 1, 2 and 4 only
+(c) 1, 3 and 4 only (d) 2, 3 and 4 only
+Ans. (a)
+Sol.
+The height of troposphere ranges from 9
+km at the poles to 17 km at the equator.
+Thus, statement (4) is incorrect.
+42. A sand sample has a porosity of 30% and
+specific gravity of solids as 2.6. What is its
+degree of saturation at moisture content of
+4.94%?
+(a) 40% (b) 3.5%
+(c) 30% (d) 25%
+Ans. (c)
+Sol. n = 0.3
+Gs = 2.6
+w = 4.94%
+e = 
+n 0.3 3
+1 n 1 0.3 7  
+So,  es = wG s
+3 s7   = 4.94 2.6100 
+ S = 0.299
+S 30%
+43. What will be the unit weight of a fully saturated
+soil sample having water content of 38% and
+grain specific gravity of 2.65?
+(a) 19.88 kN/m 3 (b) 17.88 kN/m 3
+(c) 16.52 kN/m 3 (d) 14.65 kN/m 3
+Ans. (b)
+Sol. w = 0.38
+Gs = 2.65
+S = 1
+es = wG s
+1.e = 0.38 × 2.65 
+  e = 1.007
+ sat = s w(G Se) (2.65 1 1.007 9.811 e 1 1.007
+         
+= 17.88 kN/m 3
+44. How many cubic metres of soil having void
+ratio of 0.7 can be made from 30m 3 of soil
+with void ratio of 1.2?
+(a) 36.6m 3 (b) 30.0m 3
+(c) 25.9m 3 (d) 23.2m 3
+Ans. (d)
+Sol.
+V1 = (1 + e 1) V s
+V2 = (1 + e 2) V s
+2 2
+1 1
+V 1 e
+V 1 e
+ 
+2
+1.7V 30 2.2 
+3
+2V 23.18 23.2 m 
+45. A dry sand specimen is put through a tri-
+axial test. The cell pressure is 50 kPa and
+the deviator stress at failure is 100 kPa. The
+angle of internal friction for the sand
+specimen is
+
+IES MASTER
+(a) 15º (b) 30º
+(c) 45º (d) 55º
+Ans. (b)
+Sol. 3 = 50 kPa
+d  = 1 3 100 kPa   
+ 1  = 100 + 50 = 150 kPa
+3  = 
+2
+1 tan 45 [C 0]2
+      
+ 50 = 
+2150 tan 45 2
+    
+ tan 45 2
+      = 
+1
+3
+45 2
+  = 30°
+2
+  = 15°
+   = 30°
+46. The theory of consolidation predicts
+settlement due to primary consolidation; it
+cannot include settlement due to initial
+compression nor due to secondary
+consolidation. This happens because of the
+following assumptions made in developing
+the theory:
+1. Soil grains and water are incompressible.
+2. Soil is fully saturated
+3. Compression takes place in the vertical
+direction only
+4. Time lag in consolidation is entirely due to
+low permeability of soil
+Which of the above statements are correct?
+(a) 1, 2 and 3 only (b) 1, 2 and 4 only
+(c) 3 and 4 only (d) 1, 2, 3 and 4
+Ans. (b)
+Sol. Soil grains and water are incompressible and
+soil is fully saturated are assumption which
+makes sure that initial compression is not
+taken in account.
+Time lag in consolidation is entirely due to
+low permeability of soil which is reason that
+secondary consolidation can be neglected.
+Compression in vertical direction only do not
+have any relation with primary and seconary
+compression
+47. Consider the following statements:
+1. Secondary consolidation results due to
+prolonged dissipation of excess hydrostatic
+pressure.
+2. Primary consolidation happens under
+expulsion of both air and water from voids
+in early stages.
+3. Initial consolidation in the case of fully
+saturated soils is mainly due to
+compression of solid particlels
+4. Primary consolidation happens more
+quickly in coarse-grained soils than in fine-
+grained soils
+Which of the above statements are correct?
+(a) 1 and 2 only (b) 2 and 3 only
+(c) 3 and 4 only (d) 1 and 4 only
+Ans. (c)
+Sol.
+ Initial consolidation for fully saturated soil
+is due to compression of soil solids.
+ Primary consolidation occurs due to
+expulsion of excess pore water. Since
+permeability of coarse grained is greater.
+Hence it happens more quickly in coarse
+grained.
+
+IES MASTER
+ Secondary consolidation occurs due to
+gradual, readjustment of clay particles
+into a more stable configuration.
+48. Consider the following statements with regard
+to Soil testing:
+1. The origin and pole are at the same point
+in a Mohr’s circle
+2. The shear stress is maximum on the failure
+plane
+3. Mohr’s circle drawn with data from an
+unconfined compression test passes
+through the origin
+4. Maximum shear stress occurs on a plane
+inclined at 45º to the principal plane
+Which of the abvoe statements are correct?
+(a) 1 and 2 only (b) 2 and 3 only
+(c) 3 and 4 only (d) 1 and 4 only
+Ans. (c)
+Sol.
+1
+Cu
+O 1 u = q .
+Mohr circle for unconfined
+Compression test
+(Passing through origin)
+f
+max f >    
+Plane of failure
+[Mohr circle for a
+      typical soil at failure]
+49. A soil yielded a maximum dry unit weight of
+18 kN/m3 at a moisture content of 16% during
+a Standard Proctor Test. What is the degree
+of saturation of the soil if its specific gravity is
+2.65?
+(a) 98.42% (b) 95.50%
+(c) 84.32% (d) 75.71%
+Ans. (b)
+Sol.
+d  = 18 kN/m 3
+w = 0.16
+Gs = 2.65
+d  = s wG
+1 e
+
+
+ 18 = 2.65 9.81
+1 e
+
+
+ e = 0.444
+e × s = wG s
+ 0.444 × s = 0.16 × 2.65
+ s = 0.9547
+s = 95.5%
+50. Consider the following assumptions regarding
+Coulomb’s Wedge Theory:
+1. There is equilibrium of every element within
+the soil mass of the material
+2. There is equilibrium of the whole of the
+material
+3. Backfill is wet, cohesive and ideally elastic
+4. The wall surface is rough
+Which of the above assumptions are correct?
+(a) 1 and 3 only (b) 1 and 4 only
+(c) 2 and 3 only (d) 2 and 4 only
+Ans. (d)
+Sol.
+ Friction is assumed betwen soil and wall
+ Backfill is dry, cohesionless, isotropic
+ Equilibrium of soil wedge is considered.
+51. In a clayey soil having 50 kN/m 2 as unit
+cohesion and 18 kN/m 3 as unit weight, an
+excavation is made with a vertical face. Taking
+Taylor’s stability number as 0.261, what is the
+
+IES MASTER
+maximum depth of excavation so that the
+vertical face remains stable?
+(a) 5.30m (b) 7.06m
+(c) 10.6m (d) 12.4m
+Ans. (c)
+Sol. Sn = Stability number
+H = Maximum depth of stable excavation
+Sn = 
+c
+C
+F H
+ 0.261 = 50
+18 H (Take F c = 1)
+ H = 50 10.64 m18 0.261 
+52. What is the Boussinesq’s vertical stress at a
+point 6m directly below a concentrated load
+of 2000 kN applied at the ground surface?
+(a) 53.1 kN/m 2 (b) 26.5 kN/m 2
+(c) 11.8 kN/m 2 (d) 8.8 kN/m 2
+Ans. (b)
+Sol.
+z  = 
+52
+2 2
+3Q 1
+2 z r1 z
+            
+= 
+5/2
+2
+2
+3 2000 1 26.53 kN / m12 6
+       
+53. Consider the following statements:
+1. In a reinforced concrete member subjected
+to flexure, the externally applied moments
+is resisted by an internal couple formed
+by steel and concrete and their magnitudes
+vary with the applied moment, while the
+lever arm of the internal couple remains
+constant
+2. In a prestressed concrete member, the
+external moment is resisted by an internal
+couple, but it is the lever arm that changes
+with the loading conditions and the stress
+in steel remains practically constant.
+Which of the above statements is/are correct?
+(a) 1 only (b) 2 only
+(c) Both 1 and 2 (d) Neither 1 nor 2
+Ans. (c)
+Sol. A change in the external moments in the
+elastic range of a pre-stressed concrete
+beam results in a shift of the pressure line
+rather than in an increase in the resultant
+force in the beam.
+In R.C.C. design principle of lever arm
+practically remains constant.
+This is in contrast to a reinforced concrete
+beam section where an increase in the
+external moment results in a corresponding
+increase in the tensile force and the
+compressive force but the lever arm of
+internal couple remains constant.
+C
+(d – x/3)
+T
+54. Consider the following statements with regard
+to Global Positioning Systems (GPS):
+1. The position of an object can be exactly
+determined by a single satellite
+2. The position of the observer (moving
+person or vehicel) on ground is determined
+by an oribiting satellite
+3. Atomic clocks are fixed in satellites to
+calculate the positioning of the satellite to
+aid in determining travel times.
+4. Absolute positioning, where accuracy of 1
+cm to 5cm is needed, depends upon the
+health of the satellite.
+
+IES MASTER
+Which of the above statements are correct?
+(a) 1, 2 and 3 only (b) 1, 2 and 4 only
+(c) 1, 3 and 4 only (d) 2, 3 and 4 only
+Ans. (d)
+Sol. Minimum 4 satellite are required to
+determine exact position of an object.
+55. A temporary bench mark has been established
+at the soffit of a chejja on a window opening,
+and its known elevation is 102.405 m abvoe
+mean sea level. The backsight used to
+establish the height of the instrument is by an
+inverted staff reading of 1.80m. A foresight
+reading with the same staff, held normally, is
+1.215m on a recently constructed plinth. The
+elevation of the plinth is
+(a) 95.42 m O.D (b) 99.39 m O.D
+(c) 102.42 m O.D (d) 105.99 m O.D
+Ans. (b)
+Sol. R.L. of T.B.M = 102.405 m (elevation of soffit
+of chejja).
+B.S. = –1.8m (inverted)
+F.S. = 1.215 m
+H.I. = R.L. of T.B.M. + B.S.
+H.I. = 102.405 – 1.8 = 100.605 m
+R.L. of plinth = 100.605 – 1.215 = 99.39 m
+56. A transition curve is to be provided for a
+circular railway curve of 300m radius, the
+gauge being 1.5m with the maximum
+superelevation restricted to 15 cm. What is
+the length of the transition curve for balancing
+the centrifugal force?
+(a) 72.3m (b) 78.1m
+(c) 84.2m (d) 88.3m
+Ans. (a)
+Sol. Correct option is (a)
+here,
+Vmax = 
+4.35 R 67
+     = (4.35 300 67) km/hr
+    = 66.39 km/hr
+Thus,
+Length of transition curve
+= 0.073 × e × V max
+= (0.073 × 15 × 66.39)m
+= 72.6 m 
+  72.3 m
+57. Consider the following statements regarding
+remote sensing survey:
+1. Information transfer is accomplished by
+use of electromagnetic radiation
+2. Remote sensing from space is done by
+satellites
+3. Remote sensing has no application in
+earthquake prediction
+Which of the above statements are correct?
+(a) 1 and 2 only (b) 1 and 3 only
+(c) 2 and 3 only (d) 1, 2 and 3
+Ans. (d)
+Sol. Remote sensing from space is done by
+space shuttle i.e. space craft or satellites.
+Remote sensing is detecting and measuring
+electromagnetic energy emanating or
+reflected from distant objects made up of
+various materials, so that we can identify
+and categorize these objects.
+Remote sensing is used in disaster
+management services such as flood and
+drought warning and monitoring, damage
+assesment in case of natural calamities like
+
+IES MASTER
+volcanic erruptions, earthquake, tsunami etc.
+But it has no application in earthquake
+prediction.
+58. The rate of equilibrium superelevation on a
+road is
+1. Directly proporitonal to the square of
+vehicel velocity
+2. Inversely proportional to the radius of the
+horizontal curve
+3. Directly proportional to the square of the
+radius of the horizontal curve
+Which of the above statements are correct?
+(a) 1 and 2 only (b) 1 and 3 only
+(c) 2 and 3 only (d) 1, 2 and 3
+Ans. (a)
+Sol.
+Correct option is (a)
+Rate of equilibrium superelevation.
+2ve gR
+Thus, statement (3) is incorrect.
+59. As per IRC 37: 2012, the fatigue life of a
+flexible pavement consisting of granular base
+and sub-base depends upon
+1. Resilient Modulus of bituminous layers
+2. Horizontal tensile strain at the the bottom
+of bituminous layer
+3. Mix design of birumen
+4. Vertical subgrade strain
+Which of the above statments are correct?
+(a) 1, 2 and 4 only (b) 1, 3 and 4 only
+(c) 1, 2 and 3 only (d) 2, 3 and 4 only
+Ans. (c)
+Sol.
+Does not depend on vertical subgrade strain
+60. Which one of the following types of steel is
+used in the manufacturing of metro and mono
+rails?
+(a) Mild steel (b) Cast steel
+(c) Manganese steel (d) Bessemer steel
+Ans. (c)
+Sol. Correct option is (c)
+Maganese steel is used in the manufacturing
+of metro and mono rails.
+61. Consider the following statements for selecting
+building stones:
+1. Seasoning of stones is essential and is
+done by soaking in water
+2. Specific gravity of stone is to be more than
+2.7
+3. Porosity of stone affects its durability
+4. Climatic conditions decide the type of stone
+to be used in construction
+Which of the above statements are correct?
+(a) 1, 2 and 3 only
+(b) 1, 2 and 4 only
+(c) 1, 3 and 4 only
+(d) 2, 3 and 4 only
+Ans. (d)
+Sol. For good building material specific gravity
+of stone should be more than 2.7.
+Stones with high porosity are less durable.
+Suitabili ty of stones depends on its
+characteristics also on local environmental
+and climatic conditions.
+
+IES MASTER
+62. Consider the following statements:
+1. Hydrophobic cement grains possesses low
+wetting ability
+2. Rapid-hardening cement is useful in
+concreting under static, or running water
+3. Quick-setting cement helps concrete to
+attain high strength in the initial period
+4. White cement is just a variety of ordinary
+cement free of colouring oxides.
+Which of the above statements are correct?
+(a) 1 and 4 only (b) 1 and 3 only
+(c) 2 and 4 only (d) 2 and 3 only
+Ans. (a)
+Sol.  Hydrophobic cement contains
+admixtures which decreases the wetting
+ability of cement grains.
+ Rapid hardening cement is similar to
+OPC, except it has more C 3S (upto 50%)
+and less C 2S and it is ground more
+finely. It helps in attainment of early
+strength and used where early removal
+of formwork is required.
+ Quick setting cement has low gypsum
+content which gives the quick setting
+property but it doesnot affect the strength
+gain.
+ White cement are free from iron oxides.
+63. Consider the following statements:
+1, Rich mixes are less prone to bleeding than
+lean ones
+2. Bleeding can be reduced by increasing the
+fineness of cement
+Which of the above statements is/are correct?
+(a) 1 only (b) 2 only
+(c) Both 1 and 2 (d) Neither 1 nor 2
+Ans. (c)
+Sol. Bleeding can be reduced by the use of
+uniformly graded aggregates, pozzolana-by
+breaking the continuous water channel, or
+by using-entraining agents, finer cement,
+alkali cement and rich mix.
+64. The yield of concrete per bag of cement for a
+concrete mix proportional of 1 : 1.5 : 3 (with
+adopting 
+2
+3  as the coefficient) is
+(a) 0.090 m 3 (b) 0.128 m 3
+(c) 0.135 m 3 (d) 0.146 m 3
+Ans. (b)
+Sol. Volume of one bag of cement = 0.035m 3
+Cement: sand : Aggregate :: 1 : 1.5 : 3 (by
+volume)
+ Volume of dry mix = 0.035 + 1.5 × 0.035
++ 3 × 0.035 = 0.1925 m 3
+ For wet mix yield of concrete
+= 
+32 0.1925 0.128 m3  
+65. Consider the following statements:
+1. Workability of concrete increases with the
+increase in the proportion of water content
+2. Concrete having small-sized aggregates
+is more workable than that containing
+large-sized aggregate
+3. For the same quantity of water, rounded
+aggregates produce a more workable
+concrete mix as compared to angular and
+flaky aggregates
+
+IES MASTER
+4. A concrete mix with no slump shown in
+the slump cone test indicates its very poor
+workability
+Which of the above statements are correct?
+(a) 1, 2 and 3 only (b) 1, 2 and 4 only
+(c) 1, 3 and 4 only (d) 2, 3 and 4 only
+Ans. (c)
+Sol.
+ Workability of concrete is the ease with
+which a concrete can be transported,
+placed and 100% compacted without
+excessive bleeding or segregation.
+ Concrete having large sized aggregate
+has high workability due to less surface
+area of large aggregates which requires
+less paste.
+ Slump value of zero is an indication of
+extremely low workability of mixture.
+66. A steel wire of 20 mm diameter is bent into a
+circular shape of 10 m radius. If E, the modulus
+of elasticity, is 2 × 10 6 kg/cm 2, then the
+maximum tensile stress induced in the wire
+is, nearly
+(a) 2 × 10 3 kg/cm 2 (b) 4 × 10 3 kg/cm 2
+(c) 2 × 10 4 kg/cm 2 (d) 4 × 10 4 kg/cm 2
+Ans. (a)
+Sol. Dia of steel wire = 20 mm
+Radius of circular shape = 10 m
+Modulus of elasticity, E = 2 × 10 6 kg/cm 2
+R=10m
+y = 10mm
+20 mm
+Steel wire
+ From bending formula
+M
+I  = 
+f E
+y R
+f
+y  = E
+R    f = E yR 
+f = 
+6
+3 22 10 20 10  kg / cm10 2
+  
+3 2f 2 10  kg/cm 
+67. The stress-strain curve for an ideally plastic
+material is
+(a) Stress
+Strain
+(b) Stress
+Strain
+(c) Stress
+Strain
+(d) Stress
+Strain
+Ans. (c)
+Sol. Stress-strain curve for perfectly plastic
+material
+
+IES MASTER
+Stress
+Strain
+Curve will not have any elastic component.
+So most appropriate answer is ‘c’.
+Note : shear stress-strain rate curve for ideal
+Bingham Plastic.
+Shear
+stress
+Shear strain rate
+Ideal Bingham plastic
+68. A long rod of uniform rectangular section
+with thickness t, originally straight, is bent
+into the form of a circular arch with
+displacement d at the mid-point of span l.
+The displacement d may be regarded as
+small as compared to the length l. The
+longitudinal surface strain is
+(a)
+2
+2td
+l (b) 2
+4td
+l
+(c) 2
+8td
+l (d) 2
+16td
+l
+Ans. (b)
+Sol.
+d
+tl
+R R
+ From property of circle
+(2R – d) × d = 
+l l
+2 2
+         
+ for small ' '  arch length and chord length
+are same
+2ld 8R  or 
+2lR 8d
+From bending formula
+y
+
+ = E
+R    t / 2
+
+ = 2
+E
+l
+8d
+2
+y 4dt
+E R l
+    
+69. If strains on a piece of metal are x  = –120
+µm/m, y  = – 30 µm/m, and  = 120 µm/m,
+what is the maximum principal strain?
+(a) 0 (b) 50 µm/m
+(c) 75 µm/m (d) 150 µm/m
+Ans. (d)
+Sol. Given :
+x  = –120 µm/m
+y  = –30 µm/m
+  = 120 µm/m
+ max  = 
+x y
+2
+  
+ ± 
+2 2
+x y xy
+2 2
+                
+= 120 30
+2
+   ± 
+2 2
+120 30 120
+2 2
+           
+= 2 275 45 60  
+max 150 m/m     or min 0 
+Maximum magnitude of strain will be
+considered.
+
+IES MASTER
+70. The state of stress at a point is given by :
+x y80 MPa, 100 MPa    and xy  = 60
+MPa. If the yield strength for the material is
+150 MPa, as determined in a uniaxial test,
+then the maximum shear stress is, nearly
+(a) 150.8 MPa (b) 127.4 MPa
+(c) 119.3 MPa (d) 104.0 MPa
+Ans. (*)
+Sol. Given,
+x  = 80 MPa
+y  = 100 NPa
+xy  = 60 MPa
+fy = 150 MPa
+1/2 = 
+2
+x y x y 2
+xy2 2
+           
+1  = 
+2
+280 100 80 100 602 2
+      = 150.83MPa
+2  = 
+2
+280 100 80 100 602 2
+    
+  =
+29.17MPa
+max = 1 2 1 2max , , 2 2 2
+       
+max  = 75.41MPa
+71. Principal stress at a point in an elastic material
+are 1.5   (tensile),   (tensile) and 0.5 
+(compressive). The elastic limit in tension is
+210 MPa and µ = 0.3. The value of   at
+failure when computed by maximum principal
+strain theory is, nearly
+(a) 140.5 MPa (b) 145.5 MPa
+(c) 150.5 MPa (d) 155.5 MPa
+Ans. (d)
+Sol. 1  = 1.5 (T) , E = 210 MPa
+2  = (T)
+3  = 0.5 (c)
+µ = 0.3
+From maximum principal strain theory
+31 2 µ
+E E E
+      
+yf
+E
+1.5 0.3 0.50.3E E E
+           
+   
+yf
+E
+  f y = 210 MPa
+155.5 MPa 
+72.
+A
+1.2m
+C B
+0.5 m
+250 N
+1.2m
+A horizontal bar of  40 mm diameter solid
+section is 2.40 m long and is rigidly held at
+both ends so that no angular rotation occurs
+axially or circumferentially at the ends (as
+shown in figure). The maximum tensile stress
+in the bar is nearly
+(a) 12.2 N/mm 2 (b) 13.7 N/mm 2
+(c) 15.2 N/mm 2 (d) 16.7 N/mm 2
+Ans. (d)
+Sol.
+250
+125
+2.4m
+125/4 125/4
+250 2.4
+8
+ 250 2.4
+8
+
+
+IES MASTER
+R1 = 250 125 62.5
+2 2.4 2.4       R 2 = 250 125 62.5
+2 2.4 2.4 
+250
+12543.75 Nm 106.25 Nm
+12.5Nm
+43.75 Nm
+106.25 Nm
+137.5 NmR  = 46.875N1 R  = 203.125N2
+    Maximum bending stress occur at the point
+of maximum bending moment
+max  (at mid span) = 3
+32M
+d
+= 3
+32 137.5 1000
+40
+ 
+ 
+= 21.88 MPa
+max  (at end B) = 3
+32M
+d
+= 2
+32 106.25 1000
+d
+ 
+    16.9 MPa
+73. A slid shaft A of diameter D and length L is
+subjected to a torque T; another shaft B of the
+same material and of the same length, but
+half the diameter, is also subjected to the same
+torque T. The ratio between the angles of twist
+of shaft B to that of shaft A is
+(a) 32 (b) 16
+(c) 8 (d) 4
+Ans. (b)
+Sol. Shaft A Shaft B
+Diameter, d 1 = D d = 
+D
+2
+Length, l = L l = L
+Torque = T Torque = T
+
+T C
+J r L
+  
+  = TL 1
+CJ J   
+ J = 
+4d
+32
+
+4
+1 2 A
+4
+2 B1
+d 1
+16d
+    
+B
+A
+16 
+74. The required diameter for a solid shaft to
+transmit 400 kW at 150 rpm, with the working
+shear stress not to exceed 80 MN/m2, is nearly
+(a) 125 mm (b) 121 mm
+(c) 117 mm (d) 113 mm
+Ans. (c)
+Sol. Power = 400 kW
+N = 150 rpm
+Shear stress = 80 MPa
+P = 
+2 NT
+60
+
+T = 
+3400 10 60
+2 150
+ 
+ 
+T = 25464.79 N.m
+T
+J r
+
+3
+4
+25464.79 10 80
+dd32 2
+  
+
+IES MASTER
+d3 = 
+325464.79 16 10
+80
+     
+d 117.4 mm
+75. An RCC column of 4 m length is rigidly
+connected to the slab and to the foundation.
+Its cross-section is (400 × 400) mm 2. The
+column will behave is a/an
+(a) Long column
+(b) Short column
+(c) Intermediate column
+(d) Linkage
+Ans. (b)
+Sol. As the connection is rigid, both rotation and
+translation is not allowed at both the ends
+and have l eff = 0.65l.
+Slenderness Ratio :
+effl
+b  = 0.65 4000
+400
+  = 6.5
+  Short column 
+effl3 12b
+    
+l = 4m
+Note : Slenderness Ratio < 3   Pedestal
+3    Slenderness Ratio   12   Short
+column
+76.
+A B –ve
+C
+100 N
+D E O
+350 N350 N
+50 N
+350 N 350 N
+O
++ve
+50 N
++ve
+100 N
+The shear  force diagram of a single
+overhanging beam is shown in figure. One
+simple support is at end A. The ‘total’
+downward load acting on the beam is
+(a) 800 N (b) 600 N
+(c) 400 N (d) 200 N
+Ans. (a)
+Sol.
+100 N
+350 N
+E
+350 N
+400 N 300 N
+450 N350 N
+50 N
+B A
+350 350 N
+100 N 100 N
+C
+D
+Total downword SF. = 400 + 300 100
+= 800 N
+77. The deformation of a vertically held bar of
+length L and cross-section A is due to its self-
+weight only. If Young’s modulus is E and the
+unit weight of the bar is 
+,  the elongation dL
+is
+
+IES MASTER
+(a)
+3L
+2E
+ (b)
+2EL
+2
+(c)
+2L
+2E
+ (d)
+2L
+2AE
+
+Ans. (c)
+Sol.
+y
+(L-y) Idy L
+A = cross – sectional area
+s = unit wt of bar
+E = Young’s modulus of elasticity.
+Total elongation, dL = PL
+AE
+ dL = 
+L
+0
+A(L y)dy
+AE
+ 
+
+Integrating we get,
+2LdL 2E
+
+78. For material, the modulus of rigidity is 100
+GPa and the modulus of elasticity is 250 GPa.
+The value of the Poisson’s ratio is
+(a) 0.20 (b) 0.25
+(c) 0.30 (d) 0.35
+Ans. (b)
+Sol. E = 2G(1 )  , E = 250 GPa, G = 100 GPa
+E 2501 12G 2 100     
+0.25 
+79. Two persons weighing W each are sitting on
+a plank of length L floating on water, at L
+4
+from either end. Neglecting the weight of the
+plank, the bending moment at the middle point
+of the plank is
+(a)
+WL
+16 (b) WL
+64
+(c)
+WL
+8 (d) Zero
+Ans. (d)
+Sol.
+W WL/2
+L/4L/4
+L
+Reaction will be in the form of udl acting
+upward.
+i.e.,
+W WL/2
+L/4L/4
+L 2W/L
+WL/16 WL/16
+BMD
+Mass, bending moment at middle point of
+plank = zero.
+80. In the case of a rectangular beam subjected
+to a transverse shearing force, the ratio of
+maximum shear stress to average shear stress
+is
+(a) 0.75 (b) 1.00
+(c) 1.25 (d) 1.50
+
+IES MASTER
+Ans. (d)
+Sol. Average shear stress for a beam of cross
+section area (b × d) = 
+V
+bd
+Shear stress distribution for rectangular
+cross-section = 
+2
+2V d y2I 4
+ 
+  
+Maximum will be at y = 0 (at N.A.)
+2
+max 3
+V d 3 V
+4 2 bd2bd
+12
+       
+So, 
+max
+avg.
+3 1.52
+  
+81. 4m
+AH
+8 m
+4 m
+B
+H
+8 m
+80 kN
+The  horizontal thrust of the three-hinged arch
+loaded as shown in the figure is
+(a) 20 kN (b) 30 kN
+(c) 40 kN (d) 50 kN
+Ans. (c)
+Sol.
+4m
+AH
+8 m
+4 m
+B
+H
+8 m
+80 kN
+RA RB
+Moment about B will be zero
+B AM 0 R 16 80 12 0      
+  R A = 12 × 5 = 60 kN; R B = 20 kN
+  Moment of forces on right of hinge about
+the hinge will be zero so,
+20 × 8 = H × 4   H = 40 kN
+82. Each span of a two-span continuous beam of
+uniform flexural rigidity is 6 m. All three
+supports are simple supports. It carries a
+uniformly distributed load of 20 kN/m over the
+left span only. The moment at the middle
+support is
+(a) 90 kNm Sagging (b) 45 kNm Hogging
+(c) 90 kNm Hogging (d) 45 kNm Sagging
+Ans. (b)
+Sol.
+6 m6 m
+CBA
+20 kN/m
+By moment distribution method
+Distribution factor at B and C will be 0.5
+FEM at A = 
+220 6 60 kN-m12
+  
+FEMB = 60 kN-m
+Joint
+Member
+DF
+FEM
+Final 
+moment
+A
+AB
+–60
+0
+BA
+0.5
+60
+30
+–45
+45
+–45
+–45
+BC
+0.5
+B C
+CB
+0
++60
+
+IES MASTER
+45 kN.m45 kN.m
+83.
+w/m
+L
+BA
+A fixed beam is loaded as in figure. The fixed
+end moment at support A
+(a)
+2wL
+30 (b)
+2wL
+20
+(c)
+2wL
+10 (d)
+2wL
+8
+Ans. (b)
+Sol. Fixed end moment for beam loaded with
+uniformly varying load.
+w/m
+L BA
+2w
+30
+l2w
+20
+l
+84. For a plane truss member, the length is 2 m,
+E = 200 GPa and area of cross-section is
+200 mm2. The stiffness matrix coefficient K 11
+with reference to its local axis is
+(a) 200 N/m (b) 2 × 10 7 N/m
+(c) 4 × 10 7 N/m (d) 400 N/m
+Ans. (b)
+Sol. For truss local stiffness matrix is
+= 
+AE AE
+L L
+AE AE
+L L
+  
+ 
+   
+k11 = 
+3AE 200 200 10
+L 2
+ 
+= 2 × 10 7 N/m
+85.
+L
+S
+P Q
+L
+R
+F
+For the truss shown in the figure, the force in
+the member PQ is
+(a) F (b)
+F
+2
+(c) 2 F (d) 2F
+Ans. (a)
+Sol.
+L
+S
+P Q
+L
+R
+F
+Joint equilibrium at R
+FQR
+RFRS
+F
+So, FQR = F and FRS = 0
+Joint equilibrium of Q
+
+IES MASTER
+45°
+FQR
+FQS
+FPQ
+ x PQ QSF 0 F F sin45 0   
+ FPQ = –F QSsin45° …(i)
+ y QR QSF 0 F F cos45 0   
+  F QS = 2 F …(ii)
+by eq. (i)
+PQF F 
+Alternative solution:
+S
+P Q
+L
+R
+F
+L
+S
+Q
+L
+R
+F
+FPQFPQ
+Method of section
+sM 0
+ HP × L = F × P
+ So, PQ PF H F 
+86. An important building is l ocated in
+earthquake zone V in India. The seismic
+weight of the building is 10000 kN and it is
+designed by ductility considerations. The
+spectral acceleration factor for this structure
+is 2.5. The base shear for this structure is
+(a) 1350 kN (b) 5000 kN
+(c) 10000 kN (d) 25000 kN
+Ans. (a)
+Sol. Seismic base shear V B = A hW
+Ah = Horizontal earthquake force
+W = Seismic weight
+Ah = 
+ZISa 0.36 1.5 2.5 0.1352Rg 2 5
+  
+z = 0.36 for zone V
+I = 1.5 for important building
+Sa 2.5 (given)g 
+R = 5 (for building designed with ductile
+consideration)
+Thus,
+Base shear = 0.135 × 10000 kN = 1350 kN
+87. An RCC slab (M 25 grade) of dimensions
+5 m × 5 m × 0.15 m, is supported on four
+square columns (M 25 grade) of side 400 mm,
+the clear height of each column being
+3 m. Assuming rigid connections, the
+fundamental time period of vibration of the
+slab along the horizontal direction is nearly
+(a) 4.12 s (b) 2.80 s
+(c) 0.50 s (d) 0.07 s
+Ans. (d)
+Sol.
+5m
+5m
+0.15m
+0.4×0.4m
+3m
+
+IES MASTER
+Stiffness of each column = 3
+12EI
+L
+= 
+3
+3
+12 5000 25 400 400 23703 N / mm
+12 3000
+   
+
+where 2E 5000 fck N / mm
+3bdI 12
+Stiffness of four column = 4K
+= 4 × 23703 = 94812 × 10 3 N/m
+Using lumped mass technique, mass of the
+single degree of freedom system
+= Mass of slab + mass of 50% column height
+= [5 × 5 × 0.15 + 4 × 1.5 × 0.4 × 0.4] × 25
+= 117.75 kN
+Mass = 
+3weight 117.75 10 12003.05 kgg 9.81  
+Fundamental natural time period
+n 3
+m 12003.05T 2 2 0.0706 seck 94812 10
+    
+
+88. Consider the following statements regarding
+suspension cables :
+1. The horizontal component of the cable
+tension in a suspension bridge is constant
+at every point along the length of the cable.
+2. Stiffening girders in a suspension bridge
+carry only the live load
+Which of the above statement is/are correct?
+(a) 1 only (b) 2 only
+(c) Both 1 and 2 (d) Neither 1 nor 2
+Ans. (c)
+Sol. Correct option is (c)
+H H
+1. Horizontal component of cable tension at
+each section is the same and it is equal to the
+horizontal reaction at support.
+2. The uniformly distributed dead load of the
+roadway and the stiffening girders is
+transmitted to the cables through hanger
+cables and is taken up entirely by the tension
+in the cables. The stiffnening girders do not
+suffer any S.F or B.M  under dead load as
+the girders are supported by closely spaced
+hanger cables throughtout. Any live load on
+the bridge will be transmitted to the girders
+as point loads. The stiffening girders transmit
+the live load to the cable as uniformly
+distributed load. While doing so the stiffening
+girders will be subjected to S.F. and B.M
+throughout their length.
+E
+DRoad F way
+z
+L/2
+W
+x
+A Y yc
+B
+C
+L/2
+Three hinged stiffening girder
+89.
+m
+(EI)  = 5000 kNmBeam
+2
+K =1000 N/ms
+50 kg
+A B
+2m
+The fundamental time period of vibration of
+the system shown in the figure, by neglecting
+the self weight of the beam, is nearly
+
+IES MASTER
+(a) 0.2 sec (b) 0.8 sec
+(c) 1.4 sec (d) 2.8 sec
+Ans. (c)
+Sol.
+m 50 kg
+k  = 1000 N/ss
+(EI)  = 5000 kNmbeam
+2
+keq = 
+1 s
+1 s
+k k
+k k
+k1 = 
+3
+3 3
+3EI 3 5000 10 1875000 N/m
+2
+  
+l
+keq = 1875000 1000 999.47 N/m1875000 1000
+ 
+Time period = m 502 2 1.4 seck 999.47   
+90. Consider the following statements with
+reference to the design of welded tension
+members:
+1. The entire cross-sectional area of the
+connected leg is assumed to contribute to
+the effective area in the case of angles.
+2. Two angles, back-to-back and tack-welded
+as per the codal requirements, may be
+assumed to behave as a tee-section.
+3. A check on slenderness ratio may be
+necessary in some cases.
+Which of the above statements are correct?
+(a) 1 and 2 only (b) 1 and 3 only
+(c) 2 and 3 only (d) 1, 2 and 3
+Ans. (d)
+Sol. 1. In case of welded tension members,
+entire cross-sectional area of connected
+leg is condiered in effective area
+calculation, whereas for bolted
+connection, deduction for holes is made
+for connected leg.
+2. As per IS 800 : 2007, two angles placed
+back-to-back and tack welded area
+assumed to behave as tee section.
+3. As per IS 800 : 2007, check for
+slenderness ratio of tension members
+may be necessary to provide adequate
+rigidity to prevent accidental eccentricity
+of load or excessive vibration.
+Thus, statement 1, 2 and 3 all are
+correct.
+91. A sample of dry soil is coated with a thin layer
+of paraffin and has a mass of 460 g. It
+displaced 300 cc of water when immersed in
+it. The paraffin is peeled off and its mass was
+found to be 9 g. If the specific gravity of soil
+solids and paraffin are 2.65 and 0.9
+respectively, the voids ratio of soil is nearly
+(a) 0.92 (b) 0.71
+(c) 0.59 (d) 0.48
+Ans. (b)
+Sol. Mass of soil + paraffin = 460 g
+Mass of paraffin = 9g
+Mass of soil = 451 g
+Volume of soil + volume of paraffin = 300cc
+9gVolume of soil 3000.9 1  
+Volume of soil = 290 cc
+dry density of soil d( )  = 451 1.555 g / cc290 
+
+IES MASTER
+d  = s wG V
+1 e
+1.555 = 2.65 1
+1 e
+
+
+e = 0.704
+92. Marshalling yard in railway system provides
+facilities for
+(a) Maintenance of rolling stock
+(b) Safe movements of passengers and
+coaches
+(c) Receiving, breaking up, re-forming and
+dispatching onwards – of trains
+(d) Receiving, loading, unloading and delivery
+of goods and vehicles, and scheduling their
+further functioning
+Ans. (c)
+Sol. Correct option is (c)
+Marshalling yard is a yard with facilities for
+receiving, classfying and despatching rolling
+stock to their destinations.
+93. ‘Composite Sleeper Index’ is relevant in
+determining:
+1. Required and adoptable sleeper density
+2. Durability of sleeper units
+3. Mechanical strength of the stock of wooden
+sleepers
+Which of the above statements is/are correct?
+(a) 1 and 2 only (b) 2 and 3 only
+(c) 1 only (d) 3 only
+Ans. (d)
+Sol.
+‘Composte sleeper index’ is employed to
+determine mechanical strength of wooden
+sleepers.
+94. The normal flows on two approach roads at
+an intersection are respectively 500 pcu/h and
+300 pcu/h. The corresponding saturation flow
+is 1600 pcu/h on each road. The total lost
+time per single cycle is 16 s. The optimum
+cycle time by Webster’s method is
+(a) 72.5 s (b) 58.0 s
+(c) 48.0 s (d) 19.3 s
+Ans. (b)
+Sol.
+By Webster’s method optimum cycle time,
+C =
+1.5 L 5
+q1 s
+
+ 
+where,
+L = Total lost time = 16 sec
+S = Saturation flow = 1600 pcu/n.
+q
+s  = 500 300 1
+1600 1600 2 
+ C = (1.5 16) 5 sec1 0.5
+ 
+
+ = 58 sec
+95. In the offshore region at a particular harbour
+facility, an oscillatory wave train approaches
+with wavelength of 80 m where the mean sea
+depth is 30 m. What would be the velocity of
+the individual waves?
+(a) 17.15 m/s (b) 16.05 m/s
+(c) 15.15 m/s (d) 14.05 m/s
+Ans. (a)
+Sol. L = 80 m (wavelength)
+h = 30 m (mean see depth)
+gL 2 hV tanh2 L
+ 
+
+IES MASTER
+2 30 2 30
+80 80
+2 30 2 30
+80 80
+9.81 80 e e 10.98 m / s2
+e e
+  
+  
+  
+
+  The same ans do not match with any
+option.
+We will find wave velocity by equation.
+V gh
+This expression is generally used in shallow
+water waves where h <<< L (generally
+h 0.05 L )
+V 9.81 30 17.15 m / s  
+96. For proper planning of harbours oscillatory
+waves in the relevant off-shore region must
+be taken into account. If the sea depth is 30
+m and an oscillatory waves train is observed
+to have wavelength of 50 m, what would be
+the velocity of the individual waves?
+(a) 9.43 m/s (b) 9.21 m/s
+(c) 9.08 m/s (d) 8.83 m/s
+Ans. (d)
+Sol. L = 50 m (wavelength)
+h = 30 m (mean sea depth)
+gL 2 hV tanh2 L
+ 
+x x
+x x
+e etanh x
+e e
+
+
+
+
+2 30
+50
+2 30
+50
+2 30 2 30
+50 50
+9.81 50 e eV 2
+e e
+
+  
+   
+
+= 8.83 m/s
+Directions: Each of the next Twenty Four (24) items
+consists of two statements, one labelled as ‘Statement
+(I)’ and the other as ‘Statement (II)’. Examine these
+two statements carefully and select the answers to
+these items using the codes given below:
+Codes:
+(a) Both Statement (I) and Statement (II) are
+individually true and Statement (II) is the
+correct explanation of Statement (I)
+(b) Both Statement (I) and Statement (II) are
+individually true but Statement (II) is not
+the correct explanation of Statement (I)
+(c) Statement (I) is true but Statement (II) is
+false
+(d) Statement (I) is false but statement (II) is
+true
+97. Statement (I) :  Glass, used as sheets in
+buildings, is a crystalline solid and is
+transparent.
+Statement (II) : Glass is obtained by the fusion
+of silicates of sodium and calcium, both of
+which are crystalline in structure.
+Ans. (d)
+Sol. Correct option is (d)
+I– Glass is a non-crystalline amorphous solid
+II– Glass is manufactured by using some of the
+cystalline solids like silicates of sodium,
+calcium etc.
+Thus, statement I is incorrect.
+98. Statement (I) :  Lime-surkhi mortar is used in
+construction of Anicuts (dams) since the 19th
+century.
+Statement (II) :  Portland cement is a recent
+material compared to surkhi-mortar which is
+best suited for hydraulic structures.
+Ans. (b)
+Sol. Statement I and II both are correct
+Cement mortar has better quality as
+compare to lime-surkhi mortar.
+
+IES MASTER
+99. Statement (I) : Rapid method of concrete mix-
+design will take 3 days for trials.
+Statement (II) :  This rapid method depends
+on curing the concrete in warm water at or
+above 55°C.
+Ans. (a)
+Sol.
+Rapid method of concrete mix-design takes
+only 3 days for trials.
+The procedure is based on the use of
+accelerated curing (using warm water).
+100. Statement (I) :  R.M.C. is preferably used in
+construction of large projects.
+Statement (II) : R.M.C. is adoptable to achieve
+any desired strength of concrete, with
+simultaneous quality control.
+Ans. (a)
+Sol. Ready mix concrete (RMC) is preferably
+used in large project as it possess the
+following major properties:
+(i) Better quality concrete is produced.
+(ii) Elimination of storage space for basic
+materials at site.
+(iii) It can achieve any desired strength of
+concrete.
+Thus helps in easy completion of large
+projects.
+101. Statement (I) :  In a bolted joint, all similarly
+placed bolts share the load equally.
+Statement (II) :  Bolts are placed in holes
+having slightly larger diameters.
+Ans. (b)
+Sol. Statement (I) and (II) both are correct.
+102. Statement (I) :  In a RC beam, bond stress
+developed is due to pure adhesion, and
+frictional and mechanical resistance.
+Statement (II) :  Inadequacy of bond strength
+can be compensated by providing end
+anchorage in the reinforcing bars.
+Ans. (b)
+Sol. Statement I is correct as the bond stress
+developed is due to pure adhesion (due to
+gum like property in the products of
+hydration), frictional resistance (due to the
+surface roughness of the reinforcement and
+the grip exerted by the concrete shrinkage)
+and mechanical resistance (due to the
+deformed bars).
+Statement II is correct, as the inadequacy
+of bond strength can be compensated by
+providing development length/end anchorage
+in the reinforcing bars. However, statement
+II is not the reason of statement I.
+103. Statement (I) :  A Dummy is an activity in the
+network.
+Statement (II) : A Dummy is a representation
+in the network requiring neither time nor re-
+sources.
+Ans. (d)
+Sol. Dummy is not an activity in the network dia-
+gram, it is only used to show inter-relationship
+which neither consumes resources nor time.
+104. Statement (I) :  In areas where extreme cold
+conditions are a regular feature, and more so
+particularly in winter, it is necessary to use
+lighter oil for automobiles than in summer.
+Statement (II) : 'Lighter'  in Statement (I) re-
+fers to the oil density, which may be adjusted
+by admixtures.
+
+IES MASTER
+Ans. (c)
+Sol. Oil is thin when heated and thickens as it is
+cooled even to the point that at very cold
+temperature, oil would thicken such that, it
+no longer lubricate the engine. Therefore
+lighter viscosity motor oils is essential when
+season changes from summer to winter to
+prevent catastrophic engine failure.
+105. Statement (I) : Bernoulli's equation is appli-
+cable to any point in the flow field provided the
+flow is steady and irrotational.
+Statement (II) : The integration of Euler's equa-
+tion of motion to derive Bernoulli's equation
+involves the assumptions that velocity poten-
+tial exists and that the flow conditions do not
+change with time at any point.
+Ans. (a)
+Sol. The integration of Euler’s equation of
+motion to derive Bernoulli’s equation
+involves the assumptions that velocity
+potential exists.
+If velocity potential exist, flow is irrotational.
+106. Statement (I) : A sloping glacis is always pre-
+ferred over a horizontal bed for locating a hy-
+draulic jump.
+Statement (II) : The hydraulic jump is the best
+dissipator of energy of the flowing water.
+Ans. (d)
+Sol. Sloping glacis is not preferred because
+length of hydraulic jump increases and
+energy loss decreases on this.
+Hydraulic jump is the best dissipator of
+energy so statement (II) is only correct.
+107. Statement (I) : Anaerobic sludge digester, by
+itself, is considered to be the better method
+than other methods of sludge treatment.
+Statement (II) : During Anaerobic sludge di-
+gestion, CH 4 is produced; also rodents and
+other pests are attracted when digester sludge
+is dried.
+Ans. (b)
+Sol. During anaerobic sludge degistain CH 4 is
+produced and rodents and pests are
+attracted when degistor sludge is dried.
+108. Statement (I) : A nomogram is a ready
+reckoner to compute any two hydraulic param-
+eters like discharge, pipe diameter, pipe slope
+and flow velocity in the pipe if the other two
+are known.
+Statement (II) : Hydraulic parameters can be
+determined by using Mannings or Chezy's for-
+mulae; and a Nomogram is an organized com-
+pilation of a number of such, varied computa-
+tions.
+Ans. (a)
+Sol. Nomogram is a diagram representing the
+relation between three or more variables
+quantities by means of a number of scale,
+so that value of variable can be found by
+simple geometric construction.
+Chezy’s equation
+Q = C×A
+R S
+2where A D 4
+   
+Manning’s equation Q = 
+2/3 1/21 A R Sn 
+109. Statement (I) : The field capacity of Municipal
+solid waste is the total moisture that can be
+retained in a waste sample against gravity.
+Statement (II) : The field capacity of Municipal
+solid waste is of critical importance in deter-
+mining the volume of leachate in landfills.
+Ans. (b)
+
+IES MASTER
+Sol.
+I. Field capacity of municipal solid waste is
+the moisture retained against the force of
+gravity.
+II. Field capacity (i.e., mositure retained) is
+of prime importance while finding out
+volume of leachate.
+110. Statement (I) : Proximate analysis of MSW is
+carried out to determine moisture content, vola-
+tile matter, and fixed carbon.
+Statement (II) : Ultimate analysis of MSW is
+carried out to determine the full range of chemi-
+cal composition and the energy value.
+Ans. (b)
+Sol. Correct option is (b)
+ I. Proximate analysis of ‘municipal solid waste’
+is carried out to determine.
+(i) Moisture
+(ii) Volatile matter
+(iii) Ash
+(iv) Fixed carbon
+  II. Ultimate analysis of solid waste is used to char-
+acterize the chemical composition of organic
+matter. They are also used to define the proper
+mix of solid waste materials to achieve suit-
+able C/N ratios for bio-conversion processes.
+111. Statement (I) : The impact of Green House
+Gas emission on the environment may com-
+prise accelerated increase in global warming
+as well as a significant rise in mean sea levels.
+Statement (II) : Green House Gas emission is
+responsible for decreased land masses, in-
+creased population densities and food short-
+ages.
+Ans. (b)
+Sol.
+ Green house effect increase the
+temperature of earth and due to which
+the polar ice caps will melt and it will
+increase the ocean level.
+ Inundation of coastal land decreases
+land m ass, consequently increases
+population density and creates food
+shortages.
+112. Statement (I) : The fundamental principle of
+surveying is 'to work from the whole to the part'.
+Statement (II) : Working from the whole to the
+part ensures prevention of accumulation of
+possible errors in survey work over large ar-
+eas.
+Ans. (a)
+Sol. Fundamental principal of surveying is from
+working from whole to part which ensures
+localisation of error.
+Whereas working from part to whole maximises
+error.
+113. Statement (I) : Compass survey is still used
+by Geologists to locate the magnetic ores.
+Statement (II) : Local attraction causes errors
+in compass survey due to terrestrial features
+either natural or man made.
+Ans. (b)
+Sol. Compass survey is used by geologist to locate
+the magnetic ores because north or south end
+of the needle is drawn downards, according to
+the polarity of the ore.
+Local attraction causes error in magnetic bear-
+ing due to terrestrial features either natural or
+man-made which create errors in compass
+survey.
+114. Statement (I) : PCA is a preferred raw mate-
+rial for construction of Bituminous pavements
+in areas of heavy rainfall.
+
+IES MASTER
+Statement (II) : In PCA, no stripping is needed
+as there is improved binding: and thereby sta-
+bility is also improved.
+Ans. (a)
+Sol. ‘Plastic coated aggregates’ and also they
+protect bitumen from aggregate moisture are
+water resistant thus gives proper bond
+strength and durability in areas of heavy
+rainfall.
+115. Statement (I) : Bituminous roads disintegrate
+even with light traffic, but such failures are not
+exclusively attributable to wrong surface treat-
+ment.
+Statement (II) : Improper preparation of the
+subgrade and the foundation is often respon-
+sible for this disintegration.
+Ans. (c)
+Sol.
+ 
+ Some defects which is not rectified immediately,
+result in the disintegration of the pavement into
+small, loose fragment.
+Examples of such defects are
+(1) Stripping
+(2) Loss of aggregates
+(3) Rav elling
+(4) Edge breaking
+  
+ Improper prepartion of subgrade is not a cuase
+of disintegration.
+116. Statement (I) : Cermet, as a refractory mate-
+rial (Clay 80% + Aluminium 20%), is used in
+the construction of rockets and jets.
+Statement (II) : Cermet containing metals,
+which are stable at temperatures as high as
+600ºC, resists sudden shocks.
+Ans. (a)
+Sol.
+   The composition of most cermets: 80% cermaic
+(clay) and 20% metals (Al, Ni, Fe etc). These
+cermets are mainly used as high refractories
+where high temp as well as shock resistant.
+Thus cermets are used in rockets and jet
+engine port.
+117. Statement (I) : Aluminium alloy with less than
+6% copper is used in making automobile pis-
+tons.
+Statement (II) : Duraluminium containing 4%
+copper has a high tensile strength and is well
+usable wherever alkaline environment is not
+present.
+Ans. (b)
+Sol.
+  
+ Y-alloy consist of Al (92%) and Cu around 4–
+5% is generally used is piston of IC engine
+   Composition of duralium is as follows
+   
+Cu Mn He Mg Al
+3.5 4.5% 0.4 0.7% 0.7% 0.4 0.7 Re st   
+118. Statement (I) : There is no practical method of
+concrete mix design based on the specific sur-
+face of aggregates.
+Statement (II) : Surface area of aggregates
+plays a vital role in achieving the right mix de-
+sired for a desired strength.
+Ans. (b)
+Sol. Desired strength of concrete depends on
+workability which is in-turn depended on
+surface area of aggregates.
+119. Statement (I) : Air seasoning of structural
+timber renders it more durable, tough and
+elastic.
+
+IES MASTER
+Statement (II) : Air seasoning of timber is the
+most economical and eco-friendly method of
+treatment when time is not a constraining
+criterion.
+Ans. (b)
+Sol.  Seasoning is the process of reducing the
+moisture content of timber which
+increases the durability, toughness and
+elasticity of timber.
+ Air seasoning is very economical, but it
+requires large time for seasoning.
+ B ot h sta t em ents ar e c or r ec t  but
+statement (II) does not ex plain the
+statement (I).
+120. Statement (I) :  Lining of nuclear plants with
+specially heavy concrete is needed for
+shielding and protecting against several
+dangerous conditions.
+Statement (II) : Limonite is one special type
+of aggregate possessing a high density.
+Ans. (b)
+Sol. Limonite is one special type of aggregate
+having density 2.7 – 4.3 g/cc.
+121. A steel column is pinned at both ends and has
+a buckling load of 200 kN. If the column is
+restrained against lateral movement at its mid-
+height, its buckling load will be
+(a) 100 kN (b) 200 kN
+(c) 400 kN (d) 800 kN
+Ans. (d)
+Sol.
+1crP = 
+2
+2
+eff1
+EI
+l
+
+2crP = 
+2
+2
+eff 2
+EI
+l
+
+2cr
+200
+P = 
+2
+eff 2
+eff1
+l 1
+l 4
+    
+2crP = 800 kN
+122. Consider the following statements in respect
+of column splicing :
+1. Splices should be provided close to the
+point of inflection in a member
+2. Splices should be located near to the point
+of lateral restraint in a member
+3. Machined columns for perfect bearing
+would need splices to be designed for axial
+force only
+Which of the above statements are correct?
+(a) 1 and 2 only (b) 1 and 3 only
+(c) 2 and 3 only (d) 1, 2 and 3
+Ans. (a)
+Sol. In case of column splicing:
+1. Splicing should be provided close to
+point of  inflection and point of
+contraflexure.
+2. Splices should be located near to point
+of lateral restraint.
+3. Machined columns need splices to be
+designed for axial force and bending
+moment.
+Hence, statement (1) and (2) are correct.
+123. Buckling of the compression flange of a girder,
+without transverse stiffeners, can be avoided
+if (with standard notations)
+(a)
+2
+f
+w
+d 345t   (b)
+2
+f
+w
+d 270t  
+(c) w
+w
+d 270t   (d) w
+w
+d 250t  
+
+IES MASTER
+Ans. (a)
+Sol. To avoid buckling of compression flange, IS-
+800: 2007 specifies following web thickness
+requirements
+(I) when transverse stiffeners are not
+provided 
+2
+f
+w
+d 345t   .
+(II) When only transverse stiffeners are
+provided
+(i) 
+2
+f
+w
+d 345 for c 1.5 dt   
+(ii) f
+w
+d 345 for c 1.5 dt   
+where,
+d = depth of the web
+tw = thickness of the web
+f  = 
+yf
+250
+f
+fyf = yield stress of the compression flange
+c = clean distance between transverse
+stiffener.
+124. A simply supported steel beam of rectangular
+section and of span L is subjected to a
+uniformly distributed load. The length of the
+plastic hinge by considering moment ratio of
+1.5 will be nearly
+(a) 0.27 L (b) 0.39 L
+(c) 0.45 L (d) 0.58 L
+Ans. (d)
+Sol. For simply supported beam subjected to
+uniformly distributed load.
+L
+MyMy Np
+LP
+Length of plastic hinge,
+LP = 1L 1 S.F.
+where, S.F. = Shape factor = Moment ratio
+= 1.5 (given)
+Thus,
+LP = 
+11 (0.577) L 0.58 L1.5  
+125. A single angle of thickness 10 mm is
+connected to a gusset by 6 numbers of 18
+mm diameter bolts, with pitch of 50 mm and
+with edge distance of 30 mm. The net area in
+block shear along the line of the transmitted
+force is
+(a) 1810 mm 2 (b) 1840 mm 2
+(c) 1920 mm 2 (d) 1940 mm 2
+Ans. (a)
+Sol. * Assuming diameter of bolt hole = 18 mm
+Dia of bolt hole = 18 mm
+t = 10 mm
+30 50 50 50 50 50
+Net area in block shear along the line of
+force [(30 + 5 × 50) – 5.5 × 18] × 10
+= 1810 mm 2
+
+IES MASTER
+126. Consider the following statements for the
+design of a laced column :
+1. In a bolted construction, the minimum width
+of the lacing bar shall be three times the
+nominal diameter of the end bolt.
+2. The thickness of the flat of a single lacing
+system shall be not less than one-fortieth
+of its effective length.
+3. The angle of inclination of the lacing bar
+should be less than 40° with the axis of
+the built-up column
+4. The lacing shall be designed for a
+transverse shear of 2.5% of the axial load
+on the column
+Which of the above statements are correct?
+(a) 1, 2 and 3 only (b) 1, 2 and 4 only
+(c) 1, 3 and 4 only (d) 1, 2, 3 and 4
+Ans. (b)
+Sol. Angle of lacing with built-up column, should
+be 40°<
+ < 70°.
+127. The permissible bending compressive strength
+for M 25 grade of concrete is 8.5 N/mm 2. Its
+short-term and long-term modular ratios are,
+nearly
+(a) 8 and 11 (b) 8 and 8
+(c) 11 and 11 (d) 11 and 6
+Ans. (a)
+Sol. Short term modular ratio
+= 
+S
+C
+E
+E
+= 
+5
+ck
+2 10  MPa
+5000 f  MPa
+
+= 
+52 10 8
+5000 25
+ 
+Long term modular ratio (including effect of
+creep) = 
+cbc
+280
+3
+cbc  for M 25 = 8.5
+Long term modular ratio = 
+280
+3 8.5
+= 10.98   11 1
+128. The ultimate load carrying capacity of a short
+circular column of 300 mm diameter with 1%
+helical reinforcement of Fe 415 grade steel
+and concrete of M 20 grade, is nearly
+(a) 451 kN (b) 500 kN
+(c) 756 kN (d) 794 kN
+Ans. (d)
+Sol. Ultimate load carrying capacity of circular
+column with helical reinforcement = P u-helical
+Pu-helical  = 1.05(0.4 f ckAc + 0.67f yAsc)
+fck = 20 N/mm 2
+AC = 
+2 20.99 300  mm4
+ 
+fy = 415 N/mm 2
+ASC = 2 20.01 300  mm4
+ 
+Pu-helical  =
+2 21.05 0.4 20 300 0.99 0.67 415 0.01 300
+4 4
+            
+= 794192.46 N
+  794 kN
+129. In a cantilever retaining wall, the main steel
+reinforcement is provided
+(a) On the backfill side, in the vertical direction
+(b) On both, inner and outer, faces
+(c) In horizontal as well as in vertical directions
+(d) To counteract shear stresses
+
+IES MASTER
+Ans. (a)
+Sol.
+M
+Main bar
+(Vertical R/F on back
+fill side due to tensile
+stress)
+Due to lateral pressure of backfills, the wall
+is designed as a cantilever and main
+reinforcement is provided on the rear side
+or backfill side in the vertical direction.
+130. Design strength for M25 concrete in direct
+compression, bending compression and
+flexural tension are, respectively
+(a) 10 MPa, 11.15 MPa and 3.5 MPa
+(b) 25 MPa, 11.15 MPa and 3 MPa
+(c) 10 MPa, 12.5 MPa and 3.5 MPa
+(d) 25 MPa, 11.15 MPa and 2.57 MPa
+Ans. (a)
+Sol. Direct compression = 0.4 fck = 0.4×25 = 10
+MPa.
+(In case of cloumn, in axial compression the
+value of direct compression strength of
+concrete is assumed as 0.4 fck).
+Bending compression strength = 0.446 fck
+= 11.15 MPa.
+Flexure tension strength = 
+0.7 fck  = 3.5
+MPa.
+131. Double pitched roof trusses of span 20m and
+rise 2.5m are placed at 8m spacing. The
+maximum live load reaction at the supports is
+nearly
+(a) 36 kN (b) 40 kN
+(c) 46 kN (d) 60 kN
+Ans. (d)
+Sol.
+
+Rise = 2.5 m
+20 m
+spacing = 8 m
+tan  = 2.5
+10
+   
+ 14 
+For  = 14°, (> 10°)
+Live load on roof tress
+[0.75 – (14 – 10) × 0.02] kN/m2
+= 0.67 kN/m 2
+Hence,
+Maximum live load reaction
+= 0.67 Floor area
+2
+
+= 0.67 20 8 kN 53.6 kN2
+  
+But since this is not given in option,
+ Let us take maximum live load = 0.75 kN/m 2
+Thus,
+Maximum live load reaction at support
+=
+0.75 20 8 kN2
+   = 60 kN
+
+IES MASTER
+132. Ground motion during earthquak e is random
+in nature. For the purpose of analysis, it can
+be converted into different harmonic
+excitations through
+(a) Fourier series
+(b) Newton’s second law
+(c) Duhamel’s integral
+(d) Time series analysis
+Ans. (a)
+133. An RCC structure with fundamental time period
+of 1.2 sec vibrates at a forcing frequency of
+10 rad/sec. The maximum dynamic
+displacement is X% of static displacement. The
+value of X is
+(a) 10.1 (b) 28.9
+(c) 37.7 (d) 50.2
+Ans. (c)
+Sol. Tn = 1.25
+  = 10 rad/sec
+0
+d 2st 0
+uDynamic displacement 1RStatic displacement (u ) 1
+  
+ 
+where,
+Rd = Magnification factor/amplification factor
+  = Frequency ratio = 
+n
+
+
+Tn = n
+n
+2 2
+1.2
+   
+   = 10 1.2 1.912
+ 
+ v0 = d st 0 st 02
+1R (u ) (u )
+1 1.91
+
+
+= st 0 st 00.377(u ) 37.7%(u )
+134. A steel building has plan dimensions of 50m ×
+50m and it is 120 m tall. It is provided with
+brick infill panels. The approximate fundamental
+time period of the building is
+(a) 1.53 sec (b) 2.72 sec
+(c) 3.08 sec (d) 4.15 sec
+Ans. (a)
+Sol. The approximate fundamental natural period
+of building with brick in fill pannel is
+Ta = 
+0.09 h 0.09 120 1.53 sec
+d 50
+ 
+135. A masonry structure has a prism strength of
+10 N/mm 2 with  = 0.25. The modulus of
+elasticity and the shear modulus of the
+masonry arer respectively.
+(a) 5500 MPa and 2200 MPa
+(b) 2000 MPa and 200 MPa
+(c) 5500 MPa and 1000 MPa
+(d) 2000 MPa and 1000 MPa
+Ans. (a)
+Sol. Elastic modulus of brick modulus = 550 f m
+Where f m = presim strength
+Emasonry = 550×10 = 5500 N/mm 2.
+Shear modulus = 
+ 
+E
+2 1  
+=  
+25500 2200N / mm2 1 0.25 
+136. The surface tension in a soap bubble of 20
+mm diameter, when the inside pressure is 2.0
+N/m2 above atmospheric pressure, is
+(a) 0.025 N/m (b) 0.0125 N/m
+(c) 5 × 10 –3 N/m (d) 4.25 × 10 –3 N/m
+
+IES MASTER
+Ans. (c)
+Sol. P = 8
+D
+
+2N/m 2 = 8
+0.02
+
+   = 5 × 10 –3 N/m
+137. Consider the following statements regarding
+labour welfare:
+1. Work prompted by mere sympathy and
+kindness may degenerate and may injure
+the worker’s sense of self-respect.
+2. Rapid industrialization on a large scale
+poses problems in respect of labour and
+its welfare
+3. Construction labour is still largely
+unorganized, and hence lacks in welfare
+measures
+Which of the above statements are correct?
+(a) 1 and 2 only (b) 1 and 3 only
+(c) 1, 2 and 3 (d) 2 and 3 only
+Ans. (c)
+Sol. All statements are correct and self
+explainatory.
+138. A soil sample has an average grain diameter
+as 0.03 mm. The size of interstices is one
+eight of the mean grain diameter. Considering
+  of water as 0.075 g/cm, the water will rise
+in the clay to a height of
+(a) 2.4 m (b) 3.0 m
+(c) 3.6 m (d) 4.0 m
+Ans. (d)
+Sol.
+
+h
+Size of interstices = m
+1 0.003D cm8 8 
+Size of interstices is assumed as radius of
+interstices.
+cos D     = 2
+wD h4
+   
+w
+4 cos
+D
+ 
+  = h ( 0) 
+h = 
+4 4 0.075
+0.003D 1 g / cc 2 8
+     
+= 400 cm
+= 4 m
+139. A jet of water has a diameter of 0.3 cm. The
+absolute surface tension of water is 0.072 N/
+m and atmospheric pressure is 101.2 kN/m 2
+The absolute pressure within the jet of water
+will be
+(a) 101.104 kN/m 2 (b) 101.152 kN/m 2
+(c) 101.248 kN/m 2 (d) 101.296 kN/m 2
+Ans. (c)
+Sol. dj = 0.3cm
+water = 0.072 N/m
+Patm = 101.2N/m 2
+P =  2 for jetD
+
+Pjet–Patm= 
+2 2
+–2
+2 0.072N / m 48N / m 0.048KN / m
+0.3 10
+  
+
+Pjet = 101.2 + 0.048 = 101.248 KN/m 2.
+
+IES MASTER
+140. A glass tube of 2.5 mm internal diameter is
+immersed in oil of mass density 940 kg/m 3 to
+a depth of 9 mm. If a pressure of 148 N/m 2 is
+needed to from a bubble which is just released.
+What is the surface tension of the oil?
+(a) 0.041 N/m (b) 0.043 N/m
+(c) 0.046 N/m (d) 0.050 N/m
+Ans. (a)
+Sol.
+9mm
+d =2.5 mmi
+oil = 940 kg/m
+3
+(Pi–P0) = 4
+D
+
+Now P 0 = 940 × 9.81 × 9 × 10 –3 = 82.99N/
+m2
+  148 – 82.99 = –3
+4
+2.5 10
+ 
+
+   = 
+–365.01 2.5 10 0.041N / m4
+  
+141. In a rectangular open channel, 2.0 m wide,
+water flows at a depth of 0.8 m. It discharges
+over an aerated sharp crested weir over the
+full width, with depth over weir crest being
+0.25 m/ C c = 0.61. Adjusting for velocity head
+of approach, what would be the discharge
+through the channel? 
+2g  = 4.43 units s
+(a) 0.439 m 3/sec (b) 0.445 m 3/sec
+(c) 0.453 m 3/sec (d) 0.461 m 3/sec
+Ans. (c)
+Sol. B = 2m (L)
+Yoc = 0.8m
+CC = 0.61
+2g  = 4.43
+Yweir crest  = H = 0.25 m
+Q =  3/2
+C
+2 Cd 2gLH takeCd C 0.613  
+= 
+3/22 0.61 4.43 2 0.253    
+= 0.45 m 3/s
+Discharge through open channel = Discharge
+through weir = 0.45 m 3/s.
+142. A steady, two dimensional, incompressible
+flow field is represented by u = x + 3y + 3
+and v = 2x - y - 8 In this flow field, the
+stagnation point is
+(a) (3, 2) (b) (–3, 2)
+(c) (–3, –2) (d) (3, –2)
+Ans. (d)
+Sol. u = x + 3y + 3
+v = 2x – y – 8
+for stagnation point, u = 0 & v = 0
+ x+3y+3= 0 ... (i)
+3(2x–y–8)= 0
+ 6x–3y–24 = 0
+x+3y+3 = 0
+7x = 21
+x  = 3
+Put x = 3 in ...(i)
+3+3y+3 = 0
+y – 2 so,x 3,y –2   
+143. If the energy present in a jet of water of 20
+cm diameter and having a velocity of 25 m/s
+could be extracted by a device with 90%
+efficiency, the power extracted would be nearly.
+
+IES MASTER
+(taking 
+1
+2g  = 0.051 
+2sec
+m )
+(a) 180 kW (b) 225 kW
+(c) 260 kW (d) 300 kW
+Ans. (b)
+Sol. D = 20 cm
+V = 25 m/s
+90% 
+2 21 1P mv ( Q) v2 2        
+2 31 1000 0.2 25 0.92 4
+     
+= 220.89 kW
+144. In a siphon, the summit is 5m above the water
+level in the tank from which the flow is being
+discharged. If the head loss from the inlet to
+the summit is 2.5m and the velocityhead at
+the summit is 0.5 m, (taking   = 10
+appropriate units) the pressure head at the
+summit is
+(a) –80 kPa
+(b) –3 m of water (abs)
+(c) 5 m of water (abs)
+(d) 18 m of water (abs)
+Ans. (a)
+Sol.
+2
+5m
+1
+h  = 2.5 mL
+vs
+2
+2g= 0.5m
+Datum
+Applying bernoulli’s equation
+between (1) & (2)
+2
+1 1
+1
+P V Z2g   =  
+2
+s 2
+2 L
+VP Z h2g  
+2
+1 1
+1
+P V Z 02g
+ 
+    
+
+2P 0.5 2.5 5 0   
+Pressure head = –8m
+P2 = –8×10 = –80 kPa.
+145. The stream function of a doublet with
+horizontal axis and of strength 
+  is
+(a) 
+ r2 (b)   cos2 r
+(c)   r sin2 (d)  
+
+sin
+2 r
+Ans. (d)
+Sol. For doublet 
+– sin cos&2 r 2 r
+       
+146. A vertical cylindrical tank, 2m diameter has at
+the bottom, a 5 cm diameter, sharp-edged
+orifice, for which C d = 0.6. Water enters the
+tank at a constant rate of 9l/sec. At what depth
+above the orifice will the level in the tank
+become steady?
+(a) 2.95 m (b) 2.75 m
+(c) 2.60 m (d) 2.50 m
+Ans. (a)
+
+IES MASTER
+Sol.
+d=2m
+Q=9 /sl
+di = 5 ×10  m
+–2
+Qin – Q out = 
+dV
+dt  
+2
+out iQ Cd d 2gH4
+      
+(V = volume of water in tank)
+ 9×10–3m3/s –
+   
+2
+2–2
+d d h45 10 2 9.81 h 0.64 dt
+       
+(for h to be constant)
+Therefore, dh
+dt = 0
+So, 9×10 –3 =  
+2–25 10 2 9.81 0.6 h4
+    
+ h = 1.725
+h = 2.975 m 2.95m
+147. A transmitter antenna is of a vertical pipe, 20
+cm diameter and 25 m height, on top of a tall
+structure. It is subjected to wind speed of 20
+m/sec. Density of air is 1.22 kg/m3; its viscosity
+is 1.8 × 10 –5 Ns/m2. Drag coefficient of a (tall)
+circular cylinder is tabulated as
+    2 3 3 4 4 5 5 5
+e
+D
+R 10 10 1.3 10 10 1.5 10 1.06 10 1.2 10 4.5 10
+C 1.6 1.05 0.95 1.0 1.08 1.0 0.89 0.26
+What is the drag experienced?
+(a) 737 N (b) 700 N
+(c) 670 N (d) 63 N
+Ans. (a)
+Sol. D = 20m
+h = 25m
+Vw = 20m/s
+a  = 1.22 Kg/m 3;
+  = 1.8×10 –5 Ns/m 2
+Re = 
+5
+–5
+VD 1.22 20 0.2 2.71 10
+1.8 10
+     
+C
+0.89
+0.26
+DRe
+1.2×10
+4.5×10
+5
+5
+5Dfor Re 2.7 10C   =
+  5
+0.89 – 0.260.89 –
+4.5 – 1.2 10
+
+ ×(2.71–1.2)×10 5
+= 0.601
+FD = 2
+D
+1 C AV2 
+AD = D × h (projected area)
+FD = 21 0.6 1.22 0.2 25 202      = 733.22N.
+148. A smooth flat plate with a sharp leading edge
+is placed along a free steam of water flowing
+at 2.5 m/sec. At what distance from the leading
+edge will the boundary layer transition from
+laminar to turbulent flow? Take density of water
+as 1000 kg/m3 and its viscosity as 1 centiposie.
+Also, what will be the boundary layer thickness
+at that distance?
+(a) 12.8 cm and 0.113 cm
+(b) 14.2 cm and 0.113 cm
+(c) 12.8 cm and 0.125 cm
+(d) 14.2 cm and 0.125 cm
+Ans. (a)
+Sol.
+x R  = 5×10e
+5
+
+IES MASTER
+Vo = 2.5m/s
+  = 1000 Kg/m 3;
+  = 1×10 –2 poise  1×10–2×0.1N.S/m 2
+= 1×10 –3N.S/m 2
+At transition 
+50V x 5 10  
+= 
+5
+–3 2
+1000 2.5 x 5 10
+10 NS / m
+   
+x = 0.2m 20cm
+ex
+5
+x R
+ 
+ 5
+5 0.141 cm0.2 5 10
+    
+
+However, sometime transition occurs at
+different Re between 2×10 5 – 3×10 6,
+depending on the roughness of plate and
+turbulence in approaching stream.
+Taking Re = 3.2×10 5
+50V x 3.2 10  
+ x = 
+5 –3
+3
+3.2 10 10 0.128m 12.8cm.
+10 2.5
+   
+
+5
+x Re x
+ 
+ 5
+5 12.8 0.113cm.
+3.2 10
+  
+
+149. What is the rotational speed in rpm of a 0.8
+m diameter cylindrical container, held with axis
+vertical, if the fluid contained in it rises to 0.6
+m height at the sides and leaves a circular
+space 0.3 m diameter on the bottom
+uncovered?
+(a) 90.2 rpm (b) 88.4 rpm
+(c) 86.0 rpm (d) 83.7 rpm
+Ans. (b)
+Sol.
+D =0.3 mi
+0.6m
+D=0.8m
+2 2Rh (R 0.4m)2g
+ 
+2 2
+i
+i
+Rh (R 0.15m)2g
+ 
+D = 0.8 m
+  = 2 N
+60
+
+2 22 2
+iRR 0.62g 2g
+  
+= 
+2 2 2 20.4 0.15 0.62 9.81 2 9.81
+      
+    = 9.253 rad/s
+  2 N 9.25360
+ 
+N = 88.4
+150. If 1 and 2  are the laminar boundary layer
+thickness at a point M distant x from the
+leading edge when the reynolds number of
+the flow are 100 and 484, respectively, then
+the ratio 
+
+
+1
+2
+ will be
+(a) 2.2 (b) 4.84
+(c) 23.43 (d) 45.45
+Ans. (a)
+Sol. 1
+x
+  = 
+e x1
+5
+R  so  1
+5x
+100
+ 
+Similarly 2  = 
+5x
+484
+1
+2
+
+  = 484 22 2.2100 10 

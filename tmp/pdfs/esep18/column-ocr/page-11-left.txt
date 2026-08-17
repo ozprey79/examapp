@@ -1,0 +1,37 @@
+51. In a rectangular open channel, 2:0m
+wide, water flaws at a depth of 0-8 m,
+It discharges over an aerated sharp-
+‘crested weir over the full width, with
+depth over weir crest being 0-25 m.
+Cc= 0-61. Adjusting for velocity head of
+approach, what would be the discharge
+through the channel? 2g = 4-43 units
+(a) 0-439 m3/sec
+(b) 0-445 m3/sec
+(c) 0-453 m3/sec
+(d) 0-461 m3/sec
+
+52. A steady, two dimensional, incompres-
+sible flow field is represented by
+u=x+3y+3 and v=2x-y—8
+In this flow field, the stagnation point is
+(a) G, 2)
+
+(b) G3, 2)
+(c) 3, -2)
+@ G, -2)
+
+53. If the energy present in a jet of water
+of 20 cm diameter and having a velocity
+of 25 m/s could be extracted by a device
+with 90% efficiency, the power extracted
+would be nearly
+
+2
+ein E0051 —
+2g          m
+(a) 180 kw
+(b) 225 kW
+(c) 260 kw
+(d) 300 kW
+1

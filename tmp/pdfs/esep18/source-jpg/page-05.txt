@@ -1,0 +1,90 @@
+Lie
+
+18.
+
+19.
+
+The deformation of a vertically held bar
+of length Z and cross-section A is due to
+its self-weight only. If Young’s modulus
+is E and the unit weight of the bar is y,
+the elongation dL is
+
+@ 2
+) oe
+@ =
+oe
+
+For a material, the modulus of rigidity
+is 100 GPa and the modulus of elasticity
+is 250 GPa. The value of the Poisson’s
+ratio is
+
+(a) 0-20
+
+(b) 0-25
+
+(c) 0:30
+
+(d) 0:35
+
+Two persons weighing W each are sitting
+on a plank of length Z floating on water,
+
+Bp
+at Ti from either end. Neglecting the
+
+weight of the plank, the bending moment
+at the middle point of the plank is
+
+WL
+WL
+(b) ae
+WL
+(d) Zero
+
+20. In the case of a rectangular beam
+
+21.
+
+22:
+
+subjected to a lransversé sheariny fuive,
+the ratio of maximum shear stress to
+average shear stress is
+
+(a) 0-75
+
+(b) 1:00
+
+(c) 1:25
+
+(a) 1-50
+
+i
+Hoy ie BH
+je— 8m —>k— 8m — >|
+
+The horizontal thrust of the three-hinged
+arch loaded as shown in the figure is
+
+(a) 20 kN
+(b) 30 kN
+(c) 40 kN
+(d) 50 kN
+Each span of a two-span continuous
+beam of uniform flexural rigidity is 6 m.
+All three supports are simple supports.
+It carries a uniformly distributed load of
+
+20 kN/m over the left span only. The
+moment at the middle support is
+
+(a) 90 kNm Sagging
+
+(b) 45 kNm Hogging
+(c) 90 kNm Hogging
+
+(d) 45 kNm Sagging
+
+A—SKP-D-CVL

@@ -1,0 +1,31 @@
+20. In the case of a rectangular beam
+subjected to a transverse sheuriny [urve,
+_ the ratio of maximum shear stress to
+average shear stress is
+(a) 0-75            .
+(b) 1:00
+(c) 1:25
+.. (@) 1-50
+ahs                   80 KN
+je-4m  alt
+a
+H A            jest
+ous      ;     ¥            BH
+je— 8m —+>/<— 8m —>|
+The horizontal thrust of the three-hinged
+:     arch loaded as shown in the figure is
+(a) 20 kN
+(&) 30 kN
+(c) 40 kN
+(d) 50 kN
+22. Each span of a two-span continuous
+beam of uniform flexural rigidity is 6 m.
+All three supports are simple supports.
+It carries a uniformly distributed load of
+20 kN/m over the left span only. The
+moment at the middle support is
+ (a) 90 kKNm Sagging
+(b) 45 kNm Hogging
+(c) 90 kNm Hogging
+(@) 45 kNm Sagging
+,                                        A—SKP-D-CVL

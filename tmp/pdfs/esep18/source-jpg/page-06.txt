@@ -1,0 +1,78 @@
+24.
+
+ZS.
+
+AMS L VB
+
+A fixed beam is loaded as in figure. The
+fixed end moment at support A is
+
+(a) we
+(d) ues
+
+For a plane truss member, the length is
+2m, #=200 GPa and area of cross-
+
+_ section is 200 mm2. The stiffness matrix
+
+coefficient K,, with reference to its local
+axis is
+
+(a) 200 N/m
+
+(b) 2x 10’ N/m
+
+(c) 4x 107 Nim
+
+(@) 400 N/m
+P. 4
+L
+|
+R
+Komedi Le
+
+For the truss shown in the figure, the
+force in the member PQ is
+
+SKP-D-CVL-A
+
+26.
+
+27.
+
+(a) F
+F
+(b) 6)
+
+(c) V2F
+
+() 2F
+
+An important building is located in
+earthquake zone V in India. The seismic
+weight of the building is 10000 kN and it
+is designed by ductility considerations.
+The spectral acceleration factor for this
+structure is 2:5. The base shear for this
+structure is
+
+(a) 1350 kN
+(b) 5000 kN
+(c) 10000 kN
+
+(d) 25000 kN
+
+An RCC slab (M 25 grade), of dimensions
+5m x 5m x 0-15 m, is supported on four
+square columns (M25 grade) of side
+400 mm, the clear height of each column
+being 3 m. Assuming rigid connections,
+the fundamental time period of vibration
+of the slab along the horizontal direction
+is nearly
+
+(a) 4-12 s
+(b) 2:80 s
+(c) 0:50 s
+
+() 0-07 s

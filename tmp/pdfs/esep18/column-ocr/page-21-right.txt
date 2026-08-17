@@ -1,0 +1,37 @@
+ts         Which of the above statements are
+ni                correct ?
+:         (a) 1 and 2 only
+of         (b) 2 and 3 only
+)          (c) 3 and 4 only
+(d) 1 and 4 only
+A=
+108. Consider the following statements with
+regard to Soil Testing :
+1. The origin and pole are at the same
+le.                point in a Mohr’s circle
+2. The shear stress is maximum on
+ly                  the failure plane
+3. Mohr’s circle drawn with data from
+=             an unconfined compression. test
+passes through the origin
+4. Maximum shear stress occurs on a
+plane inclined at 45° to the principal
+plane
+Which of the above statements are
+correct ?
+(a) 1 and 2 only
+(b) 2 and 3 only
+(c) 3 and 4 only
+ie          (d) 1 and 4 only
+3S
+109. A soil yielded a maximum dry unit
+-         weight of 18 kN/m? at a moisture
+i         content of 16% during a Standard
+:       Proctor Test. What is the degree of
+saturation of the soil if its specific
+sf          gravity is 2-65 ?
+©         (a) 98-42%
+(b) 95-50%
+ls       (c) 84.32%
+(d) 75:71%                     :
+21                                         A—SKP-D-CVL

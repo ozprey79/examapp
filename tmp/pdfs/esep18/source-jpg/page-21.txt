@@ -1,0 +1,116 @@
+106. The theory of consolidation predicts
+
+settlement due to primary consolidation;
+it cannot include settlement due to
+initial compression nor due to secondary
+consolidation. This happens because of
+the following assumptions made in
+developing the theory :
+
+1. Suil pratis aud water are in-
+
+compressible
+2. Soil is fully saturated
+
+3. Compression takes place in the
+vertical direction only
+
+4. Time lag in consolidation is entirely
+due to low permeability of soil
+
+Which of the above statements are
+correct ?
+
+(a)
+(b)
+
+(c) 3 and 4 only
+
+@)
+
+1, 2 and 3 only
+
+1, 2 and 4 only
+
+2s uande4,
+
+107. Consider the following statements :
+
+1. Secondary consolidation results due
+to prolonged dissipation of excess
+hydrostatic pressure
+
+2. Primary consolidation happens under
+expulsion of both air and water
+from voids in early stages
+
+3. Initial consolidation in the case of
+fully saturated soils is mainly due to
+compression of solid particles
+
+4. Primary consolidation happens more
+quickly in coarse-grained soils than
+in fine-grained soils
+
+21
+
+108.
+
+109.
+
+Which of the above statements are
+correct ?
+
+(a)
+(b) 2 and 3 only
+(c) 3 and 4 only
+
+@)
+
+1 and 2 only
+
+1 and 4 only
+
+Consider the following statements with
+regard to Soil Testing :
+
+1. The origin and pole are at the same
+point in a Mohr’s circle
+
+2. The shear stress is maximum on
+the failure plane
+
+3. Mohr’s circle drawn with data from
+an unconfined compression test
+passes through the origin
+
+4. Maximum shear stress occurs on a
+plane inclined at 45° to the principal
+plane
+
+Which of the above statements are
+correct ?
+
+(a)
+(b) 2 and 3 only
+(c) 3 and 4 only
+
+@)
+
+1 and 2 only
+
+1 and 4 only
+
+A soil yielded a maximum dry unit
+weight of 18 kN/m? at a moisture
+content of 16% during a Standard
+Proctor Test. What is the degree of
+saturation of the soil if its specific
+gravity is 2-65 ?
+
+(a) 98-42%
+(b) 95-50%
+(c) 84-32%
+@) 75-71%
+
+A —SKP-D-CVL

@@ -1,0 +1,42 @@
+1          Which of the above statements are
+3                correot ?
+j
+/         (a) 1 and 3 only
+/
+L          (b) 2 and 4 only
+1
+zi          (c) 2 and 3 only
+(d) 1 and 4 only
+78.
+Ky <—
+h
+ies      dy       af
+—>),    d,         |       —>v5
+Consider the occurrence of a surge at
+the water surface of a wide rectangular
+channel flow, as in the figure, where’ the
+one-dimensionally considered velocities
+=          are vy, and y, and the depths are d, and
+d,, with the surge height h, whereby
+d,—d,=h, moving at a speed of V,
+over depth d,. Joint application: of conti-
+nuity and momentum principles will
+:           indicate the surge front speed Vy, to be
+1
+3h \2
+5         (a) Vy = Ved) | 1+——-
+                     2d,
+t
+5 Be
+2
+3h lh
+Vy = ed, | 1+=—+—| —
+2    Orn a 2 di (4)
+€
+1         5
+h \2
+e                             :
+S                                   1
+r                              h  2)\2
+i      cia
+15                                            A —SKP-D-CVI

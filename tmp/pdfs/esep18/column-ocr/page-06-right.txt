@@ -1,0 +1,34 @@
+(a) F
+Fe
+(bo) —
+V2
+© V2F
+
+(d) 2F
+
+26. An important building is located in
+earthquake zone V in India. The seismic
+weight of the building is 10000 kN and it
+is designed by ductility considerations.
+The spectral acceleration factor for this
+structure is 2:5. The base shear for this
+structure is
+(a) 1350 kN
+(b) 5000 kN
+(c) 10000 kN
+(@) 25000 kN
+
+27. An RCC slab (M 25 grade), of dimensions
+5m x 5m x 0-15 m, is supported on four
+square columns (M25 grade) of side
+400 mm, the clear height of each column
+being 3 m. Assuming rigid connections,
+the fundamental time period of vibration
+of the slab along the horizontal direction
+is nearly       :
+(a) 412s
+(b) 2:80 5s
+(c) 0:50 s             '
+@ 007s °
+
+6

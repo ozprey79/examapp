@@ -1,0 +1,2617 @@
+ESE 2020
+Preliminary Examination
+Detailed Solutions of
+Civil Engineering
+(Set-A)
+Click here for detailed solutions
+www.madeeasy.in
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi - 110016 | Ph: 011-45124612, 9958995830
+Delhi | Hyderabad | Noida | Bhopal | Jaipur | Lucknow | Indore | Pune | Bhubaneswar | Kolkata | Patna
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+Expected Cutoff of ESE 2020 Prelims Actual Cutoff of ESE 2019 Prelims
+(Out of 500 Marks) (Out of 500 Marks)
+Branch Gen OBC SC ST Branch Gen OBC SC ST
+CE 210-220 205-215 170-180 170-180 CE 188 185 143 159
+ME 245-255 245-255 210-220 210-220 ME 187 187 166 169
+EE 225-235 215-225 195-205 195-205 EE 221 211 191 172
+E&T 235-245 225-235 185-195 185-195 E&T 226 221 176 165
+Civil Engineering Paper
+Analysis : ESE 2020 Prelims Exam
+Sl. Subjects No. of Qs.
+1 Building Materials 15
+2 Strength of Materials 18
+3 Structural Analysis 06
+4 Design of Steel Structures 13
+5 RCC & Prestress Concrete 10
+6 Construction Practice, Planning & Management 12
+7 Fluid & Hydraulic Machines + OCF 12
+8 Engineering Hydrology 02
+9 Irrigation Engineering 08
+10 Environmental Engineering 13
+11 Geo-technical Engineering 14
+12 Surveying and Geology 13
+13 Transportation Engineering 06
+14 Railway Engineering 08
+UPSC ESE/IES Prelims 2020
+Civil Engineering Analysis & Expected Cut-off by MADE EASY Faculties
+https://youtu.be/YKX-lrNxvZE
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 2
+
+
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+11111..... When the deposit of efflorescence is more than 10% but less than 50% of the exposed
+area of the brick, the presence of efflorescence is
+(a) Moderate (b) Slight
+(c) Heavy (d) Serious
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+NIL negligible
+SLIGHT ≤ 10%
+MODERATE 10 – 50%
+HEAVY/HIGH > 50%
+SERIOUS > 50% and accompanied by powdering or flacking of exposed surface.
+End of Solution
+22222..... Mohs scale is used for stones to determine
+(a) Flakiness index (b) Durability
+(c) Strength (d) Hardness
+AAAAAnnnnnsssss..... (((((ddddd)))))
+End of Solution
+33333..... Which of the following conditions are recommended for using sulphate resisting cement?
+1. Concrete to be used in foundation and basement, where soil is not infested with
+sulphates.
+2. Concrete used for fabrication of pipes which are likely to be buried in marshy region
+or sulphate bearing soils.
+3. Concrete to be used in the construction of sewage treatment works.
+(a) 2 and 3 only (b) 1 and 2 only
+(c) 1 and 3 only (d) 1, 2 and 3
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+44444..... Which one of the following cements is a deliquescent?
+(a) Quick setting Portland cement (b) White and Coloured cement
+(c) Calcium Chloride cement (d) Water Repellent cement
+AAAAAnnnnnsssss..... (((((ccccc)))))
+End of Solution
+55555..... Consider the following data for concrete with mild exposure
+Water-cement ratio = 0.50
+Water = 191.6 litre
+The required cement content will be
+(a) 561 kg/m3 (b) 472 kg/m3
+(c) 383 kg/m3 (d) 294 kg/m3
+AAAAAnnnnnsssss..... (((((ccccc)))))
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 3
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+W
+(By mass) = 0.5
+C
+W
+C=
+0.5
+Volume of water = 191.6 litre = 0.1916 m3
+Mass of water = 0.1916 × 103 = 191.6 kg
+191.6
+C= = 383.2 kg
+0.5
+End of Solution
+66666..... The strength of a fully matured concrete sample is 500 kg/cm2. When cured at an average
+temperature of 20°C in day, 10°C in night, datum temperature T is –11°C. If Plowman
+0
+constants A is 32 and B is 54, the strength of identical concrete at 7 days will be nearly
+(a) 333 kg/cm2 (b) 312 kg/cm2
+(c) 272 kg/cm2 (d) 243 kg/cm2
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+M= (20 – (–11)) × 12 × 7 + (10 – (–11)) × 12 × 7
+= 2604 + 1764
+= 4368°C – Hrs
+Strength, f= a + b log (M × 10–3)
+10
+= 32 + 54 log (4368 × 10–3)
+10
+= 66.57%
+Strength of concrete at 7 days = 0.6657 × 500
+= 332.85 kg/cm2
+= 333 kg/cm2
+End of Solution
+77777..... A sample of concrete is prepared by using 500 g of cement with water cement ratio
+of 0.55 and 240 N/mm2 intrinsic strength of gel. The theoretical strength of concrete on
+full hydration will be nearly
+(a) 148 N/mm2 (b) 126 N/mm2
+(c) 104 N/mm2 (d) 82 N/mm2
+AAAAAnnnnnsssss..... (((((ccccc)))))
+Weight of cement = 500 gm
+W
+= 0.55
+C
+Weight of water = 500 × 0.55 = 275 gm
+Volume of water = 275 ml
+0.657C 0.657×500 328.5
+Gel space ratio = = = = 0.756
+0.319C+W 0.319×500 +275 434.5
+Theoretical strength of concrete = 240 (0.756)3 = 103.71 N/mm2
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 4
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+88888..... The cement and water slurry coming on the top and setting on the surface is called
+(a) Crazing (b) Efflorescence
+(c) Sulphate deterioration (d) Laitance
+AAAAAnnnnnsssss..... (((((ddddd)))))
+End of Solution
+99999..... Polymer concrete is most suitable for
+(a) Sewage disposal works
+(b) Mass concreting works
+(c) Insulating exterior walls of an air-conditioned building
+(d) Road repair works
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+1111100000..... Which one of the following limes will be used for finishing coat in plastering and white
+washing?
+(a) Semi Hydraulic lime (b) Kankar lime
+(c) Magnesium/Dolomitic lime (d) Eminently Hydraulic lime
+AAAAAnnnnnsssss..... (((((ccccc)))))
+End of Solution
+1111111111..... Which one of the following light weight element will be added to enhance the protective
+properties for X-ray shielding mortars?
+(a) Sodium (b) Potassium
+(c) Lithium (d) Calcium
+AAAAAnnnnnsssss..... (((((ccccc)))))
+End of Solution
+1111122222..... Which one of the following stone is produced by moulding a mixture of iron slag and
+Portland cement?
+(a) Imperial stone (b) Garlic stone
+(c) Ransom stone (d) Victoria stone
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+End of Solution
+1111133333..... When a round bar material with diameter of 37.5 mm, length of 2.4 m, Young’s modulus
+of 110 GN/m2 and shear modulus of 42 GN/m2 is stretched for 2.5 mm, its Bulk modulus
+will be nearly
+(a) 104 GN/m2 (b) 96 GN/m2
+(c) 84 GN/m2 (d) 76 GN/m2
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 5
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+9KG
+E=
+3K+G
+3KE + EG= 9KG
+9KG – 3KE= EG
+EG 110 × 42
+K= = = 96.25 GN/m2
+9G−3E 9 × 42 −3 ×110
+End of Solution
+1111144444..... A punch of 20 mm diameter is used to punch a hole in 8 mm thick plate. If the force
+required to create a hole is 110 kN, the average shear stress in the plate will be nearly
+(a) 410 MPa (b) 320 MPa
+(c) 220 MPa (d) 140 MPa
+AAAAAnnnnnsssss..... (((((ccccc)))))
+P P
+Shear stress, τ = =
+A πdt
+110×103
+= = 219 MPa (cid:2) 220 MPa
+π × 20× 8
+End of Solution
+1111155555..... A reinforced concrete circular section of 50,000 mm2 cross-sectional area carries 6
+reinforcing bars whose total area is 500 mm2. If the concrete is not to be stressed more
+than 3.5 MPa and modular ratio for steel and concrete is 18, the safe load the column
+can carry will be nearly
+(a) 225 kN (b) 205 kN
+(c) 180 kN (d) 160 kN
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+A
+sc
+A
+c
+A = 50000 mm2
+g
+A = 500 mm2
+sc
+A = 50000 – 500 = 49500 mm2
+c
+P= A · σ + A · σ
+c cc sc sc
+= A ·σ + A ·m·σ
+c cc sc cc
+= 49500 × 3.5 + 500 × 18 × 3.5
+= 204750 N
+= 204.75 kN
+= 205 kN (say)
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 6
+
+
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+1111166666..... The strain energy U stored due to bending of the cantilever beam due to point load at
+the free end will be
+W2 l 3 W2 l 2
+(a) (b)
+6EI 6EI
+W3 l 3 W2 l 3
+(c) (d)
+36EI 36EI
+where : W= Concentrated load
+l = Length of a cantilever
+EI = Flexural rigidity
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+W
+L
+U=
+L
+∫
+(
+M
+x
+)2
+dx
+=
+L ∫W2x2dx
+=
+W2L3
+2EI 2EI 6EI
+0 0
+End of Solution
+1111177777..... A steel bar 2 m long, 20 mm wide and 15 mm thick is subjected to a tensile load of
+30 kN. If Poisson’s ratio is 0.25 and Young’s modulus is 200 GPa, an increase in volume
+will be
+(a) 160 mm3 (b) 150 mm3
+(c) 140 mm3 (d) 130 mm3
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+P
+30×103
+Axial stress, σ = = = 100 MPa
+A 20×15
+σ
+Volumetric strain, ε = (1− 2μ)
+v E
+100
+∴ ΔV= (1− 0.5)× 20×15× 2000
+200 ×103
+= 150 mm3
+End of Solution
+1111188888..... A bolt is under an axial thrust of 9.6 kN together with a transverse force of 4.8 kN. If
+factor of safety is 3, yield strength of bolt material is 270 N/mm2 and Poisson’s ratio
+is 0.3, its diameter as per maximum principal stress theory will be nearly
+(a) 13 mm (b) 15 mm
+(c) 17 mm (d) 19 mm
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+9.6 ×103 12.23 ×103
+Axial stress, σ = = N/mm2
+π
+d2
+d2
+4
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 7
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+4.8 ×103 6.115×103
+Shear stress, τ = = N/mm2
+π
+d2
+d2
+4
+Maximum principal stress,
+σ ⎛ σ⎞2
+σ = + ⎜ ⎟ + τ2
+1 2 ⎝ 2⎠
+6115
+⎛6115⎞2 ⎛6115⎞2
+= + ⎜ ⎟ + ⎜ ⎟
+d2 ⎝ d2 ⎠ ⎝ d2 ⎠
+1
+= [6115+ 8647.916]
+d2
+14762.9
+= N/mm2
+d2
+According to maximum principal stress theorem,
+σ
+σ ≤ y
+1 FOS
+14762.9 270
+≤
+d2 3
+∴ d ≥ 12.81 mm
+End of Solution
+1111199999..... In a material the principal stresses are 60 MN/m2, 48 MN/m2 and –36 MN/m2. When
+1
+the values of E = 200 GN/m2 and = 0.3, the total strain energy per unit volume will
+m
+be nearly
+(a) 43.5 kNm/m3 (b) 35.5 kNm/m3
+(c) 27.5 kNm/m3 (d) 19.5 kNm/m3
+AAAAAnnnnnsssss..... (((((ddddd)))))
+Strain energy per unit volume
+1
+= [σ2 + σ2 + σ2 −2μ(σ σ + σ σ + σ σ )]
+2E 1 2 3 1 2 2 3 3 1
+1
+= [602 + 482 + 362 −0.6(60 × 48 − 48 ×36 −60 ×36)]×1012
+2 ×200 ×109
+1012
+= [7200 −0.6(2880 −1728 −2160)]
+4 ×1011
+10
+= (7200 + 604.8)
+4
+= 19.51 kNm/m3
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 8
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+2222200000..... At a point in a two dimensional stress system, the normal stress on two mutually
+perpendicular planes are σ and σ and shear stress is τ . One of the principal stresses
+xx yy xy
+will become zero when the value of shear stress τ is
+xy
+(a) ±(σ σ ) (b) ± σ − σ
+xx yy xx yy
+(c) ± σ + σ (d) ± σ σ
+xx yy xx yy
+AAAAAnnnnnsssss..... (((((ddddd)))))
+σ + σ ⎛ σ − σ ⎞2
+σ = xx yy + ⎜ xx yy ⎟ + τ2 = +ve ≠ 0
+1 2 ⎝ 2 ⎠ xy
+∴ σ = 0
+2
+σ + σ ⎛ σ − σ ⎞2
+xx yy − xx yy + τ2
+⎜ ⎟ = 0
+2 ⎝ 2 ⎠ xy
+τ2 xy = σ xx ⋅σ yy
+∴ τ = ± σ ⋅σ
+xy xx yy
+End of Solution
+2222211111..... The deflection δ of the closed coil helical spring is
+WR2n 64WR3n
+(a) (b)
+8Cd3 Cd4
+128WR3n 64WR2n
+(c) (d)
+Cd2 Cd2
+where : W is the axial load
+R is the radius of the coil
+n is the number of turns of coil
+C is the modulus of rigidity
+d is the diameter of the wire of the coil
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+T2L
+Strain energy in spring =
+2GJ
+( )
+P2R2 2πRn
+=
+π
+2G d4
+32
+32P2R3n
+=
+Gd4
+By Castigliano’s theorem,
+∂U ∂ 32P2R3n
+δ = = =
+∂P ∂P Gd4
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 9
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+64PR3n
+δ =
+Gd4
+G = C = Modulus of rigidity
+End of Solution
+2222222222..... A closely-coiled helical spring of round steel wire 5 mm in diameter having 12 complete
+coils of 50 mm mean diameter is subjected to an axial load of 100 N. If modulus of
+rigidity is 80 GPa, the deflection of the spring will be
+(a) 36 mm (b) 32 mm
+(c) 28 mm (d) 24 mm
+AAAAAnnnnnsssss..... (((((ddddd)))))
+64PR3n 64 ×100 ×253 ×12
+Δ = =
+Gd4 80 ×103 × 54
+Δ = 24 mm
+End of Solution
+2222233333..... A hollow shaft of external and internal diameters as 100 mm and 40 mm respectively
+is transmitting power at 120 rpm. If the shearing stress is not to exceed 50 MPa, the
+power the shaft can transmit will be
+(a) 100 kW (b) 120 kW
+(c) 140 kW (d) 160 kW
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+16T
+τ =
+max ⎡
+⎛d
+⎞4⎤
+πd
+0
+3
+⎢
+⎢1−
+⎜ ⎝d
+i
+⎟ ⎠ ⎥
+⎥
+⎣ o ⎦
+16T
+50 =
+⎡
+⎛ 40
+⎞4⎤
+π ×1003 ⎢1− ⎜ ⎟ ⎥
+⎢⎣
+⎝100⎠
+⎥⎦
+T= 9.56 × 106 Nmm
+2πNT
+∴ P=
+60
+2π ×120×9.56×103
+=
+60
+= 120 kW
+End of Solution
+2222244444..... A circular beam of 100 mm diameter is subjected to a shear force of 30 kN. The maximum
+shear stress will be nearly
+(a) 5.1 MPa (b) 6.3 MPa
+(c) 7.5 MPa (d) 8.7 MPa
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 10
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+4 F 4 30 ×103
+τ = ⋅ = × = 5.08 MPa
+max 3 A 3 π (100)2
+4
+End of Solution
+2222255555..... A cantilever beam AB as shown in figure is subjected to a point load of 12 kN over
+a span of 6 m with E = 2 × 105 N/mm2 and I = 6 × 107 mm4. The deflection at the
+XX
+free end will be
+W
+A B
+l
+(a) 80 mm (b) 72 mm
+(c) 64 mm (d) 56 mm
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+PL3 12 ×103 ×60003
+Δ = = = 72 mm
+3EI 3 ×2 ×105 ×6 ×107
+End of Solution
+2222266666..... A floor has to carry a load of 12 kN/m2. The floor is supported on rectangular joists each
+100 mm wide, 300 mm deep and 5 m long. If maximum stress in the joists should not
+exceed 8 MN/m2, the centre to centre distance of joists will be
+(a) 430 mm (b) 400 mm
+(c) 360 mm (d) 320 mm
+AAAAAnnnnnsssss..... (((((ddddd)))))
+w/m
+l
+Let h is the distance between two joists.
+12 ×l ×h
+∴ = w
+l
+w= 12h kN/m
+M
+Now σ = max
+max z
+wl 2
+8 =
+bd2
+8×
+6
+6wl2
+8 =
+8bd2
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 11
+
+
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+64×100×3002
+= w
+6×(5000)2
+∴ w= 3.84 N/mm
+12h= 3.84
+h= 0.32 m
+= 320 mm
+End of Solution
+2222277777..... A simply supported wooden beam 100 mm wide, 250 mm deep and 3 m long is carrying
+a uniformly distributed load of 40 kN/m. The maximum shear stress will be
+(a) 2.4 MPa (b) 2.8 MPa
+(c) 3.2 MPa (d) 3.6 MPa
+AAAAAnnnnnsssss..... (((((ddddd)))))
+wL 40 × 3
+Maximum S.F., S= = = 60 kN
+2 2
+60×103
+τ = 1.5 τ = 1.5× = 3.6 MPa
+max avg 100× 250
+End of Solution
+2222288888..... A simply supported beam of span 8 m carries a uniformly distributed load of 24 kN/
+m run over the whole span. The beam is propped at the middle of the span. The values
+of E = 200 × 106 kN/m2 and I = 20 × 10–5 m4. The amount by which the prop should
+yield in order to make all three reactions equal will be nearly
+(a) 20 mm (b) 15 mm
+(c) 10 mm (d) 5 mm
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+w/m B
+A C
+R R R
+3R= 24 × 8
+R= 64 kN
+5 wL4 RL3
+Δ = −
+B 384 EI 48EI
+1 ⎡ 5 64 ×83 ⎤
+= ⎢ ×24 ×84 − ⎥
+EI ⎣384 48 ⎦
+1
+= [1280 −682.666]
+200 ×109 × 20 ×10 −5
+= 14.9 mm
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 12
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+2222299999..... A cantilever beam ACB has end A fixed and subjected to a point load P at free end
+B. The point C is mid-point of AB and the moment of inertia of AC is twice that of CB.
+the deflection at the free end will be
+P
+2I I B
+A
+l l
+2 2
+Pl 3 Pl 3
+(a) (b)
+3EI 48EI
+5Pl 3 9Pl 3
+(c) (d)
+96EI 48EI
+AAAAAnnnnnsssss..... (((((ddddd)))))
+P
+C B P
+A
+Δ PL
+c
+2
+θ c θ · L A C
+c 2
+Δ′
+B
+PL ⎛L⎞ ⎛L⎞2
+·⎜ ⎟ P⎜ ⎟
+2 ⎝ 2⎠ ⎝ 2⎠
+θ = +
+C 2EI 4EI
+PL2 PL2 3PL2
+= + =
+8EI 16EI 16EI
+PL
+⎛L⎞2 ⎛L⎞3
+·⎜ ⎟ P⎜ ⎟
+2 ⎝ 2⎠ ⎝ 2⎠
+Δ = +
+C 4EI 6EI
+PL3 PL3 5PL3
+= + =
+32EI 48EI 96EI
+L
+∴ Δ = Δ + θ · + Δ′
+B C C 2 B
+5PL3 3PL3 PL3
+= + +
+96EI 32EI 24EI
+9PL3
+=
+48EI
+End of Solution
+3333300000..... A beam of uniform cross-section simply supported at ends carries a concentrated load
+W at midspan. If the ends of the beam are fixed and only load P is applied at the midspan
+such that the deflection at the centre remains the same, the value of the load P will be
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 13
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+(a) 6 W (b) 4 W
+(c) 2 W (d) W
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+W
+1
+L/2 L/2
+Δ
+1
+WL3
+Δ = 1
+1 48EI
+For fixed beam
+W
+2
+Δ
+2
+WL3
+Δ = 2
+2 192EI
+For Δ = Δ
+1 2
+WL3 WL3
+1 2
+=
+48EI 192EI
+∴ W = 4W
+2 1
+End of Solution
+3333311111..... Two wheel loads 200 kN and 80 kN spaced at 2 m apart move on the span of girder
+of 16 m. If any wheel load can lead the other, the maximum bending moment that can
+occur at a section of 6 m from the left end will be
+(a) 1050 kNm (b) 990 kNm
+(c) 870 kNm (d) 750 kNm
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+200 kN 80 kN
+W W
+1 2
+2 m
+200 kN 80 kN
+2 m
+A B
+6 m C 10 m
+Slope = 1 1 0 6 Slope = 1 6 6
+6
+×8
+16
+10×6
+16
+ILD for M
+C
+6 m 2 m 8 m
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 14
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+For maximum B.M. at ‘C’ place 200 kN at Section-C, and the load of 80 kN should be
+placed to the right of Section-C because the slope of ‘BC’ is less. So ordinate will be
+more.
+⎛ 10 × 6⎞ ⎛ 6 ⎞
+∴ M = ⎜200 × ⎟ + ⎜80 × × 8⎟
+max ⎝ 16 ⎠ ⎝ 16 ⎠
+= 990 kNm.
+End of Solution
+3333322222..... A beam of length l is fixed at its both ends and carries two concentrated loads of W
+l
+each at a distance of from both ends. The fixed end moment at A will be
+3
+−Wl −2Wl
+(a) (b)
+3 9
+−6Wl −4Wl
+(c) (d)
+15 27
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+MMMMMeeeeettttthhhhhoooooddddd 11111 ::::: BBBBByyyyy PPPPPrrrrriiiiinnnnnccccciiiiipppppllllleeeee ooooofffff SSSSSuuuuupppppeeeeerrrrrpppppooooosssssiiiiitttttiiiiiooooonnnnn
+W W W
+=
+L/3 L/3 L/3 L/3 2L/3
+M M M M′
+1 1
+W
++
+2L/3 L/3
+M M′
+2 2
+M= M + M
+1 2
+⎛ l ⎞ ⎛2l⎞2 ⎛2l⎞ ⎛ l ⎞2
+W⎜ ⎟ ⎜ ⎟ W⎜ ⎟ ⎜ ⎟
+⎝3⎠ ⎝ 3 ⎠ ⎝ 3 ⎠ ⎝3⎠
+= +
+l2 l2
+⎡ 4l 2l ⎤ 2Wl −2Wl
+= W⎢ + ⎥ = (Hogging) or
+⎣27 27⎦ 9 9
+MMMMMeeeeettttthhhhhoooooddddd 22222 ::::: BBBBByyyyy MMMMMooooommmmmeeeeennnnnttttt AAAAArrrrreeeeeaaaaa MMMMMeeeeettttthhhhhoooooddddd
+P P P P
+=
+L/3 L/3 L/3 L/3 L/3 L/3
+M A B M A B
++
+M M
+A B
+M
+Net diagram by superposition.
+EI
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 15
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+PL
+3EI M
+EI
+L/3 L/3 L/3
+From moment area theorem
+θ = 0
+AB
+⎧1 ⎛ Pl ⎞ l ⎫ ⎧⎛ Pl ⎞ l ⎫ MI
+⇒ = ⎨ × ⎜ ⎟ × ×2⎬ + ⎨⎜ ⎟ × ⎬ −
+⎩2 ⎝3EI⎠ 3 ⎭ ⎩⎝3EI⎠ 3⎭ EI
+2Pl −2Pl
+⇒ M= (Hogging) or
+9 9
+End of Solution
+3333333333..... The natural frequency of a mass m at the end of the cantilever beam of negligible mass
+with usual notations will be
+1 ⎛ 3EI ⎞1/2 1⎛ 6EI ⎞1/2
+(a) ⎜ ⎟ (b) ⎜ ⎟
+2π ⎝ mL3⎠ π ⎝ mL3⎠
+1 ⎛ 6EI ⎞1/2 1 ⎛ 3EI ⎞1/2
+(c) ⎜ ⎟ (d) ⎜ ⎟
+2π ⎝ mL3⎠ 2π ⎝ mL3⎠
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+K
+m
+3EI
+Stiffness of beam (K) =
+L3
+1 K
+Natural frequency (f) =
+2π m
+1 3EI
+=
+2π mL3
+End of Solution
+3333344444..... The simple oscillator under idealized conditions of no-damping, once excited will oscillate
+indefinitely with constant amplitude at its natural frequency f will be
+1 m 1 k
+(a) (b)
+2π k π m
+1 k 1 m
+(c) (d)
+2π m π k
+AAAAAnnnnnsssss..... (((((ccccc)))))
+For undamped free vibration
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 16
+
+
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+1 K
+f=
+2π m
+End of Solution
+3333355555..... A cable carrying a load of 10 kN/m run of horizontal span is stretched between supports
+of 100 m apart. If the supports are at same level and central dip of 8 m, the ratio of
+greatest and least tensions in the cable will be
+(a) 1.05 (b) 1.35
+(c) 1.65 (d) 1.95
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+T wL wL T
+max V = V = max
+A 2 B 2
+wL2 wL2
+H = H =
+8h 8h
+A h B
+c
+C
+⎛wL⎞2 ⎛ wL2 ⎞2
+T at supports = ⎜ ⎟ + ⎜ ⎟
+max ⎝ 2 ⎠ ⎝ 8h ⎠
+wL2
+T at mid-span = H =
+min 8h
+wL2 ⎛ 16h2 ⎞1/2
+⎜1+
+⎟
+T 8h ⎝ L2 ⎠
+∴ max =
+T wL2
+min
+8h
+⇒
+T
+max =
+⎛
+⎜1+
+8h2 ⎞
+⎟
+⎛
+⎜ ∵
+h2
+<< 1
+⎞
+⎟
+T ⎝ L2 ⎠ ⎝ L2 ⎠
+min
+T ⎛ 82 ⎞
+∴ max = ⎜1+ 8 × ⎟
+T ⎝ 1002 ⎠
+min
+= 1.0512
+End of Solution
+3333366666..... A cable is suspended between two points 75 m apart at the same level. It carries a
+uniformly distributed load of 12.5 kN per horizontal meter. If the maximum tension in
+the cable is limited to 1000 kN, the minimum central dip will be nearly
+(a) 14 m (b) 12 m
+(c) 10 m (d) 8 m
+AAAAAnnnnnsssss..... (((((ccccc)))))
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 17
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+⎛ wL2 ⎞2 ⎛wL⎞2
+T = ⎜ ⎟ + ⎜ ⎟
+max ⎝ 8h ⎠ ⎝ 2 ⎠
+wL wL2
+Neglecting the magnitude of as compared to .
+2 8h
+wL2
+∴ T (cid:2)
+max 8h
+wL2
+≤ 1000 kN
+8h
+12.5× 752
+⇒ h ≥ = 8.789 m
+8×1000
+Take h = 10 m
+End of Solution
+3333377777..... A tie bar 50 mm × 8 mm is to carry a load of 80 kN. A specimen of the same quality
+steel of cross-sectional area is 250 mm2. For a maximum load of 125 kN carried by the
+specimen, the factor of safety in the design will be
+(a) 3.0 (b) 2.5
+(c) 2.0 (d) 1.5
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+Maximum Load
+Yield strength of steel =
+Cross-Section Area
+125×103
+= = 500 N/mm2
+250
+80 ×1000
+Working stress = = 200 N/mm2
+50 × 8
+Yield Strength 500
+FOS = = = 2.5
+Working Stress 200
+End of Solution
+3333388888..... Hanger connections are made when
+(a) Beam as well as girder is meeting at different level. A plate or hanger is interposed
+between the beam and the girder and finally interconnected by means of angle cleats
+or bolts and rods.
+(b) Beam as well as girder is meeting at same level. A plate is interposed between
+the beam and the girder.
+(c) The beams are meeting at different levels. A hanger is interposed between the beams
+and finally interconnected by means of angle cleats or bolts and rods.
+(d) The girders are meeting at same level. A plate is interposed between the girders
+and finally interconnected by means of bolts and rods.
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 18
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+3333399999..... The splicing of a column becomes necessary, where
+(a) The available length of structural steel section is less than the required length of
+the column.
+(b) Section remains same throughout at all floors.
+(c) Only riveted columns are to be designed.
+(d) Splices should be designed to carry axial loads only.
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+4444400000..... A tie bar 50 mm × 8 mm is to carry a load of 80 kN. A specimen of same quality steel
+of cross-sectional area is 250 mm2. If the maximum load carried by the specimen is
+125 kN, the gauge length will be
+(a) 133 mm (b) 126 mm
+(c) 113 mm (d) 106 mm
+AAAAAnnnnnsssss..... (((((ccccc)))))
+Gauge length = 5.65 A
+o
+= 5.65 50 ×8 = 113 mm
+End of Solution
+4444411111..... The strength of a column depends on which of the following imperfections?
+1. The material being isotropic and homogeneous.
+2. Geometric variations of column.
+3. Eccentricity of load.
+(a) 1, 2 and 3 (b) 2 and 3 only
+(c) 1 and 3 only (d) 1 and 2 only
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+End of Solution
+4444422222..... Which of the following types of failures occur in the beam-column connections?
+1. Failure by lateral-torsional buckling.
+2. Failure by combined instability in both the principal directions.
+3. Failure by combined twisting and bending on the torsionally weak sections.
+4. Failure by combined twisting and bending when plane of bending does not contain
+the shear centre.
+(a) 1, 2 and 3 only (b) 1, 3 and 4 only
+(c) 1, 2 and 4 only (d) 2, 3 and 4 only
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+The following categories of combined bending and axial load, along with the likely mode
+of failure exist
+1. Axial compression and bending about one axis; Failure by instability in plane of
+bending without twisting.
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 19
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+2. Axial compression and bending about the strong axis : Failure by lateral-torsional
+buckling.
+3. Axial compression and biaxial bending (torsionally stiff sections): Failure by instability
+in one of the principal directions.
+4. Axial compression and biaxial bending (thin walled sections) : Failure by combined
+twisting and bending on these torsionally weak sections.
+5. Axial compression, biaxial bending, and torsion: Failure by combined twisting and
+bending when plane of bending does not contain the shear centre.
+End of Solution
+4444433333..... In a design of beam columns, the values of plastic section ratio β = 1, the plastic
+b
+sectional modulus Z = 3948812 mm3, the yield stress f = 250 N/mm2 and critical
+pz y
+moment of M = 16866 × 106 N/mm. The non-dimensional lateral torsional slenderness
+cr
+ratio will be nearly
+(a) 0.141 (b) 0.242
+(c) 0.323 (d) 0.424
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+β Z f
+λ = b py
+LT M
+cr
+1×3948812 ×250
+=
+16866 ×106
+= 0.242
+End of Solution
+4444444444..... As per Indian Railway Board, the impact factor i (also known as coefficient of dynamic
+augment, CDA) in steel girders for single track span is
+⎡ 8 ⎤ ⎡ 6 ⎤
+(a) ⎢0.15+ ⎥ >/ 1.0 (b) ⎢0.75+ ⎥ >/ 1.0
+⎣ 6 +L⎦ ⎣ 8 +L⎦
+⎡ 6 ⎤ ⎡ 8 ⎤
+(c) ⎢0.15+ ⎥ >/ 1.0 (d) ⎢0.75+ ⎥ >/ 1.0
+⎣ 8 +L⎦ ⎣ 6 +L⎦
+where : L is span.
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+4444455555..... An ISHB 300 with plastic section modulus of 921.68 × 103 mm3, flange width of 250
+mm, the yield stress of 250 N/mm2 is embedded in a pocket base to develop its strength
+with M25 concrete in design of beam-column. The required depth will be nearly
+(a) 475 mm (b) 425 mm
+(c) 375 mm (d) 325 mm
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 20
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+d = ?
+b = 250 mm
+Pocket base
+For plastic section,
+f z
+y p
+Depth, d=
+0.164f b
+ck
+250× 921.68×103
+= = 474.1(cid:2) 475 mm
+0.164× 25× 250
+End of Solution
+4444466666..... In beam-columns or eccentric loaded columns, an elastic critical stress in compression
+f is
+cc
+πE π2E
+(a) (b)
+λ λ2
+πE π2E
+(c) (d)
+λ2 λ
+where : E= Modulus of elasticity of steel
+λ = Slenderness ratio in the plane of bending
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+π2EA
+P =
+e λ2
+π2E
+σ =
+c λ2
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 21
+
+
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+4444477777..... A square of side a is placed such that its diagonal is horizontal. The shape factor of
+the square will be
+a
+(a) 3.2 (b) 2.0
+(c) 1.5 (d) 1.0
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+a
+Z
+p
+Shape factor = S.F =
+Z
+e
+A( )
+Z = y + y
+p 2 1 2
+⎛ ⎞
+1 a a/ 2 a/ 2
+= × × 2a⎜ + ⎟
+2 2 ⎝ 3 3 ⎠
+a3
+Z =
+p 3 2
+I
+a4/12
+xx =
+Z =
+e y a/ 2
+max
+a3
+=
+6 2
+a3/3 2
+Shape factor = = 2
+a3/6 2
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 22
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+4444488888..... Which one of the following is the correct assumption made in evaluation of fully plastic
+moment?
+(a) The upper and lower yield stresses and the modulus of elasticity have different values
+in compression and tension.
+(b) The material is homogeneous and isotropic in both the elastic and plastic states.
+(c) There will be resultant axial force on the beam.
+(d) Some layers of the material are not free to expand and contract longitudinally and
+laterally under stress.
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+End of Solution
+4444499999..... As per IS-456 : 2000, cracking of concrete in tension zone cannot be avoided but can
+be limited by
+1. Adhering to the codal requirements of minimum steel area
+2. Proper and prolonged curing of concrete
+3. Increasing water cement ratio to increase workability
+(a) 1 and 2 only (b) 1 and 3 only
+(c) 2 and 3 only (d) 1, 2 and 3
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+Increasing water cement ratio will reduce the strength of concrete. This may lead to
+cracking of concrete on tension side.
+End of Solution
+5555500000..... Which of the following assumptions are made with respect to Euler’s theory applied to
+columns?
+1. The section of the column is uniform.
+2. The length of the column is very large compared to the lateral dimensions.
+3. The direct stress is large when compared with the bending stress.
+(a) 1, 2 and 3 (b) 1 and 3 only
+(c) 2 and 3 only (d) 1 and 2 only.
+AAAAAnnnnnsssss..... (((((ddddd)))))
+The direct stress is small compared to bending stress.
+End of Solution
+5555511111..... A rectangular beam with b = 200 mm and effective depth d = 300 mm is subjected
+to limit state shear of 80 kN and torsional moment of 6 kNm. The equivalent value of
+shear will be
+(a) 128 kN (b) 116 kN
+(c) 104 kN (d) 92 kN
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+1.6T
+V = V + u
+ue u B
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 23
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+1.6 × 6
+= 80 + = 128 kN
+0.20
+End of Solution
+5555522222..... As per IS-456 : 2000, the value of maximum compression strain in concrete in axial
+compression for limit state of collapse is
+(a) 0.001 (b) 0.002
+(c) 0.003 (d) 0.004
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+As per IS 456 - Pr. No. 39.1 (a) maximum compression strain in axial compression is
+0.002.
+End of Solution
+5555533333..... The positive bending moment coefficient at the middle of the end-span of a continuous
+one way slab is
+⎛w w ⎞ ⎛w w ⎞
+(a) ⎜ l + d⎟L2 (b) ⎜ l + d⎟L2
+⎝10 12 ⎠ ⎝ 9 10 ⎠
+⎛w w ⎞ ⎛w w ⎞
+(c) ⎜ l + d⎟L2 (d) ⎜ l + d⎟L2
+⎝12 16 ⎠ ⎝ 9 12 ⎠
+where : w = Live load
+l
+w = Dead load
+d
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+|
+As per table 12 IS 456
+1
+Coefficient of DL =
+12
+1
+Coefficient for LL =
+10
+At middle of end span
+⎛W Wd⎞
+So maximum BM = ⎜ ⎝ 10 L + 12 ⎟ ⎠ L2
+End of Solution
+5555544444..... Which of the following are the general design requirements of retaining wall?
+1. The factor of safety against sliding should be at least 1.5.
+2. The factor of safety against over-turning should be at least 2.0.
+3. The bearing pressure at toe should be less than the bearing capacity of the soil.
+4. The length of retaining wall to be cast in one go should not exceed 10 m otherwise
+cracks may develop.
+(a) 1, 2 and 3 only (b) 1, 3 and 4 only
+(c) 1, 2 and 4 only (d) 2, 3 and 4 only
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 24
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+As per IIIIISSSSS 444445555566666:::::22222000000000000000 CCCCClllllaaaaauuuuussssseeeee 2222200000.....11111
+1. Factor of safety against sliding = 1.50.
+2. Factor of safety against overturning = 1.5
+3. Bearing pressure at toe should be < BC of soil.
+4. Length of RW >/ 10 m in one go.
+End of Solution
+5555555555..... Which of the following are the desirable properties for efficient functioning in design for
+movement joint of water tank?
+1. The joint should accommodate repeated movement of the structure without loss of
+water-tightness.
+2. The design should provide for exclusion of grit and debris which would prevent the
+closing of the joint.
+3. The material used in the construction of movement joints should not slump unduly
+in hot weather or become brittle in cold weather.
+(a) 1, 2 and 3 (b) 1 and 2 only
+(c) 1 and 3 only (d) 2 and 3 only
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+Provision No. 10.2 IS 3370 - Part II/P-6.
+End of Solution
+5555566666..... A simply supported beam having 200 mm width and 450 mm effective depth supports
+a total uniformly distributed load of 200000 N. The nominal shear stress will be nearly
+(a) 0.8 N/mm2 (b) 1.1 N/mm2
+(c) 1.8 N/mm2 (d) 2.2 N/mm2
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+Total load = 200 kN
+wL 200
+Maximum shear force = =
+2 2
+V= 100 kN
+V 100 ×1000
+Nominal shear stress, τ = =
+v Bd 200 × 450
+= 1.11 N/mm2
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 25
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+5555577777..... Which of the following are correct for cover to reinforcement?
+1. The reinforcement shall have a minimum clear cover of 20 mm or diameter of such
+bar whichever is more.
+2. At each end of reinforcing bar not less than 25 mm nor less than twice the diameter
+of such bar.
+3. Increased cover thickness may be provided when surface of concrete exposed to
+the action of harmful chemicals.
+(a) 1, 2 and 3 (b) 1 and 2 only
+(c) 1 and 3 only (d) 2 and 3 only
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+As per 4.1/ (a)/ P-29/ SP - 34
+End of Solution
+5555588888..... A beam of size 250 mm width and 460 mm effective depth is subjected to limit state
+moment of 146 kNm. If M20 grade concrete and Fe415 steel are used, the area of steel
+required will be
+(a) 435 mm2 (b) 935 mm2
+(c) 1100 mm2 (d) 1235 mm2
+AAAAAnnnnnsssss..... (((((ccccc)))))
+B= 250 mm [M20/Fe415]
+d= 460 mm
+M = 146 kN-m
+u
+M = Q.Bd2
+u,lim
+4602
+= 0.138 × 20 × 250 ×
+106
+= 146 kN-m Balanced section
+M 146 ×106
+u =
+A =
+st 0.87f jd 0.87 × 415 × 0.80 × 460
+y
+= 1099 mm2
+= 1100 mm2 (say)
+AAAAAlllllttttteeeeerrrrrnnnnnaaaaatttttiiiiivvvvveeeeelllllyyyyy,,,,,
+⎡ ⎤
+0.5f 4.6M
+A = ck ⎢1− 1− u ⎥ ×Bd
+st f
+y
+⎢⎣ f
+ck
+Bd2 ⎥⎦
+⎡ ⎤
+0.5 × 20 4.6 ×146 ×106
+= ⎢1− 1− ⎥ × 250 × 460
+415 ⎢ ⎣ 20 × 250 × 4602 ⎥ ⎦
+= 1096.43 mm2 say 1100 mm2
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 26
+
+
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+5555599999..... Air permeability method is used to determine
+(a) Soundness of cement (b) Setting time
+(c) Fineness of cement (d) Resistance of cement
+AAAAAnnnnnsssss..... (((((ccccc)))))
+Air permeability method is used to find fineness of cement.
+End of Solution
+6666600000..... Which of the following assumptions are correct for the lateral torsional buckling of an
+I-section beam?
+1. The beam is initially distorted.
+2. Its behaviour is elastic.
+3. It is loaded by equal and opposite end moments in the plane of the web.
+(a) 1 and 2 only (b) 2 and 3 only
+(c) 1 and 3 only (d) 1, 2 and 3
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+End of Solution
+6666611111..... In an excavation of 3000 cub.mtr of common earth for a canal project, 6 men can be
+effectively employed on the job. If an output of a man is taken as 100 cub.mtr per day,
+the duration of excavation activity will be
+(a) 5 days (b) 6 days
+(c) 7 days (d) 8 days
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+3000 m3
+Duration for excavation =
+6×100 m3/day
+= 5 days
+End of Solution
+6666622222..... The project plan for construction:
+1. Clearly defines project’s scope of work. It breaks down project objectives into clear,
+identifiable, attainable and verifiable goals.
+2. Identifies critical activities, thus enabling management of projects by exceptions.
+3. Provides the basis for co-ordinating the efforts of clients, consultants, architects,
+designers, quality surveyors, specialists, suppliers, contractors and project staff.
+(a) 1 and 2 only (b) 1, 2 and 3
+(c) 1 and 3 only (d) 2 and 3 only
+AAAAAnnnnnsssss..... (((((ccccc)))))
+Planning is the most important phase of project management planning involves defining
+the objectives of a project, listing of tasks, or jobs that must be performed, determining
+gross requirement for material, manpower and preparing estimate of costs and durations
+for various activities to bring about satisfactory completion of project.
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 27
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+6666633333..... Which one of the following techniques is not covered in Project Network Analysis?
+(a) Critical Path Method (b) Program Evaluation and Review Techniques
+(c) Procedure Network Analysis (d) Measurement Book
+AAAAAnnnnnsssss..... (((((ddddd)))))
+End of Solution
+6666644444..... Which of the following statements are correct for Network Critical Path?
+1. The path of critical activities, which links the start and end events is critical path.
+2. It is the path of activities having zero float.
+3. It is the path of events having zero slack.
+4. The sum of the duration of the critical activities along a critical path gives the duration
+of the project.
+(a) 1, 2, 3 and 4 (b) 1, 2 and 3 only
+(c) 1 and 4 only (d) 2, 3 and 4 only
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+6666655555..... Independent float is an amount of time by which the start of an activity may be delayed
+without affecting
+1. the preceding or the following activity.
+2. the start of a following activity.
+3. the completion of the project.
+(a) 1 only (b) 2 only
+(c) 3 only (d) 1, 2 and 3
+AAAAAnnnnnsssss..... (((((ddddd)))))
+Independent float gives the idea about excess time that exist if the preceeding activity
+completed as late as possible and the succeeding activity start as early as possible.
+End of Solution
+6666666666..... Consider the following activity for the total project:
+Activity Immediate Predecessors Duration (Days)
+A – 10
+B – 9
+C A 9
+D A 8
+E B 7
+F B 11
+G D, E 5
+The total project duration for the critical path will be
+(a) 25 days (b) 23 days
+(c) 21 days (d) 19 days
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 28
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+C
+(9)
+(8)
+A
+D
+10 G
+T = 23 days
+E
+9 (5)
+E
+B (7)
+F
+(11)
+Critical path is = A – D – G and project duration = 23 days
+End of Solution
+6666677777..... By performing which of the following functions the construction manager can achieve
+the project goals?
+1. Envisioning the task ahead.
+2. Setting targets and monitoring performance.
+3. Motivating the work force.
+4. Building the line supervisors team.
+(a) 1, 2 and 4 only (b) 1, 2 and 3 only
+(c) 1, 3 and 4 only (d) 1, 2, 3 and 4
+AAAAAnnnnnsssss..... (((((ddddd)))))
+End of Solution
+6666688888..... The cost of the machine is `20,00,000 and if it is purchased under installment basis;
+the company has to pay 25% of the cost at the time of purchase and the remaining
+amount in 10 annual equal installments of `2,50,000 each. If rate of interest is 18%,
+compounded annually the present worth of the machine will be
+(a) `17,01,000 (b) `16,22,500
+(c) `15,43,000 (d) `14,64,500
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+⎡ (1+ i)n −1 ⎤
+P= A⎢ ⎥
+⎢⎣ i(1+ i)n ⎥⎦
+⎡ (1+ 0.18)10 −1 ⎤
+= 250000⎢ ⎥ = `1123521
+⎢⎣ 0.18(1.18)10 ⎥⎦
+Now initially payment = 25% of 2000000 = `500000
+∴ Present worth of machine = 500000 + 1123521 = `1623521
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 29
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+6666699999..... Which of the following relations are correct for determining different components of a
+bid price?
+1. Bid price = Direct cost + Indirect cost + Mark up amount
+2. Direct cost = Project overheads + Common plant and equipment cost + Common
+work men cost
+3. Mark up amount = Profit + Contingency + Allowances for risks + General overheads
+(a) 1, 2 and 3 (b) 1 and 2 only
+(c) 1 and 3 only (d) 2 and 3 only
+AAAAAnnnnnsssss..... (((((ccccc)))))
+Project overhead is indirect cost.
+End of Solution
+7777700000..... Resources smoothing is
+(a) An optimization and economical utilization of resources.
+(b) An adjustment of resources without affecting project duration.
+(c) A gradual increase in resources.
+(d) A gradual decrease in resources.
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+End of Solution
+7777711111..... In PERT technique, the time estimate of activities and probability of their occurrence
+follow
+(a) Binomial distribution (b) Normal distribution
+(c) Poisson distribution (d) β-distribution
+AAAAAnnnnnsssss..... (((((ddddd)))))
+All activities will follow β-distribution of frequency and project as a whole is assumed
+to follow normal distribution of frequency according to central limit theorem.
+End of Solution
+7777722222..... Indirect cost due to accidents includes
+(a) Legal charges
+(b) Medical expenses for the injured
+(c) Compensation amount to the injured
+(d) Over time payment to make up the loss of time
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+End of Solution
+7777733333..... An oil of specific gravity 0.9 contained in a vessel. At a point the height of oil is 40 m
+and for the density of water = 1000 kg/m3, the corresponding height of water at the point
+will be
+(a) 28 m (b) 32 m
+(c) 36 m (d) 40 m
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 30
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+AAAAAnnnnnsssss..... (((((ccccc)))))
+Pressure due to oil column height = Pressure due to water column height
+(900)g· 40 = (1000)gh
+h= 36 m of water column
+End of Solution
+7777744444..... When speed changes in case of centrifugal pump, which of the following points are
+correct?
+1. The shape of the velocity triangle will remain same.
+2. Various angles will remain same.
+3. Magnitude of velocities will change proportionately.
+(a) 1 and 2 only (b) 1 and 3 only
+(c) 2 and 3 only (d) 1, 2 and 3
+AAAAAnnnnnsssss..... (((((ddddd)))))
+End of Solution
+7777755555..... Which one of the following is the use of flow net analysis in fluid mechanics?
+(a) To determine the streamlines and equipotential lines.
+(b) To determine, downward lift pressure above hydraulic structure.
+(c) To determine the viscosity for given boundaries of flow.
+(d) To design the hydraulic structure.
+AAAAAnnnnnsssss..... (((((ddddd)))))
+End of Solution
+7777766666..... A jet propelled aircraft is flying at a speed of 1100 km/hour at t = 20°C, k = 1.4 and
+R = 287 J/kgK. The Mach number at a point on the jet will be nearly
+(a) 0.3 (b) 0.5
+(c) 0.7 (d) 0.9
+AAAAAnnnnnsssss..... (((((ddddd)))))
+For adiabatic process
+K= γ P
+K
+C= , P= ρRT
+ρ
+= γRT
+( )
+= 1.4(287) 273+ 20
+= 343.114 m/s
+5
+1100×
+V 18
+M = =
+a C 343.114
+= 0.89
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 31
+
+
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+7777777777..... When the drag force becomes equal to the weight of the body, the acceleration ceases
+and the net external force acting in the body becomes.
+(a) Zero and the body will move at constant speed.
+(b) Light and the body will move forward
+(c) Zero and the body will move fast.
+(d) High and the body will move at constant speed.
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+7777788888..... Which one of the following statements is correct regarding flow in open channel?
+(a) The curve for kinetic energy is a parabola
+(b) The curve for potential energy is a parabola
+(c) Specific energy is asymptotic to the vertical axis
+(d) At critical depth the specific energy is maximum
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+2
+q
+E =
+y k 2gy2
+2
+E = y q
+p E = y +
+2gy2
+45°
+Specific energy E
+Consider a rectangular channel,
+q2
+Specific energy (E) = y+ ...q = Discharge per unit width
+2gy2
+E= E + E
+p k
+⎛ q2 ⎞
+∴ The curve of kinetic energy ⎜ ⎝ E k = 2gy2 ⎟ ⎠ is parabolic while the curve of potential
+energy (E = y) is a straight line making an angle 45°.
+p
+Specific energy curve is asymptotic to E = y line and horizontal axis (E-axis).
+p
+End of Solution
+7777799999..... Which one of the following statement is correct regarding critical state of flow through
+a channel section?
+(a) Specific energy is a minimum for a given discharge
+(b) Specific energy is a maximum for a given discharge
+(c) The Froude number is greater than two
+(d) The discharge is a minimum for a given specific force
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 32
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+For a given discharge specific energy is minimum when the flow is critical.
+y
+E = y
+E = Critical specific energy
+C
+= Critical depth
+y
+c
+E min = E C E Specific energy
+End of Solution
+8888800000..... Which one of the following statement is correct regarding centrifugal pumps?
+(a) The discharge is fluctuating and pulsating
+(b) It is used for large discharge through smaller heads
+(c) The efficiency is low
+(d) It runs at low speed
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+End of Solution
+8888811111..... A hydraulic press has a ram of 300 mm diameter and a plunger of 45 mm diameter.
+When the force applied at the plunger is 50 N, the weight lifted by the hydraulic press
+will be nearly
+(a) 2133 N (b) 2223 N
+(c) 2316 N (d) 2406 N
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+F
+W
+RAM Plunger
+According to Pascal law,
+W F
+= ; A = Area of Ram, a = Area of plunger
+A a
+W 50
+=
+π π
+× (0.3)2 × (0.045)2
+4 4
+W= 2222.22 N
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 33
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+8888822222..... Hydraulic efficiency of Francis turbine is
+(a) Directly proportional to velocity of whirl at inlet and inversely proportional to net head
+on turbine.
+(b) Directly proportional to velocity of whirl at inlet and net head on turbine.
+(c) Inversely proportional to velocity at inlet and net head on turbine.
+(d) Inversely proportional to velocity of whirl at inlet and directly proportional to net head
+on turbine.
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+8888833333..... A turbine develops 7225 kW power under a head of 25 m at 135 rpm. The specific speed
+of the turbine will be nearly
+(a) 245 rpm (b) 225 rpm
+(c) 205 rpm (d) 185 rpm
+AAAAAnnnnnsssss..... (((((ccccc)))))
+N P
+N =
+s H5/4
+135 7225
+= 205.27 (SI units)
+=
+(25)5/4
+End of Solution
+8888844444..... Which one of the following is an example of bodies where both drag and lift forces are
+produced?
+(a) Hydrofiles (b) A tall chimney exposed to wind
+(c) Flow of water past a bridge pier (d) Motion of aeroplanes, submarines, torpedoes
+AAAAAnnnnnsssss..... (((((ddddd)))))
+End of Solution
+8888855555..... The relative humidity h is a measure of air’s capacity, at its existing temperature, to
+absorb further moisture, and is defined by the relation
+(a) e ×100 (b) e s ×100
+e s e
+(c) 2e s ×100 (d) 2e ×100
+e e s
+Where: e = Vapour pressure, e = Saturation vapour pressure
+s
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+e e
+Relatively humidity = a ×100 or ×100
+e e
+s s
+Here, e or e = Actual vapour pressure of air in mm of Hg
+a
+e = Saturation vapour pressure of air in mm of Hg
+s
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 34
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+8888866666..... Which one of the following is not a major deterrent in water harvesting through water
+tanks?
+(a) Deforestation mainly due to population pressure in the catchments of tank systems
+(b) Siltation
+(c) Lack of maintenance and repairs and breaches of tank embankments
+(d) Shallow depth of water tanks
+AAAAAnnnnnsssss..... (((((ddddd)))))
+End of Solution
+8888877777..... Which one of the following is not a basic requirement for any well screen?
+(a) Resistance to corrosion, incrustation and deterioration
+(b) Enough structural strength to prevent collapse
+(c) Suitability for excessive movement of sand into the well
+(d) Minimum resistance to flow of water into the well
+AAAAAnnnnnsssss..... (((((ccccc)))))
+End of Solution
+8888888888..... Which one of the following methods is not the category of Geophysical methods of sub-
+surface investigation?
+(a) Electrical resistivity method (b) Electric logging
+(c) Gamma-ray logging (d) Electrical response surveying
+AAAAAnnnnnsssss..... (((((ddddd)))))
+(cid:129) Electric resistivity method : It is based on the difference in the electrical conductivity
+or the electrical resistivity of different soil.
+(cid:129) Electric logging : This technique can be used in geotechnical investigations to
+assess the variation with depth of geologic materials and associated fluids.
+(cid:129) Gamma-Ray logging : This is a method of measuring naturally occurring gamma
+radiation to characterize the rock or sediment in a borehole or drill hole.
+End of Solution
+8888899999..... In which one of the following industries, the water requirement in kilo litres per unit of
+production is very high?
+(a) Paper industry (b) Steel industry
+(c) Sugar industry (d) Fertilizer industry
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+9999900000..... In drip irrigation system, which one of the following emitters is not based on definitions
+by American Society of Agricultural Engineers (ASAE)?
+(a) Emitter (b) Pulsating emitter
+(c) Long path emitter (d) Multi-outlet emitter
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 35
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+9999911111..... A Persian wheel with an average discharge of 230 litre/minute irrigates 1 hectare wheat
+crop in 50 hours. The average depth of irrigation will be nearly
+(a) 4 cm (b) 5 cm
+(c) 6 cm (d) 7 cm
+AAAAAnnnnnsssss..... (((((ddddd)))))
+Volume supplied = Discharge × Time
+l
+V= 230 × 50 hr
+min
+230×10−3m3 × 50× 60 min
+=
+min
+= 690 m3
+Area irrigated = 1 ha
+A= 104 m2
+Volume
+Depth of irrigation =
+Area
+690
+= m
+10000
+= 0.069 m
+= 6.9 cm (cid:2) 7 cm
+End of Solution
+9999922222..... Which one of the following is not the main cause for soil salinity and sodicity?
+(a) Irrigation mismanagement
+(b) Poor land levelling
+(c) Use of heavy machinery, resulting in no soil compaction
+(d) Leaching without adequate drainage
+AAAAAnnnnnsssss..... (((((ccccc)))))
+Heavy machinery usage will result only in the change in physical properties of soil but
+there will not be any change in chemical properties so salt concentration of soil will
+remain unaffected.
+End of Solution
+9999933333..... Which one of the following is not the major factor influencing seepage from a canal?
+(a) Characteristics of the soil traversed by the canal system
+(b) Area wetted by the canal
+(c) Location of the canal
+(d) Frequencies of canal usage
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 36
+
+
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+9999944444..... Which of the following are the causes of failure of weirs?
+1. Rupture of floor due to uplift.
+2. Rupture of floor due to suction caused by standing wave.
+3. Scour on the upstream and downstream of the weir.
+(a) 1 and 2 only (b) 1 and 3 only
+(c) 1, 2 and 3 (d) 2 and 3 only
+AAAAAnnnnnsssss..... (((((ccccc)))))
+Rupture of floor due to uplift:
+If the weight of floor is insufficient to resist the uplift pressure, the floor may burst and
+fail due to rupture.
+Rupture of floor due to suction caused by standard wave.
+The standing wave or hydraulic jump formed at the d/s of the weir causes suction which
+also acts in the direction of uplift pressure. If floor thickness is insufficient then it may
+fail due to rupture.
+Scour on the upstream and downstream of the weir.
+If the natural water way of a river is contracted, the water may scour the bed both at
+upstream and downstream of the structure. The scour holes so formed may progress
+towards the structure causing its failure.
+End of Solution
+9999955555..... Which of the following are the principal factors influencing the choice of a particular
+method of lining?
+1. Availability and cost of the material at the site or within easy reach.
+2. Velocity of flow in the channel.
+3. Cost of maintenance.
+(a) 1 and 2 only (b) 1 and 3 only
+(c) 1, 2 and 3 (d) 2 and 3 only
+AAAAAnnnnnsssss..... (((((ccccc)))))
+That type of lining is preferred for which material required is easily available within small
+distance.
+If alignment of area if such that slope is very high then velocity of canal will also be
+high hence in such core stronger material for lining such or concrete lining should be
+used.
+To have better benefit - cost ratio that type of lining should be used in which cost of
+maintenance is less.
+End of Solution
+9999966666..... Which of the following are the objectives for river training?
+1. High flood discharge may pass safely and quickly through the reach.
+2. To make the river course stable and reduce bank erosion to minimum.
+3. To check flow through canal.
+4. To provide a sufficient draft for navigation as well as good course for it.
+(a) 1, 2 and 3 only (b) 1, 3 and 4 only
+(c) 1, 2 and 4 only (d) 2, 3 and 4 only
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 37
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+AAAAAnnnnnsssss..... (((((ccccc)))))
+Objectives of river training are high water training : So that high flood discharge may
+pass safely.
+Mean water training : To have efficient disposal of sediments.
+Low water training : To provide sufficient depth of navigation during low weather season.
+To reduce bank erosion and make the river course stable.
+End of Solution
+9999977777..... The transition region between unsaturated zone and saturated zone is called
+(a) Capillary fringe (b) Water table
+(c) Yadose water zone (d) Confining bed
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+Between the unsaturated zone and the saturated zone (water table), transition zone is
+present called as the capillary fringe.
+In this zone the voids are saturated or almost saturated with water that is held in place
+by capillary forces.
+End of Solution
+9999988888..... Which of the following chemical parameters are associated with the organic content of
+water?
+1. Biological Oxygen Demand (BOD).
+2. Chemical Oxygen Demand (COD).
+3. Total Organic Carbon (TOC) and Total Oxygen Demand (TOD).
+(a) 1 and 2 only (b) 1 and 3 only
+(c) 2 and 3 only (d) 1, 2 and 3
+AAAAAnnnnnsssss..... (((((ddddd)))))*****
+***** BOD stands for biochemical oxygen demand not biological oxygen demand.
+End of Solution
+9999999999..... When chlorine is dissolved in water, it reacts to form hypochlorous acid and hypochlorite
+ions. At pH < 5, chlorine exists in water as
+(a) Elemental or molecular chlorine
+(b) Remains in the form of hypochlorous acid
+(c) Remains in the form of hypochlorite ions
+(d) Remains in the form of both hypochlorous acid and hypochlorite ions
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+111110000000000..... Reactive substances are
+(a) Unstable under normal conditions. They can cause explosions and/or liberate toxic
+fumes, gases, and vapors when mixed with water.
+(b) Easily ignited and burn vigorously and persistently.
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 38
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+(c) Liquids with pH less than 2 or greater than 12.5, the those that are capable of
+corroding metal containers.
+(d) Harmful or fatal when ingested or absorbed.
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+Reactive substance are solids, liquids or gaseous substances, mixture of substances,
+as well as substances that occur in combinations of such state, which upon contact
+with water, at their pressure, temperature or other chemical properties represent a risk
+of dangerous reaction explosion or emission of dangerous gas, vapour, dust or mist.
+End of Solution
+111110000011111..... The noise value of sound waves depends upon:
+1. The frequency of sound waves.
+2. The intensity of sound waves.
+3. The time of exposure of sound waves.
+(a) 1 and 2 only (b) 1 and 3 only
+(c) 2 and 3 only (d) 1, 2 and 3
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+111110000022222..... Which one of the following type of treatments will be used for neutralization of alkaline
+effluent?
+(a) Lime stone treatment (b) Caustic lime treatment
+(c) Carbon dioxide treatment (d) Hydrochloric acid treatment
+AAAAAnnnnnsssss..... (((((ddddd)))))
+End of Solution
+111110000033333..... Flocculation is the process of
+(a) Gently mixing the water and coagulant allowing the formation of large particles of
+floc.
+(b) Removing relatively large floating and suspended debris.
+(c) Flow, which is slowed enough so that gravity will cause the floc to settle.
+(d) Mixture of solids and liquids collected from the settling tank are dewatered and
+disposed of.
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+Flocculation in a process of contact and cohesion whereby the particles of a dispersion
+form larger size clusters in the pressure of coagulants.
+End of Solution
+111110000044444..... In solid waste management, waste utilization is achieved by
+(a) Recover, Reclamation and Reproduce
+(b) Reuse, Reclamation and Recycling
+(c) Recover, Recycling and Reproduce
+(d) Reuse, Reproduce and Recycling
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 39
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+AAAAAnnnnnsssss..... (((((*****)))))
+3R’s stands for Reduce, Reuse and Recycle. None of the option is matching.
+End of Solution
+111110000055555..... The frequency range for hearing the sound by a human ear is in the range of
+(a) 20 Hz - 200 kHz (b) 10 Hz - 20 kHz
+(c) 20 Hz - 20 kHz (d) 10 Hz - 20 Hz
+AAAAAnnnnnsssss..... (((((ccccc)))))
+End of Solution
+111110000066666..... Physiological response accompanying response and other noise exposures include:
+1. A vascular response characteristic by peripheral vasoconstriction, changes in heart
+beat rate and blood pressure.
+2. Various glandular charges such as increased output of adrenaline evidenced by
+chemical changes in blood.
+3. Slow, deep breathing.
+(a) 1 and 2 only (b) 1 and 3 only
+(c) 2 and 3 only (d) 1, 2 and 3
+AAAAAnnnnnsssss..... (((((ddddd)))))
+Physiological response accompanying response and other noise exposures include:
+1. A vascular response characteristic by peripheral vasoconstriction, changes in heart
+beat rate and blood pressure.
+2. Various glandular charges such as increased output of adrenaline evidenced by
+chemical changes in blood.
+3. Slow, deep breathing.
+4. A change in the electrical resistance of skin with changes in activity of sweat glands.
+End of Solution
+111110000077777..... Electrostatic precipitators are used for removal of
+1. Gaseous contaminants
+2. Liquid contaminants
+3. Particulate contaminants
+(a) 1 only (b) 2 only
+(c) 3 only (d) 1, 2 and 3
+AAAAAnnnnnsssss..... (((((ccccc)))))
+End of Solution
+111110000088888..... Which one of the following type of ecology is dealt with autecology?
+(a) Synecology (b) Community ecology
+(c) Ecosystem ecology (d) Individual species ecology
+AAAAAnnnnnsssss..... (((((ddddd)))))
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 40
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+111110000099999..... A soil sample has porosity of 40%, and the specific gravity of solids is 2.70. If the soil
+is 50% saturated, the unit weight will be nearly
+(a) 22 kN/m3 (b) 20 kN/m3
+(c) 18 kN/m3 (d) 16 kN/m3
+AAAAAnnnnnsssss..... (((((ccccc)))))
+( )
+G+Se γ
+Bulk unit weight, γ = w
+b 1+e
+n 0.4 2
+Void ratio, e= = =
+1−n 1− 0.4 3
+⎧ 2⎫
+⎪2.7+ 0.5×
+⎪
+3
+∴ γ = ⎨ ⎬9.81
+2
+⎪ 1+ ⎪
+⎩ 3 ⎭
+= 17.85 kN/m3
+End of Solution
+111111111100000..... Oven dry mass of a pat of clay is 10.8 gm and mass of mercury displaced on immersion
+is 84.2 gm. If the specific gravity of solids is 2.72 and the density of the mercury is
+13.6 g/cm3, the shrinkage limit of the soil will be nearly
+(a) 12% (b) 15%
+(c) 18% (d) 21%
+AAAAAnnnnnsssss..... (((((ddddd)))))
+Dry mass of clay = 10.8 gm
+Volume of mercury displaced = Total volume of soil mass
+Mass of mercury
+=
+Unit weight of mercury
+84.2
+= = 6.1911 cc
+13.6
+Dry unit weight of soil,
+M 10.8
+ρ = dry = = 1.744
+d V 6.1911
+T
+ρ 1.744
+d = = 1.744
+Shrinkage ratio, R=
+ρ 1
+w
+1 1
+Shrinkage limit, w = −
+s R G
+1 1
+w = − = 0.2056
+s 1.744 2.72
+= 20.56%
+AAAAAlllllttttteeeeerrrrrnnnnnaaaaatttttiiiiivvvvveeeeelllllyyyyy
+Weight of solids (W) = 10.8 gm
+s
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 41
+
+
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+G = 2.72
+s
+Density of mercury (ρ ) = 13.6 g/cc
+m
+84.2
+Volume of mercury displaced (V) = = 6.19 cc
+13.6
+∴ Volume of soil = V = 6.19 cc
+Air Water
+6.19 cc
+Solid 10.8 gm Solid 10.8 gm
+at shrinkage limit soil is just saturated
+∴ Volume of water = Volume of void in dry state
+10.8
+= 6.19 − = 2.22 cc
+2.72
+W 2.22×1
+So, shrinkage limit (w) = w = ×100%
+s W 10.8
+s
+= 20.55% (cid:2) 21%
+End of Solution
+111111111111111..... The suitability number of a backfill for D = 1 mm, D = 0.5 mm and D = 0.08 mm
+50 20 10
+will be nearly
+(a) 16 (b) 18
+(c) 20 (d) 22
+AAAAAnnnnnsssss..... (((((ddddd)))))
+3 3 1
+Suitability Number = 1.7 + +
+(D )2 (D )2 (D )2
+50 20 10
+3 3 1
+= 1.7 + +
+(1)2 (0.5)2 (0.08)2
+= 21.72
+End of Solution
+111111111122222..... The porosity of a soil n is
+e e
+(a) (b)
+1+e 1−e
+e+1 e−1
+(c) (d)
+e e
+Where e = void ratio
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 42
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+e
+n=
+1+e
+V
+v
+V V ⎛ V ⎞
+n= v = s ..... ⎜e= v ⎟
+V (V s +V s ) ⎝ V s ⎠
+V
+s
+e
+n= proved
+1+e
+End of Solution
+111111111133333..... A coarse-grained soil has a void ratio of 0.78 and specific gravity as 2.67. The critical
+gradient at which a quick sand condition occurs will be
+(a) 0.62 (b) 0.74
+(c) 0.82 (d) 0.94
+AAAAAnnnnnsssss..... (((((ddddd)))))
+Critical hydraulic gradient,
+G−1 2.67 −1
+i = =
+c 1+e 1+ 0.78
+= 0.938
+End of Solution
+111111111144444..... Which of the following assumptions of the Rankine theory of lateral earth pressure are
+correct?
+1. The soil mass is semi-infinite, homogeneous, dry and cohesionless.
+2. The ground surface is a plane which may be horizontal or inclined.
+3. The wall yields about the base and thus satisfies the deformation condition for plastic
+equilibrium.
+(a) 1 and 2 only (b) 1 and 3 only
+(c) 1, 2 and 3 (d) 2 and 3 only
+AAAAAnnnnnsssss..... (((((ccccc)))))
+End of Solution
+111111111155555..... The ratio of the horizontal stress to the vertical stress is called coefficient of
+(a) Active earth pressure (b) Passive earth pressure
+(c) Earth pressure (d) Plastic earth pressure
+AAAAAnnnnnsssss..... (((((ccccc)))))
+σ
+Horizontal stress h = K
+=
+Vertical stress
+σv
+K = Earth pressure coefficient.
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 43
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+111111111166666..... A bed consists of compressible clay of 4 m thickness with pervious sand on top and
+impervious rock at the bottom. In a consolidation test on an undisturbed specimen of
+clay from this deposit 90% settlement was reached in 4 hours. The specimen was 20
+mm thick. The time for the building founded over this deposit to reach 90% of its final
+settlement will be
+(a) 91 years (b) 82 years
+(c) 73 years (d) 64 years
+AAAAAnnnnnsssss..... (((((ccccc)))))
+By taking single drainage in field slab,
+t
+In lab, (T ) = C
+V 90 V d2
+( )
+T V 90 4 hrs
+= ( )
+C V 20 ×10 −3 2
+t
+In field, (T ) = C
+V 90 V d2
+( )
+t= T V 90 ×d2 = 4 × 42
+( )
+C V 20 ×10 −3 2
+t= 18.26 years
+Note : Answer is not matching, hence try assuming double drainage in laboratory.
+t 4 hrs
+In lab, (T ) = C = C ×
+V 90 V d2 V ( 10 ×10 −3 ) 2
+t
+In field, (T ) = C
+V 90 V (4m)2
+( )
+t= T V 90 × (4 m)2 = ( 4 ) × 42
+C V 10 ×10 −3 2
+= 73.059 years
+AAAAAlllllttttteeeeerrrrrnnnnnaaaaatttttiiiiivvvvveeeeelllllyyyyy,,,,,
+t∝ H2
+t ⎛H ⎞2
+field = ⎜ field ⎟
+t ⎝ H ⎠
+lab lab
+20
+H = = 10 mm
+lab 2
+⎛ 4×10 3 ⎞2 4
+∴ t = ⎜ ⎟ × = 73 years
+field ⎝ ⎜ 10 ⎠ ⎟ 24×365
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 44
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+111111111177777..... A 30 cm square bearing plate settles by 8 mm in the plate load test on cohesionless
+soil when the intensity of loading is 180 kN/m2. The settlement of a shallow foundation
+of 1.5 m square under the same intensity of loading will be nearly
+(a) 30 mm (b) 26 mm
+(c) 22 mm (d) 18 mm
+AAAAAnnnnnsssss..... (((((ccccc)))))
+B = 1.5 m. B = 0.3 m, S = 8 mm
+f P P
+For cohesionless soil,
+S ⎧⎪B ( B + 0.3 )⎫⎪ 2
+f = ⎨ f ( P )⎬
+S ⎪⎩B B + 0.3 ⎪⎭
+p P f
+⎧⎪1.5 ( 0.3 + 0.3 )⎫⎪ 2
+S f = 8⎨ ⎪⎩0.3 ( 1.5 + 0.3 )⎬ ⎪⎭
+= 22.22 mm
+End of Solution
+111111111188888..... When the observed value of N exceeds 15, the corrected penetration number N as per
+c
+Terzaghi and Peck recommendation in the silty fine sands will be
+1 1
+(a) 15 − (N −15) (b) 15 − (N +15)
+2 R 2 R
+1 1
+(c) 15+ (N −15) (d) 15+ (N +15)
+2 R 2 R
+where : N= Penetration number, and
+N = Recorded value
+R
+AAAAAnnnnnsssss..... (((((ccccc)))))
+End of Solution
+111111111199999..... A canal of 4 m deep has side slopes of 1 : 1. The properties of the soil are c = 15 kN/m2,
+φ = 15°, e = 0.76 and G = 2.7. Taylor’s stability number for that sudden drawdown = 0.136.
+The factor of safety with respect to cohesion in the case of sudden drawdown will be
+(a) 0.64 (b) 1.43
+(c) 2.22 (d) 3.01
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+In case of sudden drawdown γ should be used in stability No.
+sat
+⎛G+e⎞ ⎛ 2.7 + 0.76⎞
+γ = ⎜ ⎟ γ = ⎜ ⎟ 9.81
+sat ⎝ 1+e⎠ w ⎝ 1+ 0.76 ⎠
+= 19.28 kN/m2
+C C
+s = = ( )
+n γH γ FOS H
+c sat
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 45
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+15
+0.136 = ( )
+19.28 FOS 4
+FOS = 1.43
+End of Solution
+111112222200000..... The stability or shear strength of fine grained soils can be increased by draining them
+with the passage of direct current through them. This process is known as
+(a) Electro-osmosis (b) Zeta potential
+(c) Electro-chemical hardening (d) Consolidation
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+Electro-osmosis is a method of drainage of cohesive soil in which a direct current (DC)
+is passed through a saturated soil between a positive electrode (anode) and a negative
+electrode (cathode), as a result pore water migrates to cathode.
+The cathode is a well point which collects the water drained from the soil.
+As the water is drained out, the consolidation process can be upto a hundred times
+faster rate than mechanical consolidation that is why substantial improvement in the
+shear strength of soil is achieved quickly.
+End of Solution
+111112222211111..... The combined correction for curvature and refraction for a distance of 3400 m will be
+nearly
+(a) 0.2 m (b) 0.4 m
+(c) 0.6 m (d) 0.8 m
+AAAAAnnnnnsssss..... (((((ddddd)))))
+Combined correction (C) = –0.06735d2
+= –0.0673 × 3.42
+= 0.77798 m
+≈ 0.8 m
+End of Solution
+111112222222222..... A 100 m tape is suspended between the ends under a pull of 200 N. If the weight of
+the tape is 30 N, the correct distance between the tape ends will be nearly
+(a) 100.5 m (b) 100.3 m
+(c) 100.1 m (d) 99.9 m
+AAAAAnnnnnsssss..... (((((ddddd)))))
+w2l
+Sag correction (C) =
+s 24P2
+m
+302 ×100
+C =
+s 24 ×2002
+30 ×30 ×100
+=
+24 ×200 ×200
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 46
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+9 9
+= = = 0.09375 ≈ 0.1 (negative)
+24 ×2 ×2 48 ×2
+Measured length of tape = 100 m
+Correct length of tape = 100 – 0.1
+= 99.9 m
+End of Solution
+111112222233333..... In horizontal distance measurement, the basic formula for distance in stadia tacheometry
+has an additive constant. An anallatic lens is inserted in the tacheometer to make this
+additive constant zero. This lens is
+(a) Convex lens inserted between object glass and diaphragm.
+(b) Plano-convex lens between object glass and diaphragm.
+(c) Plano-convex lens between diaphragm and eye piece.
+(d) convex lens inserted between diaphragm and eye piece.
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+111112222244444..... If the LMT is 8h 12m 16s AM at 38° 45′ W longitude, the GMT will be
+(a) 11h 12m 16s AM (b) 10h 47m 16s AM
+(c) 9h 29m 46s AM (d) 5h 29m 46s AM
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+Local mean time at 38°45′W
+= 8 hour 12 minute 16 seconds
+Difference of degree from GMT (0°) longitude
+= 38° 43′
+Time difference = 38 × 4 minute + 45 × 4 seconds
+= 152 min. + 3 min. = 155 min.
+= 2 hr. 35 min.
+Time at GMT = LMT + Time difference
+= 8 hr. 12 min. 16 sec. + 2 hr. 35 min.
+= 10 hr. 47 min. 16 sec.
+End of Solution
+111112222255555..... A section line AB appears to be 10.16 cm on a photograph for which the focal length
+is 16 cm. The corresponding line measures 2.54 cm on a map, which is to a scale
+1
+. The terrain has an average elevation of 200 m above mean sea level. The flying
+50,000
+altitude of the aircraft above mean sea level during photograph will be
+(a) 1800 m (b) 2000 m
+(c) 2200 m (d) 2400 m
+AAAAAnnnnnsssss..... (((((ccccc)))))
+Length of a line on a map
+= 2.54 cm
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 47
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+1
+Scale =
+50,000
+Actual length on ground
+= 50,000 × 2.54 cm
+Length of same line on photo
+= 10.16 cm
+10.16
+then, Scale of photo =
+50,000× 2.54
+4 1
+= =
+50,000 12500
+f
+Scale of photo =
+H−h
+16×10−2
+1
+=
+H−200 12500
+⇒ 16 × 10–2 × 12500 = H – 200
+⇒ 16 × 125 + 200 = H
+⇒ 2000 + 200 = H
+f
+Scale of photo =
+H−h
+16×10−2
+1
+=
+H−200 12500
+⇒ 16 × 10–2 × 12500 = H – 200
+⇒ 16 × 125 + 200 = H
+⇒ 2000 + 200 = H
+⇒ H= 2200
+End of Solution
+111112222266666..... If backsight and foresight distances are balanced
+1. The difference in elevation between two points can be directly calculated by taking
+difference of the two readings.
+2. No corrections for the inclination of the line of sight is necessary.
+(a) 1 only (b) 2 only
+(c) Both 1 and 2 (d) Neither 1 nor 2
+AAAAAnnnnnsssss..... (((((ccccc)))))
+Due to balancing of sight, error due to non-parallism of sight is eliminated.
+End of Solution
+111112222277777..... A railway curve of 1350 m radius is to be set out to connect two tangents. If the design
+speed is 110 kmph and the rate of change of acceleration is 0.3 m/s3, the shift of the
+circular curve will be nearly
+(a) 0.18 m (b) 0.16 m
+(c) 0.14 m (d) 0.12 m
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 48
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+R= 1350 m
+V= 110 kmph
+⎛ 53 ⎞
+L =
+V3
+=
+⎜
+⎜
+1103 ×
+183
+⎟
+⎟ = 70.41 m
+T CR ⎜ 0.3 ×1350 ⎟
+⎜ ⎟
+⎝ ⎠
+LT2
+Shift =
+2MR
+70.412
+= = 0.159 ≈ 0.16 m
+24×1300
+End of Solution
+111112222288888..... A theodolite is called a transit theodolite, when its telescope can be revolved thrugh
+a complete revolution about its
+(a) Vertical axis in an inclined plane (b) Horizontal axis in an inclined plane
+(c) Vertical axis in a horizontal plane (d) Horizontal axis in a vertical plane
+AAAAAnnnnnsssss..... (((((ddddd)))))
+Transiting = Revolution of telescope about horizontal axis
+(Trunion axis) in vertical plane.
+End of Solution
+111112222299999..... Stalactites and stalagmites are features of
+(a) Stream erosion developed in limestone region by specific chemical reaction.
+(b) Ground water deposition in caves formed by precipitation from dripping water rich
+in calcium carbonate.
+(c) Marine erosion and deposition formed along coastal regions by selective erosion
+followed by deposition by waves.
+(d) A centripetal drainage in which streams from different directions flow towards a
+common central basin.
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+End of Solution
+111113333300000..... Which of the following statements with reference to isogonic line are correct in magnetic
+declination?
+1. It is drawn through the points of same declination.
+2. It does not form complete great circle.
+3. It radiates from north and south magnetic regions and follow irregular paths.
+(a) 1 and 2 only (b) 1 and 3 only
+(c) 2 and 3 only (d) 1, 2 and 3
+AAAAAnnnnnsssss..... (((((ddddd)))))
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 49
+
+
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+111113333311111..... Mountains resulting from the depression or elevation of blocks of the earth crust on a
+large scale due to faulting and these elevated structures are commonly called
+(a) Fault block mountains (b) Volcanic mountains
+(c) Relict mountains (d) Residual mountains
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+111113333322222..... A little gap is left between the head of the glaciated valley and the mass of the glacier
+ice. This gap is known as
+(a) Bergs-chrund (b) Arete
+(c) Horn (d) Cirque
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+111113333333333..... The sight distance available on a road to a driver at any instance depends on
+1. Features of the road ahead
+2. Height of the driver’s eye above the road surface
+3. Height of the object above the road surface
+(a) 1 and 2 only (b) 1 and 3 only
+(c) 2 and 3 only (d) 1, 2 and 3
+AAAAAnnnnnsssss..... (((((ddddd)))))
+End of Solution
+111113333344444..... Consider the following data :
+Design speed = 96 kmph
+Speed of overtaken vehicle = 80 kmph
+Reaction time for overtaking = 2 sec
+Acceleration = 2.5 kmph/sec
+The safe overtaking sight distance on a two-way traffic road will be nearly
+(a) 646 m (b) 556 m
+(c) 466 m (d) 376 m
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+S= (0.2V + 6) = 0.2 × 80 + 6 = 22 m
+B
+45 4 ×22
+T= = = 11.26 sec
+9 0.694
+V = V = 96
+A C
+V = 80 kmph
+B
+OSD = d + d + d
+1 2 3
+OSD = (0.278 × 80 × 2) + (0.278 × 80 × 11.26 + 2 × 22) +
+(0.278 × 96 × 11.26)
+= 639 m
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 50
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+111113333355555..... Which one of the following statements is correct?
+(a) The ratio of load on wheel to contact area or area of imprint is called as contact
+pressure.
+(b) The ratio of load on wheel to contact pressure is called as rigidity factor.
+(c) The value of rigidity factor is more than three for an average tyre pressure of 7 kg/cm2.
+(d) Rigidity factor does not depend upon the degree of tension developed in walls of
+tyres.
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+111113333366666..... Which one of the following is nnnnnooooottttt the correct type of critical load position in pavement
+slab design for the load on the pavement surface?
+(a) Interior loading (b) Edge loading
+(c) Eccentric loading (d) Corner loading
+AAAAAnnnnnsssss..... (((((ccccc)))))
+End of Solution
+111113333377777..... Which of the following statements are correct regarding Westergaard’s concept for
+temperature stresses?
+1. During the day, the top of the pavement slab gets heated under the sun light when
+the bottom of the slab becomes hot.
+2. During summer season as the mean temperature of the slab increases, the concrete
+pavement expands towards the expansion joints.
+3. Due to frictional force at the interface, compressive stress is developed at the bottom
+of the slab as it tends to expand.
+(a) 1 and 2 only (b) 2 and 3 only
+(c) 1 and 3 only (d) 1, 2 and 3
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+End of Solution
+111113333388888..... Which of the following advantages are correct regarding Poly-centric shape tunnel?
+1. It can be conveniently used for road and railway traffic.
+2. The number of centres and lengths of radii cannot be fixed.
+3. It can resist external and internal pressure due to its arch action.
+(a) 1 and 2 only (b) 2 and 3 only
+(c) 1 and 3 only (d) 1, 2 and 3
+AAAAAnnnnnsssss..... (((((ccccc)))))
+Poly-centric Tunnel :
+(cid:129) This tunnel section consist number of centers.
+(cid:129) The base of tunnel is flat enough for traffic hence can be used for radius and railways.
+(cid:129) The number of centers and length of roads can be fixed as per the local conditions
+hence required greater skilled persons.
+(cid:129) The tunnel can resist effectively external and internal pressure.
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 51
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+111113333399999..... Which one of the following statement is correct regarding Journal friction?
+(a) Caused due to the wave action of rails.
+(b) The amount does not depend upon the type of bearing.
+(c) For roller bearings, it varies from 0.5 to 1.0 kg per tonne.
+(d) For coupled boxes, it lubricates by hard grease from 0.5 kg to 1.0 kg per tonne.
+AAAAAnnnnnsssss..... (((((ccccc)))))
+End of Solution
+111114444400000..... For the construction of a 640 m long B.G. railway track by using a sleeper density of
+M + 5, and the length of each rail is 12.8 m, the number of sleepers required will be
+(a) 1000 (b) 900
+(c) 800 (d) 700
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+640
+Number of sleepers = ×(M+ 5)
+M
+640
+= ×(12.8 + 5)
+12.8
+= 890 ≈ 900
+End of Solution
+111114444411111..... Which one of the following statement is correct regarding ballast used for railway tracks?
+(a) The minimum depth of ballast for B.G. section is 20 cm – 25 cm.
+(b) The quantity of stone ballast required for one metre length of track is 0.53 m3 for
+B.G. section.
+(c) For M.G. section the width of ballast is 1.83 m.
+(d) The minimum depth of ballast for N.G. section is 10 cm.
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+Standard depth of ballast for B.G. section is 20 cm – 25 cm.
+End of Solution
+111114444422222..... Which one of the following statement is correct?
+(a) The radius of transition raises from infinity to a selected minimum in order to attain
+full super-elevation and curvature gradually.
+(b) The compound curve is an arc of circle.
+(c) The radius of transition curve is constant for entire length.
+(d) The horizontal curves are provided whenever there is a change in gradient.
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 52
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+111114444433333..... A cross-over occur between two Metre Gauge parallel tracks of same crossing number
+1 in 12 with straight intermediate portion between the reverse curves and the distance
+between the centres of tracks is 3.5 m. If the value of G is 1 m, the intermediate straight
+distance will be nearly
+(a) 12 m (b) 15 m
+(c) 18 m (d) 21 m
+AAAAAnnnnnsssss..... (((((ccccc)))))
+A
+B
+C
+D E
+Length of intermediate straight :
+DE= (D – G)N – G 1+N2
+= (3.5 – 1.0) × 12 – 1× 1+122
+≈ 2.5 × 12 – 12
+= 1.5 × 12 = 18 m
+End of Solution
+111114444444444..... Which one of the following is the correct standard for provision of curves on railway track?
+(a) Cant excess on B.G. shall not be allowed to exceed 105 mm.
+(b) Minimum radius of vertical curves for group A, Broad Gauge track is 4,000 m.
+1
+(c) The minimum value of super-elevation according to Railway Board is th of gauge.
+10
+V2
+(d) The speed potential of curve is given by formula E = where, E is superelevation
+127R
+in mm.
+AAAAAnnnnnsssss..... (((((bbbbb)))))
+End of Solution
+DDDDDiiiiirrrrreeeeeccccctttttiiiiiooooonnnnnsssss ::::: Each of the next Six (06) items consists of two statements, one labelled as
+‘Statement (I)’ and the other as ‘Statement (II)’. Examine these two statements carefully and select
+the answers to these items using the codes given below:
+CCCCCooooodddddeeeeesssss:::::
+(a) Both Statement (I) and Statement (II) are individually true; and Statement (II) is the
+correct explanation of Statement (I)
+(b) Both Statement (I) and Statement (II) are individually tru'e; but Statement (II) is NOT
+the correct explanation of Statement (I)
+(c) Statement (I) is true; but Statement (II) is false
+(d) Statement (I) is false; but Statement (II) is true
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 53
+
+ESE 2020
+Preliminary Examination
+Civil Engineering | Set-A
+111114444455555..... SSSSStttttaaaaattttteeeeemmmmmeeeeennnnnttttt (((((I))))) ::::: Finer grinding of cement results in early development of strength.
+SSSSStttttaaaaattttteeeeemmmmmeeeeennnnnttttt (((((II))))) ::::: the finer the cement, the higher is the rate of hydration.
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+End of Solution
+111114444466666..... SSSSStttttaaaaattttteeeeemmmmmeeeeennnnnttttt (((((I))))) ::::: Pozzolana is added to cement to increase early strength.
+SSSSStttttaaaaattttteeeeemmmmmeeeeennnnnttttt (((((II))))) ::::: It reduces the heat of hydration.
+AAAAAnnnnnsssss..... (((((ddddd)))))
+(i) Initial strength of Pozzolana cement is generally less. So statement is wrong.
+End of Solution
+111114444477777..... SSSSStttttaaaaattttteeeeemmmmmeeeeennnnnttttt (((((I))))) ::::: Coarser the particles, less is optimum moisture content.
+SSSSStttttaaaaattttteeeeemmmmmeeeeennnnnttttt (((((II))))) ::::: The specific surface area of coarser particle is less.
+AAAAAnnnnnsssss..... (((((aaaaa)))))
+Coarser the grains, the lesser is the specific surface area, so lesser is the amount of
+water required to make the soil grains wet at maximum dry density.
+End of Solution
+111114444488888..... SSSSStttttaaaaattttteeeeemmmmmeeeeennnnnttttt (((((I))))) ::::: A reverse curve consists of two arcs with their centres of curvature on
+opposite sides of the curve.
+SSSSStttttaaaaattttteeeeemmmmmeeeeennnnnttttt (((((II))))) ::::: Superelevation can be provided conveniently at the intersection point
+of the two arcs.
+AAAAAnnnnnsssss..... (((((ccccc)))))
+End of Solution
+111114444499999..... SSSSStttttaaaaattttteeeeemmmmmeeeeennnnnttttt (((((I))))) ::::: The counter interval depends upon the nature of the ground – whether
+it is undulating or flat.
+SSSSStttttaaaaattttteeeeemmmmmeeeeennnnnttttt (((((II))))) ::::: In a hilly terrain or undulating ground a smaller interval is adopted,
+otherwise the contours will come too close for plotting due to the steep slope.
+AAAAAnnnnnsssss..... (((((ccccc)))))
+Statement II is wrong. Bigger contour interval is adopted in hilly terrain.
+End of Solution
+111115555500000..... SSSSStttttaaaaattttteeeeemmmmmeeeeennnnnttttt (((((I))))) ::::: Geodetic survey cannot be done for works requiring high precision.
+SSSSStttttaaaaattttteeeeemmmmmeeeeennnnnttttt (((((II))))) ::::: The curvature of earth is accounted for measurements in Geodetic
+survey.
+AAAAAnnnnnsssss..... (((((ddddd)))))
+Geodetic survey is done for high precision works.
+End of Solution
+(cid:129)(cid:129)(cid:129)(cid:129)(cid:129)(cid:129)(cid:129)(cid:129)(cid:129)(cid:129)(cid:129)(cid:129)(cid:129)(cid:129)(cid:129)(cid:129)(cid:129)(cid:129)(cid:129)(cid:129)
+Corporate Office: 44-A/1, Kalu Sarai, New Delhi-110016 (cid:13)(cid:13)(cid:13)(cid:13)(cid:13) info@madeeasy.in (cid:223) www.madeeasy.in Page 54

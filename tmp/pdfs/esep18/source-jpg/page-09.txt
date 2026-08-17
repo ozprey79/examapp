@@ -1,0 +1,115 @@
+Sle
+
+38.
+
+The permissible bending compressive
+strength for M 25 grade of conerele is
+8:5 N/mm?. Its short-term and long-term
+modular ratios are, nearly
+
+(a) 8 and 11
+
+(b) 8 and 8
+
+(c) 11 and 11
+
+(d) 11 and6 .
+
+The ultimate load carrying capacity of a
+short circular column of 300 mm
+
+diameter with 1% helical reinforcement
+of Fe 415 grade steel and concrete of
+
+_ M20 grade, is nearly
+
+39°
+
+40.
+
+(a) 451 kN
+
+(b) 500 kN
+
+(c) 756 kN
+
+() 794 kN
+
+In a cantilever retaining wall, the main
+steel reinforcement is provided
+
+(a) On the backfill side, in the vertical
+direction
+
+(b) On both, inner and outer, faces
+
+(c) In horizontal as well as in vertical
+directions
+
+(d) To counteract shear stresses
+Design strength for M25 concrete in
+
+direct compression, bending compression
+and flexural tension are, respectively
+
+(a) 10 MPa, 11-15 MPa and 3-5 MPa
+(b) 25 MPa, 11-15 MPa and 3 MPa
+
+(c) 10 MPa, 12:5 MPa and 3-5 MPa
+(d) 25 MPa, 11-15 MPa and 2-57 MPa
+
+41.
+
+42.
+
+43.
+
+44,
+
+Double-pitched roof trusses of span
+20 m and tise 7-5 m are placed at 8m
+spacing. The maximum live load reaction
+at the supports is nearly
+
+(a) 36 kN
+(b) 40 kN
+(co) 46 kN
+(d) 60 kN
+Ground motion during earthquake is
+random in nature. For the purpose of
+
+analysis, it can be converted into
+different harmonic excitations through
+
+(a) Fourier series
+
+(b) Newton’s second law
+
+(c) Duhamel’s integral
+
+(d) ‘Time series analysis
+
+An RCC structure with fundamental time
+period of 1-2 sec vibrates at a forcing
+frequency of 10 rad/sec. The maximum
+
+dynamic displacement is X% of static
+displacement. The value of X is
+
+(a) 10-1
+(b) 28-9
+(c) 37-7
+(d) 50-2
+A steel building has plan dimensions of
+50 m x 50 m and it is 120m tall. It is
+provided with brick infill panels. The
+
+approximate fundamental time period of
+the building is :
+
+(a) 1-53 sec
+(b) 2:72 sec
+(c) 3-08 sec
+@d) 4:15 sec
+
+A — SKP-D-CVL

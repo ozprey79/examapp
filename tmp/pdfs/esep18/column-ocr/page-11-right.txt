@@ -1,0 +1,35 @@
+54. In a siphon, the summit is 5 m above the
+water level in the tank from which the
+flow is being discharged. If the head loss
+from the inlet to the summit is 2-5 m and
+the velocity head at the summit is 0-5 m,
+(taking y =10 appropriate units): the
+pressure head at the summit is
+(a) —80 kPa —
+
+(b) —3 m of water (abs)
+(c) 5 m of water (abs)
+(d) 18 m of water (abs)
+55. The stream function of a doublet with
+horizontal axis and of strength p is
+v)
+a) —r
+(a)   e
+(b)  a cos
+2mr
+() ring
+20
+@  HM sind
+Qn o£
+:       56. A vertical cylindrical tank, 2 m diameter
+           has, at the bottom, a 5cm diameter,
+           sharp-edged orifice, for which C,= 0-6.
+Water enters the tank at a constant rate
+of 9//sec. At what depth above the
+orifice will the level in the tank become
+steady ?
+(a) 2-95 m
+(b) 2-75m
+(c) 2:-60m
+(d) 2:50 m
+11                                               A—SKP-D-CVL

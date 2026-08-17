@@ -1,0 +1,42 @@
+41. Double-pitched roof trusses of span
+20 m and tise 2-5 mare placed at 8m
+spacing. The maximum live load reaction
+at the supports is nearly
+(a) 36 kN
+(b) 40 KN
+(0) 46 kN
+(d) 60 KN
+
+42. Ground motion during earthquake is
+random in nature. For the purpose of
+analysis, it can be converted into
+different harmonic excitations through
+(a) Fourier series
+
+- (b) Newton’s second law
+(c) Duhamel’s integral
+(d) ‘Time series analysis                ‘
+
+43. An RCC structure with fundamental time
+period of 1-2 sec vibrates at a forcing
+frequency of 10 rad/sec. The maximum
+dynamic displacement is X% of static
+displacement. ‘The value of X is
+(a) 10-1                       eet
+(b) 28:9         ,
+
+(c) 37-7        ae)
+(d) 50-2
+
+44. A steel building has plan dimensions of
+50m 50m and it is 120m tall. It is
+provided with brick infill panels. The
+
+approximate fundamental time period of
+the building is                                      3
+(a) 1:53 sec
+(b) 2:72 sec -
+(c) 3-08 sec        i
+(d) 4:15 sec             :
+
+9                                            A — SKP-D-CVL

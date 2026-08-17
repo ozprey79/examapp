@@ -1,0 +1,50 @@
+86. Annual rainfall values at station A in mm
+for the years 2001 to 2010 are given in
+the table below. If simple central 3-year
+moving mean of this rainfall record is
+calculated, the maximum and minimum
+values in the moving mean list would be
+
+Annual
+
+Rainfall               h
+
+Pp at   S86 | 621     639 | 689] 610 |. 591 | 604 | 621 | 650
+
+station
+
+A (mm)
+
+(a) 689 mm and 602 mm
+(b) 649 mm and 602 mm
+* (c) 689 mm and 586 mm
+(d) 649 mm and 586 mm
+87. Khosla’s formulae for assessing pressure
+. distribution under weir floors are based
+on
+(a) Potential flow in permeable layers
+just beneath the floors
+
+(b) Boundary layer flow with pressure
+drop longitudinally
+
+(c) Conformal transformation of poten-
+tial flow into the w plane
+
+() Simplification of 3-D flow
+
+88. In a siphon aqueduct, the worst condition
+of uplift on the floor occurs when
+(a) The canal is full and the drainage is
+
+empty, with water table at drainage
+- bed level
+(b) The canal is empty and the
+drainage is full, with water table at
+. drainage bed level
+:      (c) Both the canal and the drainage
+are full
+(d) The canal is empty and _ the
+drainage is full, with water table
+below the floor
+17                                           A—SKP-D-CVL

@@ -1,0 +1,40 @@
+135. Statement (I) : Bernoulli’s equation is
+applicable to any point in
+the flow field provided
+the flow is steady and
+
+'— irrotational.
+Statement (II) : The integration of Euler’s
+:        equation of motion to
+derive Bernoulli’s equa-
+tion involves the assump-
+tions that velocity poten-
+tial exists and that the
+s    flow conditions do not
+change with time at
+any point.
+
+136. Statement (I): A sloping glacis is
+always preferred over
+a horizontal bed for
+locating a hydraulic
+jump.               :
+
+Statement (II) : The hydraulic jump is
+the best dissipator of
+energy of the flowing
+water.
+
+137. Statement (I) : Anaerobic sludge digester,
+by itself, is considered
+
+;         to be the better method
+     than other methods of
+sludge treatment.
+
+Statement (II) : During Anaerobic sludge
+digestion, CH, is pro-
+duced; also rodents and
+other pests are attracted
+when digester sludge
+is dried.

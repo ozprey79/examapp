@@ -1,0 +1,124 @@
+110.
+
+111.
+
+112.
+
+Consider the following assumptions
+regarding Coulomb’s Wedge Theory :
+
+1. There is’ equilibrium of every
+element within the soil mass of the
+material
+
+2. There is equilibrium of the whole
+of the material
+
+3. Backfill is wet, cohesive, and ideally
+elastic
+
+4. The wall surface is rough
+
+Which of the above assumptions are
+correct ?
+
+(a)
+(b) 1 and 4 only
+(c) 2 and 3 only
+(d) 2 and 4 only
+
+1 and 3 only
+
+In a clayey soil having 50 kN/m? as unit
+cohesion and 18 kN/m? as unit weight,
+an excavation is made with a vertical
+face. Taking Taylor’s stability number as
+0-261, what is the maximum depth of
+excavation so that the vertical face
+remains stable ?
+
+(a) 5:30 m
+(b) 7:06 m
+(c) 10-6m
+(d) 12-4m
+What is the Boussinesq’s vertical stress
+at a point 6 m directly below a concen-
+
+trated load of 2000 kN applied at the
+ground surface ?
+
+(a) 53-1 kKN/m2
+(b) 26-5 kN/m?
+(c) 11-8 kKN/m?
+(d) 8-8 kN/m2
+
+SKP-D-CVL—A
+
+22
+
+113. Consider the following statements :
+
+1. In a reinforced concrete member
+subjected to flexure, the externally
+applied moment is resisted by an
+internal couple formed by steel and
+concrete and their magnitudes vary
+with the applied moment, while the
+lever arm of the internal couple
+
+remains constant
+
+2. In a prestressed concrete. member,
+the external moment is resisted by
+an internal couple, but it is the lever
+arm that changes with the loading
+conditions and the stress in steel
+
+remains practically constant
+
+Which of the above statements is/are
+
+correct ?
+
+(a) 1 only
+
+(b) 2 only
+
+(c) Both 1 and 2
+(d) Neither 1 nor 2
+
+114.
+
+(GPS) :
+
+1. The position of an object can be
+exactly determined by a single
+
+satellite
+
+2. The position of the observer (moving
+person or vehicle) on ground is
+determined by an orbiting satellite
+
+3. Atomic clocks are fixed in satellites
+to calculate the positioning of the
+satellite to aid in determining travel
+
+times
+
+4. Absolute positioning, where accuracy
+of 1 cm to 5 cm is needed, depends
+
+upon the health of the satellite
+
+Which of the above statements are
+
+correct ?
+
+(a) 1, 2 and 3 only
+(b) 1, 2 and 4 only
+(c) 1, 3 and 4 only
+(d) 2, 3 and 4 only
+
+Consider the following statements with
+regard to Global Positioning Systems

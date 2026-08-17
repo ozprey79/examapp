@@ -1,0 +1,33 @@
+23.  *
+;     w/m
+WA                         (ene SS ik
+A fixed beam is loaded as in figure. The
+fixed end moment at support A is
+wl?
+a   —<—"
+(a)   aD
+wl?
+ay
+wie
+Oe
+(©)    0
+wl?
+@)
+@)    ;
+24. For a plane truss member, the length is
+2m, H=200 GPa and area of cross-
+. section is 200 mm2. The stiffness matrix
+coefficient K,, with reference to its local
+axis is       :
+(a) 200 Nin
+(b) 2x10? Nim
+(c) 4x10? Nim
+(d) 400 N/m
+25.    B              "
+iE
+:                |
+R
+k«——-L             F
+For the truss shown in the figure, the
+force in the memher PQ is
+SKP-D-CVL-—A                                                   6

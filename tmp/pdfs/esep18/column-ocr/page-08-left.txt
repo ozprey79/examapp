@@ -1,0 +1,38 @@
+32. Consider the following statements in
+respect of column splicing :
+1. Splices should be provided close to
+the point of inflection in a member
+2. Splices should be located near to
+the point of lateral restraint in a
+member
+_ 3. Machined columns  for  perfect
+bearing would need splices to be
+designed for axial force only
+Which of the above statements are
+correct ?
+(a) 1 and 2 only
+(b) 1 and 3 only
+(c) 2 and 3 only
+ @ 1,2 and 3
+33. Buckling of the compression flange of a
+:     girder, without transverse stiffeners, can
+be avoided if (with standard notations)
+d
+(a) — <345 eF
+by
+d        2
+— =270€
+Oles        7
+;
+(c) — $270 &,
+by
+d
+qd) — < 2506,
+Ly
+34. A simply supported steel beam of
+rectangular section and of span L is
+subjected to a uniformly distributed load.
+The length of the plastic hinge by
+considering moment ratio of 1:5 will be
+nearly                :               ;
+SKP-D-CVL-A                         8

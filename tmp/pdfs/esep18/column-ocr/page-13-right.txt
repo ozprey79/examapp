@@ -1,0 +1,41 @@
+65. A 2m -wide rectangular channel carries
+a discharge of 10 m3/s. What would be
+the depth of flow if the Froude number
+of the flow is 2-0?
+
+(a) 1:72m
+(b) 1:36 m
+(c) 0-86 1
+(d) 0-68 m
+
+66. M; Profile is indicated by which of the
+
+following conditions ?
+(a) Yor Ve > ¥
+(b)  y 2 Yo me Ve
+(c)  Ye a Yo a y
+Qoy y= Yo
+
+67. Floating logs of wood tend to move
+to the mid-river reach on the water
+surface. This is due to
+(a) Least obstruction from the banks
+(b) 2-cell transverse circulation in the
+
+flow
+(c) Fastest velocity along the mid-tiver
+l              reach
+          (d) Near-symmetry of the isovels
+t              across the section is conducive to
+:           ' principle of least work
+r               :
+
+68. The sequent depth ratio in a rectangular
+channel is 14. The Froude number of the
+supercritical flow will be
+(a) 6-62
+(b) 7-55
+
+|           (c) 8:45
+(d) 10-25     ee
+13              A- SKP-D-CVL

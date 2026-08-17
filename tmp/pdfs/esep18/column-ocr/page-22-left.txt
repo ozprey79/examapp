@@ -1,0 +1,47 @@
+110. Consider the following assumptions    “i
+regarding Coulomb’s Wedge Theory :
+
+1. There is’ equilibrium of every.
+element within the soil mass of the
+material
+
+2. There is equilibrium of the whole
+of the material
+
+3. Backfill is wet, cohesive, and ideally
+elastic
+
+4. The wall surface is rough
+
+Which of the above assumptions are
+correct ?
+(a) 1 and 3 only
+(b) 1 and 4 only
+_ (©) 2 and 3 only              :
+
+(d) 2 and 4 only
+
+111. In a clayey soil having 50 kN/m? as unit
+cohesion and 18 kN/m> as unit weight,     j
+an excavation is made with a vertical
+face. Taking Taylor’s stability number as
+0-261, what is the maximum depth of
+excavation so that the vertical face
+remains stable ?
+(a) 5-30 m
+(b) 7:06 m
+(c) 10-6m
+(d) 12:-4m
+
+112. What is the Boussinesq’s vertical stress
+at a point 6 m directly below a concen-
+trated load of 2000 kN applied at the
+ground surface ?
+(a) 53-1 KN/m2
+(b) 26:5 kN/m2
+
+© (c) 11:8 kKN/An?2
+
+(d) 8:8 kN/m?2
+
+SKP-D-CVL-—A                                               22

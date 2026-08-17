@@ -1,0 +1,40 @@
+102. A sand sample has a porosity of 30%
+and specific gravity of solids as 2:6.
+What is its degree of saturation at
+moisture: content of 4-94% ?
+
+(a) 40%
+(b) 35%
+(c) 30%
+@ 25%
+
+103. What will be the unit weight of a fully
+saturated soil sample having water
+content. of 38% and grain specific gravity
+of 2:65 ?
+
+(a) 19-88 kN/m3
+
+-  (b) 17-88 KN/m3                  E
+      (c) 16-52 kN/n3
+(d) 14-65 kN/m3
+
+104. How many cubic metres of soil having
+void ratio of 0-7 can be made from
+30 m3 of soil with void ratio of 1-2?
+(a) 36-6 m3
+(b) 30-0 m3
+(c) 25-9 m3
+(d) 23-2 m3
+
+105. A dry sand specimen is put through a
+tri-axial test. The cell pressure is 50 kPa
+and the deviator stress at failure is
+100 kPa. The angle of internal friction
+for the sand specimen is
+(a) 15°
+(b) 30°
+(c) 45°
+(d) 55°
+
+20

@@ -1,0 +1,33 @@
+63. An open channel is of isosceles triangle
+shape, with side slopes 1 vettival and in
+horizontal. The ratio of the critical depth
+to specific energy at critical depth will
+be
+2
+(a) =
+ay
+3
+(b)  A
+4
+c)) =
+¢    5
+5
+d) =
+@)  i
+64.      A       3      B
+10 7       40°      44
+Bor) BG
+D       20°       G
+8      1          5
+A pipe network is shown with all needful
+input data to compute the first iteration
+improved magnitudes of the initially
+assumed flows in the branches. What
+will be the such improved flow magni-
+. tudes in branches AB and CD? Consider
+to first decimal accuracy.
+(a) Ato B: 5:1; CtoD: 3-1
+(b+) Ato B: 5:7; CtoD: 28
+(c) Ato B: 4:9; C to D: 3-4
+(d) Ato B: 5-5; Ct D. 38
+1

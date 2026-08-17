@@ -1,0 +1,46 @@
+69. In a hydraulic jump, the depths on the
+two sides are 0:-4m and 1-4m. The
+head loss in the jump is nearly
+(a) 0-45 m
+(b) 0:65 m
+(c) 0:80 m
+(d) 0:90 m
+
+70. A20.cm centrifugal pump runs at 1400 rpm
+delivering 0:09 m3/sec against a head of
+45 m with an efficiency of 87%. What is
+its non-dimensional specific speed using
+rps as the relevant data component ?
+
+(a) 0-482
+(b) 0-474
+(c) 0-466
+(d) 0-458
+
+71. Two identical centrifugal pumps are
+connected in parallel to a common
+delivery pipe of a system. The discharge
+performance curve of each of the pumps
+is represented by H=30—8007. The
+discharge-head equation of the parallel
+duplex pump set is
+(a) H=30-8007
+(b) H=15-—200?
+
+(c) H=30=2007
+-@ H=15-8007
+
+72. Consider the following data relating to
+the performance of a centrifugal pump :
+speed = 1200 rpm, flow rate = 30 J/s,
+head = 20 m, and power = 5 kW. If
+the speed of the pump is increased to
+1500 rpm, assuming the efficiency is
+unaltered, the new flow rate and head,
+respectively, will be
+(a) 46-9 I/s and 25:0 m
+(b) 37-5 /s and 25-0 m
+(c) 46-9 /s and 31:3 m
+(d) 37-5 l/s and 31-3 m
+
+SKP-D-CVL-A .                                           14
